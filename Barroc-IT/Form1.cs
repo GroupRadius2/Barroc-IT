@@ -16,5 +16,11 @@ namespace Barroc_IT
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MainForm mf = new MainForm();
+            mf.Show();
+        }
     }
 }
