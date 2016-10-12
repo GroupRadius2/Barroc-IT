@@ -63,6 +63,36 @@ namespace Barroc_IT.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap barrocit {
+            get {
+                object obj = ResourceManager.GetObject("barrocit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap barrocit1 {
+            get {
+                object obj = ResourceManager.GetObject("barrocit1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap barrocit2 {
+            get {
+                object obj = ResourceManager.GetObject("barrocit2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap multiple_users_silhouette_318_49546 {
             get {
                 object obj = ResourceManager.GetObject("multiple-users-silhouette_318-49546", resourceCulture);
