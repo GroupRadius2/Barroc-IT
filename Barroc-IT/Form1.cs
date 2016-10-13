@@ -30,6 +30,7 @@ namespace Barroc_IT
                     {
                         MainForm mf = new MainForm();
                         mf.Show();
+                        this.Hide();
                     }
                     else
                     {
@@ -41,6 +42,7 @@ namespace Barroc_IT
                     {
                         MainForm mf = new MainForm();
                         mf.Show();
+                        this.Hide();
                     }
                     else
                     {
@@ -52,6 +54,7 @@ namespace Barroc_IT
                     {
                         MainForm mf = new MainForm();
                         mf.Show();
+                        this.Hide();
                     }
                     else
                     {
@@ -82,6 +85,7 @@ namespace Barroc_IT
                         {
                             MainForm mf = new MainForm();
                             mf.Show();
+                            this.Hide();
                         }
                         else
                         {
@@ -93,6 +97,7 @@ namespace Barroc_IT
                         {
                             MainForm mf = new MainForm();
                             mf.Show();
+                            this.Hide();
                         }
                         else
                         {
@@ -104,6 +109,7 @@ namespace Barroc_IT
                         {
                             MainForm mf = new MainForm();
                             mf.Show();
+                            this.Hide();
                         }
                         else
                         {
