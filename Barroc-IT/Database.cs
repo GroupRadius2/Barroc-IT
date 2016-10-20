@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
 
 namespace Barroc_IT
 {
@@ -10,10 +11,15 @@ namespace Barroc_IT
     {
         private static string connectionString;
         private static Database instance;
+        private static SqlDataAdapter adapter;
+        private static SqlConnection connection;
+        private static SqlCommand command;
 
         private static Database()
         {
-            connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\michael\Documents\Radius College\N4 Applicatieontwikkelaar\Leerjaar 2\Project\Barroc\Bouwfase\Barroc-IT\DatabaseBarrocIT.accdb";
+            connectionString = @"Data Source=MICHAELPC\MICHAEL;Initial Catalog=DatabaseBarroc;Integrated Security=True";
+            adapter = new SqlDataAdapter();
+            connection = new SqlConnection();
         }
 
         public static Database GetInstace()
@@ -24,6 +30,27 @@ namespace Barroc_IT
             }
 
             return instance;
+        }
+
+        public void OpenConnection()
+        {
+            connection.Open();
+        }
+
+        public void CloseConnection()
+        {
+            connection.Close();
+        }
+
+        public object Query(string query, string parameter)
+        {
+            object result;
+
+            command = new SqlCommand(query, connection);
+            command.Parameters.Add(parameter);
+            result = command.ExecuteScalar();
+
+            return result;
         }
     }
 }
