@@ -11,7 +11,7 @@ namespace Barroc_IT
         private static string connectionString;
         private static Database instance;
 
-        private static Database()
+        private Database()
         {
             connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\michael\Documents\Radius College\N4 Applicatieontwikkelaar\Leerjaar 2\Project\Barroc\Bouwfase\Barroc-IT\DatabaseBarrocIT.accdb";
         }
