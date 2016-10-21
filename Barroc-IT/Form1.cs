@@ -28,8 +28,8 @@ namespace Barroc_IT
                 case "Finance":
                     if (textBox2.Text == PsF)
                     {
-                        MainForm mf = new MainForm();
-                        mf.Show();
+                        FormFinance finance = new FormFinance();
+                        finance.Show();
                         this.Hide();
                     }
                     else
@@ -64,9 +64,7 @@ namespace Barroc_IT
                 default:
                     MessageBox.Show("Invalid login credentials");
                     break;
-
             }
-            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -85,7 +83,7 @@ namespace Barroc_IT
                         {
                             MainForm mf = new MainForm();
                             mf.Show();
-                            this.Hide();
+                            this.Close();
                         }
                         else
                         {
@@ -97,7 +95,7 @@ namespace Barroc_IT
                         {
                             MainForm mf = new MainForm();
                             mf.Show();
-                            this.Hide();
+                            this.Close();
                         }
                         else
                         {
@@ -109,7 +107,7 @@ namespace Barroc_IT
                         {
                             MainForm mf = new MainForm();
                             mf.Show();
-                            this.Hide();
+                            this.Close();
                         }
                         else
                         {
@@ -119,11 +117,8 @@ namespace Barroc_IT
                     default:
                         MessageBox.Show("Invalid login credentials");
                         break;
-
                 }
             }
         }
-    
-    }
-    
+    }   
 }

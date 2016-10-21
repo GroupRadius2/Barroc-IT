@@ -35,11 +35,11 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.labelProjects = new System.Windows.Forms.Label();
+            this.labelCustomers = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonLogout = new System.Windows.Forms.Button();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
@@ -53,6 +53,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
@@ -139,33 +140,33 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(48, 386);
+            this.label6.Location = new System.Drawing.Point(32, 386);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(121, 33);
+            this.label6.Size = new System.Drawing.Size(123, 33);
             this.label6.TabIndex = 47;
-            this.label6.Text = "New tab";
+            this.label6.Text = "Invoices";
             // 
-            // label5
+            // labelProjects
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(48, 333);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(121, 33);
-            this.label5.TabIndex = 46;
-            this.label5.Text = "New tab";
+            this.labelProjects.AutoSize = true;
+            this.labelProjects.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.labelProjects.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelProjects.Location = new System.Drawing.Point(31, 333);
+            this.labelProjects.Name = "labelProjects";
+            this.labelProjects.Size = new System.Drawing.Size(121, 33);
+            this.labelProjects.TabIndex = 46;
+            this.labelProjects.Text = "Projects";
             // 
-            // label4
+            // labelCustomers
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(48, 281);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(121, 33);
-            this.label4.TabIndex = 45;
-            this.label4.Text = "New tab";
+            this.labelCustomers.AutoSize = true;
+            this.labelCustomers.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.labelCustomers.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCustomers.Location = new System.Drawing.Point(28, 280);
+            this.labelCustomers.Name = "labelCustomers";
+            this.labelCustomers.Size = new System.Drawing.Size(157, 33);
+            this.labelCustomers.TabIndex = 45;
+            this.labelCustomers.Text = "Customers";
             // 
             // label2
             // 
@@ -189,14 +190,15 @@
             this.label1.TabIndex = 31;
             this.label1.Text = "Dashboard";
             // 
-            // button1
+            // buttonLogout
             // 
-            this.button1.Location = new System.Drawing.Point(17, 185);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(176, 23);
-            this.button1.TabIndex = 30;
-            this.button1.Text = "Logout";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonLogout.Location = new System.Drawing.Point(17, 185);
+            this.buttonLogout.Name = "buttonLogout";
+            this.buttonLogout.Size = new System.Drawing.Size(176, 23);
+            this.buttonLogout.TabIndex = 30;
+            this.buttonLogout.Text = "Logout";
+            this.buttonLogout.UseVisualStyleBackColor = true;
+            this.buttonLogout.Click += new System.EventHandler(this.buttonLogout_Click);
             // 
             // pictureBox13
             // 
@@ -316,11 +318,24 @@
             this.pictureBox5.TabIndex = 54;
             this.pictureBox5.TabStop = false;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DarkRed;
+            this.label3.Location = new System.Drawing.Point(803, 15);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(31, 33);
+            this.label3.TabIndex = 55;
+            this.label3.Text = "3";
+            // 
             // FormFinance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1354, 733);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox12);
             this.Controls.Add(this.label11);
@@ -329,11 +344,11 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.labelProjects);
+            this.Controls.Add(this.labelCustomers);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonLogout);
             this.Controls.Add(this.pictureBox13);
             this.Controls.Add(this.pictureBox14);
             this.Controls.Add(this.pictureBox15);
@@ -376,11 +391,11 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelProjects;
+        private System.Windows.Forms.Label labelCustomers;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonLogout;
         private System.Windows.Forms.PictureBox pictureBox13;
         private System.Windows.Forms.PictureBox pictureBox14;
         private System.Windows.Forms.PictureBox pictureBox15;
@@ -394,5 +409,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label label3;
     }
 }

@@ -21,5 +21,11 @@ namespace Barroc_IT
         {
 
         }
+
+        private void buttonLogout_Click(object sender, EventArgs e)
+        {
+            Form1 login = new Form1();
+            login.Show();
+        }
     }
 }
