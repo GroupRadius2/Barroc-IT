@@ -15,7 +15,7 @@ namespace Barroc_IT
         private static SqlConnection connection;
         private static SqlCommand command;
 
-        private static Database()
+        private Database()
         {
             connectionString = @"Data Source=MICHAELPC\MICHAEL;Initial Catalog=DatabaseBarroc;Integrated Security=True";
             adapter = new SqlDataAdapter();
