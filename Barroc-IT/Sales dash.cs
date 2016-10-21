@@ -21,25 +21,16 @@ namespace Barroc_IT
         {
             tabControl1.SelectedTab = tabPage2;
         }
-
-        private void label13_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-
+            tabControl1.SelectedTab = tabPage1;
         }
 
-        private void label22_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label15_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
+            MessageNewCustomer MNC = new MessageNewCustomer();
+            MNC.Show();
+        
         }
     }
 }
