@@ -62,8 +62,8 @@ namespace Barroc_IT
 
         private void button4_Click(object sender, EventArgs e)
         {
-            MessageNewCustomer MNC = new MessageNewCustomer();
-            MNC.Show();        
+            MessageNewProject MNP = new MessageNewProject();
+            MNP.Show();        
         }
     }
 }
