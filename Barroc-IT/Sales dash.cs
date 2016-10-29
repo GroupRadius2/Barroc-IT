@@ -46,5 +46,24 @@ namespace Barroc_IT
         {
             tabControl1.SelectedTab = tabPage4;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form1 login = new Form1();
+            Sales_dash SD = new Sales_dash();
+            SD.Close();
+            login.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tabPage1;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            MessageNewCustomer MNC = new MessageNewCustomer();
+            MNC.Show();        
+        }
     }
 }
