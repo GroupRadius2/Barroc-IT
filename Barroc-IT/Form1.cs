@@ -14,7 +14,7 @@ namespace Barroc_IT
     {
         public string PsS = "sales123";
         public string PsF = "finance123";
-        public string PsD = "development123";
+        public string PsD = "";
 
         public Form1()
         {
@@ -40,8 +40,8 @@ namespace Barroc_IT
                 case "Development":
                     if (textBox2.Text == PsD)
                     {
-                        MainForm mf = new MainForm();
-                        mf.Show();
+                        Development d = new Development();
+                        d.Show();
                         this.Hide();
                     }
                     else
@@ -95,8 +95,8 @@ namespace Barroc_IT
                     case "Development":
                         if (textBox2.Text == PsD)
                         {
-                            MainForm mf = new MainForm();
-                            mf.Show();
+                            Development d = new Development();
+                            d.Show();
                             this.Hide();
                         }
                         else

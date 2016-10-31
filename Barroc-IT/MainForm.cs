@@ -23,5 +23,10 @@ namespace Barroc_IT
             Form1 form1 = new Form1();
             form1.Show();
         }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
