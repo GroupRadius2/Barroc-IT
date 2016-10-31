@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
+using System.Windows.Forms;
+using System.Data;
 
 namespace Barroc_IT
 {
@@ -10,10 +13,15 @@ namespace Barroc_IT
     {
         private static string connectionString;
         private static Database instance;
+        private static SqlDataAdapter adapter;
+        private static SqlConnection connection;
+        private static SqlCommand command;
 
-        private static Database()
+        private Database()
         {
-            connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\michael\Documents\Radius College\N4 Applicatieontwikkelaar\Leerjaar 2\Project\Barroc\Bouwfase\Barroc-IT\DatabaseBarrocIT.accdb";
+            connectionString = @"Data Source=MICHAELPC\MICHAEL;Initial Catalog=DatabaseBarroc;Integrated Security=True";
+            adapter = new SqlDataAdapter();
+            connection = new SqlConnection(connectionString);
         }
 
         public static Database GetInstace()
@@ -24,6 +32,44 @@ namespace Barroc_IT
             }
 
             return instance;
+        }
+
+        public void OpenConnection()
+        {
+            connection.Open();
+        }
+
+        public void CloseConnection()
+        {
+            connection.Close();
+        }
+
+        public void Query(string query)
+        {
+            command = new SqlCommand(query, connection);
+        }
+
+        public void QueryInDatagridView(string query, DataGridView dataGridView)
+        {
+            dataGridView.Refresh();
+
+            adapter = new SqlDataAdapter(query, connectionString);
+            SqlCommandBuilder sqlCommandBuilder = new SqlCommandBuilder(adapter);
+            DataTable dataTable = new DataTable();
+            adapter.Fill(dataTable);
+            dataGridView.DataSource = dataTable;
+        }
+
+        public void AddParameter(string parameterName, object value)
+        {
+            command.Parameters.Add(new SqlParameter(parameterName, value));
+        }
+
+        public object ExecuteQuery()
+        {
+            object result = command.ExecuteScalar();
+
+            return result;
         }
     }
 }
