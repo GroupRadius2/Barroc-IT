@@ -12,9 +12,9 @@ namespace Barroc_IT
 {
     public partial class Form1 : Form
     {
-        public string PsS = "sales123";
+        public string psS = "sales123";
         private string psF = "";
-        public string PsD = "";
+        public string psD = "";
 
         public Form1()
         {
