@@ -32,7 +32,7 @@ namespace Barroc_IT
 
         private void buttonLogout_Click(object sender, EventArgs e)
         {
-            FormLogin login = new FormLogin();
+            Form1 login = new Form1();
             login.Show();
             this.Close();
             database.CloseConnection();

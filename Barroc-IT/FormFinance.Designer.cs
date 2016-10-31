@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.labelAddInvoice = new System.Windows.Forms.Label();
             this.labelAddCustomer = new System.Windows.Forms.Label();
@@ -54,8 +55,8 @@
             this.labelNegativeBalances = new System.Windows.Forms.Label();
             this.dataGridViewNegativeCompanies = new System.Windows.Forms.DataGridView();
             this.labelPositiveBalances = new System.Windows.Forms.Label();
-            this.labelTitleCustomers = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.labelTitleCustomers = new System.Windows.Forms.Label();
             this.tabPageProjects = new System.Windows.Forms.TabPage();
             this.dataGridViewProjects = new System.Windows.Forms.DataGridView();
             this.projectidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -498,24 +499,24 @@
             this.labelPositiveBalances.TabIndex = 59;
             this.labelPositiveBalances.Text = "Positive balances ()";
             // 
-            // labelTitleCustomers
-            // 
-            this.labelTitleCustomers.AutoSize = true;
-            this.labelTitleCustomers.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitleCustomers.Location = new System.Drawing.Point(6, 15);
-            this.labelTitleCustomers.Name = "labelTitleCustomers";
-            this.labelTitleCustomers.Size = new System.Drawing.Size(157, 33);
-            this.labelTitleCustomers.TabIndex = 57;
-            this.labelTitleCustomers.Text = "Customers";
-            // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.labelTitleCustomers);
-            this.panel1.Location = new System.Drawing.Point(0, 9);
+            this.panel1.Location = new System.Drawing.Point(0, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1122, 66);
             this.panel1.TabIndex = 58;
+            // 
+            // labelTitleCustomers
+            // 
+            this.labelTitleCustomers.AutoSize = true;
+            this.labelTitleCustomers.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitleCustomers.Location = new System.Drawing.Point(6, 8);
+            this.labelTitleCustomers.Name = "labelTitleCustomers";
+            this.labelTitleCustomers.Size = new System.Drawing.Size(157, 33);
+            this.labelTitleCustomers.TabIndex = 57;
+            this.labelTitleCustomers.Text = "Customers";
             // 
             // tabPageProjects
             // 
@@ -543,8 +544,17 @@
             this.pstartdateDataGridViewTextBoxColumn,
             this.penddateDataGridViewTextBoxColumn});
             this.dataGridViewProjects.DataSource = this.tblprojectsBindingSource;
+            this.dataGridViewProjects.GridColor = System.Drawing.SystemColors.InactiveCaption;
             this.dataGridViewProjects.Location = new System.Drawing.Point(37, 98);
             this.dataGridViewProjects.Name = "dataGridViewProjects";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewProjects.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewProjects.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridViewProjects.Size = new System.Drawing.Size(1007, 504);
             this.dataGridViewProjects.TabIndex = 61;
