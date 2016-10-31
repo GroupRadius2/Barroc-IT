@@ -21,7 +21,7 @@ namespace Barroc_IT
         {
             connectionString = @"Data Source=MICHAELPC\MICHAEL;Initial Catalog=DatabaseBarroc;Integrated Security=True";
             adapter = new SqlDataAdapter();
-            connection = new SqlConnection();
+            connection = new SqlConnection(connectionString);
         }
 
         public static Database GetInstace()
@@ -44,28 +44,32 @@ namespace Barroc_IT
             connection.Close();
         }
 
-        public object Query(string query, string parameter)
+        public void Query(string query)
         {
-            object result;
-
             command = new SqlCommand(query, connection);
-            command.Parameters.Add(parameter);
-            result = command.ExecuteScalar();
-
-            return result;
         }
 
-        public void QueryInDatagridView(string query, string parameter, DataGridView dataGridView)
+        public void QueryInDatagridView(string query, DataGridView dataGridView)
         {
             dataGridView.Refresh();
 
-            command = new SqlCommand(query, connection);
-            command.Parameters.Add(parameter);
-
-            adapter = new SqlDataAdapter(query, connection);
+            adapter = new SqlDataAdapter(query, connectionString);
+            SqlCommandBuilder sqlCommandBuilder = new SqlCommandBuilder(adapter);
             DataTable dataTable = new DataTable();
             adapter.Fill(dataTable);
             dataGridView.DataSource = dataTable;
+        }
+
+        public void AddParameter(string parameterName, object value)
+        {
+            command.Parameters.Add(new SqlParameter(parameterName, value));
+        }
+
+        public object ExecuteQuery()
+        {
+            object result = command.ExecuteScalar();
+
+            return result;
         }
     }
 }

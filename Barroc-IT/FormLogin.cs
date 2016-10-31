@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace Barroc_IT
 {
-    public partial class Form1 : Form
+    public partial class FormLogin : Form
     {
-        public string PsS = "sales123";
-        public string PsF = "finance123";
-        public string PsD = "development123";
+        private string psS = "sales123";
+        private string psF = "";
+        private string psD = "development123";
 
-        public Form1()
+        public FormLogin()
         {
             InitializeComponent();
         }
@@ -26,7 +26,7 @@ namespace Barroc_IT
             switch(comboBox1.Text)
             {
                 case "Finance":
-                    if (textBox2.Text == PsF)
+                    if (textBox2.Text == psF)
                     {
                         FormFinance finance = new FormFinance();
                         finance.Show();
@@ -38,7 +38,7 @@ namespace Barroc_IT
                     }
                     break;
                 case "Development":
-                    if (textBox2.Text == PsD)
+                    if (textBox2.Text == psD)
                     {
                         MainForm mf = new MainForm();
                         mf.Show();
@@ -50,7 +50,7 @@ namespace Barroc_IT
                     }
                     break;
                 case "Sales":
-                    if (textBox2.Text == PsS)
+                    if (textBox2.Text == psS)
                     {
                         MainForm mf = new MainForm();
                         mf.Show();
@@ -79,7 +79,7 @@ namespace Barroc_IT
                 switch (comboBox1.Text)
                 {
                     case "Finance":
-                        if (textBox2.Text == PsF)
+                        if (textBox2.Text == psF)
                         {
                             MainForm mf = new MainForm();
                             mf.Show();
@@ -91,7 +91,7 @@ namespace Barroc_IT
                         }
                         break;
                     case "Development":
-                        if (textBox2.Text == PsD)
+                        if (textBox2.Text == psD)
                         {
                             MainForm mf = new MainForm();
                             mf.Show();
@@ -103,7 +103,7 @@ namespace Barroc_IT
                         }
                         break;
                     case "Sales":
-                        if (textBox2.Text == PsS)
+                        if (textBox2.Text == psS)
                         {
                             MainForm mf = new MainForm();
                             mf.Show();
