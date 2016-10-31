@@ -71,6 +71,8 @@
     <Compile Include="Changecustomer.Designer.cs">
       <DependentUpon>Changecustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConfirmBox.cs" />
+    <Compile Include="ConfirmBoxBuilder.cs" />
     <Compile Include="Database.cs" />
     <Compile Include="Development.cs">
       <SubType>Form</SubType>
@@ -78,11 +80,24 @@
     <Compile Include="Development.Designer.cs">
       <DependentUpon>Development.cs</DependentUpon>
     </Compile>
+    <Compile Include="DatabaseBarrocProjectsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatabaseBarrocProjectsDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFinance.cs">
+      <SubType>Form</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="FormFinance.Designer.cs">
+      <DependentUpon>FormFinance.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -122,6 +137,10 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormFinance.resx">
+      <DependentUpon>FormFinance.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -139,6 +158,17 @@
     <EmbeddedResource Include="Sales dash.resx">
       <DependentUpon>Sales dash.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DatabaseBarrocProjectsDataSet.xsc">
+      <DependentUpon>DatabaseBarrocProjectsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DatabaseBarrocProjectsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatabaseBarrocProjectsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DatabaseBarrocProjectsDataSet.xss">
+      <DependentUpon>DatabaseBarrocProjectsDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -199,6 +229,27 @@
       <Visible>False</Visible>
       <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
       <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DBBarroc.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DBBarroc_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>DBBarroc.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
       <Visible>False</Visible>
