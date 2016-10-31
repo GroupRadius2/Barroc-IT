@@ -52,8 +52,8 @@ namespace Barroc_IT
                 case "Sales":
                     if (textBox2.Text == PsS)
                     {
-                        MainForm mf = new MainForm();
-                        mf.Show();
+                        Sales_dash SD = new Sales_dash();
+                        SD.Show();
                         this.Hide();
                     }
                     else
@@ -107,8 +107,8 @@ namespace Barroc_IT
                     case "Sales":
                         if (textBox2.Text == PsS)
                         {
-                            MainForm mf = new MainForm();
-                            mf.Show();
+                            Sales_dash SD = new Sales_dash();
+                            SD.Show();
                             this.Hide();
                         }
                         else
