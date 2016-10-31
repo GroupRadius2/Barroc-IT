@@ -17,8 +17,6 @@ namespace Barroc_IT
         public ConfirmBoxBuilder(ConfirmBox confirmBox)
         {
             this.confirmBox = confirmBox;
-
-            
         }
 
         public void BuildSize(int width, int height)
@@ -56,7 +54,7 @@ namespace Barroc_IT
             buttonDecline.Click += buttonDecline_Click;
 
             buttonAccept.Location = new Point(5, labelTop.Height + richTextBoxCenter.Height + 10);
-            buttonDecline.Location = new Point(confirmBox.ConfirmForm.Width - 5, labelTop.Height + richTextBoxCenter.Height + 10);
+            buttonDecline.Location = new Point(confirmBox.ConfirmForm.Width - 50, labelTop.Height + richTextBoxCenter.Height + 10);
 
             confirmBox.ConfirmForm.Controls.Add(buttonAccept);
             confirmBox.ConfirmForm.Controls.Add(buttonDecline);

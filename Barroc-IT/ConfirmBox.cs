@@ -22,11 +22,11 @@ namespace Barroc_IT
         {
             get
             {
-                return ConfirmForm;
+                return confirmForm;
             }
             set
             {
-                ConfirmForm = value;
+                confirmForm = value;
             }
         }
 
