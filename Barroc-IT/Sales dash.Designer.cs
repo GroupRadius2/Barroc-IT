@@ -515,6 +515,7 @@
             this.label7.Size = new System.Drawing.Size(219, 42);
             this.label7.TabIndex = 52;
             this.label7.Text = "New Project";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label6
             // 
@@ -1184,6 +1185,7 @@
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(1869, 6);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox6.TabIndex = 46;
             this.pictureBox6.TabStop = false;
             // 
@@ -1311,10 +1313,11 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.pictureBox1.Location = new System.Drawing.Point(-4, -8);
+            this.pictureBox1.Location = new System.Drawing.Point(5, -20);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1925, 84);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 33;
             this.pictureBox1.TabStop = false;
             // 

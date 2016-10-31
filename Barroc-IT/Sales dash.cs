@@ -65,5 +65,10 @@ namespace Barroc_IT
             MessageNewProject MNP = new MessageNewProject();
             MNP.Show();        
         }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tabPage6;
+        }
     }
 }
