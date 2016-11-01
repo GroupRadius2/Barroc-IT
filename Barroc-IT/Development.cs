@@ -30,7 +30,7 @@ namespace Barroc_IT
             label4.ForeColor = Color.Black;
             label5.ForeColor = Color.Black;
             label6.ForeColor = Color.Black;
-
+            label9.ForeColor = Color.Black;
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -40,7 +40,7 @@ namespace Barroc_IT
             label4.ForeColor = Color.Red;
             label5.ForeColor = Color.Black;
             label6.ForeColor = Color.Black;
-
+            label9.ForeColor = Color.Black;
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -50,6 +50,7 @@ namespace Barroc_IT
             label4.ForeColor = Color.Black;
             label5.ForeColor = Color.Red;
             label6.ForeColor = Color.Black;
+            label9.ForeColor = Color.Black;
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -59,7 +60,7 @@ namespace Barroc_IT
             label4.ForeColor = Color.Black;
             label5.ForeColor = Color.Black;
             label6.ForeColor = Color.Red;
-
+            label9.ForeColor = Color.Black;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -68,6 +69,17 @@ namespace Barroc_IT
             Form1 form1 = new Form1();
             form1.Show();
         }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+            Tabcontrol1.SelectedTab = tabPage6;
+            label1.ForeColor = Color.Black;
+            label4.ForeColor = Color.Black;
+            label5.ForeColor = Color.Black;
+            label6.ForeColor = Color.Black;
+            label9.ForeColor = Color.Red;
+        }
+
 
     }
 }
