@@ -13,16 +13,24 @@ namespace Barroc_IT
         private ConfirmBox confirmBox;
         private Label labelTop;
         private RichTextBox richTextBoxCenter;
+        private int height;
 
         public ConfirmBoxBuilder(ConfirmBox confirmBox)
         {
             this.confirmBox = confirmBox;
+            height = 0;
+        }
+
+        public void Construct()
+        {
+            confirmBox.ConfirmForm.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
         public void BuildSize(int width, int height)
         {
             confirmBox.ConfirmForm.Width = width;
             confirmBox.ConfirmForm.Height = height;
+            this.height = height;
         }
 
         public void BuildTop(string text)
@@ -38,7 +46,9 @@ namespace Barroc_IT
         {
             richTextBoxCenter = new RichTextBox();
             richTextBoxCenter.Location = new Point(5, labelTop.Height + 5);
+            richTextBoxCenter.Width = confirmBox.ConfirmForm.Width - 30;
             richTextBoxCenter.Text = text;
+            richTextBoxCenter.Height = height / 2;
 
             confirmBox.ConfirmForm.Controls.Add(richTextBoxCenter);
         }
@@ -54,7 +64,7 @@ namespace Barroc_IT
             buttonDecline.Click += buttonDecline_Click;
 
             buttonAccept.Location = new Point(5, labelTop.Height + richTextBoxCenter.Height + 10);
-            buttonDecline.Location = new Point(confirmBox.ConfirmForm.Width - 50, labelTop.Height + richTextBoxCenter.Height + 10);
+            buttonDecline.Location = new Point(confirmBox.ConfirmForm.Width - 100, labelTop.Height + richTextBoxCenter.Height + 10);
 
             confirmBox.ConfirmForm.Controls.Add(buttonAccept);
             confirmBox.ConfirmForm.Controls.Add(buttonDecline);
@@ -73,3 +83,4 @@ namespace Barroc_IT
         }
     }
 }
+

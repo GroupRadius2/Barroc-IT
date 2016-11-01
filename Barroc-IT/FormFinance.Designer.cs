@@ -471,7 +471,7 @@
             // labelNegativeBalances
             // 
             this.labelNegativeBalances.AutoSize = true;
-            this.labelNegativeBalances.Location = new System.Drawing.Point(111, 331);
+            this.labelNegativeBalances.Location = new System.Drawing.Point(111, 357);
             this.labelNegativeBalances.Name = "labelNegativeBalances";
             this.labelNegativeBalances.Size = new System.Drawing.Size(105, 13);
             this.labelNegativeBalances.TabIndex = 61;
@@ -484,7 +484,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewNegativeCompanies.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridViewNegativeCompanies.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewNegativeCompanies.Location = new System.Drawing.Point(111, 364);
+            this.dataGridViewNegativeCompanies.Location = new System.Drawing.Point(111, 383);
             this.dataGridViewNegativeCompanies.Name = "dataGridViewNegativeCompanies";
             this.dataGridViewNegativeCompanies.Size = new System.Drawing.Size(906, 210);
             this.dataGridViewNegativeCompanies.TabIndex = 60;

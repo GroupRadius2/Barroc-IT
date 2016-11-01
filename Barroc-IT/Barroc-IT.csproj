@@ -71,9 +71,9 @@
     <Compile Include="Changecustomer.Designer.cs">
       <DependentUpon>Changecustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="ConfirmBox.cs" />
-    <Compile Include="ConfirmBoxBuilder.cs" />
-    <Compile Include="Database.cs" />
+    <Compile Include="CSFinance\ConfirmBox.cs" />
+    <Compile Include="CSFinance\ConfirmBoxBuilder.cs" />
+    <Compile Include="CSFinance\Database.cs" />
     <Compile Include="Development.cs">
       <SubType>Form</SubType>
     </Compile>
