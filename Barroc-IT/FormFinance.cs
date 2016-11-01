@@ -195,7 +195,7 @@ namespace Barroc_IT
             builder.Construct();
             builder.BuildSize(250, 450);
             builder.BuildTop("You are about to save the following data:");
-            // builder.BuildCenter();
+            builder.BuildCenter("Project id: " + textBoxChangeInvoiceProjectId.Text);
             builder.BuildBottom();
 
             confirmBox.Show();
