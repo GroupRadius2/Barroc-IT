@@ -32,7 +32,7 @@ namespace Barroc_IT
 
         private void buttonLogout_Click(object sender, EventArgs e)
         {
-            FormLogin login = new FormLogin();
+            Form1 login = new Form1();
             login.Show();
             this.Close();
             database.CloseConnection();
@@ -190,16 +190,20 @@ namespace Barroc_IT
             database.AddParameter("@price", textBoxChangeInvoicePrice.Text);
             database.AddParameter("@id", selectedIndexInvoice);
 
-            /*ConfirmBox confirmBox = new ConfirmBox();
+            ConfirmBox confirmBox = new ConfirmBox();
             ConfirmBoxBuilder builder = new ConfirmBoxBuilder(confirmBox);
-            builder.BuildSize(60, 50);
+            builder.BuildSize(250, 450);
             builder.BuildTop("You are about to save the following data:");
-            builder.BuildCenter("Info");
+            builder.BuildCenter(textBoxChangeInvoiceProjectId.Text + textBoxChangeInvoiceDescription.Text + textBoxChangeInvoicePrice.Text);
             builder.BuildBottom();
 
-            confirmBox.Show();*/
-            database.ExecuteQuery();
+            confirmBox.Show();
 
+            if (confirmBox.IsAccepted())
+            {
+                database.ExecuteQuery();
+            }
+            
             UpdateInfo();
         }
 

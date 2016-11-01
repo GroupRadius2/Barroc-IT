@@ -20,7 +20,7 @@ namespace Barroc_IT
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormLogin form1 = new FormLogin();
+            Form1 form1 = new Form1();
             form1.Show();
         }
 

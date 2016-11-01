@@ -12,9 +12,9 @@ namespace Barroc_IT
 {
     public partial class Form1 : Form
     {
-        public string PsS = "sales123";
-        public string PsF = "finance123";
-        public string PsD = "";
+        public string psS = "sales123";
+        private string psF = "";
+        public string psD = "";
 
         public Form1()
         {
@@ -26,10 +26,10 @@ namespace Barroc_IT
             switch(comboBox1.Text)
             {
                 case "Finance":
-                    if (textBox2.Text == PsF)
+                    if (textBox2.Text == psF)
                     {
-                        MainForm mf = new MainForm();
-                        mf.Show();
+                        FormFinance finance = new FormFinance();
+                        finance.Show();
                         this.Hide();
                     }
                     else
@@ -38,7 +38,7 @@ namespace Barroc_IT
                     }
                     break;
                 case "Development":
-                    if (textBox2.Text == PsD)
+                    if (textBox2.Text == psD)
                     {
                         Development d = new Development();
                         d.Show();
@@ -50,10 +50,10 @@ namespace Barroc_IT
                     }
                     break;
                 case "Sales":
-                    if (textBox2.Text == PsS)
+                    if (textBox2.Text == psS)
                     {
-                        MainForm mf = new MainForm();
-                        mf.Show();
+                        Sales_dash SD = new Sales_dash();
+                        SD.Show();
                         this.Hide();
                     }
                     else
@@ -64,9 +64,7 @@ namespace Barroc_IT
                 default:
                     MessageBox.Show("Invalid login credentials");
                     break;
-
             }
-            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -81,11 +79,11 @@ namespace Barroc_IT
                 switch (comboBox1.Text)
                 {
                     case "Finance":
-                        if (textBox2.Text == PsF)
+                        if (textBox2.Text == psF)
                         {
                             MainForm mf = new MainForm();
                             mf.Show();
-                            this.Hide();
+                            this.Close();
                         }
                         else
                         {
@@ -93,7 +91,7 @@ namespace Barroc_IT
                         }
                         break;
                     case "Development":
-                        if (textBox2.Text == PsD)
+                        if (textBox2.Text == psD)
                         {
                             Development d = new Development();
                             d.Show();
@@ -105,10 +103,10 @@ namespace Barroc_IT
                         }
                         break;
                     case "Sales":
-                        if (textBox2.Text == PsS)
+                        if (textBox2.Text == psS)
                         {
-                            MainForm mf = new MainForm();
-                            mf.Show();
+                            Sales_dash SD = new Sales_dash();
+                            SD.Show();
                             this.Hide();
                         }
                         else
@@ -119,11 +117,8 @@ namespace Barroc_IT
                     default:
                         MessageBox.Show("Invalid login credentials");
                         break;
-
                 }
             }
         }
-    
-    }
-    
+    }   
 }

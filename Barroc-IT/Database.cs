@@ -19,7 +19,7 @@ namespace Barroc_IT
 
         private Database()
         {
-            connectionString = @"Data Source=MICHAELPC\MICHAEL;Initial Catalog=DatabaseBarroc;Integrated Security=True";
+            connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\DBBarroc.mdf;Integrated Security=True;Connect Timeout=30";
             adapter = new SqlDataAdapter();
             connection = new SqlConnection(connectionString);
         }

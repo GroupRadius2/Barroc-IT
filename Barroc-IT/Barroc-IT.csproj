@@ -59,17 +59,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="appiontment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="appiontment.Designer.cs">
+      <DependentUpon>appiontment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Changecustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Changecustomer.Designer.cs">
+      <DependentUpon>Changecustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfirmBox.cs" />
+    <Compile Include="ConfirmBoxBuilder.cs" />
+    <Compile Include="Database.cs" />
     <Compile Include="Development.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Development.Designer.cs">
       <DependentUpon>Development.cs</DependentUpon>
     </Compile>
+    <Compile Include="DatabaseBarrocProjectsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatabaseBarrocProjectsDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormLogin.Designer.cs">
-      <DependentUpon>FormLogin.cs</DependentUpon>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="FormFinance.cs">
       <SubType>Form</SubType>
@@ -85,8 +105,32 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MessageNewCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageNewCustomer.Designer.cs">
+      <DependentUpon>MessageNewCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessageNewProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageNewProject.Designer.cs">
+      <DependentUpon>MessageNewProject.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sales dash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales dash.Designer.cs">
+      <DependentUpon>Sales dash.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="appiontment.resx">
+      <DependentUpon>appiontment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Changecustomer.resx">
+      <DependentUpon>Changecustomer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Development.resx">
       <DependentUpon>Development.cs</DependentUpon>
     </EmbeddedResource>
@@ -100,10 +144,19 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MessageNewCustomer.resx">
+      <DependentUpon>MessageNewCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageNewProject.resx">
+      <DependentUpon>MessageNewProject.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales dash.resx">
+      <DependentUpon>Sales dash.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="DatabaseBarrocProjectsDataSet.xsc">
       <DependentUpon>DatabaseBarrocProjectsDataSet.xsd</DependentUpon>
@@ -141,13 +194,21 @@
     <None Include="Resources\1.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="BarrocITDatabase.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="BarrocITDatabase_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>BarrocITDatabase.mdf</DependentUpon>
-    </Content>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">
@@ -159,6 +220,18 @@
       <Visible>False</Visible>
       <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
       <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
       <Visible>False</Visible>
