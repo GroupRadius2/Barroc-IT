@@ -19,7 +19,7 @@ namespace Barroc_IT
         public FormFinance()
         {
             InitializeComponent();
-            database = Database.GetInstace();
+            database = Database.GetInstance();
             try
             {
                 database.OpenConnection();
@@ -87,10 +87,9 @@ namespace Barroc_IT
 
         private void buttonCompanySave_Click(object sender, EventArgs e)
         {
-           // UpdateInfo();
-
-            //database.Query("SELECT COUNT(*) FROM tbl_companies");
-            //int countOfCompanyId = (int)database.ExecuteQuery();
+            UpdateInfo();
+            database.Query("SELECT COUNT(*) FROM tbl_companies");
+            int countOfCompanyId = (int)database.ExecuteQuery();
 
             //database.Query("INSERT INTO tbl_companies(c_id, c_name, c_address, c_housenumber, c_code, c_city, c_contactperson, c_contactperson_initials, " +
             //    "c_contactperson_telephonenumber, c_contactperson_faxnumber, c_contactperson_email, c_potential_customer, c_last_contact_date, c_creditworthy, " + 
@@ -144,6 +143,7 @@ namespace Barroc_IT
             database.QueryInDatagridView("SELECT * FROM tbl_invoices", dataGridViewInvoices);
             database.QueryInDatagridView("SELECT * FROM tbl_companies WHERE c_creditworthy = 1", dataGridViewPositiveCompanies);
             database.QueryInDatagridView("SELECT * FROM tbl_companies WHERE c_creditworthy = 0", dataGridViewNegativeCompanies);
+            
         }
 
         private void buttonSaveInvoice_Click(object sender, EventArgs e)

@@ -38,6 +38,7 @@ namespace Barroc_IT
         {
             richTextBoxCenter = new RichTextBox();
             richTextBoxCenter.Location = new Point(5, labelTop.Height + 5);
+
             richTextBoxCenter.Text = text;
 
             confirmBox.ConfirmForm.Controls.Add(richTextBoxCenter);
