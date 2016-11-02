@@ -16,6 +16,7 @@ namespace Barroc_IT
         public Development()
         {
             InitializeComponent();
+            dataGridView1.Show();
         }
 
         private void Development_Load(object sender, EventArgs e)

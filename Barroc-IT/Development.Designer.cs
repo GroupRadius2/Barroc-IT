@@ -48,17 +48,18 @@
             this.label9 = new System.Windows.Forms.Label();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.label12 = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.label12 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.label8 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.label8 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.Projects = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.Projects = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.Appointments = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Appointments = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label7 = new System.Windows.Forms.Label();
             this.Tabcontrol1 = new System.Windows.Forms.TabControl();
@@ -77,6 +78,8 @@
             this.tabPage4.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.Tabcontrol1.SuspendLayout();
             this.SuspendLayout();
@@ -242,7 +245,7 @@
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlDark;
             this.pictureBox1.Location = new System.Drawing.Point(-9, -2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1444, 68);
+            this.pictureBox1.Size = new System.Drawing.Size(1444, 38);
             this.pictureBox1.TabIndex = 33;
             this.pictureBox1.TabStop = false;
             // 
@@ -288,16 +291,6 @@
             this.tabPage6.Text = "Project progress";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(28, 28);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(228, 33);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "Project progress";
-            // 
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.BackColor = System.Drawing.Color.DarkGray;
@@ -312,6 +305,16 @@
             this.tableLayoutPanel4.Size = new System.Drawing.Size(1056, 473);
             this.tableLayoutPanel4.TabIndex = 65;
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(28, 28);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(228, 33);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Project progress";
+            // 
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.tableLayoutPanel3);
@@ -324,15 +327,6 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Companies";
             this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(28, 28);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(179, 37);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Companies";
             // 
             // tableLayoutPanel3
             // 
@@ -348,6 +342,15 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1056, 473);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(28, 28);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(179, 37);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Companies";
+            // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.tableLayoutPanel2);
@@ -359,16 +362,6 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Projects";
             this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // Projects
-            // 
-            this.Projects.AutoSize = true;
-            this.Projects.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Projects.Location = new System.Drawing.Point(28, 28);
-            this.Projects.Name = "Projects";
-            this.Projects.Size = new System.Drawing.Size(132, 37);
-            this.Projects.TabIndex = 0;
-            this.Projects.Text = "Projects";
             // 
             // tableLayoutPanel2
             // 
@@ -384,6 +377,16 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1056, 473);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
+            // Projects
+            // 
+            this.Projects.AutoSize = true;
+            this.Projects.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Projects.Location = new System.Drawing.Point(28, 28);
+            this.Projects.Name = "Projects";
+            this.Projects.Size = new System.Drawing.Size(132, 37);
+            this.Projects.TabIndex = 0;
+            this.Projects.Text = "Projects";
+            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.tableLayoutPanel1);
@@ -396,6 +399,29 @@
             this.tabPage2.Text = "Appointments";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.DarkGray;
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.dataGridView1, 0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(35, 103);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1056, 473);
+            this.tableLayoutPanel1.TabIndex = 1;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(522, 230);
+            this.dataGridView1.TabIndex = 0;
+            // 
             // Appointments
             // 
             this.Appointments.AutoSize = true;
@@ -405,20 +431,6 @@
             this.Appointments.Size = new System.Drawing.Size(214, 37);
             this.Appointments.TabIndex = 0;
             this.Appointments.Text = "Appointments";
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.DarkGray;
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(35, 103);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1056, 473);
-            this.tableLayoutPanel1.TabIndex = 1;
             // 
             // tabPage1
             // 
@@ -503,6 +515,8 @@
             this.tabPage3.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.Tabcontrol1.ResumeLayout(false);
@@ -547,5 +561,6 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TabControl Tabcontrol1;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
