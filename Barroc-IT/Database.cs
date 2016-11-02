@@ -20,7 +20,7 @@ namespace Barroc_IT
         private Database()
         {
             //connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\DBBarroc.mdf;Integrated Security=True;Connect Timeout=30";
-            connectionString = @"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\Levi\Documents\Visual Studio 2013\Projects\Barroc-IT\Barroc-IT\App_Data\ReBarroc.mdf;Integrated Security=True;Connect Timeout=30";
+            connectionString = @"Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\App_Data\ReBarroc.mdf;Integrated Security=True;Connect Timeout=30";
             adapter = new SqlDataAdapter();
             connection = new SqlConnection(connectionString);
         }
