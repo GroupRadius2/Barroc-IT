@@ -19,7 +19,7 @@ namespace Barroc_IT
         public FormFinance()
         {
             InitializeComponent();
-            database = Database.GetInstance();
+            //database = Database.GetInstance();
             try
             {
                 database.OpenConnection();

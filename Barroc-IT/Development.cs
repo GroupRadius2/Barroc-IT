@@ -27,7 +27,7 @@ namespace Barroc_IT
             this.dataGridView3.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView4.DefaultCellStyle.Font = new Font("Tahoma", 16);
             this.dataGridView4.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            Database.GetInstace().QueryInDatagridView("Select *  FROM tbl_companies DROP TABLE c_id", dataGridView2);
+            Database.GetInstace().QueryInDatagridView("Select c_name, c_address, c_housenumber,c_code,c_city,c_contactperson_first_name, c_contactperson_last_name, c_contactperson_initials,c_contactperson_telephone,c_contactperson_faxnumber, c_contactperson_email, c_potential_customer, c_last_contact_date, c_creditworthy, c_revenue, c_limit, c_ledger, c_btw_code, c_maintenance_contract  FROM tbl_companies ", dataGridView2);
             Database.GetInstace().QueryInDatagridView("Select p_start_date, p_end_date, p_progression FROM tbl_project", dataGridView3);
             Database.GetInstace().QueryInDatagridView("Select a_date , a_time_of FROM tbl_appiontments", dataGridView1);
             Database.GetInstace().QueryInDatagridView("Select p_progression , p_start_date, p_end_date  FROM tbl_project", dataGridView4);
@@ -36,9 +36,9 @@ namespace Barroc_IT
             dataGridView3.Columns[0].HeaderCell.Value = "Start date";
             dataGridView3.Columns[1].HeaderCell.Value = "End date";
             dataGridView3.Columns[2].HeaderCell.Value = "Progression";
-            dataGridView4.Columns[0].HeaderCell.Value = "Start date";
-            dataGridView4.Columns[1].HeaderCell.Value = "End date";
-            dataGridView4.Columns[2].HeaderCell.Value = "Progression";
+            dataGridView4.Columns[0].HeaderCell.Value = "Progress";
+            dataGridView4.Columns[1].HeaderCell.Value = "Startdate";
+            dataGridView4.Columns[2].HeaderCell.Value = "Enddate";
 
         }
 

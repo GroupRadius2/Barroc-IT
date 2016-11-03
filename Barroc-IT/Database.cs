@@ -13,50 +13,19 @@ namespace Barroc_IT
     {
         private static string connectionString;
         private static Database instance;
-        private static int version;
-
         private static SqlDataAdapter adapter;
         private static SqlConnection connection;
         private static SqlCommand command;
-        
+
         private Database()
         {
-            version = 11;
-
-            try
-            {
-                if (!Connect())
-                {
-                    version = 12;
-                    Connect();
-                }
-            }
-            catch (SqlException se)
-            {
-                MessageBox.Show(se.Message);
-            }
-        }
-
-        public static bool Connect()
-        {
-            bool state = false;
-
-            connectionString = @"Data Source=(LocalDB)\v" + version.ToString() + ".0;AttachDbFilename=|DataDirectory|\\App_Data\\ReBarroc.mdf;Integrated Security=True;Connect Timeout=30";
+            //connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\DBBarroc.mdf;Integrated Security=True;Connect Timeout=30";
+            connectionString = @"Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\App_Data\ReBarroc.mdf;Integrated Security=True;Connect Timeout=30";
             adapter = new SqlDataAdapter();
             connection = new SqlConnection(connectionString);
-            
-            try
-            {
-                connection.Open();
-
-                state = true;
-            }
-            catch (SqlException se) { }
-
-            return state;
         }
 
-        public static Database GetInstance()
+        public static Database GetInstace()
         {
             if (instance == null)
             {
