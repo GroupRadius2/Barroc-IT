@@ -13,7 +13,6 @@ namespace Barroc_IT
         private ConfirmBox confirmBox;
         private Label labelTop;
         private RichTextBox richTextBoxCenter;
-        private Timer timer;
 
         public ConfirmBoxBuilder(ConfirmBox confirmBox)
         {
