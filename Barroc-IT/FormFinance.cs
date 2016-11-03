@@ -19,7 +19,7 @@ namespace Barroc_IT
         public FormFinance()
         {
             InitializeComponent();
-            database = Database.GetInstace();
+            database = Database.GetInstance();
             try
             {
                 database.OpenConnection();
@@ -40,89 +40,88 @@ namespace Barroc_IT
 
         private void labelCustomers_Click(object sender, EventArgs e)
         {
-            //UpdateInfo();
-            //tabControlFinance.SelectTab(tabPageCustomers);
+            UpdateInfo();
+            tabControlFinance.SelectTab(tabPageCustomers);
             labelCustomers.ForeColor = Color.Red;
         }
 
         private void labelProjects_Click(object sender, EventArgs e)
         {
-            //UpdateInfo();
-            //tabControlFinance.SelectTab(tabPageProjects);
+            UpdateInfo();
+            tabControlFinance.SelectTab(tabPageProjects);
             labelProjects.ForeColor = Color.Red;
         }
 
         private void FormFinance_Load(object sender, EventArgs e)
         {
-            //UpdateInfo();
+            UpdateInfo();
         }
 
         private void labelInvoices_Click(object sender, EventArgs e)
         {
-            //UpdateInfo();
-            //tabControlFinance.SelectTab(tabPageInvoices);
+            UpdateInfo();
+            tabControlFinance.SelectTab(tabPageInvoices);
             labelInvoices.ForeColor = Color.Red;
         }
 
         private void labelDashboard_Click(object sender, EventArgs e)
         {
-           // UpdateInfo();
-            //tabControlFinance.SelectTab(tabPageCustomers);
+            UpdateInfo();
+            tabControlFinance.SelectTab(tabPageCustomers);
             labelDashboard.ForeColor = Color.Red;
         }
 
         private void labelAddCustomer_Click(object sender, EventArgs e)
         {
-            //UpdateInfo();
-           // tabControlFinance.SelectTab(tabPageAddCustomer);
+            UpdateInfo();
+            tabControlFinance.SelectTab(tabPageAddCustomer);
             labelAddCustomer.ForeColor = Color.Red;
         }
 
         private void labelAddInvoice_Click(object sender, EventArgs e)
         {
-            //UpdateInfo();
-           // labelAddInvoice.ForeColor = Color.Red;
+            UpdateInfo();
+            labelAddInvoice.ForeColor = Color.Red;
             tabControlFinance.SelectTab(tabPageAddInvoice);
         }
 
         private void buttonCompanySave_Click(object sender, EventArgs e)
         {
-           // UpdateInfo();
+            UpdateInfo();
+            database.Query("SELECT COUNT(*) FROM tbl_companies");
+            int countOfCompanyId = (int)database.ExecuteQuery();
 
-            //database.Query("SELECT COUNT(*) FROM tbl_companies");
-            //int countOfCompanyId = (int)database.ExecuteQuery();
+            database.Query("INSERT INTO tbl_companies(c_id, c_name, c_address, c_housenumber, c_code, c_city, c_contactperson, c_contactperson_initials, " +
+                "c_contactperson_telephonenumber, c_contactperson_faxnumber, c_contactperson_email, c_potential_customer, c_last_contact_date, c_creditworthy, " +
+                "c_discount, c_banknumber, c_credit_balance, c_revenue, c_limit, c_ledger, c_btw_code, c_maintenance_contract)" +
+                "VALUES(@id, @c_name, @c_address, @c_housenumber, @c_code, @c_city, @c_contactperson, @c_contactperson_initials, @c_contactperson_telephonenumber, " +
+                "@c_contactperson_faxnumber, @c_contactperson_email, @c_potential_customer, @c_last_contact_date, @c_creditworthy, @c_discount, @c_banknumber, " +
+                "@c_credit_balance, @c_revenue, @c_limit, @c_ledger, @c_btw_code, @c_maintenance_contract);");
 
-            //database.Query("INSERT INTO tbl_companies(c_id, c_name, c_address, c_housenumber, c_code, c_city, c_contactperson, c_contactperson_initials, " +
-            //    "c_contactperson_telephonenumber, c_contactperson_faxnumber, c_contactperson_email, c_potential_customer, c_last_contact_date, c_creditworthy, " + 
-            //    "c_discount, c_banknumber, c_credit_balance, c_revenue, c_limit, c_ledger, c_btw_code, c_maintenance_contract)" + 
-            //    "VALUES(@id, @c_name, @c_address, @c_housenumber, @c_code, @c_city, @c_contactperson, @c_contactperson_initials, @c_contactperson_telephonenumber, " +
-            //    "@c_contactperson_faxnumber, @c_contactperson_email, @c_potential_customer, @c_last_contact_date, @c_creditworthy, @c_discount, @c_banknumber, " +
-            //    "@c_credit_balance, @c_revenue, @c_limit, @c_ledger, @c_btw_code, @c_maintenance_contract);");
+            database.AddParameter("@id", ++countOfCompanyId);
+            database.AddParameter("@c_name", textBoxAddCustomerCompanyName.Text);
+            database.AddParameter("@c_address", textBoxAddCustomerCompanyAddress.Text);
+            database.AddParameter("@c_housenumber", textBoxAddCustomerCompanyHouseNumber.Text);
+            database.AddParameter("@c_code", textBoxAddCustomerCompanyCode.Text);
+            database.AddParameter("@c_city", textBoxAddCustomerCompanyCity.Text);
+            database.AddParameter("@c_contactperson", textBoxAddCustomerContactperson.Text);
+            database.AddParameter("@c_contactperson_initials", textBoxAddCustomerInitials.Text);
+            database.AddParameter("@c_contactperson_telephonenumber", textBoxAddCustomerTelephone.Text);
+            database.AddParameter("@c_contactperson_faxnumber", textBoxAddCustomerFaxnumber.Text);
+            database.AddParameter("@c_contactperson_email", textBoxAddCustomerEmail.Text);
+            database.AddParameter("@c_potential_customer", checkBoxAddCustomerPotentialCustomer.Checked ? 1 : 0);
+            database.AddParameter("@c_last_contact_date", textBoxAddCustomerCompanyLastContactDate.Text);
+            database.AddParameter("@c_creditworthy", checkBoxAddCustomerCompanyCreditworthy.Checked ? 1 : 0);
+            database.AddParameter("@c_discount", textBoxAddCustomerDiscount.Text);
+            database.AddParameter("@c_banknumber", textBoxAddCustomerBanknumber.Text);
+            database.AddParameter("@c_credit_balance", textBoxAddCustomerCompanyCreditBalance.Text);
+            database.AddParameter("@c_revenue", textBoxAddCustomerRevenue.Text);
+            database.AddParameter("@c_limit", textBoxAddCustomerLimit.Text);
+            database.AddParameter("@c_ledger", textBoxAddCustomerLedger.Text);
+            database.AddParameter("@c_btw_code", textBoxAddCustomerVATCode.Text);
+            database.AddParameter("@c_maintenance_contract", textBoxAddCustomerMainContract.Text);
 
-            //database.AddParameter("@id", ++countOfCompanyId);
-            //database.AddParameter("@c_name", textBoxAddCustomerCompanyName.Text);
-            //database.AddParameter("@c_address", textBoxAddCustomerCompanyAddress.Text);
-            //database.AddParameter("@c_housenumber", textBoxAddCustomerCompanyHouseNumber.Text);
-            //database.AddParameter("@c_code", textBoxAddCustomerCompanyCode.Text);
-            //database.AddParameter("@c_city", textBoxAddCustomerCompanyCity.Text);
-            //database.AddParameter("@c_contactperson", textBoxAddCustomerContactperson.Text);
-            //database.AddParameter("@c_contactperson_initials", textBoxAddCustomerInitials.Text);
-            //database.AddParameter("@c_contactperson_telephonenumber", textBoxAddCustomerTelephone.Text);
-            //database.AddParameter("@c_contactperson_faxnumber", textBoxAddCustomerFaxnumber.Text);
-            //database.AddParameter("@c_contactperson_email", textBoxAddCustomerEmail.Text);
-            //database.AddParameter("@c_potential_customer", checkBoxAddCustomerPotentialCustomer.Checked ? 1 : 0);
-            //database.AddParameter("@c_last_contact_date", textBoxAddCustomerCompanyLastContactDate.Text);
-            //database.AddParameter("@c_creditworthy", checkBoxAddCustomerCompanyCreditworthy.Checked ? 1 : 0);
-            //database.AddParameter("@c_discount", textBoxAddCustomerDiscount.Text);
-            //database.AddParameter("@c_banknumber", textBoxAddCustomerBanknumber.Text);
-            //database.AddParameter("@c_credit_balance", textBoxAddCustomerCompanyCreditBalance.Text);
-            //database.AddParameter("@c_revenue", textBoxAddCustomerRevenue.Text);
-            //database.AddParameter("@c_limit", textBoxAddCustomerLimit.Text);
-            //database.AddParameter("@c_ledger", textBoxAddCustomerLedger.Text);
-            //database.AddParameter("@c_btw_code", textBoxAddCustomerVATCode.Text);
-            //database.AddParameter("@c_maintenance_contract", textBoxAddCustomerMainContract.Text);
-
-            //database.ExecuteQuery();
+            database.ExecuteQuery();
         }
 
         private void UpdateInfo()
@@ -144,6 +143,7 @@ namespace Barroc_IT
             database.QueryInDatagridView("SELECT * FROM tbl_invoices", dataGridViewInvoices);
             database.QueryInDatagridView("SELECT * FROM tbl_companies WHERE c_creditworthy = 1", dataGridViewPositiveCompanies);
             database.QueryInDatagridView("SELECT * FROM tbl_companies WHERE c_creditworthy = 0", dataGridViewNegativeCompanies);
+            
         }
 
         private void buttonSaveInvoice_Click(object sender, EventArgs e)
