@@ -72,8 +72,8 @@ namespace Barroc_IT
 
         private void Sales_dash_Load(object sender, EventArgs e)
         {
-           // Database.GetInstance().QueryInDatagridView("SELECT * FROM tbl_companies;", dataGridView3);
-            //Database.GetInstance().QueryInDatagridView("SELECT * FROM tbl_appiontments", dataGridView1);
+           Database.GetInstance().QueryInDatagridView("SELECT * FROM tbl_companies;", dataGridView3);
+           Database.GetInstance().QueryInDatagridView("SELECT * FROM tbl_appiontments", dataGridView1);
         }
     }
 }

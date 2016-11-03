@@ -25,7 +25,7 @@ namespace Barroc_IT
             connection = new SqlConnection(connectionString);
         }
 
-        public static Database GetInstace()
+        public static Database GetInstance()
         {
             if (instance == null)
             {
