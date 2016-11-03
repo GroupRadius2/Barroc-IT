@@ -20,13 +20,13 @@ namespace Barroc_IT
         private void Development_Load(object sender, EventArgs e)
         {
             this.dataGridView1.DefaultCellStyle.Font = new Font("Tahoma", 16);
-            this.dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView2.DefaultCellStyle.Font = new Font("Tahoma", 16);
             this.dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView3.DefaultCellStyle.Font = new Font("Tahoma", 16);
-            this.dataGridView3.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView3.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView4.DefaultCellStyle.Font = new Font("Tahoma", 16);
-            this.dataGridView4.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView4.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             Database.GetInstance().QueryInDatagridView("Select c_name, c_address, c_housenumber,c_code,c_city,c_contactperson_first_name, c_contactperson_last_name, c_contactperson_initials,c_contactperson_telephone_number,c_contactperson_faxnumber, c_contactperson_email, c_potential_customer, c_last_contact_date, c_creditworthy, c_revenue, c_limit, c_ledger, c_btw_code, c_maintenance_contract  FROM tbl_companies ", dataGridView2);
             Database.GetInstance().QueryInDatagridView("Select p_start_date, p_end_date, p_progression FROM tbl_project", dataGridView3);
             Database.GetInstance().QueryInDatagridView("Select a_date , a_time_of FROM tbl_appiontments", dataGridView1);
@@ -39,6 +39,26 @@ namespace Barroc_IT
             dataGridView4.Columns[0].HeaderCell.Value = "Progress (In %)";
             dataGridView4.Columns[1].HeaderCell.Value = "Startdate";
             dataGridView4.Columns[2].HeaderCell.Value = "Enddate";
+            dataGridView2.Columns[0].HeaderCell.Value = "Name";
+            dataGridView2.Columns[1].HeaderCell.Value = "Address";
+            dataGridView2.Columns[2].HeaderCell.Value = "Housenumber";
+            dataGridView2.Columns[3].HeaderCell.Value = "Code";
+            dataGridView2.Columns[4].HeaderCell.Value = "City";
+            dataGridView2.Columns[5].HeaderCell.Value = "First name";
+            dataGridView2.Columns[6].HeaderCell.Value = "Last name";
+            dataGridView2.Columns[7].HeaderCell.Value = "initials";
+            dataGridView2.Columns[8].HeaderCell.Value = "Telephone number";
+            dataGridView2.Columns[9].HeaderCell.Value = "Faxnumber";
+            dataGridView2.Columns[10].HeaderCell.Value = "Email";
+            dataGridView2.Columns[11].HeaderCell.Value = "Potentional customer";
+            dataGridView2.Columns[12].HeaderCell.Value = "Last contact date";
+            dataGridView2.Columns[13].HeaderCell.Value = "Creditworthy";
+            dataGridView2.Columns[14].HeaderCell.Value = "Revenue";
+            dataGridView2.Columns[15].HeaderCell.Value = "Limit";
+            dataGridView2.Columns[16].HeaderCell.Value = "Ledger";
+            dataGridView2.Columns[17].HeaderCell.Value = "BTW Code";
+            dataGridView2.Columns[18].HeaderCell.Value = "Maintenance contract";
+
 
         }
 
