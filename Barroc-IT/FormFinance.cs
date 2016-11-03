@@ -194,16 +194,13 @@ namespace Barroc_IT
             ConfirmBoxBuilder builder = new ConfirmBoxBuilder(confirmBox);
             builder.BuildSize(250, 450);
             builder.BuildTop("You are about to save the following data:");
-            builder.BuildCenter(textBoxChangeInvoiceProjectId.Text + textBoxChangeInvoiceDescription.Text + textBoxChangeInvoicePrice.Text);
+            builder.BuildCenter("Project id: " + textBoxChangeInvoiceProjectId.Text + Environment.NewLine + 
+                "Description: " + textBoxChangeInvoiceDescription.Text + Environment.NewLine +
+                "Price: " + textBoxChangeInvoicePrice.Text);
             builder.BuildBottom();
 
             confirmBox.Show();
 
-            if (confirmBox.IsAccepted())
-            {
-                database.ExecuteQuery();
-            }
-            
             UpdateInfo();
         }
 

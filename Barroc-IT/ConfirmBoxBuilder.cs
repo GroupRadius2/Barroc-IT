@@ -13,6 +13,7 @@ namespace Barroc_IT
         private ConfirmBox confirmBox;
         private Label labelTop;
         private RichTextBox richTextBoxCenter;
+        private Timer timer;
 
         public ConfirmBoxBuilder(ConfirmBox confirmBox)
         {
@@ -38,6 +39,8 @@ namespace Barroc_IT
         {
             richTextBoxCenter = new RichTextBox();
             richTextBoxCenter.Location = new Point(5, labelTop.Height + 5);
+            richTextBoxCenter.Width = confirmBox.ConfirmForm.Width - 10;
+            richTextBoxCenter.Height = confirmBox.ConfirmForm.Height - 10;
 
             richTextBoxCenter.Text = text;
 
@@ -61,16 +64,17 @@ namespace Barroc_IT
             confirmBox.ConfirmForm.Controls.Add(buttonDecline);
         }
 
-        void buttonDecline_Click(object sender, EventArgs e)
+        private void buttonDecline_Click(object sender, EventArgs e)
         {
             confirmBox.Accept(false);
             confirmBox.ConfirmForm.Close();
         }
 
-        void buttonAccept_Click(object sender, EventArgs e)
+        private void buttonAccept_Click(object sender, EventArgs e)
         {
             confirmBox.Accept(true);
             confirmBox.ConfirmForm.Close();
+            Database.GetInstance().ExecuteQuery();
         }
     }
 }
