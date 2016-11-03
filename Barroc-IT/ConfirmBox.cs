@@ -10,6 +10,7 @@ namespace Barroc_IT
     class ConfirmBox
     {
         private bool isAccepted;
+        private bool isChosen;
         private Form confirmForm;
 
         public ConfirmBox()
@@ -33,11 +34,17 @@ namespace Barroc_IT
         public void Accept(bool isAccept)
         {
             isAccepted = isAccept;
+            isChosen = true;
         }
 
         public bool IsAccepted()
         {
             return isAccepted;
+        }
+
+        public bool IsChosen()
+        {
+            return isChosen;
         }
 
         public void Show()

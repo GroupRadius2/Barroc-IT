@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.labelAddInvoice = new System.Windows.Forms.Label();
             this.labelAddCustomer = new System.Windows.Forms.Label();
@@ -65,8 +65,8 @@
             this.penddateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tblprojectsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.databaseBarrocProjectsDataSet = new Barroc_IT.DatabaseBarrocProjectsDataSet();
-            this.labelTitleProjects = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.labelTitleProjects = new System.Windows.Forms.Label();
             this.tabPageInvoices = new System.Windows.Forms.TabPage();
             this.dataGridViewInvoices = new System.Windows.Forms.DataGridView();
             this.labelTitleInvoices = new System.Windows.Forms.Label();
@@ -472,7 +472,7 @@
             // labelNegativeBalances
             // 
             this.labelNegativeBalances.AutoSize = true;
-            this.labelNegativeBalances.Location = new System.Drawing.Point(111, 331);
+            this.labelNegativeBalances.Location = new System.Drawing.Point(111, 339);
             this.labelNegativeBalances.Name = "labelNegativeBalances";
             this.labelNegativeBalances.Size = new System.Drawing.Size(105, 13);
             this.labelNegativeBalances.TabIndex = 61;
@@ -547,14 +547,14 @@
             this.dataGridViewProjects.GridColor = System.Drawing.SystemColors.InactiveCaption;
             this.dataGridViewProjects.Location = new System.Drawing.Point(37, 98);
             this.dataGridViewProjects.Name = "dataGridViewProjects";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewProjects.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewProjects.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewProjects.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridViewProjects.Size = new System.Drawing.Size(1007, 504);
             this.dataGridViewProjects.TabIndex = 61;
@@ -593,6 +593,15 @@
             this.databaseBarrocProjectsDataSet.DataSetName = "DatabaseBarrocProjectsDataSet";
             this.databaseBarrocProjectsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Controls.Add(this.labelTitleProjects);
+            this.panel2.Location = new System.Drawing.Point(0, 4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1122, 66);
+            this.panel2.TabIndex = 60;
+            // 
             // labelTitleProjects
             // 
             this.labelTitleProjects.AutoSize = true;
@@ -602,15 +611,6 @@
             this.labelTitleProjects.Size = new System.Drawing.Size(121, 33);
             this.labelTitleProjects.TabIndex = 59;
             this.labelTitleProjects.Text = "Projects";
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.Controls.Add(this.labelTitleProjects);
-            this.panel2.Location = new System.Drawing.Point(0, 4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1122, 66);
-            this.panel2.TabIndex = 60;
             // 
             // tabPageInvoices
             // 
