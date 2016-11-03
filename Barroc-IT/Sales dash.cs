@@ -28,7 +28,7 @@ namespace Barroc_IT
 
         private void button3_Click(object sender, EventArgs e)
         {
-            MessageNewCustomer MNC = new MessageNewCustomer();
+            MessageNewCustomer MNC = new MessageNewCustomer(this);
             MNC.Show();        
         }
 
