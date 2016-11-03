@@ -69,5 +69,11 @@ namespace Barroc_IT
         {
             tabControl1.SelectedTab = tabPage6;
         }
+
+        private void Sales_dash_Load(object sender, EventArgs e)
+        {
+            Database.GetInstance().QueryInDatagridView("SELECT * FROM tbl_companies;", dataGridView3);
+            Database.GetInstance().QueryInDatagridView("SELECT * FROM tbl_appiontments", dataGridView1);
+        }
     }
 }
