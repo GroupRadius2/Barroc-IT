@@ -12,8 +12,10 @@ namespace Barroc_IT
 {
     public partial class Sales_dash : Form
     {
+        private int selectedIndexCustomer;
         public Sales_dash()
         {
+            selectedIndexCustomer = 1;
             InitializeComponent();
         }
 
@@ -90,5 +92,10 @@ namespace Barroc_IT
            Database.GetInstance().QueryInDatagridView("SELECT * FROM tbl_companies;", dataGridView3);
            Database.GetInstance().QueryInDatagridView("SELECT * FROM tbl_appiontments", dataGridView1);
         }
+
+        private void dataGridView3_SelectionChanged(object sender, EventArgs e)
+        {
+
+        }
+        }
     }
-}
