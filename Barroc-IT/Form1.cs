@@ -23,6 +23,9 @@ namespace Barroc_IT
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Database.GetInstance().CloseConnection();
+            Database.GetInstance().OpenConnection();
+
             switch(comboBox1.Text)
             {
                 case "Finance":

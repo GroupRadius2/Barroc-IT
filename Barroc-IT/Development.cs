@@ -12,10 +12,18 @@ namespace Barroc_IT
 {
     public partial class Development : Form
     {
+        private int selectedIndexAppointment;
+
         public Development()
         {
             InitializeComponent();
-            
+            selectedIndexAppointment = 0;
+            this.FormClosed += Development_FormClosed;
+        }
+
+        void Development_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Database.GetInstance().CloseConnection();
         }
         private void Development_Load(object sender, EventArgs e)
         {
@@ -106,5 +114,28 @@ namespace Barroc_IT
             label9.ForeColor = Color.Red;
         }
 
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            int counter = 1;
+
+            foreach(DataGridViewRow row in dataGridView1.Rows)
+            {
+                if(row.Selected)
+                {
+                    selectedIndexAppointment = counter;
+
+                    ChangeAppointment changeappointment = new ChangeAppointment(this);
+                    changeappointment.Show();
+                    changeappointment.Datetbx.Text = row.Cells[0].Value.ToString();
+                }
+
+                counter++;
+            }
+        }
+
+        public int GetSelectedIndexAppointment()
+        {
+            return selectedIndexAppointment;
+        }
     }
 }

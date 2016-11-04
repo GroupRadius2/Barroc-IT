@@ -65,6 +65,12 @@
     <Compile Include="appiontment.Designer.cs">
       <DependentUpon>appiontment.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChangeAppointment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeAppointment.Designer.cs">
+      <DependentUpon>ChangeAppointment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Changecustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +133,9 @@
     </Compile>
     <EmbeddedResource Include="appiontment.resx">
       <DependentUpon>appiontment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeAppointment.resx">
+      <DependentUpon>ChangeAppointment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Changecustomer.resx">
       <DependentUpon>Changecustomer.cs</DependentUpon>
