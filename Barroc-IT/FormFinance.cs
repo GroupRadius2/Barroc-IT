@@ -320,7 +320,11 @@ namespace Barroc_IT
 
             database.AddParameter("@id", selectedIndexCustomer);
 
-            database.ExecuteQuery();
+            ConfirmBoxBuilder builder = new ConfirmBoxBuilder();
+            builder.BuildTop("Are you sure you want to delete the following information:");
+            builder.BuildCenter("Address: " + textBoxAddressChangeCustomer.Text);
+            builder.BuildBottom();
+            builder.GetConfirmBox().Show();
         }
 
         private void buttonBackInvoice_Click(object sender, EventArgs e)
