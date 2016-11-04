@@ -65,11 +65,23 @@
     <Compile Include="appiontment.Designer.cs">
       <DependentUpon>appiontment.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChangeAppointment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeAppointment.Designer.cs">
+      <DependentUpon>ChangeAppointment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Changecustomer.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Changecustomer.Designer.cs">
       <DependentUpon>Changecustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeProject.Designer.cs">
+      <DependentUpon>ChangeProject.cs</DependentUpon>
     </Compile>
     <Compile Include="ConfirmBox.cs" />
     <Compile Include="ConfirmBoxBuilder.cs" />
@@ -128,8 +140,14 @@
     <EmbeddedResource Include="appiontment.resx">
       <DependentUpon>appiontment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChangeAppointment.resx">
+      <DependentUpon>ChangeAppointment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Changecustomer.resx">
       <DependentUpon>Changecustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeProject.resx">
+      <DependentUpon>ChangeProject.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Development.resx">
       <DependentUpon>Development.cs</DependentUpon>
