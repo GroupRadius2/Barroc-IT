@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.labelAddInvoice = new System.Windows.Forms.Label();
             this.labelAddCustomer = new System.Windows.Forms.Label();
@@ -39,7 +39,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.labelDashboard = new System.Windows.Forms.Label();
             this.buttonLogout = new System.Windows.Forms.Button();
-            this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
@@ -189,8 +188,8 @@
             this.labelTitleAddInvoice = new System.Windows.Forms.Label();
             this.tbl_projectsTableAdapter = new Barroc_IT.DatabaseBarrocProjectsDataSetTableAdapters.tbl_projectsTableAdapter();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -220,6 +219,7 @@
             this.tabPageAddInvoice.SuspendLayout();
             this.panelTitleAddInvoice.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox12
@@ -324,16 +324,6 @@
             this.buttonLogout.Text = "Logout";
             this.buttonLogout.UseVisualStyleBackColor = true;
             this.buttonLogout.Click += new System.EventHandler(this.buttonLogout_Click);
-            // 
-            // pictureBox14
-            // 
-            this.pictureBox14.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox14.Image = global::Barroc_IT.Properties.Resources._1;
-            this.pictureBox14.Location = new System.Drawing.Point(-5, 536);
-            this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(218, 5);
-            this.pictureBox14.TabIndex = 43;
-            this.pictureBox14.TabStop = false;
             // 
             // pictureBox10
             // 
@@ -547,14 +537,14 @@
             this.dataGridViewProjects.GridColor = System.Drawing.SystemColors.InactiveCaption;
             this.dataGridViewProjects.Location = new System.Drawing.Point(37, 98);
             this.dataGridViewProjects.Name = "dataGridViewProjects";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewProjects.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewProjects.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewProjects.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridViewProjects.Size = new System.Drawing.Size(1007, 504);
             this.dataGridViewProjects.TabIndex = 61;
@@ -1748,12 +1738,22 @@
             this.pictureBox3.TabIndex = 34;
             this.pictureBox3.TabStop = false;
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pictureBox6.Location = new System.Drawing.Point(-6, 534);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(218, 5);
+            this.pictureBox6.TabIndex = 58;
+            this.pictureBox6.TabStop = false;
+            // 
             // FormFinance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1354, 733);
+            this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox12);
@@ -1765,7 +1765,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.labelDashboard);
             this.Controls.Add(this.buttonLogout);
-            this.Controls.Add(this.pictureBox14);
             this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.pictureBox11);
             this.Controls.Add(this.pictureBox7);
@@ -1779,7 +1778,6 @@
             this.Text = "FormFinance";
             this.Load += new System.EventHandler(this.FormFinance_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
@@ -1821,6 +1819,7 @@
             this.panelTitleAddInvoice.ResumeLayout(false);
             this.panelTitleAddInvoice.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1837,7 +1836,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelDashboard;
         private System.Windows.Forms.Button buttonLogout;
-        private System.Windows.Forms.PictureBox pictureBox14;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.PictureBox pictureBox7;
@@ -1987,5 +1985,6 @@
         private System.Windows.Forms.Button buttonDeleteCustomer;
         private System.Windows.Forms.Button buttonBackInvoice;
         private System.Windows.Forms.Button buttonDeleteInvoice;
+        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }
