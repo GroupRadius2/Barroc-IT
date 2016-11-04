@@ -125,9 +125,9 @@
         private System.Windows.Forms.Label ChangeAppointmentTitle;
         private System.Windows.Forms.Label DateLbl;
         private System.Windows.Forms.Label TimeLbl;
-        private System.Windows.Forms.TextBox TimeTbx;
         private System.Windows.Forms.Button Savebtn;
         private System.Windows.Forms.Button Closebtn;
         public System.Windows.Forms.TextBox Datetbx;
+        public System.Windows.Forms.TextBox TimeTbx;
     }
 }

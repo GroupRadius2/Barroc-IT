@@ -22,10 +22,12 @@ namespace Barroc_IT
 
         private void Savebtn_Click(object sender, EventArgs e)
         {
+            //Date
             Database.GetInstance().Query("UPDATE tbl_appointments SET a_date = @a_date WHERE appiontment_id = @appointment_id;");
 
             DateTime dt;
             DateTime.TryParse(Datetbx.Text, out dt);
+            
 
             Database.GetInstance().AddParameter("@appointment_id", dev.GetSelectedIndexAppointment());
             Database.GetInstance().AddParameter("@a_date", dt);
@@ -33,9 +35,21 @@ namespace Barroc_IT
             Database.GetInstance().ExecuteQuery();
 
             Database.GetInstance().QueryInDatagridView("SELECT a_date, a_time_of FROM tbl_appointments;", dev.dataGridView1);
-            /*dev = new Development();
-            dev.Refresh();
-            dev.Show();*/
+            
+            //Time
+            Database.GetInstance().Query("UPDATE tbl_appointments SET a_time_of = @a_time_of WHERE appiontment_id = @appointment_id;");
+
+            string pr;
+            pr = TimeTbx.Text;
+
+            Database.GetInstance().AddParameter("@appointment_id", dev.GetSelectedIndexAppointment());
+            Database.GetInstance().AddParameter("@a_time_of", pr);
+
+            Database.GetInstance().ExecuteQuery();
+
+            Database.GetInstance().QueryInDatagridView("SELECT a_date, a_time_of FROM tbl_appointments;", dev.dataGridView1);
+
+            this.Hide();
         }
 
         private void Closebtn_Click(object sender, EventArgs e)

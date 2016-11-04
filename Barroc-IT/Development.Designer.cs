@@ -42,7 +42,7 @@
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.label8 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewProjects = new System.Windows.Forms.DataGridView();
             this.Projects = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -63,7 +63,7 @@
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProjects)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.Tabcontrol1.SuspendLayout();
@@ -229,7 +229,7 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.dataGridView3);
+            this.tabPage3.Controls.Add(this.dataGridViewProjects);
             this.tabPage3.Controls.Add(this.Projects);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
@@ -239,18 +239,19 @@
             this.tabPage3.Text = "Projects";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // dataGridView3
+            // dataGridViewProjects
             // 
-            this.dataGridView3.AllowUserToAddRows = false;
-            this.dataGridView3.AllowUserToDeleteRows = false;
-            this.dataGridView3.AllowUserToOrderColumns = true;
-            this.dataGridView3.AllowUserToResizeRows = false;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(35, 77);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.ReadOnly = true;
-            this.dataGridView3.Size = new System.Drawing.Size(1065, 539);
-            this.dataGridView3.TabIndex = 60;
+            this.dataGridViewProjects.AllowUserToAddRows = false;
+            this.dataGridViewProjects.AllowUserToDeleteRows = false;
+            this.dataGridViewProjects.AllowUserToOrderColumns = true;
+            this.dataGridViewProjects.AllowUserToResizeRows = false;
+            this.dataGridViewProjects.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewProjects.Location = new System.Drawing.Point(35, 77);
+            this.dataGridViewProjects.Name = "dataGridViewProjects";
+            this.dataGridViewProjects.ReadOnly = true;
+            this.dataGridViewProjects.Size = new System.Drawing.Size(1065, 539);
+            this.dataGridViewProjects.TabIndex = 60;
+            this.dataGridViewProjects.SelectionChanged += new System.EventHandler(this.dataGridViewProjects_SelectionChanged_1);
             // 
             // Projects
             // 
@@ -438,7 +439,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProjects)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -487,8 +488,8 @@
         private System.Windows.Forms.Label Appointments;
         private System.Windows.Forms.TabControl Tabcontrol1;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.DataGridView dataGridView4;
         public System.Windows.Forms.DataGridView dataGridView1;
+        public System.Windows.Forms.DataGridView dataGridViewProjects;
+        public System.Windows.Forms.DataGridView dataGridView4;
     }
 }
