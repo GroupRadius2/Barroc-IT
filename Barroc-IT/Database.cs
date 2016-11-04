@@ -41,6 +41,7 @@ namespace Barroc_IT
         {
             bool state = false;
 
+            // connectionString = @"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\michael\Documents\Radius College\N4 Applicatieontwikkelaar\Leerjaar 2\Project\Barroc\Bouwfase\Barroc-IT\Barroc-IT\App_Data\ReBarroc.mdf;Integrated Security=True";
             connectionString = @"Data Source=(LocalDB)\v" + version.ToString() + ".0;AttachDbFilename=|DataDirectory|\\App_Data\\ReBarroc.mdf;Integrated Security=True;Connect Timeout=30";
             adapter = new SqlDataAdapter();
             connection = new SqlConnection(connectionString);

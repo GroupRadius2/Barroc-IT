@@ -19,6 +19,8 @@ namespace Barroc_IT
         public FormFinance()
         {
             InitializeComponent();
+            selectedIndexInvoice = 0;
+            selectedIndexCustomer = 0;
             database = Database.GetInstance();
             try
             {
@@ -35,6 +37,12 @@ namespace Barroc_IT
             Form1 login = new Form1();
             login.Show();
             this.Close();
+            database.CloseConnection();
+            this.FormClosing += FormFinance_FormClosing;
+        }
+
+        private void FormFinance_FormClosing(object sender, FormClosingEventArgs e)
+        {
             database.CloseConnection();
         }
 
@@ -143,7 +151,6 @@ namespace Barroc_IT
             database.QueryInDatagridView("SELECT * FROM tbl_invoices", dataGridViewInvoices);
             database.QueryInDatagridView("SELECT * FROM tbl_companies WHERE c_creditworthy = 1", dataGridViewPositiveCompanies);
             database.QueryInDatagridView("SELECT * FROM tbl_companies WHERE c_creditworthy = 0", dataGridViewNegativeCompanies);
-            
         }
 
         private void buttonSaveInvoice_Click(object sender, EventArgs e)
@@ -154,14 +161,22 @@ namespace Barroc_IT
             int countOfInvoicesId = (int)database.ExecuteQuery();
 
             database.Query("INSERT INTO tbl_invoices(invoice_id, project_id, i_description, i_price) VALUES " +
-                "(@id, @project_id, @i_description, i_price);");
+                "(@id, @project_id, @i_description, @i_price);");
 
             database.AddParameter("@id", ++countOfInvoicesId);
             database.AddParameter("@project_id", textBoxProjectId.Text);
             database.AddParameter("@i_description", textBoxInvoiceDescription.Text);
             database.AddParameter("@i_price", textBoxInvoicePrice.Text);
 
-            database.ExecuteQuery();
+            ConfirmBoxBuilder builder = new ConfirmBoxBuilder();
+            builder.BuildSize(400, 500);
+            builder.BuildTop("Are you sure you want to save the following information:");
+            builder.BuildCenter("Project id: " + countOfInvoicesId.ToString() + Environment.NewLine +
+                "Description: " + textBoxInvoiceDescription.Text + Environment.NewLine +
+                "Price: " + textBoxInvoicePrice.Text);
+            builder.BuildBottom();
+
+            builder.GetConfirmBox().Show();
         }
 
         private void dataGridViewInvoices_SelectionChanged(object sender, EventArgs e)
@@ -170,13 +185,17 @@ namespace Barroc_IT
             {
                 if (row.Selected)
                 {
-                    selectedIndexInvoice = (int)row.Cells[0].Value;
+                    if (row.Cells[0].Value.ToString() != null)
+                    {
+                        if (int.TryParse(row.Cells[0].Value.ToString(), out selectedIndexInvoice))
+                        {
+                            textBoxChangeInvoiceProjectId.Text = row.Cells[1].Value.ToString();
+                            textBoxChangeInvoiceDescription.Text = row.Cells[2].Value.ToString();
+                            textBoxChangeInvoicePrice.Text = row.Cells[3].Value.ToString();
 
-                    textBoxChangeInvoiceProjectId.Text = row.Cells[1].Value.ToString();
-                    textBoxChangeInvoiceDescription.Text = row.Cells[2].Value.ToString();
-                    textBoxChangeInvoicePrice.Text = row.Cells[3].Value.ToString();
-
-                    tabControlFinance.SelectTab(tabPageChangeInvoice);
+                            tabControlFinance.SelectTab(tabPageChangeInvoice);
+                        }
+                    }
                 }   
             }
         }
@@ -190,30 +209,28 @@ namespace Barroc_IT
             database.AddParameter("@price", textBoxChangeInvoicePrice.Text);
             database.AddParameter("@id", selectedIndexInvoice);
 
-            ConfirmBox confirmBox = new ConfirmBox();
-            ConfirmBoxBuilder builder = new ConfirmBoxBuilder(confirmBox);
-            builder.BuildSize(250, 450);
+            ConfirmBoxBuilder builder = new ConfirmBoxBuilder();
+            builder.BuildSize(500, 450);
             builder.BuildTop("You are about to save the following data:");
             builder.BuildCenter("Project id: " + textBoxChangeInvoiceProjectId.Text + Environment.NewLine + 
                 "Description: " + textBoxChangeInvoiceDescription.Text + Environment.NewLine +
                 "Price: " + textBoxChangeInvoicePrice.Text);
             builder.BuildBottom();
-
-            confirmBox.Show();
+            builder.GetConfirmBox().Show();
 
             UpdateInfo();
         }
 
         private void buttonChangeCustomer_Click(object sender, EventArgs e)
         {
-            database.Query("UPDATE tbl_companies SET c_name = @c_name, c_address = @c_address," +
-                "c_housenumber = @c_housenumber, c_code = @c_code, c_city = @c_city, c_contactperson = @c_contactperson," +
-                "c_contactperson_initials = @c_contactperson_initials, c_contactperson_telephonenumber = @c_contactperson_telephonenumber," +
-                "c_contactperson_faxnumber = @c_contactperson_faxnumber, c_contactperson_email = @c_contactperson_email," +
-                "c_potential_customer = @c_potential_customer, c_last_contactdate = @c_last_contactdate," +
-                "c_creditworthy = @c_creditworthy, c_discount = @c_discount, c_banknumber = @c_banknumber," +
-                "c_credit_balance = @c_credit_balance, c_revenue = @c_revenue, c_limit = @c_limit," +
-                "c_ledger = @c_ledger, c_btw_code = @c_btw_code, c_maintenance_contract = @c_maintenance_contract" +
+            database.Query("UPDATE tbl_companies SET c_name = @c_name, c_address = @c_address, " +
+                "c_housenumber = @c_housenumber, c_code = @c_code, c_city = @c_city, c_contactperson = @c_contactperson, " +
+                "c_contactperson_initials = @c_contactperson_initials, c_contactperson_telephonenumber = @c_contactperson_telephonenumber, " +
+                "c_contactperson_faxnumber = @c_contactperson_faxnumber, c_contactperson_email = @c_contactperson_email, " +
+                "c_potential_customer = @c_potential_customer, c_last_contactdate = @c_last_contactdate, " +
+                "c_creditworthy = @c_creditworthy, c_discount = @c_discount, c_banknumber = @c_banknumber, " +
+                "c_credit_balance = @c_credit_balance, c_revenue = @c_revenue, c_limit = @c_limit, " +
+                "c_ledger = @c_ledger, c_btw_code = @c_btw_code, c_maintenance_contract = @c_maintenance_contract " +
                 "WHERE c_id = @id");
 
             database.AddParameter("@id", selectedIndexCustomer);
