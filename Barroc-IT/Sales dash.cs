@@ -12,7 +12,7 @@ namespace Barroc_IT
 {
     public partial class Sales_dash : Form
     {
-        private selectedIndexCustomer;
+        private int selectedIndexCustomer;
         public Sales_dash()
         {
             selectedIndexCustomer = 1;
@@ -67,7 +67,7 @@ namespace Barroc_IT
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormLogin login = new FormLogin();
+            Form1 login = new Form1();
             login.Show();
         }
 
@@ -95,23 +95,7 @@ namespace Barroc_IT
 
         private void dataGridView3_SelectionChanged(object sender, EventArgs e)
         {
-            foreach (DataGridViewRow row in dataGridView3.SelectedRows)
-            {
-                if (row.Selected)
-                {
-                    if (row.Cells[0].Value.ToString() != null)
-                    {
-                        if (int.TryParse(row.Cells[0].Value.ToString(), out selectedIndexCustomer))
-                        {
-                            textBoxChangeCustomerId.Text = row.Cells[1].Value.ToString();
-                            textBoxChangeInvoiceDescription.Text = row.Cells[2].Value.ToString();
-                            textBoxChangeInvoicePrice.Text = row.Cells[3].Value.ToString();
 
-                            tabControlFinance.SelectTab(tabPageChangeInvoice);
-                        }
-                    }
-                }   
-            }
         }
         }
     }

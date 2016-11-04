@@ -144,6 +144,28 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.buttonDeleteCustomer = new System.Windows.Forms.Button();
+            this.buttonBackChangeCustomers = new System.Windows.Forms.Button();
+            this.labelEmailChangeCustomer = new System.Windows.Forms.Label();
+            this.textBoxEmailChangeCustomer = new System.Windows.Forms.TextBox();
+            this.labelFaxnumberChangeCustomer = new System.Windows.Forms.Label();
+            this.textBoxFaxnumberChangeCustomer = new System.Windows.Forms.TextBox();
+            this.labelTelephoneChangeCustomer = new System.Windows.Forms.Label();
+            this.textBoxTelephoneChangeCustomer = new System.Windows.Forms.TextBox();
+            this.labelContactpersonChangeCustomer = new System.Windows.Forms.Label();
+            this.textBoxContactpersonChangeCustomer = new System.Windows.Forms.TextBox();
+            this.labelCityChangeCustomer = new System.Windows.Forms.Label();
+            this.textBoxCityChangeCustomer = new System.Windows.Forms.TextBox();
+            this.labelHouseNumberChangeCustomer = new System.Windows.Forms.Label();
+            this.textBoxHouseNumberChangeCustomer = new System.Windows.Forms.TextBox();
+            this.labelAddressChangeCustomer = new System.Windows.Forms.Label();
+            this.textBoxAddressChangeCustomer = new System.Windows.Forms.TextBox();
+            this.labelNameChangeCustomer = new System.Windows.Forms.Label();
+            this.textBoxNameChangeCustomer = new System.Windows.Forms.TextBox();
+            this.label42 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label43 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -985,7 +1007,6 @@
             this.dataGridView3.RowTemplate.Height = 24;
             this.dataGridView3.Size = new System.Drawing.Size(1445, 582);
             this.dataGridView3.TabIndex = 3;
-            this.dataGridView3.SelectionChanged += new System.EventHandler(this.dataGridView3_SelectionChanged);
             // 
             // dataGridView2
             // 
@@ -1018,6 +1039,28 @@
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.label43);
+            this.tabPage5.Controls.Add(this.textBox2);
+            this.tabPage5.Controls.Add(this.label42);
+            this.tabPage5.Controls.Add(this.textBox1);
+            this.tabPage5.Controls.Add(this.buttonDeleteCustomer);
+            this.tabPage5.Controls.Add(this.buttonBackChangeCustomers);
+            this.tabPage5.Controls.Add(this.labelEmailChangeCustomer);
+            this.tabPage5.Controls.Add(this.textBoxEmailChangeCustomer);
+            this.tabPage5.Controls.Add(this.labelFaxnumberChangeCustomer);
+            this.tabPage5.Controls.Add(this.textBoxFaxnumberChangeCustomer);
+            this.tabPage5.Controls.Add(this.labelTelephoneChangeCustomer);
+            this.tabPage5.Controls.Add(this.textBoxTelephoneChangeCustomer);
+            this.tabPage5.Controls.Add(this.labelContactpersonChangeCustomer);
+            this.tabPage5.Controls.Add(this.textBoxContactpersonChangeCustomer);
+            this.tabPage5.Controls.Add(this.labelCityChangeCustomer);
+            this.tabPage5.Controls.Add(this.textBoxCityChangeCustomer);
+            this.tabPage5.Controls.Add(this.labelHouseNumberChangeCustomer);
+            this.tabPage5.Controls.Add(this.textBoxHouseNumberChangeCustomer);
+            this.tabPage5.Controls.Add(this.labelAddressChangeCustomer);
+            this.tabPage5.Controls.Add(this.textBoxAddressChangeCustomer);
+            this.tabPage5.Controls.Add(this.labelNameChangeCustomer);
+            this.tabPage5.Controls.Add(this.textBoxNameChangeCustomer);
             this.tabPage5.Controls.Add(this.button6);
             this.tabPage5.Controls.Add(this.label40);
             this.tabPage5.Controls.Add(this.pictureBox26);
@@ -1054,7 +1097,7 @@
             // pictureBox26
             // 
             this.pictureBox26.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.pictureBox26.Location = new System.Drawing.Point(2, 70);
+            this.pictureBox26.Location = new System.Drawing.Point(8, 70);
             this.pictureBox26.Name = "pictureBox26";
             this.pictureBox26.Size = new System.Drawing.Size(1501, 743);
             this.pictureBox26.TabIndex = 1;
@@ -1400,6 +1443,206 @@
             this.pictureBox1.TabIndex = 33;
             this.pictureBox1.TabStop = false;
             // 
+            // buttonDeleteCustomer
+            // 
+            this.buttonDeleteCustomer.Location = new System.Drawing.Point(17, 737);
+            this.buttonDeleteCustomer.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonDeleteCustomer.Name = "buttonDeleteCustomer";
+            this.buttonDeleteCustomer.Size = new System.Drawing.Size(100, 28);
+            this.buttonDeleteCustomer.TabIndex = 172;
+            this.buttonDeleteCustomer.Text = "Delete";
+            this.buttonDeleteCustomer.UseVisualStyleBackColor = true;
+            // 
+            // buttonBackChangeCustomers
+            // 
+            this.buttonBackChangeCustomers.Location = new System.Drawing.Point(17, 608);
+            this.buttonBackChangeCustomers.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonBackChangeCustomers.Name = "buttonBackChangeCustomers";
+            this.buttonBackChangeCustomers.Size = new System.Drawing.Size(100, 28);
+            this.buttonBackChangeCustomers.TabIndex = 171;
+            this.buttonBackChangeCustomers.Text = "Back";
+            this.buttonBackChangeCustomers.UseVisualStyleBackColor = true;
+            // 
+            // labelEmailChangeCustomer
+            // 
+            this.labelEmailChangeCustomer.AutoSize = true;
+            this.labelEmailChangeCustomer.Location = new System.Drawing.Point(34, 385);
+            this.labelEmailChangeCustomer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelEmailChangeCustomer.Name = "labelEmailChangeCustomer";
+            this.labelEmailChangeCustomer.Size = new System.Drawing.Size(42, 17);
+            this.labelEmailChangeCustomer.TabIndex = 170;
+            this.labelEmailChangeCustomer.Text = "Email";
+            // 
+            // textBoxEmailChangeCustomer
+            // 
+            this.textBoxEmailChangeCustomer.Location = new System.Drawing.Point(174, 381);
+            this.textBoxEmailChangeCustomer.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxEmailChangeCustomer.Name = "textBoxEmailChangeCustomer";
+            this.textBoxEmailChangeCustomer.Size = new System.Drawing.Size(175, 22);
+            this.textBoxEmailChangeCustomer.TabIndex = 169;
+            // 
+            // labelFaxnumberChangeCustomer
+            // 
+            this.labelFaxnumberChangeCustomer.AutoSize = true;
+            this.labelFaxnumberChangeCustomer.Location = new System.Drawing.Point(34, 352);
+            this.labelFaxnumberChangeCustomer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelFaxnumberChangeCustomer.Name = "labelFaxnumberChangeCustomer";
+            this.labelFaxnumberChangeCustomer.Size = new System.Drawing.Size(78, 17);
+            this.labelFaxnumberChangeCustomer.TabIndex = 168;
+            this.labelFaxnumberChangeCustomer.Text = "Faxnumber";
+            // 
+            // textBoxFaxnumberChangeCustomer
+            // 
+            this.textBoxFaxnumberChangeCustomer.Location = new System.Drawing.Point(174, 348);
+            this.textBoxFaxnumberChangeCustomer.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxFaxnumberChangeCustomer.Name = "textBoxFaxnumberChangeCustomer";
+            this.textBoxFaxnumberChangeCustomer.Size = new System.Drawing.Size(175, 22);
+            this.textBoxFaxnumberChangeCustomer.TabIndex = 167;
+            // 
+            // labelTelephoneChangeCustomer
+            // 
+            this.labelTelephoneChangeCustomer.AutoSize = true;
+            this.labelTelephoneChangeCustomer.Location = new System.Drawing.Point(36, 224);
+            this.labelTelephoneChangeCustomer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelTelephoneChangeCustomer.Name = "labelTelephoneChangeCustomer";
+            this.labelTelephoneChangeCustomer.Size = new System.Drawing.Size(76, 17);
+            this.labelTelephoneChangeCustomer.TabIndex = 166;
+            this.labelTelephoneChangeCustomer.Text = "Telephone";
+            // 
+            // textBoxTelephoneChangeCustomer
+            // 
+            this.textBoxTelephoneChangeCustomer.Location = new System.Drawing.Point(176, 220);
+            this.textBoxTelephoneChangeCustomer.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxTelephoneChangeCustomer.Name = "textBoxTelephoneChangeCustomer";
+            this.textBoxTelephoneChangeCustomer.Size = new System.Drawing.Size(175, 22);
+            this.textBoxTelephoneChangeCustomer.TabIndex = 165;
+            // 
+            // labelContactpersonChangeCustomer
+            // 
+            this.labelContactpersonChangeCustomer.AutoSize = true;
+            this.labelContactpersonChangeCustomer.Location = new System.Drawing.Point(36, 317);
+            this.labelContactpersonChangeCustomer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelContactpersonChangeCustomer.Name = "labelContactpersonChangeCustomer";
+            this.labelContactpersonChangeCustomer.Size = new System.Drawing.Size(100, 17);
+            this.labelContactpersonChangeCustomer.TabIndex = 164;
+            this.labelContactpersonChangeCustomer.Text = "Contactperson";
+            // 
+            // textBoxContactpersonChangeCustomer
+            // 
+            this.textBoxContactpersonChangeCustomer.Location = new System.Drawing.Point(176, 313);
+            this.textBoxContactpersonChangeCustomer.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxContactpersonChangeCustomer.Name = "textBoxContactpersonChangeCustomer";
+            this.textBoxContactpersonChangeCustomer.Size = new System.Drawing.Size(175, 22);
+            this.textBoxContactpersonChangeCustomer.TabIndex = 163;
+            // 
+            // labelCityChangeCustomer
+            // 
+            this.labelCityChangeCustomer.AutoSize = true;
+            this.labelCityChangeCustomer.Location = new System.Drawing.Point(38, 257);
+            this.labelCityChangeCustomer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelCityChangeCustomer.Name = "labelCityChangeCustomer";
+            this.labelCityChangeCustomer.Size = new System.Drawing.Size(31, 17);
+            this.labelCityChangeCustomer.TabIndex = 162;
+            this.labelCityChangeCustomer.Text = "City";
+            // 
+            // textBoxCityChangeCustomer
+            // 
+            this.textBoxCityChangeCustomer.Location = new System.Drawing.Point(178, 253);
+            this.textBoxCityChangeCustomer.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxCityChangeCustomer.Name = "textBoxCityChangeCustomer";
+            this.textBoxCityChangeCustomer.Size = new System.Drawing.Size(175, 22);
+            this.textBoxCityChangeCustomer.TabIndex = 161;
+            // 
+            // labelHouseNumberChangeCustomer
+            // 
+            this.labelHouseNumberChangeCustomer.AutoSize = true;
+            this.labelHouseNumberChangeCustomer.Location = new System.Drawing.Point(38, 287);
+            this.labelHouseNumberChangeCustomer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelHouseNumberChangeCustomer.Name = "labelHouseNumberChangeCustomer";
+            this.labelHouseNumberChangeCustomer.Size = new System.Drawing.Size(101, 17);
+            this.labelHouseNumberChangeCustomer.TabIndex = 158;
+            this.labelHouseNumberChangeCustomer.Text = "House number";
+            // 
+            // textBoxHouseNumberChangeCustomer
+            // 
+            this.textBoxHouseNumberChangeCustomer.Location = new System.Drawing.Point(178, 283);
+            this.textBoxHouseNumberChangeCustomer.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxHouseNumberChangeCustomer.Name = "textBoxHouseNumberChangeCustomer";
+            this.textBoxHouseNumberChangeCustomer.Size = new System.Drawing.Size(175, 22);
+            this.textBoxHouseNumberChangeCustomer.TabIndex = 157;
+            // 
+            // labelAddressChangeCustomer
+            // 
+            this.labelAddressChangeCustomer.AutoSize = true;
+            this.labelAddressChangeCustomer.Location = new System.Drawing.Point(38, 139);
+            this.labelAddressChangeCustomer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelAddressChangeCustomer.Name = "labelAddressChangeCustomer";
+            this.labelAddressChangeCustomer.Size = new System.Drawing.Size(60, 17);
+            this.labelAddressChangeCustomer.TabIndex = 156;
+            this.labelAddressChangeCustomer.Text = "Address";
+            // 
+            // textBoxAddressChangeCustomer
+            // 
+            this.textBoxAddressChangeCustomer.Location = new System.Drawing.Point(178, 135);
+            this.textBoxAddressChangeCustomer.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxAddressChangeCustomer.Name = "textBoxAddressChangeCustomer";
+            this.textBoxAddressChangeCustomer.Size = new System.Drawing.Size(175, 22);
+            this.textBoxAddressChangeCustomer.TabIndex = 155;
+            // 
+            // labelNameChangeCustomer
+            // 
+            this.labelNameChangeCustomer.AutoSize = true;
+            this.labelNameChangeCustomer.Location = new System.Drawing.Point(38, 107);
+            this.labelNameChangeCustomer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelNameChangeCustomer.Name = "labelNameChangeCustomer";
+            this.labelNameChangeCustomer.Size = new System.Drawing.Size(45, 17);
+            this.labelNameChangeCustomer.TabIndex = 154;
+            this.labelNameChangeCustomer.Text = "Name";
+            // 
+            // textBoxNameChangeCustomer
+            // 
+            this.textBoxNameChangeCustomer.Location = new System.Drawing.Point(178, 103);
+            this.textBoxNameChangeCustomer.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxNameChangeCustomer.Name = "textBoxNameChangeCustomer";
+            this.textBoxNameChangeCustomer.Size = new System.Drawing.Size(175, 22);
+            this.textBoxNameChangeCustomer.TabIndex = 153;
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(38, 169);
+            this.label42.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(60, 17);
+            this.label42.TabIndex = 174;
+            this.label42.Text = "Address";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(178, 165);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(175, 22);
+            this.textBox1.TabIndex = 173;
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(36, 198);
+            this.label43.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(76, 17);
+            this.label43.TabIndex = 176;
+            this.label43.Text = "Telephone";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(176, 194);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(175, 22);
+            this.textBox2.TabIndex = 175;
+            // 
             // Sales_dash
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1602,5 +1845,27 @@
         public System.Windows.Forms.TextBox textBoxEmail;
         public System.Windows.Forms.TextBox textBoxZipcode1;
         private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button buttonDeleteCustomer;
+        private System.Windows.Forms.Button buttonBackChangeCustomers;
+        private System.Windows.Forms.Label labelEmailChangeCustomer;
+        private System.Windows.Forms.TextBox textBoxEmailChangeCustomer;
+        private System.Windows.Forms.Label labelFaxnumberChangeCustomer;
+        private System.Windows.Forms.TextBox textBoxFaxnumberChangeCustomer;
+        private System.Windows.Forms.Label labelTelephoneChangeCustomer;
+        private System.Windows.Forms.TextBox textBoxTelephoneChangeCustomer;
+        private System.Windows.Forms.Label labelContactpersonChangeCustomer;
+        private System.Windows.Forms.TextBox textBoxContactpersonChangeCustomer;
+        private System.Windows.Forms.Label labelCityChangeCustomer;
+        private System.Windows.Forms.TextBox textBoxCityChangeCustomer;
+        private System.Windows.Forms.Label labelHouseNumberChangeCustomer;
+        private System.Windows.Forms.TextBox textBoxHouseNumberChangeCustomer;
+        private System.Windows.Forms.Label labelAddressChangeCustomer;
+        private System.Windows.Forms.TextBox textBoxAddressChangeCustomer;
+        private System.Windows.Forms.Label labelNameChangeCustomer;
+        private System.Windows.Forms.TextBox textBoxNameChangeCustomer;
     }
 }
