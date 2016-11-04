@@ -49,7 +49,7 @@ namespace Barroc_IT
             Database.GetInstance().AddParameter("@c_city", sales.textBoxResidence1.Text );
             Database.GetInstance().AddParameter("@c_contactperson_first_name", sales.textBoxContactPerson.Text );
             Database.GetInstance().AddParameter("@c_contactperson_telephone_number", sales.textBoxTelephone1.Text );
-            Database.GetInstance().AddParameter("@c_contactperson_faxnumber", sales.textBoxFaxumber.Text );
+            Database.GetInstance().AddParameter("@c_contactperson_faxnumber", sales.textBoxFaxnumber.Text );
             Database.GetInstance().AddParameter("@c_contactperson_telephone_number2", sales.textBoxTelephone2.Text);
             Database.GetInstance().AddParameter("@c_contactperson_email", sales.textBoxEmail.Text );
             Database.GetInstance().AddParameter("@c_zipcode", sales.textBoxZipcode2.Text);
@@ -58,6 +58,8 @@ namespace Barroc_IT
             Database.GetInstance().AddParameter("@c_city2", sales.textBoxResidence2.Text);
 
             Database.GetInstance().ExecuteQuery();
+
+           
         }
 
         public bool IsSaved()

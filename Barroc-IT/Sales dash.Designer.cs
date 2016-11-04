@@ -29,9 +29,13 @@
         private void InitializeComponent()
         {
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.textBoxZipcode1 = new System.Windows.Forms.TextBox();
+            this.label41 = new System.Windows.Forms.Label();
+            this.textBoxHousenumber = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBoxFaxumber = new System.Windows.Forms.TextBox();
+            this.textBoxFaxnumber = new System.Windows.Forms.TextBox();
             this.textBoxTelephone2 = new System.Windows.Forms.TextBox();
             this.textBoxContactPerson = new System.Windows.Forms.TextBox();
             this.textBoxResidence2 = new System.Windows.Forms.TextBox();
@@ -140,10 +144,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBoxHousenumber = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label41 = new System.Windows.Forms.Label();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -184,13 +184,13 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.textBox1);
+            this.tabPage2.Controls.Add(this.textBoxZipcode1);
             this.tabPage2.Controls.Add(this.label41);
             this.tabPage2.Controls.Add(this.textBoxHousenumber);
             this.tabPage2.Controls.Add(this.label14);
             this.tabPage2.Controls.Add(this.button3);
             this.tabPage2.Controls.Add(this.button2);
-            this.tabPage2.Controls.Add(this.textBoxFaxumber);
+            this.tabPage2.Controls.Add(this.textBoxFaxnumber);
             this.tabPage2.Controls.Add(this.textBoxTelephone2);
             this.tabPage2.Controls.Add(this.textBoxContactPerson);
             this.tabPage2.Controls.Add(this.textBoxResidence2);
@@ -222,6 +222,40 @@
             this.tabPage2.Text = "New Customer ";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // textBoxZipcode1
+            // 
+            this.textBoxZipcode1.Location = new System.Drawing.Point(750, 407);
+            this.textBoxZipcode1.Name = "textBoxZipcode1";
+            this.textBoxZipcode1.Size = new System.Drawing.Size(331, 22);
+            this.textBoxZipcode1.TabIndex = 30;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.Location = new System.Drawing.Point(125, 397);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(140, 32);
+            this.label41.TabIndex = 29;
+            this.label41.Text = "Zipcode 1";
+            // 
+            // textBoxHousenumber
+            // 
+            this.textBoxHousenumber.Location = new System.Drawing.Point(750, 710);
+            this.textBoxHousenumber.Name = "textBoxHousenumber";
+            this.textBoxHousenumber.Size = new System.Drawing.Size(331, 22);
+            this.textBoxHousenumber.TabIndex = 28;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(125, 700);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(193, 32);
+            this.label14.TabIndex = 27;
+            this.label14.Text = "Housenumber";
+            // 
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(957, 757);
@@ -242,12 +276,12 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // textBoxFaxumber
+            // textBoxFaxnumber
             // 
-            this.textBoxFaxumber.Location = new System.Drawing.Point(750, 675);
-            this.textBoxFaxumber.Name = "textBoxFaxumber";
-            this.textBoxFaxumber.Size = new System.Drawing.Size(331, 22);
-            this.textBoxFaxumber.TabIndex = 24;
+            this.textBoxFaxnumber.Location = new System.Drawing.Point(750, 675);
+            this.textBoxFaxnumber.Name = "textBoxFaxnumber";
+            this.textBoxFaxnumber.Size = new System.Drawing.Size(331, 22);
+            this.textBoxFaxnumber.TabIndex = 24;
             // 
             // textBoxTelephone2
             // 
@@ -1365,40 +1399,6 @@
             this.pictureBox1.TabIndex = 33;
             this.pictureBox1.TabStop = false;
             // 
-            // textBoxHousenumber
-            // 
-            this.textBoxHousenumber.Location = new System.Drawing.Point(750, 710);
-            this.textBoxHousenumber.Name = "textBoxHousenumber";
-            this.textBoxHousenumber.Size = new System.Drawing.Size(331, 22);
-            this.textBoxHousenumber.TabIndex = 28;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(125, 700);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(193, 32);
-            this.label14.TabIndex = 27;
-            this.label14.Text = "Housenumber";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(750, 407);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(331, 22);
-            this.textBox1.TabIndex = 30;
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.Location = new System.Drawing.Point(125, 397);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(140, 32);
-            this.label41.TabIndex = 29;
-            this.label41.Text = "Zipcode 1";
-            // 
             // Sales_dash
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1590,7 +1590,7 @@
         public System.Windows.Forms.TextBox textBoxHousenumber;
         private System.Windows.Forms.Label label14;
         public System.Windows.Forms.TextBox textBoxTelephone1;
-        public System.Windows.Forms.TextBox textBoxFaxumber;
+        public System.Windows.Forms.TextBox textBoxFaxnumber;
         public System.Windows.Forms.TextBox textBoxTelephone2;
         public System.Windows.Forms.TextBox textBoxContactPerson;
         public System.Windows.Forms.TextBox textBoxResidence2;
@@ -1599,7 +1599,7 @@
         public System.Windows.Forms.TextBox textBoxZipcode2;
         public System.Windows.Forms.TextBox textBoxCompanyName;
         public System.Windows.Forms.TextBox textBoxEmail;
-        public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.TextBox textBoxZipcode1;
         private System.Windows.Forms.Label label41;
     }
 }

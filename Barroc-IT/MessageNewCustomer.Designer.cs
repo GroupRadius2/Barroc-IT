@@ -50,25 +50,29 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.Residence2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
+            this.Residence1 = new System.Windows.Forms.Label();
+            this.lblAddress1 = new System.Windows.Forms.Label();
+            this.lblTelephone1 = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblCompanyName = new System.Windows.Forms.Label();
+            this.lblZipcode1 = new System.Windows.Forms.Label();
+            this.lblAddress2 = new System.Windows.Forms.Label();
+            this.lblResidence1 = new System.Windows.Forms.Label();
+            this.lblResidence2 = new System.Windows.Forms.Label();
+            this.lblContactperson = new System.Windows.Forms.Label();
+            this.lblTelephone2 = new System.Windows.Forms.Label();
+            this.lblFaxnumber = new System.Windows.Forms.Label();
+            this.lblZipcode2 = new System.Windows.Forms.Label();
+            this.zipcode2 = new System.Windows.Forms.Label();
+            this.lblHousenumber = new System.Windows.Forms.Label();
+            this.housenumber = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -264,7 +268,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(25, 416);
+            this.label4.Location = new System.Drawing.Point(23, 445);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(118, 24);
             this.label4.TabIndex = 53;
@@ -274,7 +278,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(25, 440);
+            this.label5.Location = new System.Drawing.Point(23, 469);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(108, 24);
             this.label5.TabIndex = 52;
@@ -284,21 +288,21 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(25, 392);
+            this.label6.Location = new System.Drawing.Point(23, 421);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(132, 24);
             this.label6.TabIndex = 51;
             this.label6.Text = "Contactperson";
             // 
-            // label7
+            // Residence2
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(25, 368);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(115, 24);
-            this.label7.TabIndex = 50;
-            this.label7.Text = "Residance 2";
+            this.Residence2.AutoSize = true;
+            this.Residence2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Residence2.Location = new System.Drawing.Point(23, 397);
+            this.Residence2.Name = "Residence2";
+            this.Residence2.Size = new System.Drawing.Size(116, 24);
+            this.Residence2.TabIndex = 50;
+            this.Residence2.Text = "Residence 2";
             // 
             // label8
             // 
@@ -354,148 +358,190 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(24, 320);
+            this.label13.Location = new System.Drawing.Point(22, 349);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(80, 24);
+            this.label13.Size = new System.Drawing.Size(95, 24);
             this.label13.TabIndex = 44;
-            this.label13.Text = "Address";
+            this.label13.Text = "Address 2";
             // 
-            // label26
+            // Residence1
             // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(25, 344);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(115, 24);
-            this.label26.TabIndex = 43;
-            this.label26.Text = "Residance 1";
+            this.Residence1.AutoSize = true;
+            this.Residence1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Residence1.Location = new System.Drawing.Point(23, 373);
+            this.Residence1.Name = "Residence1";
+            this.Residence1.Size = new System.Drawing.Size(116, 24);
+            this.Residence1.TabIndex = 43;
+            this.Residence1.Text = "Residence 1";
             // 
-            // label29
+            // lblAddress1
             // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(249, 207);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(54, 17);
-            this.label29.TabIndex = 55;
-            this.label29.Text = "label29";
+            this.lblAddress1.AutoSize = true;
+            this.lblAddress1.Location = new System.Drawing.Point(249, 207);
+            this.lblAddress1.Name = "lblAddress1";
+            this.lblAddress1.Size = new System.Drawing.Size(54, 17);
+            this.lblAddress1.TabIndex = 55;
+            this.lblAddress1.Text = "label29";
             // 
-            // label30
+            // lblTelephone1
             // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(249, 229);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(54, 17);
-            this.label30.TabIndex = 56;
-            this.label30.Text = "label30";
+            this.lblTelephone1.AutoSize = true;
+            this.lblTelephone1.Location = new System.Drawing.Point(249, 229);
+            this.lblTelephone1.Name = "lblTelephone1";
+            this.lblTelephone1.Size = new System.Drawing.Size(54, 17);
+            this.lblTelephone1.TabIndex = 56;
+            this.lblTelephone1.Text = "label30";
             // 
-            // label31
+            // lblEmail
             // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(249, 253);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(54, 17);
-            this.label31.TabIndex = 57;
-            this.label31.Text = "label31";
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Location = new System.Drawing.Point(249, 253);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(54, 17);
+            this.lblEmail.TabIndex = 57;
+            this.lblEmail.Text = "label31";
             // 
-            // label32
+            // lblCompanyName
             // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(249, 277);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(54, 17);
-            this.label32.TabIndex = 58;
-            this.label32.Text = "label32";
+            this.lblCompanyName.AutoSize = true;
+            this.lblCompanyName.Location = new System.Drawing.Point(249, 277);
+            this.lblCompanyName.Name = "lblCompanyName";
+            this.lblCompanyName.Size = new System.Drawing.Size(54, 17);
+            this.lblCompanyName.TabIndex = 58;
+            this.lblCompanyName.Text = "label32";
             // 
-            // label33
+            // lblZipcode1
             // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(249, 301);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(54, 17);
-            this.label33.TabIndex = 59;
-            this.label33.Text = "label33";
+            this.lblZipcode1.AutoSize = true;
+            this.lblZipcode1.Location = new System.Drawing.Point(249, 301);
+            this.lblZipcode1.Name = "lblZipcode1";
+            this.lblZipcode1.Size = new System.Drawing.Size(54, 17);
+            this.lblZipcode1.TabIndex = 59;
+            this.lblZipcode1.Text = "label33";
             // 
-            // label34
+            // lblAddress2
             // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(249, 325);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(54, 17);
-            this.label34.TabIndex = 60;
-            this.label34.Text = "label34";
+            this.lblAddress2.AutoSize = true;
+            this.lblAddress2.Location = new System.Drawing.Point(249, 354);
+            this.lblAddress2.Name = "lblAddress2";
+            this.lblAddress2.Size = new System.Drawing.Size(54, 17);
+            this.lblAddress2.TabIndex = 60;
+            this.lblAddress2.Text = "label34";
             // 
-            // label35
+            // lblResidence1
             // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(249, 349);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(54, 17);
-            this.label35.TabIndex = 61;
-            this.label35.Text = "label35";
+            this.lblResidence1.AutoSize = true;
+            this.lblResidence1.Location = new System.Drawing.Point(249, 378);
+            this.lblResidence1.Name = "lblResidence1";
+            this.lblResidence1.Size = new System.Drawing.Size(54, 17);
+            this.lblResidence1.TabIndex = 61;
+            this.lblResidence1.Text = "label35";
             // 
-            // label36
+            // lblResidence2
             // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(249, 373);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(54, 17);
-            this.label36.TabIndex = 62;
-            this.label36.Text = "label36";
+            this.lblResidence2.AutoSize = true;
+            this.lblResidence2.Location = new System.Drawing.Point(249, 402);
+            this.lblResidence2.Name = "lblResidence2";
+            this.lblResidence2.Size = new System.Drawing.Size(54, 17);
+            this.lblResidence2.TabIndex = 62;
+            this.lblResidence2.Text = "label36";
             // 
-            // label37
+            // lblContactperson
             // 
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(249, 397);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(54, 17);
-            this.label37.TabIndex = 63;
-            this.label37.Text = "label37";
+            this.lblContactperson.AutoSize = true;
+            this.lblContactperson.Location = new System.Drawing.Point(249, 426);
+            this.lblContactperson.Name = "lblContactperson";
+            this.lblContactperson.Size = new System.Drawing.Size(54, 17);
+            this.lblContactperson.TabIndex = 63;
+            this.lblContactperson.Text = "label37";
             // 
-            // label38
+            // lblTelephone2
             // 
-            this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(249, 421);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(54, 17);
-            this.label38.TabIndex = 64;
-            this.label38.Text = "label38";
+            this.lblTelephone2.AutoSize = true;
+            this.lblTelephone2.Location = new System.Drawing.Point(249, 450);
+            this.lblTelephone2.Name = "lblTelephone2";
+            this.lblTelephone2.Size = new System.Drawing.Size(54, 17);
+            this.lblTelephone2.TabIndex = 64;
+            this.lblTelephone2.Text = "label38";
             // 
-            // label39
+            // lblFaxnumber
             // 
-            this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(249, 445);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(54, 17);
-            this.label39.TabIndex = 65;
-            this.label39.Text = "label39";
+            this.lblFaxnumber.AutoSize = true;
+            this.lblFaxnumber.Location = new System.Drawing.Point(249, 474);
+            this.lblFaxnumber.Name = "lblFaxnumber";
+            this.lblFaxnumber.Size = new System.Drawing.Size(54, 17);
+            this.lblFaxnumber.TabIndex = 65;
+            this.lblFaxnumber.Text = "label39";
+            // 
+            // lblZipcode2
+            // 
+            this.lblZipcode2.AutoSize = true;
+            this.lblZipcode2.Location = new System.Drawing.Point(249, 330);
+            this.lblZipcode2.Name = "lblZipcode2";
+            this.lblZipcode2.Size = new System.Drawing.Size(54, 17);
+            this.lblZipcode2.TabIndex = 67;
+            this.lblZipcode2.Text = "label33";
+            // 
+            // zipcode2
+            // 
+            this.zipcode2.AutoSize = true;
+            this.zipcode2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.zipcode2.Location = new System.Drawing.Point(22, 325);
+            this.zipcode2.Name = "zipcode2";
+            this.zipcode2.Size = new System.Drawing.Size(95, 24);
+            this.zipcode2.TabIndex = 66;
+            this.zipcode2.Text = "Zipcode 2";
+            // 
+            // lblHousenumber
+            // 
+            this.lblHousenumber.AutoSize = true;
+            this.lblHousenumber.Location = new System.Drawing.Point(250, 498);
+            this.lblHousenumber.Name = "lblHousenumber";
+            this.lblHousenumber.Size = new System.Drawing.Size(54, 17);
+            this.lblHousenumber.TabIndex = 69;
+            this.lblHousenumber.Text = "label39";
+            // 
+            // housenumber
+            // 
+            this.housenumber.AutoSize = true;
+            this.housenumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.housenumber.Location = new System.Drawing.Point(24, 493);
+            this.housenumber.Name = "housenumber";
+            this.housenumber.Size = new System.Drawing.Size(132, 24);
+            this.housenumber.TabIndex = 68;
+            this.housenumber.Text = "Housenumber";
             // 
             // MessageNewCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(457, 593);
-            this.Controls.Add(this.label39);
-            this.Controls.Add(this.label38);
-            this.Controls.Add(this.label37);
-            this.Controls.Add(this.label36);
-            this.Controls.Add(this.label35);
-            this.Controls.Add(this.label34);
-            this.Controls.Add(this.label33);
-            this.Controls.Add(this.label32);
-            this.Controls.Add(this.label31);
-            this.Controls.Add(this.label30);
-            this.Controls.Add(this.label29);
+            this.Controls.Add(this.lblHousenumber);
+            this.Controls.Add(this.housenumber);
+            this.Controls.Add(this.lblZipcode2);
+            this.Controls.Add(this.zipcode2);
+            this.Controls.Add(this.lblFaxnumber);
+            this.Controls.Add(this.lblTelephone2);
+            this.Controls.Add(this.lblContactperson);
+            this.Controls.Add(this.lblResidence2);
+            this.Controls.Add(this.lblResidence1);
+            this.Controls.Add(this.lblAddress2);
+            this.Controls.Add(this.lblZipcode1);
+            this.Controls.Add(this.lblCompanyName);
+            this.Controls.Add(this.lblEmail);
+            this.Controls.Add(this.lblTelephone1);
+            this.Controls.Add(this.lblAddress1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.Residence2);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.label26);
+            this.Controls.Add(this.Residence1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -548,24 +594,28 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label Residence2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label Residence1;
+        public System.Windows.Forms.Label lblAddress1;
+        public System.Windows.Forms.Label lblTelephone1;
+        public System.Windows.Forms.Label lblEmail;
+        public System.Windows.Forms.Label lblCompanyName;
+        public System.Windows.Forms.Label lblZipcode1;
+        public System.Windows.Forms.Label lblAddress2;
+        public System.Windows.Forms.Label lblResidence1;
+        public System.Windows.Forms.Label lblResidence2;
+        public System.Windows.Forms.Label lblContactperson;
+        public System.Windows.Forms.Label lblTelephone2;
+        public System.Windows.Forms.Label lblFaxnumber;
+        public System.Windows.Forms.Label lblZipcode2;
+        private System.Windows.Forms.Label zipcode2;
+        public System.Windows.Forms.Label lblHousenumber;
+        private System.Windows.Forms.Label housenumber;
     }
 }
