@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace Barroc_IT
 {
-    public partial class Form1 : Form
+    public partial class FormLogin : Form
     {
         public string psS = "sales123";
         private string psF = "";
         public string psD = "";
 
-        public Form1()
+        public FormLogin()
         {
             InitializeComponent();
         }

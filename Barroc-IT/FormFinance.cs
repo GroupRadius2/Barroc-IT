@@ -34,7 +34,7 @@ namespace Barroc_IT
 
         private void buttonLogout_Click(object sender, EventArgs e)
         {
-            Form1 login = new Form1();
+            FormLogin login = new FormLogin();
             login.Show();
             this.Close();
             database.CloseConnection();
@@ -267,7 +267,7 @@ namespace Barroc_IT
                 {
                     bool creditWorthyChecked = false;
 
-                    if (row.Cells[11].Value.ToString() == "1")
+                    if ((int)row.Cells[11].Value == 1)
                     {
                         creditWorthyChecked = true;
                     }
