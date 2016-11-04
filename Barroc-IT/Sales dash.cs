@@ -28,8 +28,22 @@ namespace Barroc_IT
 
         private void button3_Click(object sender, EventArgs e)
         {
+
             MessageNewCustomer MNC = new MessageNewCustomer(this);
-            MNC.Show();        
+            MNC.Show();
+            MNC.lblAddress1.Text = textBoxAddress1.Text;
+            MNC.lblAddress2.Text = textBoxAddress2.Text;
+            MNC.lblTelephone1.Text = textBoxTelephone1.Text;
+            MNC.lblTelephone2.Text = textBoxTelephone2.Text;
+            MNC.lblEmail.Text = textBoxEmail.Text;
+            MNC.lblCompanyName.Text = textBoxCompanyName.Text;
+            MNC.lblZipcode1.Text = textBoxZipcode1.Text;
+            MNC.lblZipcode2.Text = textBoxZipcode2.Text;
+            MNC.lblResidence1.Text = textBoxResidence1.Text;
+            MNC.lblResidence2.Text = textBoxResidence2.Text;
+            MNC.lblContactperson.Text = textBoxContactPerson.Text;
+            MNC.lblFaxnumber.Text = textBoxFaxnumber.Text;
+            MNC.lblHousenumber.Text = textBoxHousenumber.Text;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -45,6 +59,7 @@ namespace Barroc_IT
         private void label6_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedTab = tabPage4;
+            Database.GetInstance().QueryInDatagridView("SELECT * FROM tbl_companies;", dataGridView3);
         }
 
         private void button1_Click(object sender, EventArgs e)
