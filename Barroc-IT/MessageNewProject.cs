@@ -30,7 +30,7 @@ namespace Barroc_IT
             saved = true;
 
             Database.GetInstance().Query("SELECT COUNT(*) FROM tbl_projects");
-            int countOfCompanyId = (int)Database.GetInstance().ExecuteQuery();
+            int countOfProjectId = (int)Database.GetInstance().ExecuteQuery();
 
             Database.GetInstance().Query("INSERT INTO tbl_projects(p_company_name, p_customer_name, p_name, p_start_date, p_end_date, p_cost, p_terms) " +
                 "VALUES(@p_company_name, @p_customer_name, @p_name, @p_start_date, @p_end_date, @p_cost, @p_terms)");
