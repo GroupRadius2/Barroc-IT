@@ -144,9 +144,10 @@ namespace Barroc_IT
 
         private void btnChSave_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Test");
             Database.GetInstance().Query("UPDATE tbl_companies SET c_name = @c_name, c_address = @c_address, c_housenumber = @c_housenumber, c_city = @c_city, c_contactperson_first_name = @c_contactperson_first_name, " +
                 "c_contactperson_telephone_number = @c_contactperson_telephone_number, @c_contactperson_faxnumber = @c_contactperson_faxnumber, c_contactperson_email = @c_contactperson_email, c_contactperson_telephone_number2 = @c_contactperson_telephone_number2, c_city2 = @c_city2, c_zipcode = @c_zipcode, c_zipcode2 = @c_zipcode2, c_address2 = @c_address2");
-            Database.GetInstance().AddParameter("@c_name", textBoxCompanyName.Text);
+            Database.GetInstance().AddParameter("@c_name", txtbChCompanyName.Text);
             Database.GetInstance().AddParameter("@c_address", textBoxAddress1.Text);
             Database.GetInstance().AddParameter("@c_housenumber", textBoxHousenumber.Text);
             Database.GetInstance().AddParameter("@c_city", textBoxResidence1.Text);
@@ -161,6 +162,13 @@ namespace Barroc_IT
             Database.GetInstance().AddParameter("@c_city2", textBoxResidence2.Text);
 
             Database.GetInstance().ExecuteQuery();
+            UpdateInfo();
+        }
+        private void UpdateInfo()
+        {
+            Database.GetInstance().QueryInDatagridView("SELECT * FROM tbl_companies WHERE c_creditworthy = 0", dataGridNegativeB);
+            Database.GetInstance().QueryInDatagridView("SELECT * FROM tbl_companies WHERE c_creditworthy = 1", dataGridPositiveB);
+            Database.GetInstance().QueryInDatagridView("SELECT * FROM tbl_companies", dataGridCustomers);
         }
         }
     }

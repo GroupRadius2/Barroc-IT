@@ -86,7 +86,6 @@
             this.label26 = new System.Windows.Forms.Label();
             this.tabControlSales = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.pictureBox22 = new System.Windows.Forms.PictureBox();
             this.label36 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
@@ -97,7 +96,6 @@
             this.label32 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.pictureBox23 = new System.Windows.Forms.PictureBox();
-            this.pictureBox21 = new System.Windows.Forms.PictureBox();
             this.pictureBox20 = new System.Windows.Forms.PictureBox();
             this.pictureBox19 = new System.Windows.Forms.PictureBox();
             this.pictureBox18 = new System.Windows.Forms.PictureBox();
@@ -107,6 +105,12 @@
             this.Customerlbl = new System.Windows.Forms.Label();
             this.pictureBox24 = new System.Windows.Forms.PictureBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.label54 = new System.Windows.Forms.Label();
+            this.txtbChCity = new System.Windows.Forms.TextBox();
+            this.label51 = new System.Windows.Forms.Label();
+            this.txtbChZipcode2 = new System.Windows.Forms.TextBox();
+            this.label44 = new System.Windows.Forms.Label();
+            this.txtbChZipcode = new System.Windows.Forms.TextBox();
             this.label43 = new System.Windows.Forms.Label();
             this.txtbChTelephone = new System.Windows.Forms.TextBox();
             this.label42 = new System.Windows.Forms.Label();
@@ -168,12 +172,8 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label44 = new System.Windows.Forms.Label();
-            this.txtbChZipcode = new System.Windows.Forms.TextBox();
-            this.label51 = new System.Windows.Forms.Label();
-            this.txtbChZipcode2 = new System.Windows.Forms.TextBox();
-            this.label54 = new System.Windows.Forms.Label();
-            this.txtbChCity = new System.Windows.Forms.TextBox();
+            this.dataGridNegativeB = new System.Windows.Forms.DataGridView();
+            this.dataGridPositiveB = new System.Windows.Forms.DataGridView();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -181,9 +181,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             this.tabControlSales.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
@@ -212,6 +210,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridNegativeB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridPositiveB)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPage2
@@ -819,7 +819,8 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.pictureBox22);
+            this.tabPage3.Controls.Add(this.dataGridPositiveB);
+            this.tabPage3.Controls.Add(this.dataGridNegativeB);
             this.tabPage3.Controls.Add(this.label36);
             this.tabPage3.Controls.Add(this.label37);
             this.tabPage3.Controls.Add(this.label38);
@@ -830,7 +831,6 @@
             this.tabPage3.Controls.Add(this.label32);
             this.tabPage3.Controls.Add(this.label31);
             this.tabPage3.Controls.Add(this.pictureBox23);
-            this.tabPage3.Controls.Add(this.pictureBox21);
             this.tabPage3.Controls.Add(this.pictureBox20);
             this.tabPage3.Controls.Add(this.pictureBox19);
             this.tabPage3.Controls.Add(this.pictureBox18);
@@ -841,14 +841,6 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Customer Finance";
             this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox22
-            // 
-            this.pictureBox22.Location = new System.Drawing.Point(84, 494);
-            this.pictureBox22.Name = "pictureBox22";
-            this.pictureBox22.Size = new System.Drawing.Size(1233, 297);
-            this.pictureBox22.TabIndex = 14;
-            this.pictureBox22.TabStop = false;
             // 
             // label36
             // 
@@ -960,14 +952,6 @@
             this.pictureBox23.Size = new System.Drawing.Size(356, 50);
             this.pictureBox23.TabIndex = 9;
             this.pictureBox23.TabStop = false;
-            // 
-            // pictureBox21
-            // 
-            this.pictureBox21.Location = new System.Drawing.Point(84, 184);
-            this.pictureBox21.Name = "pictureBox21";
-            this.pictureBox21.Size = new System.Drawing.Size(1233, 244);
-            this.pictureBox21.TabIndex = 8;
-            this.pictureBox21.TabStop = false;
             // 
             // pictureBox20
             // 
@@ -1091,6 +1075,67 @@
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "tabPage5";
             this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label54.Location = new System.Drawing.Point(36, 317);
+            this.label54.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(31, 17);
+            this.label54.TabIndex = 182;
+            this.label54.Text = "City";
+            // 
+            // txtbChCity
+            // 
+            this.txtbChCity.Location = new System.Drawing.Point(173, 313);
+            this.txtbChCity.Margin = new System.Windows.Forms.Padding(4);
+            this.txtbChCity.Name = "txtbChCity";
+            this.txtbChCity.Size = new System.Drawing.Size(175, 22);
+            this.txtbChCity.TabIndex = 181;
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label51.Location = new System.Drawing.Point(35, 284);
+            this.label51.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(64, 20);
+            this.label51.TabIndex = 180;
+            this.label51.Text = "Zipcode 2";
+            this.label51.UseCompatibleTextRendering = true;
+            this.label51.UseMnemonic = false;
+            // 
+            // txtbChZipcode2
+            // 
+            this.txtbChZipcode2.Location = new System.Drawing.Point(173, 283);
+            this.txtbChZipcode2.Margin = new System.Windows.Forms.Padding(4);
+            this.txtbChZipcode2.Name = "txtbChZipcode2";
+            this.txtbChZipcode2.Size = new System.Drawing.Size(175, 22);
+            this.txtbChZipcode2.TabIndex = 179;
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label44.Location = new System.Drawing.Point(35, 254);
+            this.label44.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(53, 20);
+            this.label44.TabIndex = 178;
+            this.label44.Text = "Zipcode";
+            this.label44.UseCompatibleTextRendering = true;
+            this.label44.UseMnemonic = false;
+            // 
+            // txtbChZipcode
+            // 
+            this.txtbChZipcode.Location = new System.Drawing.Point(173, 253);
+            this.txtbChZipcode.Margin = new System.Windows.Forms.Padding(4);
+            this.txtbChZipcode.Name = "txtbChZipcode";
+            this.txtbChZipcode.Size = new System.Drawing.Size(175, 22);
+            this.txtbChZipcode.TabIndex = 177;
             // 
             // label43
             // 
@@ -1697,66 +1742,23 @@
             this.pictureBox1.TabIndex = 33;
             this.pictureBox1.TabStop = false;
             // 
-            // label44
+            // dataGridNegativeB
             // 
-            this.label44.AutoSize = true;
-            this.label44.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label44.Location = new System.Drawing.Point(35, 254);
-            this.label44.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(53, 20);
-            this.label44.TabIndex = 178;
-            this.label44.Text = "Zipcode";
-            this.label44.UseCompatibleTextRendering = true;
-            this.label44.UseMnemonic = false;
+            this.dataGridNegativeB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridNegativeB.Location = new System.Drawing.Point(84, 188);
+            this.dataGridNegativeB.Name = "dataGridNegativeB";
+            this.dataGridNegativeB.RowTemplate.Height = 24;
+            this.dataGridNegativeB.Size = new System.Drawing.Size(1147, 244);
+            this.dataGridNegativeB.TabIndex = 14;
             // 
-            // txtbChZipcode
+            // dataGridPositiveB
             // 
-            this.txtbChZipcode.Location = new System.Drawing.Point(173, 253);
-            this.txtbChZipcode.Margin = new System.Windows.Forms.Padding(4);
-            this.txtbChZipcode.Name = "txtbChZipcode";
-            this.txtbChZipcode.Size = new System.Drawing.Size(175, 22);
-            this.txtbChZipcode.TabIndex = 177;
-            // 
-            // label51
-            // 
-            this.label51.AutoSize = true;
-            this.label51.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label51.Location = new System.Drawing.Point(35, 284);
-            this.label51.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(64, 20);
-            this.label51.TabIndex = 180;
-            this.label51.Text = "Zipcode 2";
-            this.label51.UseCompatibleTextRendering = true;
-            this.label51.UseMnemonic = false;
-            // 
-            // txtbChZipcode2
-            // 
-            this.txtbChZipcode2.Location = new System.Drawing.Point(173, 283);
-            this.txtbChZipcode2.Margin = new System.Windows.Forms.Padding(4);
-            this.txtbChZipcode2.Name = "txtbChZipcode2";
-            this.txtbChZipcode2.Size = new System.Drawing.Size(175, 22);
-            this.txtbChZipcode2.TabIndex = 179;
-            // 
-            // label54
-            // 
-            this.label54.AutoSize = true;
-            this.label54.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label54.Location = new System.Drawing.Point(36, 317);
-            this.label54.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(31, 17);
-            this.label54.TabIndex = 182;
-            this.label54.Text = "City";
-            // 
-            // txtbChCity
-            // 
-            this.txtbChCity.Location = new System.Drawing.Point(173, 313);
-            this.txtbChCity.Margin = new System.Windows.Forms.Padding(4);
-            this.txtbChCity.Name = "txtbChCity";
-            this.txtbChCity.Size = new System.Drawing.Size(175, 22);
-            this.txtbChCity.TabIndex = 181;
+            this.dataGridPositiveB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridPositiveB.Location = new System.Drawing.Point(84, 522);
+            this.dataGridPositiveB.Name = "dataGridPositiveB";
+            this.dataGridPositiveB.RowTemplate.Height = 24;
+            this.dataGridPositiveB.Size = new System.Drawing.Size(1147, 244);
+            this.dataGridPositiveB.TabIndex = 15;
             // 
             // Sales_dash
             // 
@@ -1805,9 +1807,7 @@
             this.tabControlSales.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
@@ -1839,6 +1839,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridNegativeB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridPositiveB)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1904,13 +1906,11 @@
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.PictureBox pictureBox19;
         private System.Windows.Forms.PictureBox pictureBox18;
-        private System.Windows.Forms.PictureBox pictureBox22;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.PictureBox pictureBox23;
-        private System.Windows.Forms.PictureBox pictureBox21;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.TabPage tabPage4;
@@ -1992,5 +1992,7 @@
         private System.Windows.Forms.TextBox txtbChZipcode;
         private System.Windows.Forms.Label label54;
         private System.Windows.Forms.TextBox txtbChCity;
+        public System.Windows.Forms.DataGridView dataGridPositiveB;
+        public System.Windows.Forms.DataGridView dataGridNegativeB;
     }
 }
