@@ -38,10 +38,11 @@ namespace Barroc_IT
             this.dataGridView4.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             Database.GetInstance().QueryInDatagridView("Select c_name, c_address, c_housenumber,c_code,c_city,c_contactperson_first_name, c_contactperson_last_name, c_contactperson_initials,c_contactperson_telephone_number,c_contactperson_faxnumber, c_contactperson_email, c_potential_customer, c_last_contact_date, c_creditworthy, c_revenue, c_limit, c_ledger, c_btw_code, c_maintenance_contract  FROM tbl_companies ", dataGridView2);
             Database.GetInstance().QueryInDatagridView("Select p_start_date, p_end_date, p_progression FROM tbl_projects", dataGridViewProjects);
-            Database.GetInstance().QueryInDatagridView("Select a_date , a_time_of FROM tbl_appointments", dataGridView1);
+            Database.GetInstance().QueryInDatagridView("Select project_id, a_date , a_time_of FROM tbl_appointments", dataGridView1);
             Database.GetInstance().QueryInDatagridView("Select p_progression , p_start_date, p_end_date  FROM tbl_projects", dataGridView4);
-            dataGridView1.Columns[0].HeaderCell.Value = "Date";
-            dataGridView1.Columns[1].HeaderCell.Value = "Time";
+            dataGridView1.Columns[0].HeaderCell.Value = "Project id";
+            dataGridView1.Columns[1].HeaderCell.Value = "Date";
+            dataGridView1.Columns[2].HeaderCell.Value = "Time";
             dataGridViewProjects.Columns[0].HeaderCell.Value = "Start date";
             dataGridViewProjects.Columns[1].HeaderCell.Value = "End date";
             dataGridViewProjects.Columns[2].HeaderCell.Value = "Progression (In %)";
@@ -102,8 +103,8 @@ namespace Barroc_IT
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormLogin form1 = new FormLogin();
-            form1.Show();
+            FormLogin formlogin = new FormLogin();
+            formlogin.Show();
         }
 
         private void label9_Click(object sender, EventArgs e)
@@ -164,6 +165,12 @@ namespace Barroc_IT
         public int GetSelectedIndexProject()
         {
             return selectedIndexProject;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            NewAppointment newAppointment = new NewAppointment(this);
+            newAppointment.Show();
         }
     }
 }

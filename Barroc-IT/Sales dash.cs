@@ -102,8 +102,6 @@ namespace Barroc_IT
 
         }
 
-        }
-
         private void label8_Click(object sender, EventArgs e)
         {
             tabControlSales.SelectedTab = tabPage7;
