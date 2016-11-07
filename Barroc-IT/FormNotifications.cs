@@ -14,19 +14,47 @@ namespace Barroc_IT
     {
         private string department;
         private Database database;
+        private int selectedIndexMessage;
 
         public FormNotifications()
         {
             InitializeComponent();
             database = Database.GetInstance();
+            selectedIndexMessage = 1;
+            department = "Finance";
         }
 
         public FormNotifications(Department department)
         {
             InitializeComponent();
 
+            this.department = GetDepartment(department);
+
             this.department = department.ToString();
             database = Database.GetInstance();
+        }
+
+        public string GetDepartment(Department department)
+        {
+            string departmentInString;
+
+            switch (department)
+            {
+                case Department.Finance:
+                    departmentInString = "Finance";
+                    break;
+                case Department.Sales:
+                    departmentInString = "Sales";
+                    break;
+                case Department.Development:
+                    departmentInString = "Development";
+                    break;
+                default:
+                    departmentInString = null;
+                    break;
+            }
+
+            return departmentInString;
         }
 
         public void SentMessage(Department department, string title, string message)
@@ -37,7 +65,7 @@ namespace Barroc_IT
             database.Query("INSERT INTO tbl_messages(message_id, department, message, m_subject) SET message_id = @message_id, department = @department, message = @message, m_subject = @m_subject;");
 
             database.AddParameter("@message_id", ++countOfMessages);
-            database.AddParameter("@department", department.ToString());
+            database.AddParameter("@department", GetDepartment(department));
             database.AddParameter("@message", message);
             database.AddParameter("@m_subject", title);
             database.ExecuteQuery();
@@ -45,7 +73,7 @@ namespace Barroc_IT
 
         public void ReceiveMessages()
         {
-            database.QueryInDatagridView("SELECT m_subject FROM tbl_messages;",
+            database.QueryInDatagridView("SELECT m_subject FROM tbl_messages WHERE department = '" + department + "';",
                 dataGridViewAllNotifications);
         }
 
@@ -53,11 +81,16 @@ namespace Barroc_IT
         {
             foreach (DataGridViewRow row in dataGridViewAllNotifications.Rows)
             {
+                int counter = 0;
                 if (row.Selected)
                 {
+                    counter++;
+                    selectedIndexMessage = counter;
                     if (row.Cells[0].Value != null)
                     {
-                        richTextBoxMessage.Text = row.Cells["message"].Value.ToString();
+                        database.Query("SELECT message FROM tbl_messages WHERE message_id = @message_id;");
+                        database.AddParameter("@message_id", counter);
+                        richTextBoxMessage.Text = database.ExecuteQuery().ToString();
                     }
                 }
             }

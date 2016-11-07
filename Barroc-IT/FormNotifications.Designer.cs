@@ -37,18 +37,18 @@
             // dataGridViewAllNotifications
             // 
             this.dataGridViewAllNotifications.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewAllNotifications.Location = new System.Drawing.Point(12, 82);
+            this.dataGridViewAllNotifications.Location = new System.Drawing.Point(12, 29);
             this.dataGridViewAllNotifications.Name = "dataGridViewAllNotifications";
-            this.dataGridViewAllNotifications.Size = new System.Drawing.Size(128, 167);
+            this.dataGridViewAllNotifications.Size = new System.Drawing.Size(142, 220);
             this.dataGridViewAllNotifications.TabIndex = 0;
             this.dataGridViewAllNotifications.SelectionChanged += new System.EventHandler(this.dataGridViewAllNotifications_SelectionChanged);
             // 
             // richTextBoxMessage
             // 
-            this.richTextBoxMessage.Location = new System.Drawing.Point(146, 82);
+            this.richTextBoxMessage.Location = new System.Drawing.Point(160, 29);
             this.richTextBoxMessage.Name = "richTextBoxMessage";
             this.richTextBoxMessage.ReadOnly = true;
-            this.richTextBoxMessage.Size = new System.Drawing.Size(273, 167);
+            this.richTextBoxMessage.Size = new System.Drawing.Size(259, 220);
             this.richTextBoxMessage.TabIndex = 1;
             this.richTextBoxMessage.Text = "";
             // 
