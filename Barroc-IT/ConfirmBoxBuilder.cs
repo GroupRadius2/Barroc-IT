@@ -16,6 +16,7 @@ namespace Barroc_IT
         private TabControl tabControl;
         private TabPage tabPageGoBack;
         private DataGridView dataGridView;
+        private string query;
 
         public ConfirmBoxBuilder()
         {
@@ -56,13 +57,14 @@ namespace Barroc_IT
             confirmBox.ConfirmForm.Controls.Add(richTextBoxCenter);
         }
 
-        public void BuildBottom(TabControl tabControl, TabPage tabPageGoBack, DataGridView dataGridView)
+        public void BuildBottom(TabControl tabControl, TabPage tabPageGoBack, DataGridView dataGridView, string query)
         {
             Button buttonAccept = new Button();
             Button buttonDecline = new Button();
             this.tabControl = tabControl;
             this.tabPageGoBack = tabPageGoBack;
             this.dataGridView = dataGridView;
+            this.query = query;
 
             buttonAccept.Text = "Accept";
             buttonDecline.Text = "Decline";
@@ -86,6 +88,7 @@ namespace Barroc_IT
         {
             confirmBox.Accept(true);
             Database.GetInstance().ExecuteQuery();
+            Database.GetInstance().QueryInDatagridView(query, dataGridView);
             confirmBox.ConfirmForm.Close();
             tabControl.SelectTab(tabPageGoBack);
         }

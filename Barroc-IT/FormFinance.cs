@@ -16,12 +16,14 @@ namespace Barroc_IT
         private int selectedIndexInvoice;
         private int selectedIndexCustomer;
         private int selectedIndexProject;
+        private string queryProjects;
 
         public FormFinance()
         {
             InitializeComponent();
             selectedIndexInvoice = 0;
             selectedIndexCustomer = 0;
+            queryProjects = "SELECT tbl_companies.c_id, c_name, p_active FROM tbl_companies, tbl_projects WHERE p_paid = 0;";
             database = Database.GetInstance();
             try
             {
@@ -65,7 +67,7 @@ namespace Barroc_IT
         {
             database.QueryInDatagridView("SELECT tbl_companies.c_id, c_name, p_price AS Earned FROM tbl_companies, tbl_projects" + 
                 " WHERE p_paid = 1;", dataGridViewEarnedCustomers);
-            database.QueryInDatagridView("SELECT tbl_companies.c_id, c_name FROM tbl_companies, tbl_projects WHERE p_paid = 0;", dataGridViewCustomersProjectNeedsPay);
+            database.QueryInDatagridView(queryProjects, dataGridViewCustomersProjectNeedsPay);
 
             UpdateInfo();
         }
@@ -187,7 +189,7 @@ namespace Barroc_IT
                 "Description: " + textBoxInvoiceDescription.Text + Environment.NewLine +
                 "Price: " + textBoxInvoicePrice.Text + Environment.NewLine +
                 "Paid: " + checkBoxChangeInvoicePaid.Checked.ToString());
-            builder.BuildBottom(tabControlFinance, tabPageInvoices, dataGridViewInvoices);
+            builder.BuildBottom(tabControlFinance, tabPageInvoices, dataGridViewInvoices, "SELECT * FROM tbl_invoices;");
 
             builder.GetConfirmBox().Show();
         }
@@ -229,7 +231,7 @@ namespace Barroc_IT
             builder.BuildCenter("Project id: " + textBoxChangeInvoiceProjectId.Text + Environment.NewLine + 
                 "Description: " + textBoxChangeInvoiceDescription.Text + Environment.NewLine +
                 "Price: " + textBoxChangeInvoicePrice.Text);
-            builder.BuildBottom(tabControlFinance, tabPageInvoices, dataGridViewInvoices);
+            builder.BuildBottom(tabControlFinance, tabPageInvoices, dataGridViewInvoices, "SELECT * FROM tbl_invoices;");
             builder.GetConfirmBox().Show();
         }
 
@@ -281,6 +283,7 @@ namespace Barroc_IT
                     {
                         bool potentialCustomer;
                         bool creditWorthyChecked;
+                        bool bkr;
                         int indexCustomer;
 
                         bool.TryParse(row.Cells["c_creditworthy"].Value.ToString(), out creditWorthyChecked);
@@ -310,7 +313,8 @@ namespace Barroc_IT
                         bool.TryParse(row.Cells["c_potential_customer"].Value.ToString(), out potentialCustomer);
                         checkBoxPotentialCustomerInfo.Checked = potentialCustomer;
 
-                        textBoxCustomerInfoBKR.Text = creditWorthyChecked ? "Positive" : "Negative";
+                        bool.TryParse(row.Cells["c_bkr"].Value.ToString(), out bkr);
+                        textBoxCustomerInfoBKR.Text = bkr ? "Positive" : "Negative";
 
                         tabControlFinance.SelectTab(tabPageCustomerInfo);
                     }
@@ -362,7 +366,7 @@ namespace Barroc_IT
             builder.BuildCenter("Project id: " + textBoxChangeInvoiceProjectId.Text + Environment.NewLine +
                 "Description: " + textBoxChangeInvoiceDescription.Text + Environment.NewLine +
                 "Price: " + textBoxChangeInvoicePrice.Text);
-            builder.BuildBottom(tabControlFinance, tabPageInvoices, dataGridViewInvoices);
+            builder.BuildBottom(tabControlFinance, tabPageInvoices, dataGridViewInvoices, "SELECT * FROM tbl_invoices;");
 
             database.ExecuteQuery();
         }
@@ -376,11 +380,14 @@ namespace Barroc_IT
                     if (row.Cells[0].Value != null)
                     {
                         bool isActiveProject = false;
+                        bool activeProject;
 
-                        if ((bool)row.Cells["p_active"].Value)
+                        if (bool.TryParse(row.Cells["p_active"].Value.ToString(), out activeProject))
                         {
                             isActiveProject = true;
                         }
+
+                        
 
                         selectedIndexProject = (int)row.Cells["project_id"].Value;
 
@@ -408,7 +415,7 @@ namespace Barroc_IT
             ConfirmBoxBuilder builder = new ConfirmBoxBuilder();
             builder.BuildTop("You are about to change the following information:");
             builder.BuildCenter("Active: " + checkBoxActiveChangeProject.Checked.ToString());
-            builder.BuildBottom(tabControlFinance, tabPageProjects, dataGridViewProjects);
+            builder.BuildBottom(tabControlFinance, tabPageProjects, dataGridViewProjects, queryProjects);
             builder.GetConfirmBox().Show();
         }
 
