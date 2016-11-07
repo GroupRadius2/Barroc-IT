@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label34 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
+            this.lblTerms = new System.Windows.Forms.Label();
+            this.lblCost = new System.Windows.Forms.Label();
+            this.lblEndDate = new System.Windows.Forms.Label();
+            this.lblStartDate = new System.Windows.Forms.Label();
+            this.lblProjectName = new System.Windows.Forms.Label();
+            this.lblCustomerName = new System.Windows.Forms.Label();
+            this.lblCompanyName = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -51,68 +51,68 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label34
+            // lblTerms
             // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(241, 322);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(54, 17);
-            this.label34.TabIndex = 80;
-            this.label34.Text = "label34";
+            this.lblTerms.AutoSize = true;
+            this.lblTerms.Location = new System.Drawing.Point(241, 322);
+            this.lblTerms.Name = "lblTerms";
+            this.lblTerms.Size = new System.Drawing.Size(54, 17);
+            this.lblTerms.TabIndex = 80;
+            this.lblTerms.Text = "label34";
             // 
-            // label33
+            // lblCost
             // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(241, 298);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(54, 17);
-            this.label33.TabIndex = 79;
-            this.label33.Text = "label33";
+            this.lblCost.AutoSize = true;
+            this.lblCost.Location = new System.Drawing.Point(241, 298);
+            this.lblCost.Name = "lblCost";
+            this.lblCost.Size = new System.Drawing.Size(54, 17);
+            this.lblCost.TabIndex = 79;
+            this.lblCost.Text = "label33";
             // 
-            // label32
+            // lblEndDate
             // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(241, 274);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(54, 17);
-            this.label32.TabIndex = 78;
-            this.label32.Text = "label32";
+            this.lblEndDate.AutoSize = true;
+            this.lblEndDate.Location = new System.Drawing.Point(241, 274);
+            this.lblEndDate.Name = "lblEndDate";
+            this.lblEndDate.Size = new System.Drawing.Size(54, 17);
+            this.lblEndDate.TabIndex = 78;
+            this.lblEndDate.Text = "label32";
             // 
-            // label31
+            // lblStartDate
             // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(241, 250);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(54, 17);
-            this.label31.TabIndex = 77;
-            this.label31.Text = "label31";
+            this.lblStartDate.AutoSize = true;
+            this.lblStartDate.Location = new System.Drawing.Point(241, 250);
+            this.lblStartDate.Name = "lblStartDate";
+            this.lblStartDate.Size = new System.Drawing.Size(54, 17);
+            this.lblStartDate.TabIndex = 77;
+            this.lblStartDate.Text = "label31";
             // 
-            // label30
+            // lblProjectName
             // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(241, 226);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(54, 17);
-            this.label30.TabIndex = 76;
-            this.label30.Text = "label30";
+            this.lblProjectName.AutoSize = true;
+            this.lblProjectName.Location = new System.Drawing.Point(241, 226);
+            this.lblProjectName.Name = "lblProjectName";
+            this.lblProjectName.Size = new System.Drawing.Size(54, 17);
+            this.lblProjectName.TabIndex = 76;
+            this.lblProjectName.Text = "label30";
             // 
-            // label29
+            // lblCustomerName
             // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(241, 204);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(54, 17);
-            this.label29.TabIndex = 75;
-            this.label29.Text = "label29";
+            this.lblCustomerName.AutoSize = true;
+            this.lblCustomerName.Location = new System.Drawing.Point(241, 204);
+            this.lblCustomerName.Name = "lblCustomerName";
+            this.lblCustomerName.Size = new System.Drawing.Size(54, 17);
+            this.lblCustomerName.TabIndex = 75;
+            this.lblCustomerName.Text = "label29";
             // 
-            // label28
+            // lblCompanyName
             // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(241, 178);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(54, 17);
-            this.label28.TabIndex = 74;
-            this.label28.Text = "label28";
+            this.lblCompanyName.AutoSize = true;
+            this.lblCompanyName.Location = new System.Drawing.Point(241, 178);
+            this.lblCompanyName.Name = "lblCompanyName";
+            this.lblCompanyName.Size = new System.Drawing.Size(54, 17);
+            this.lblCompanyName.TabIndex = 74;
+            this.lblCompanyName.Text = "label28";
             // 
             // label8
             // 
@@ -202,6 +202,7 @@
             this.button3.TabIndex = 65;
             this.button3.Text = "Save";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.btnSaveProject_Click);
             // 
             // label3
             // 
@@ -249,13 +250,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(439, 546);
-            this.Controls.Add(this.label34);
-            this.Controls.Add(this.label33);
-            this.Controls.Add(this.label32);
-            this.Controls.Add(this.label31);
-            this.Controls.Add(this.label30);
-            this.Controls.Add(this.label29);
-            this.Controls.Add(this.label28);
+            this.Controls.Add(this.lblTerms);
+            this.Controls.Add(this.lblCost);
+            this.Controls.Add(this.lblEndDate);
+            this.Controls.Add(this.lblStartDate);
+            this.Controls.Add(this.lblProjectName);
+            this.Controls.Add(this.lblCustomerName);
+            this.Controls.Add(this.lblCompanyName);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label10);
@@ -280,13 +281,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
@@ -300,5 +294,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label lblTerms;
+        public System.Windows.Forms.Label lblCost;
+        public System.Windows.Forms.Label lblEndDate;
+        public System.Windows.Forms.Label lblStartDate;
+        public System.Windows.Forms.Label lblProjectName;
+        public System.Windows.Forms.Label lblCustomerName;
+        public System.Windows.Forms.Label lblCompanyName;
     }
 }

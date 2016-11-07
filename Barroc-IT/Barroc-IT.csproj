@@ -86,6 +86,7 @@
     <Compile Include="ConfirmBox.cs" />
     <Compile Include="ConfirmBoxBuilder.cs" />
     <Compile Include="Database.cs" />
+    <Compile Include="Department.cs" />
     <Compile Include="Development.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +111,12 @@
     <Compile Include="FormFinance.Designer.cs">
       <DependentUpon>FormFinance.cs</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="FormNotifications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNotifications.Designer.cs">
+      <DependentUpon>FormNotifications.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -158,6 +165,9 @@
     <EmbeddedResource Include="FormFinance.resx">
       <DependentUpon>FormFinance.cs</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNotifications.resx">
+      <DependentUpon>FormNotifications.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

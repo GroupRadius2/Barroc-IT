@@ -15,6 +15,7 @@ namespace Barroc_IT
         private Database database;
         private int selectedIndexInvoice;
         private int selectedIndexCustomer;
+        private int selectedIndexProject;
 
         public FormFinance()
         {
@@ -30,6 +31,8 @@ namespace Barroc_IT
             {
                 MessageBox.Show(ex.Message);
             }
+
+            this.FormClosing += FormFinance_FormClosing;
         }
 
         private void buttonLogout_Click(object sender, EventArgs e)
@@ -37,8 +40,6 @@ namespace Barroc_IT
             FormLogin login = new FormLogin();
             login.Show();
             this.Close();
-            database.CloseConnection();
-            this.FormClosing += FormFinance_FormClosing;
         }
 
         private void FormFinance_FormClosing(object sender, FormClosingEventArgs e)
@@ -62,6 +63,10 @@ namespace Barroc_IT
 
         private void FormFinance_Load(object sender, EventArgs e)
         {
+            database.QueryInDatagridView("SELECT tbl_companies.c_id, c_name, p_price AS Earned FROM tbl_companies, tbl_projects" + 
+                " WHERE p_paid = 1;", dataGridViewEarnedCustomers);
+            database.QueryInDatagridView("SELECT tbl_companies.c_id, c_name FROM tbl_companies, tbl_projects WHERE p_paid = 0;", dataGridViewCustomersProjectNeedsPay);
+
             UpdateInfo();
         }
 
@@ -75,7 +80,7 @@ namespace Barroc_IT
         private void labelDashboard_Click(object sender, EventArgs e)
         {
             UpdateInfo();
-            tabControlFinance.SelectTab(tabPageCustomers);
+            tabControlFinance.SelectTab(tabPageDashboard);
             labelDashboard.ForeColor = Color.Red;
         }
 
@@ -147,7 +152,13 @@ namespace Barroc_IT
             database.Query("SELECT COUNT(*) FROM tbl_companies WHERE c_creditworthy = 0");
             labelNegativeBalances.Text = "Negative balances (" + database.ExecuteQuery() +")";
 
-            database.QueryInDatagridView("SELECT * FROM tbl_projects", dataGridViewProjects);
+            database.Query("SELECT COUNT(*) FROM tbl_invoices;");
+            labelNumOfInvoices.Text = "Total Invoices (" + database.ExecuteQuery() + ")";
+
+            database.Query("SELECT COUNT(*) FROM tbl_messages;");
+            labelNotifications.Text = "Notifications ( " + database.ExecuteQuery() + " )";
+
+            database.QueryInDatagridView("SELECT project_id, p_name, p_active FROM tbl_projects", dataGridViewProjects);
             database.QueryInDatagridView("SELECT * FROM tbl_invoices", dataGridViewInvoices);
             database.QueryInDatagridView("SELECT * FROM tbl_companies WHERE c_creditworthy = 1", dataGridViewPositiveCompanies);
             database.QueryInDatagridView("SELECT * FROM tbl_companies WHERE c_creditworthy = 0", dataGridViewNegativeCompanies);
@@ -160,21 +171,23 @@ namespace Barroc_IT
             database.Query("SELECT COUNT(*) FROM tbl_invoices");
             int countOfInvoicesId = (int)database.ExecuteQuery();
 
-            database.Query("INSERT INTO tbl_invoices(invoice_id, project_id, i_description, i_price) VALUES " +
-                "(@id, @project_id, @i_description, @i_price);");
+            database.Query("INSERT INTO tbl_invoices(invoice_id, project_id, i_description, i_price, i_paid) VALUES " +
+                "(@id, @project_id, @i_description, @i_price, @i_paid);");
 
             database.AddParameter("@id", ++countOfInvoicesId);
             database.AddParameter("@project_id", textBoxProjectId.Text);
             database.AddParameter("@i_description", textBoxInvoiceDescription.Text);
             database.AddParameter("@i_price", textBoxInvoicePrice.Text);
+            database.AddParameter("@i_paid", checkBoxAddInvoicePaid.Checked ? 1 : 0); 
 
             ConfirmBoxBuilder builder = new ConfirmBoxBuilder();
             builder.BuildSize(400, 500);
             builder.BuildTop("Are you sure you want to save the following information:");
             builder.BuildCenter("Project id: " + countOfInvoicesId.ToString() + Environment.NewLine +
                 "Description: " + textBoxInvoiceDescription.Text + Environment.NewLine +
-                "Price: " + textBoxInvoicePrice.Text);
-            builder.BuildBottom();
+                "Price: " + textBoxInvoicePrice.Text + Environment.NewLine +
+                "Paid: " + checkBoxChangeInvoicePaid.Checked.ToString());
+            builder.BuildBottom(tabControlFinance, tabPageInvoices, dataGridViewInvoices);
 
             builder.GetConfirmBox().Show();
         }
@@ -185,13 +198,14 @@ namespace Barroc_IT
             {
                 if (row.Selected)
                 {
-                    if (row.Cells[0].Value.ToString() != null)
+                    if (row.Cells[1].Value != null)
                     {
-                        if (int.TryParse(row.Cells[0].Value.ToString(), out selectedIndexInvoice))
+                        if (int.TryParse(row.Cells["invoice_id"].Value.ToString(), out selectedIndexInvoice))
                         {
-                            textBoxChangeInvoiceProjectId.Text = row.Cells[1].Value.ToString();
-                            textBoxChangeInvoiceDescription.Text = row.Cells[2].Value.ToString();
-                            textBoxChangeInvoicePrice.Text = row.Cells[3].Value.ToString();
+                            textBoxChangeInvoiceProjectId.Text = row.Cells["project_id"].Value.ToString();
+                            textBoxChangeInvoiceDescription.Text = row.Cells["i_description"].Value.ToString();
+                            textBoxChangeInvoicePrice.Text = row.Cells["i_price"].Value.ToString();
+                            checkBoxChangeInvoicePaid.Checked = (bool)row.Cells["i_paid"].Value;
 
                             tabControlFinance.SelectTab(tabPageChangeInvoice);
                         }
@@ -202,11 +216,11 @@ namespace Barroc_IT
 
         private void buttonSaveChangeInvoice_Click(object sender, EventArgs e)
         {
-            database.Query("UPDATE tbl_invoices SET project_id = @project_id, i_description = @description, i_price = @price WHERE invoice_id = @id;");
+            database.Query("UPDATE tbl_invoices SET project_id = @project_id, i_description = @i_description, i_price = @i_price WHERE invoice_id = @id;");
 
             database.AddParameter("@project_id", textBoxChangeInvoiceProjectId.Text);
-            database.AddParameter("@description", textBoxChangeInvoiceDescription.Text);
-            database.AddParameter("@price", textBoxChangeInvoicePrice.Text);
+            database.AddParameter("@i_description", textBoxChangeInvoiceDescription.Text);
+            database.AddParameter("@i_price", textBoxChangeInvoicePrice.Text);
             database.AddParameter("@id", selectedIndexInvoice);
 
             ConfirmBoxBuilder builder = new ConfirmBoxBuilder();
@@ -215,10 +229,8 @@ namespace Barroc_IT
             builder.BuildCenter("Project id: " + textBoxChangeInvoiceProjectId.Text + Environment.NewLine + 
                 "Description: " + textBoxChangeInvoiceDescription.Text + Environment.NewLine +
                 "Price: " + textBoxChangeInvoicePrice.Text);
-            builder.BuildBottom();
+            builder.BuildBottom(tabControlFinance, tabPageInvoices, dataGridViewInvoices);
             builder.GetConfirmBox().Show();
-
-            UpdateInfo();
         }
 
         private void buttonChangeCustomer_Click(object sender, EventArgs e)
@@ -234,27 +246,27 @@ namespace Barroc_IT
                 "WHERE c_id = @id");
 
             database.AddParameter("@id", selectedIndexCustomer);
-            database.AddParameter("@c_name", textBoxNameChangeCustomer.Text);
-            database.AddParameter("@c_address", textBoxAddressChangeCustomer.Text);
-            database.AddParameter("@c_housenumber", textBoxHouseNumberChangeCustomer.Text);
-            database.AddParameter("@c_code", textBoxCompanyCodeChangeCustomer.Text);
-            database.AddParameter("@c_city", textBoxCityChangeCustomer.Text);
-            database.AddParameter("@c_contactperson", textBoxContactpersonChangeCustomer.Text);
-            database.AddParameter("@c_contactperson_initials", textBoxInitialsChangeCustomer.Text);
-            database.AddParameter("@c_contactperson_telephonenumber", textBoxTelephoneChangeCustomer.Text);
-            database.AddParameter("@c_contactperson_faxnumber", textBoxFaxnumberChangeCustomer.Text);
-            database.AddParameter("@c_contactperson_email", textBoxEmailChangeCustomer.Text);
-            database.AddParameter("@c_potential_customer", checkBoxPotentialCustomerChangeCustomer.Checked ? 1 : 0);
-            database.AddParameter("@c_last_contactdate", textBoxLastContactDateChangeCustomer.Text);
-            database.AddParameter("@c_creditworthy", checkBoxCreditworthyChangeCustomer.Checked ? 1 : 0);
-            database.AddParameter("@c_discount", textBoxDiscountChangeCustomer.Text);
-            database.AddParameter("@c_banknumber", textBoxBanknumberChangeCustomer.Text);
-            database.AddParameter("@c_credit_balance", textBoxCreditBalanceChangeCustomer.Text);
-            database.AddParameter("@c_revenue", textBoxRevenueChangeCustomer.Text);
-            database.AddParameter("@c_limit", textBoxLimitChangeCustomer.Text);
-            database.AddParameter("@c_ledger", textBoxLedgerChangeCustomer.Text);
-            database.AddParameter("@c_btw_code", textBoxVATCodeChangeCustomer.Text);
-            database.AddParameter("@c_maintenance_contract", textBoxMaintenanceContractChangeCustomer.Text);
+            database.AddParameter("@c_name", textBoxNameCustomerInfo.Text);
+            database.AddParameter("@c_address", textBoxAddressCustomerInfo.Text);
+            database.AddParameter("@c_housenumber", textBoxHouseNumberCustomerInfo.Text);
+            database.AddParameter("@c_code", textBoxCompanyCodeCustomerInfo.Text);
+            database.AddParameter("@c_city", textBoxCityChangeCustomerInfo.Text);
+            database.AddParameter("@c_contactperson", textBoxContactpersonCustomerInfo.Text);
+            database.AddParameter("@c_contactperson_initials", textBoxInitialsCustomerInfo.Text);
+            database.AddParameter("@c_contactperson_telephonenumber", textBoxTelephoneCustomerInfo.Text);
+            database.AddParameter("@c_contactperson_faxnumber", textBoxFaxnumberCustomerInfo.Text);
+            database.AddParameter("@c_contactperson_email", textBoxEmailCustomerInfo.Text);
+            database.AddParameter("@c_potential_customer", checkBoxPotentialCustomerInfo.Checked ? 1 : 0);
+            database.AddParameter("@c_last_contactdate", textBoxLastContactDateCustomerInfo.Text);
+            database.AddParameter("@c_creditworthy", checkBoxCreditworthyCustomerInfo.Checked ? 1 : 0);
+            database.AddParameter("@c_discount", textBoxDiscountCustomerInfo.Text);
+            database.AddParameter("@c_banknumber", textBoxBanknumberCustomerInfo.Text);
+            database.AddParameter("@c_credit_balance", textBoxCreditBalanceCustomerInfo.Text);
+            database.AddParameter("@c_revenue", textBoxRevenueCustomerInfo.Text);
+            database.AddParameter("@c_limit", textBoxLimitCustomerInfo.Text);
+            database.AddParameter("@c_ledger", textBoxLedgerCustomerInfo.Text);
+            database.AddParameter("@c_btw_code", textBoxVATCodeCustomerInfo.Text);
+            database.AddParameter("@c_maintenance_contract", textBoxMaintenanceContractCustomerInfo.Text);
 
             database.ExecuteQuery();
         }
@@ -265,36 +277,43 @@ namespace Barroc_IT
             {
                 if (row.Selected)
                 {
-                    bool creditWorthyChecked = false;
-
-                    if ((int)row.Cells[11].Value == 1)
+                    if (row.Cells[1] != null)
                     {
-                        creditWorthyChecked = true;
+                        bool potentialCustomer;
+                        bool creditWorthyChecked;
+                        int indexCustomer;
+
+                        bool.TryParse(row.Cells["c_creditworthy"].Value.ToString(), out creditWorthyChecked);
+                        int.TryParse(row.Cells["c_id"].Value.ToString(), out indexCustomer);
+
+                        selectedIndexCustomer = indexCustomer;
+
+                        textBoxNameCustomerInfo.Text = row.Cells["c_name"].Value.ToString();
+                        textBoxAddressCustomerInfo.Text = row.Cells["c_address"].Value.ToString();
+                        textBoxHouseNumberCustomerInfo.Text = row.Cells["c_housenumber"].Value.ToString();
+                        textBoxCompanyCodeCustomerInfo.Text = row.Cells["c_code"].Value.ToString();
+                        textBoxCityChangeCustomerInfo.Text = row.Cells["c_city"].Value.ToString();
+                        textBoxContactpersonCustomerInfo.Text = row.Cells["c_contactperson_first_name"].Value.ToString() + " " + row.Cells["c_contactperson_last_name"].Value.ToString();
+                        textBoxInitialsCustomerInfo.Text = row.Cells["c_contactperson_initials"].Value.ToString();
+                        textBoxTelephoneCustomerInfo.Text = row.Cells["c_contactperson_telephone_number"].Value.ToString();
+                        textBoxFaxnumberCustomerInfo.Text = row.Cells["c_contactperson_faxnumber"].Value.ToString();
+                        textBoxEmailCustomerInfo.Text = row.Cells["c_contactperson_email"].Value.ToString();
+                        checkBoxCreditworthyCustomerInfo.Checked = creditWorthyChecked;
+                        textBoxDiscountCustomerInfo.Text = row.Cells["c_discount"].Value.ToString();
+                        textBoxBanknumberCustomerInfo.Text = row.Cells["c_ledger"].Value.ToString();
+                        textBoxCreditBalanceCustomerInfo.Text = row.Cells["c_credit_balance"].Value.ToString();
+                        textBoxRevenueCustomerInfo.Text = row.Cells["c_revenue"].Value.ToString();
+                        textBoxLimitCustomerInfo.Text = row.Cells["c_limit"].Value.ToString();
+                        textBoxLedgerCustomerInfo.Text = row.Cells["c_ledger"].Value.ToString();
+                        textBoxVATCodeCustomerInfo.Text = row.Cells["c_btw_code"].Value.ToString();
+                        textBoxMaintenanceContractCustomerInfo.Text = row.Cells["c_maintenance_contract"].Value.ToString();
+                        bool.TryParse(row.Cells["c_potential_customer"].Value.ToString(), out potentialCustomer);
+                        checkBoxPotentialCustomerInfo.Checked = potentialCustomer;
+
+                        textBoxCustomerInfoBKR.Text = creditWorthyChecked ? "Positive" : "Negative";
+
+                        tabControlFinance.SelectTab(tabPageCustomerInfo);
                     }
-
-                    selectedIndexCustomer = (int)row.Cells[0].Value;
-
-                    textBoxNameChangeCustomer.Text = row.Cells[1].Value.ToString();
-                    textBoxAddressChangeCustomer.Text = row.Cells[2].Value.ToString();
-                    textBoxHouseNumberChangeCustomer.Text = row.Cells[3].Value.ToString();
-                    textBoxCompanyCodeChangeCustomer.Text = row.Cells[4].Value.ToString();
-                    textBoxCityChangeCustomer.Text = row.Cells[5].Value.ToString();
-                    textBoxContactpersonChangeCustomer.Text = row.Cells[6].Value.ToString();
-                    textBoxInitialsChangeCustomer.Text = row.Cells[7].Value.ToString();
-                    textBoxTelephoneChangeCustomer.Text = row.Cells[8].Value.ToString();
-                    textBoxFaxnumberChangeCustomer.Text = row.Cells[9].Value.ToString();
-                    textBoxEmailChangeCustomer.Text = row.Cells[10].Value.ToString();
-                    checkBoxAddCustomerCompanyCreditworthy.Checked = creditWorthyChecked;
-                    textBoxDiscountChangeCustomer.Text = row.Cells[12].Value.ToString();
-                    textBoxBanknumberChangeCustomer.Text = row.Cells[13].Value.ToString();
-                    textBoxCreditBalanceChangeCustomer.Text = row.Cells[14].Value.ToString();
-                    textBoxRevenueChangeCustomer.Text = row.Cells[15].Value.ToString();
-                    textBoxLimitChangeCustomer.Text = row.Cells[16].Value.ToString();
-                    textBoxLedgerChangeCustomer.Text = row.Cells[17].Value.ToString();
-                    textBoxVATCodeChangeCustomer.Text = row.Cells[18].Value.ToString();
-                    textBoxMaintenanceContractChangeCustomer.Text = row.Cells[19].Value.ToString();
-
-                    tabControlFinance.SelectTab(tabPageChangeCustomer);
                 }
             }
         }
@@ -316,11 +335,15 @@ namespace Barroc_IT
 
         private void buttonDeleteCustomer_Click(object sender, EventArgs e)
         {
-            database.Query("DELETE * FROM tbl_customers WHERE c_id = @id;");
+            /*database.Query("DELETE * FROM tbl_customers WHERE c_id = @id;");
 
             database.AddParameter("@id", selectedIndexCustomer);
 
-            database.ExecuteQuery();
+            ConfirmBoxBuilder builder = new ConfirmBoxBuilder();
+            builder.BuildTop("Are you sure you want to delete the following information:");
+            builder.BuildCenter("Address: " + textBoxAddressCustomerInfo.Text);
+            builder.BuildBottom();
+            builder.GetConfirmBox().Show();*/
         }
 
         private void buttonBackInvoice_Click(object sender, EventArgs e)
@@ -334,7 +357,73 @@ namespace Barroc_IT
 
             database.AddParameter("@id", selectedIndexInvoice);
 
+            ConfirmBoxBuilder builder = new ConfirmBoxBuilder();
+            builder.BuildTop("Are you sure you want to delete the following information: ");
+            builder.BuildCenter("Project id: " + textBoxChangeInvoiceProjectId.Text + Environment.NewLine +
+                "Description: " + textBoxChangeInvoiceDescription.Text + Environment.NewLine +
+                "Price: " + textBoxChangeInvoicePrice.Text);
+            builder.BuildBottom(tabControlFinance, tabPageInvoices, dataGridViewInvoices);
+
             database.ExecuteQuery();
+        }
+
+        private void dataGridViewProjects_SelectionChanged(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dataGridViewProjects.Rows)
+            {
+                if (row.Selected)
+                {
+                    if (row.Cells[0].Value != null)
+                    {
+                        bool isActiveProject = false;
+
+                        if ((bool)row.Cells["p_active"].Value)
+                        {
+                            isActiveProject = true;
+                        }
+
+                        selectedIndexProject = (int)row.Cells["project_id"].Value;
+
+                        textBoxChangeProjectName.Text = row.Cells["p_name"].Value.ToString();
+                        checkBoxActiveChangeProject.Checked = isActiveProject;
+
+                        tabControlFinance.SelectTab(tabPageChangeProject);
+                    }
+                }
+            }
+        }
+
+        private void buttonBackChangeProject_Click(object sender, EventArgs e)
+        {
+            tabControlFinance.SelectTab(tabPageProjects);
+        }
+
+        private void buttonChangeProject_Click(object sender, EventArgs e)
+        {
+            database.Query("UPDATE tbl_projects SET p_active = @p_active WHERE project_id = @project_id;");
+
+            database.AddParameter("@project_id", selectedIndexProject);
+            database.AddParameter("@p_active", checkBoxActiveChangeProject.Checked ? 1 : 0);
+
+            ConfirmBoxBuilder builder = new ConfirmBoxBuilder();
+            builder.BuildTop("You are about to change the following information:");
+            builder.BuildCenter("Active: " + checkBoxActiveChangeProject.Checked.ToString());
+            builder.BuildBottom(tabControlFinance, tabPageProjects, dataGridViewProjects);
+            builder.GetConfirmBox().Show();
+        }
+
+        private void textBoxSearchInvoices_TextChanged(object sender, EventArgs e)
+        {
+            database.QueryInDatagridView("SELECT * FROM tbl_invoices WHERE i_description LIKE '%" + textBoxSearchInvoices.Text + "%';", "@i_description", 
+                textBoxSearchInvoices.Text, dataGridViewInvoices);
+        }
+
+        private void labelNotifications_Click(object sender, EventArgs e)
+        {
+            FormNotifications notifications = new FormNotifications(Department.Finance);
+
+            notifications.ReceiveMessages();
+            notifications.Show();
         }
     }
 }

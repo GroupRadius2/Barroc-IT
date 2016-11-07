@@ -21,16 +21,15 @@ namespace Barroc_IT
 
         private void label4_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectedTab = tabPage2;
+            tabControlSales.SelectedTab = tabPage2;
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectedTab = tabPage1;
+            tabControlSales.SelectedTab = tabPage1;
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void customerSave_Click(object sender, EventArgs e)
         {
-
             MessageNewCustomer MNC = new MessageNewCustomer(this);
             MNC.Show();
             MNC.lblAddress1.Text = textBoxAddress1.Text;
@@ -50,17 +49,17 @@ namespace Barroc_IT
 
         private void label1_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectedTab = tabPage1;
+            tabControlSales.SelectedTab = tabPage1;
         }
 
         private void label5_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectedTab = tabPage3;
+            tabControlSales.SelectedTab = tabPage3;
         }
 
         private void label6_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectedTab = tabPage4;
+            tabControlSales.SelectedTab = tabPage4;
             Database.GetInstance().QueryInDatagridView("SELECT * FROM tbl_companies;", dataGridView3);
         }
 
@@ -73,25 +72,41 @@ namespace Barroc_IT
 
         private void button5_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectedTab = tabPage1;
+            tabControlSales.SelectedTab = tabPage1;
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             MessageNewProject MNP = new MessageNewProject();
-            MNP.Show();        
+            MNP.Show();
+            MNP.lblCompanyName.Text = textBoxC_Name.Text;
+            MNP.lblCustomerName.Text = textBoxCustomerName.Text;
+            MNP.lblProjectName.Text = textBoxP_Name.Text;
+            MNP.lblStartDate.Text = textBoxBeginDate.Text;
+            MNP.lblEndDate.Text = textBoxEndDate.Text;
+            MNP.lblCost.Text = textBoxCost.Text;
+            MNP.lblTerms.Text = textBoxTerms.Text;
         }
 
         private void label7_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectedTab = tabPage6;
+            tabControlSales.SelectedTab = tabPage6;
+            Database.GetInstance().QueryInDatagridView("SELECT * FROM tbl_projects;", datagridProjects);
         }
 
         private void Sales_dash_Load(object sender, EventArgs e)
         {
            Database.GetInstance().QueryInDatagridView("SELECT * FROM tbl_companies;", dataGridView3);
            Database.GetInstance().QueryInDatagridView("SELECT * FROM tbl_appiontments", dataGridView1);
+           Database.GetInstance().QueryInDatagridView("SELECT * FROM tbl_projects", datagridProjects);
+
         }
 
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+            tabControlSales.SelectedTab = tabPage7;
+        }
         }
     }
