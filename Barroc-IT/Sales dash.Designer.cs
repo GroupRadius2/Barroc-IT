@@ -102,33 +102,33 @@
             this.pictureBox19 = new System.Windows.Forms.PictureBox();
             this.pictureBox18 = new System.Windows.Forms.PictureBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dataGridCustomers = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.Customerlbl = new System.Windows.Forms.Label();
             this.pictureBox24 = new System.Windows.Forms.PictureBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.label43 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtbChTelephone = new System.Windows.Forms.TextBox();
             this.label42 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtbChAdress2 = new System.Windows.Forms.TextBox();
             this.buttonDeleteCustomer = new System.Windows.Forms.Button();
             this.buttonBackChangeCustomers = new System.Windows.Forms.Button();
             this.labelEmailChangeCustomer = new System.Windows.Forms.Label();
-            this.textBoxEmailChangeCustomer = new System.Windows.Forms.TextBox();
+            this.txtbChEmail = new System.Windows.Forms.TextBox();
             this.labelFaxnumberChangeCustomer = new System.Windows.Forms.Label();
-            this.textBoxFaxnumberChangeCustomer = new System.Windows.Forms.TextBox();
+            this.txtbChFaxnumber = new System.Windows.Forms.TextBox();
             this.labelTelephoneChangeCustomer = new System.Windows.Forms.Label();
-            this.textBoxTelephoneChangeCustomer = new System.Windows.Forms.TextBox();
+            this.txtbChTelephone2 = new System.Windows.Forms.TextBox();
             this.labelContactpersonChangeCustomer = new System.Windows.Forms.Label();
-            this.textBoxContactpersonChangeCustomer = new System.Windows.Forms.TextBox();
+            this.txtbChContactperson = new System.Windows.Forms.TextBox();
             this.labelCityChangeCustomer = new System.Windows.Forms.Label();
-            this.textBoxCityChangeCustomer = new System.Windows.Forms.TextBox();
+            this.txtbChCity2 = new System.Windows.Forms.TextBox();
             this.labelHouseNumberChangeCustomer = new System.Windows.Forms.Label();
-            this.textBoxHouseNumberChangeCustomer = new System.Windows.Forms.TextBox();
+            this.txtbChHousenumber = new System.Windows.Forms.TextBox();
             this.labelAddressChangeCustomer = new System.Windows.Forms.Label();
-            this.textBoxAddressChangeCustomer = new System.Windows.Forms.TextBox();
+            this.txtbChAdress = new System.Windows.Forms.TextBox();
             this.labelNameChangeCustomer = new System.Windows.Forms.Label();
-            this.textBoxNameChangeCustomer = new System.Windows.Forms.TextBox();
+            this.txtbChCompanyName = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
             this.label40 = new System.Windows.Forms.Label();
             this.pictureBox26 = new System.Windows.Forms.PictureBox();
@@ -168,6 +168,12 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label44 = new System.Windows.Forms.Label();
+            this.txtbChZipcode = new System.Windows.Forms.TextBox();
+            this.label51 = new System.Windows.Forms.Label();
+            this.txtbChZipcode2 = new System.Windows.Forms.TextBox();
+            this.label54 = new System.Windows.Forms.Label();
+            this.txtbChCity = new System.Windows.Forms.TextBox();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -182,7 +188,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
             this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridCustomers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).BeginInit();
             this.tabPage5.SuspendLayout();
@@ -993,7 +999,7 @@
             // 
             // tabPage4
             // 
-            this.tabPage4.Controls.Add(this.dataGridView3);
+            this.tabPage4.Controls.Add(this.dataGridCustomers);
             this.tabPage4.Controls.Add(this.dataGridView2);
             this.tabPage4.Controls.Add(this.Customerlbl);
             this.tabPage4.Controls.Add(this.pictureBox24);
@@ -1005,14 +1011,15 @@
             this.tabPage4.Text = "tabPage4";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // dataGridView3
+            // dataGridCustomers
             // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(44, 118);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowTemplate.Height = 24;
-            this.dataGridView3.Size = new System.Drawing.Size(1445, 582);
-            this.dataGridView3.TabIndex = 3;
+            this.dataGridCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridCustomers.Location = new System.Drawing.Point(44, 118);
+            this.dataGridCustomers.Name = "dataGridCustomers";
+            this.dataGridCustomers.RowTemplate.Height = 24;
+            this.dataGridCustomers.Size = new System.Drawing.Size(1445, 582);
+            this.dataGridCustomers.TabIndex = 3;
+            this.dataGridCustomers.SelectionChanged += new System.EventHandler(this.dataGridCustomers_SelectionChanged_1);
             // 
             // dataGridView2
             // 
@@ -1045,28 +1052,34 @@
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.label54);
+            this.tabPage5.Controls.Add(this.txtbChCity);
+            this.tabPage5.Controls.Add(this.label51);
+            this.tabPage5.Controls.Add(this.txtbChZipcode2);
+            this.tabPage5.Controls.Add(this.label44);
+            this.tabPage5.Controls.Add(this.txtbChZipcode);
             this.tabPage5.Controls.Add(this.label43);
-            this.tabPage5.Controls.Add(this.textBox2);
+            this.tabPage5.Controls.Add(this.txtbChTelephone);
             this.tabPage5.Controls.Add(this.label42);
-            this.tabPage5.Controls.Add(this.textBox1);
+            this.tabPage5.Controls.Add(this.txtbChAdress2);
             this.tabPage5.Controls.Add(this.buttonDeleteCustomer);
             this.tabPage5.Controls.Add(this.buttonBackChangeCustomers);
             this.tabPage5.Controls.Add(this.labelEmailChangeCustomer);
-            this.tabPage5.Controls.Add(this.textBoxEmailChangeCustomer);
+            this.tabPage5.Controls.Add(this.txtbChEmail);
             this.tabPage5.Controls.Add(this.labelFaxnumberChangeCustomer);
-            this.tabPage5.Controls.Add(this.textBoxFaxnumberChangeCustomer);
+            this.tabPage5.Controls.Add(this.txtbChFaxnumber);
             this.tabPage5.Controls.Add(this.labelTelephoneChangeCustomer);
-            this.tabPage5.Controls.Add(this.textBoxTelephoneChangeCustomer);
+            this.tabPage5.Controls.Add(this.txtbChTelephone2);
             this.tabPage5.Controls.Add(this.labelContactpersonChangeCustomer);
-            this.tabPage5.Controls.Add(this.textBoxContactpersonChangeCustomer);
+            this.tabPage5.Controls.Add(this.txtbChContactperson);
             this.tabPage5.Controls.Add(this.labelCityChangeCustomer);
-            this.tabPage5.Controls.Add(this.textBoxCityChangeCustomer);
+            this.tabPage5.Controls.Add(this.txtbChCity2);
             this.tabPage5.Controls.Add(this.labelHouseNumberChangeCustomer);
-            this.tabPage5.Controls.Add(this.textBoxHouseNumberChangeCustomer);
+            this.tabPage5.Controls.Add(this.txtbChHousenumber);
             this.tabPage5.Controls.Add(this.labelAddressChangeCustomer);
-            this.tabPage5.Controls.Add(this.textBoxAddressChangeCustomer);
+            this.tabPage5.Controls.Add(this.txtbChAdress);
             this.tabPage5.Controls.Add(this.labelNameChangeCustomer);
-            this.tabPage5.Controls.Add(this.textBoxNameChangeCustomer);
+            this.tabPage5.Controls.Add(this.txtbChCompanyName);
             this.tabPage5.Controls.Add(this.button6);
             this.tabPage5.Controls.Add(this.label40);
             this.tabPage5.Controls.Add(this.pictureBox26);
@@ -1082,6 +1095,7 @@
             // label43
             // 
             this.label43.AutoSize = true;
+            this.label43.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label43.Location = new System.Drawing.Point(36, 198);
             this.label43.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label43.Name = "label43";
@@ -1089,31 +1103,32 @@
             this.label43.TabIndex = 176;
             this.label43.Text = "Telephone";
             // 
-            // textBox2
+            // txtbChTelephone
             // 
-            this.textBox2.Location = new System.Drawing.Point(176, 194);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(175, 22);
-            this.textBox2.TabIndex = 175;
+            this.txtbChTelephone.Location = new System.Drawing.Point(174, 195);
+            this.txtbChTelephone.Margin = new System.Windows.Forms.Padding(4);
+            this.txtbChTelephone.Name = "txtbChTelephone";
+            this.txtbChTelephone.Size = new System.Drawing.Size(175, 22);
+            this.txtbChTelephone.TabIndex = 175;
             // 
             // label42
             // 
             this.label42.AutoSize = true;
+            this.label42.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label42.Location = new System.Drawing.Point(38, 169);
             this.label42.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(60, 17);
+            this.label42.Size = new System.Drawing.Size(72, 17);
             this.label42.TabIndex = 174;
-            this.label42.Text = "Address";
+            this.label42.Text = "Address 2";
             // 
-            // textBox1
+            // txtbChAdress2
             // 
-            this.textBox1.Location = new System.Drawing.Point(178, 165);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(175, 22);
-            this.textBox1.TabIndex = 173;
+            this.txtbChAdress2.Location = new System.Drawing.Point(174, 167);
+            this.txtbChAdress2.Margin = new System.Windows.Forms.Padding(4);
+            this.txtbChAdress2.Name = "txtbChAdress2";
+            this.txtbChAdress2.Size = new System.Drawing.Size(175, 22);
+            this.txtbChAdress2.TabIndex = 173;
             // 
             // buttonDeleteCustomer
             // 
@@ -1127,125 +1142,136 @@
             // 
             // buttonBackChangeCustomers
             // 
+            this.buttonBackChangeCustomers.BackColor = System.Drawing.Color.Transparent;
             this.buttonBackChangeCustomers.Location = new System.Drawing.Point(17, 608);
             this.buttonBackChangeCustomers.Margin = new System.Windows.Forms.Padding(4);
             this.buttonBackChangeCustomers.Name = "buttonBackChangeCustomers";
-            this.buttonBackChangeCustomers.Size = new System.Drawing.Size(100, 28);
+            this.buttonBackChangeCustomers.Size = new System.Drawing.Size(100, 29);
             this.buttonBackChangeCustomers.TabIndex = 171;
             this.buttonBackChangeCustomers.Text = "Back";
-            this.buttonBackChangeCustomers.UseVisualStyleBackColor = true;
+            this.buttonBackChangeCustomers.UseVisualStyleBackColor = false;
+            this.buttonBackChangeCustomers.Click += new System.EventHandler(this.buttonBackChangeCustomers_Click);
             // 
             // labelEmailChangeCustomer
             // 
             this.labelEmailChangeCustomer.AutoSize = true;
-            this.labelEmailChangeCustomer.Location = new System.Drawing.Point(34, 385);
+            this.labelEmailChangeCustomer.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.labelEmailChangeCustomer.Location = new System.Drawing.Point(32, 481);
             this.labelEmailChangeCustomer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelEmailChangeCustomer.Name = "labelEmailChangeCustomer";
             this.labelEmailChangeCustomer.Size = new System.Drawing.Size(42, 17);
             this.labelEmailChangeCustomer.TabIndex = 170;
             this.labelEmailChangeCustomer.Text = "Email";
             // 
-            // textBoxEmailChangeCustomer
+            // txtbChEmail
             // 
-            this.textBoxEmailChangeCustomer.Location = new System.Drawing.Point(174, 381);
-            this.textBoxEmailChangeCustomer.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxEmailChangeCustomer.Name = "textBoxEmailChangeCustomer";
-            this.textBoxEmailChangeCustomer.Size = new System.Drawing.Size(175, 22);
-            this.textBoxEmailChangeCustomer.TabIndex = 169;
+            this.txtbChEmail.Location = new System.Drawing.Point(174, 477);
+            this.txtbChEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.txtbChEmail.Name = "txtbChEmail";
+            this.txtbChEmail.Size = new System.Drawing.Size(175, 22);
+            this.txtbChEmail.TabIndex = 169;
             // 
             // labelFaxnumberChangeCustomer
             // 
             this.labelFaxnumberChangeCustomer.AutoSize = true;
-            this.labelFaxnumberChangeCustomer.Location = new System.Drawing.Point(34, 352);
+            this.labelFaxnumberChangeCustomer.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.labelFaxnumberChangeCustomer.Location = new System.Drawing.Point(32, 448);
             this.labelFaxnumberChangeCustomer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelFaxnumberChangeCustomer.Name = "labelFaxnumberChangeCustomer";
             this.labelFaxnumberChangeCustomer.Size = new System.Drawing.Size(78, 17);
             this.labelFaxnumberChangeCustomer.TabIndex = 168;
             this.labelFaxnumberChangeCustomer.Text = "Faxnumber";
             // 
-            // textBoxFaxnumberChangeCustomer
+            // txtbChFaxnumber
             // 
-            this.textBoxFaxnumberChangeCustomer.Location = new System.Drawing.Point(174, 348);
-            this.textBoxFaxnumberChangeCustomer.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxFaxnumberChangeCustomer.Name = "textBoxFaxnumberChangeCustomer";
-            this.textBoxFaxnumberChangeCustomer.Size = new System.Drawing.Size(175, 22);
-            this.textBoxFaxnumberChangeCustomer.TabIndex = 167;
+            this.txtbChFaxnumber.Location = new System.Drawing.Point(174, 444);
+            this.txtbChFaxnumber.Margin = new System.Windows.Forms.Padding(4);
+            this.txtbChFaxnumber.Name = "txtbChFaxnumber";
+            this.txtbChFaxnumber.Size = new System.Drawing.Size(175, 22);
+            this.txtbChFaxnumber.TabIndex = 167;
             // 
             // labelTelephoneChangeCustomer
             // 
             this.labelTelephoneChangeCustomer.AutoSize = true;
+            this.labelTelephoneChangeCustomer.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.labelTelephoneChangeCustomer.Location = new System.Drawing.Point(36, 224);
             this.labelTelephoneChangeCustomer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTelephoneChangeCustomer.Name = "labelTelephoneChangeCustomer";
-            this.labelTelephoneChangeCustomer.Size = new System.Drawing.Size(76, 17);
+            this.labelTelephoneChangeCustomer.Size = new System.Drawing.Size(79, 20);
             this.labelTelephoneChangeCustomer.TabIndex = 166;
-            this.labelTelephoneChangeCustomer.Text = "Telephone";
+            this.labelTelephoneChangeCustomer.Text = "Telephone 2";
+            this.labelTelephoneChangeCustomer.UseCompatibleTextRendering = true;
+            this.labelTelephoneChangeCustomer.UseMnemonic = false;
             // 
-            // textBoxTelephoneChangeCustomer
+            // txtbChTelephone2
             // 
-            this.textBoxTelephoneChangeCustomer.Location = new System.Drawing.Point(176, 220);
-            this.textBoxTelephoneChangeCustomer.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxTelephoneChangeCustomer.Name = "textBoxTelephoneChangeCustomer";
-            this.textBoxTelephoneChangeCustomer.Size = new System.Drawing.Size(175, 22);
-            this.textBoxTelephoneChangeCustomer.TabIndex = 165;
+            this.txtbChTelephone2.Location = new System.Drawing.Point(174, 223);
+            this.txtbChTelephone2.Margin = new System.Windows.Forms.Padding(4);
+            this.txtbChTelephone2.Name = "txtbChTelephone2";
+            this.txtbChTelephone2.Size = new System.Drawing.Size(175, 22);
+            this.txtbChTelephone2.TabIndex = 165;
             // 
             // labelContactpersonChangeCustomer
             // 
             this.labelContactpersonChangeCustomer.AutoSize = true;
-            this.labelContactpersonChangeCustomer.Location = new System.Drawing.Point(36, 317);
+            this.labelContactpersonChangeCustomer.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.labelContactpersonChangeCustomer.Location = new System.Drawing.Point(34, 413);
             this.labelContactpersonChangeCustomer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelContactpersonChangeCustomer.Name = "labelContactpersonChangeCustomer";
             this.labelContactpersonChangeCustomer.Size = new System.Drawing.Size(100, 17);
             this.labelContactpersonChangeCustomer.TabIndex = 164;
             this.labelContactpersonChangeCustomer.Text = "Contactperson";
             // 
-            // textBoxContactpersonChangeCustomer
+            // txtbChContactperson
             // 
-            this.textBoxContactpersonChangeCustomer.Location = new System.Drawing.Point(176, 313);
-            this.textBoxContactpersonChangeCustomer.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxContactpersonChangeCustomer.Name = "textBoxContactpersonChangeCustomer";
-            this.textBoxContactpersonChangeCustomer.Size = new System.Drawing.Size(175, 22);
-            this.textBoxContactpersonChangeCustomer.TabIndex = 163;
+            this.txtbChContactperson.Location = new System.Drawing.Point(174, 409);
+            this.txtbChContactperson.Margin = new System.Windows.Forms.Padding(4);
+            this.txtbChContactperson.Name = "txtbChContactperson";
+            this.txtbChContactperson.Size = new System.Drawing.Size(175, 22);
+            this.txtbChContactperson.TabIndex = 163;
             // 
             // labelCityChangeCustomer
             // 
             this.labelCityChangeCustomer.AutoSize = true;
-            this.labelCityChangeCustomer.Location = new System.Drawing.Point(38, 257);
+            this.labelCityChangeCustomer.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.labelCityChangeCustomer.Location = new System.Drawing.Point(36, 353);
             this.labelCityChangeCustomer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCityChangeCustomer.Name = "labelCityChangeCustomer";
-            this.labelCityChangeCustomer.Size = new System.Drawing.Size(31, 17);
+            this.labelCityChangeCustomer.Size = new System.Drawing.Size(43, 17);
             this.labelCityChangeCustomer.TabIndex = 162;
-            this.labelCityChangeCustomer.Text = "City";
+            this.labelCityChangeCustomer.Text = "City 2";
             // 
-            // textBoxCityChangeCustomer
+            // txtbChCity2
             // 
-            this.textBoxCityChangeCustomer.Location = new System.Drawing.Point(178, 253);
-            this.textBoxCityChangeCustomer.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxCityChangeCustomer.Name = "textBoxCityChangeCustomer";
-            this.textBoxCityChangeCustomer.Size = new System.Drawing.Size(175, 22);
-            this.textBoxCityChangeCustomer.TabIndex = 161;
+            this.txtbChCity2.Location = new System.Drawing.Point(173, 349);
+            this.txtbChCity2.Margin = new System.Windows.Forms.Padding(4);
+            this.txtbChCity2.Name = "txtbChCity2";
+            this.txtbChCity2.Size = new System.Drawing.Size(175, 22);
+            this.txtbChCity2.TabIndex = 161;
             // 
             // labelHouseNumberChangeCustomer
             // 
             this.labelHouseNumberChangeCustomer.AutoSize = true;
-            this.labelHouseNumberChangeCustomer.Location = new System.Drawing.Point(38, 287);
+            this.labelHouseNumberChangeCustomer.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.labelHouseNumberChangeCustomer.Location = new System.Drawing.Point(36, 383);
             this.labelHouseNumberChangeCustomer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelHouseNumberChangeCustomer.Name = "labelHouseNumberChangeCustomer";
             this.labelHouseNumberChangeCustomer.Size = new System.Drawing.Size(101, 17);
             this.labelHouseNumberChangeCustomer.TabIndex = 158;
             this.labelHouseNumberChangeCustomer.Text = "House number";
             // 
-            // textBoxHouseNumberChangeCustomer
+            // txtbChHousenumber
             // 
-            this.textBoxHouseNumberChangeCustomer.Location = new System.Drawing.Point(178, 283);
-            this.textBoxHouseNumberChangeCustomer.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxHouseNumberChangeCustomer.Name = "textBoxHouseNumberChangeCustomer";
-            this.textBoxHouseNumberChangeCustomer.Size = new System.Drawing.Size(175, 22);
-            this.textBoxHouseNumberChangeCustomer.TabIndex = 157;
+            this.txtbChHousenumber.Location = new System.Drawing.Point(173, 379);
+            this.txtbChHousenumber.Margin = new System.Windows.Forms.Padding(4);
+            this.txtbChHousenumber.Name = "txtbChHousenumber";
+            this.txtbChHousenumber.Size = new System.Drawing.Size(175, 22);
+            this.txtbChHousenumber.TabIndex = 157;
             // 
             // labelAddressChangeCustomer
             // 
             this.labelAddressChangeCustomer.AutoSize = true;
+            this.labelAddressChangeCustomer.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.labelAddressChangeCustomer.Location = new System.Drawing.Point(38, 139);
             this.labelAddressChangeCustomer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelAddressChangeCustomer.Name = "labelAddressChangeCustomer";
@@ -1253,31 +1279,32 @@
             this.labelAddressChangeCustomer.TabIndex = 156;
             this.labelAddressChangeCustomer.Text = "Address";
             // 
-            // textBoxAddressChangeCustomer
+            // txtbChAdress
             // 
-            this.textBoxAddressChangeCustomer.Location = new System.Drawing.Point(178, 135);
-            this.textBoxAddressChangeCustomer.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxAddressChangeCustomer.Name = "textBoxAddressChangeCustomer";
-            this.textBoxAddressChangeCustomer.Size = new System.Drawing.Size(175, 22);
-            this.textBoxAddressChangeCustomer.TabIndex = 155;
+            this.txtbChAdress.Location = new System.Drawing.Point(173, 136);
+            this.txtbChAdress.Margin = new System.Windows.Forms.Padding(4);
+            this.txtbChAdress.Name = "txtbChAdress";
+            this.txtbChAdress.Size = new System.Drawing.Size(175, 22);
+            this.txtbChAdress.TabIndex = 155;
             // 
             // labelNameChangeCustomer
             // 
             this.labelNameChangeCustomer.AutoSize = true;
+            this.labelNameChangeCustomer.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.labelNameChangeCustomer.Location = new System.Drawing.Point(38, 107);
             this.labelNameChangeCustomer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelNameChangeCustomer.Name = "labelNameChangeCustomer";
-            this.labelNameChangeCustomer.Size = new System.Drawing.Size(45, 17);
+            this.labelNameChangeCustomer.Size = new System.Drawing.Size(108, 17);
             this.labelNameChangeCustomer.TabIndex = 154;
-            this.labelNameChangeCustomer.Text = "Name";
+            this.labelNameChangeCustomer.Text = "Company Name";
             // 
-            // textBoxNameChangeCustomer
+            // txtbChCompanyName
             // 
-            this.textBoxNameChangeCustomer.Location = new System.Drawing.Point(178, 103);
-            this.textBoxNameChangeCustomer.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxNameChangeCustomer.Name = "textBoxNameChangeCustomer";
-            this.textBoxNameChangeCustomer.Size = new System.Drawing.Size(175, 22);
-            this.textBoxNameChangeCustomer.TabIndex = 153;
+            this.txtbChCompanyName.Location = new System.Drawing.Point(173, 105);
+            this.txtbChCompanyName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtbChCompanyName.Name = "txtbChCompanyName";
+            this.txtbChCompanyName.Size = new System.Drawing.Size(175, 22);
+            this.txtbChCompanyName.TabIndex = 153;
             // 
             // button6
             // 
@@ -1288,6 +1315,7 @@
             this.button6.TabIndex = 4;
             this.button6.Text = "Save";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.btnChSave_Click);
             // 
             // label40
             // 
@@ -1669,6 +1697,67 @@
             this.pictureBox1.TabIndex = 33;
             this.pictureBox1.TabStop = false;
             // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label44.Location = new System.Drawing.Point(35, 254);
+            this.label44.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(53, 20);
+            this.label44.TabIndex = 178;
+            this.label44.Text = "Zipcode";
+            this.label44.UseCompatibleTextRendering = true;
+            this.label44.UseMnemonic = false;
+            // 
+            // txtbChZipcode
+            // 
+            this.txtbChZipcode.Location = new System.Drawing.Point(173, 253);
+            this.txtbChZipcode.Margin = new System.Windows.Forms.Padding(4);
+            this.txtbChZipcode.Name = "txtbChZipcode";
+            this.txtbChZipcode.Size = new System.Drawing.Size(175, 22);
+            this.txtbChZipcode.TabIndex = 177;
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label51.Location = new System.Drawing.Point(35, 284);
+            this.label51.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(64, 20);
+            this.label51.TabIndex = 180;
+            this.label51.Text = "Zipcode 2";
+            this.label51.UseCompatibleTextRendering = true;
+            this.label51.UseMnemonic = false;
+            // 
+            // txtbChZipcode2
+            // 
+            this.txtbChZipcode2.Location = new System.Drawing.Point(173, 283);
+            this.txtbChZipcode2.Margin = new System.Windows.Forms.Padding(4);
+            this.txtbChZipcode2.Name = "txtbChZipcode2";
+            this.txtbChZipcode2.Size = new System.Drawing.Size(175, 22);
+            this.txtbChZipcode2.TabIndex = 179;
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label54.Location = new System.Drawing.Point(36, 317);
+            this.label54.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(31, 17);
+            this.label54.TabIndex = 182;
+            this.label54.Text = "City";
+            // 
+            // txtbChCity
+            // 
+            this.txtbChCity.Location = new System.Drawing.Point(173, 313);
+            this.txtbChCity.Margin = new System.Windows.Forms.Padding(4);
+            this.txtbChCity.Name = "txtbChCity";
+            this.txtbChCity.Size = new System.Drawing.Size(175, 22);
+            this.txtbChCity.TabIndex = 181;
+            // 
             // Sales_dash
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1724,7 +1813,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridCustomers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).EndInit();
             this.tabPage5.ResumeLayout(false);
@@ -1845,7 +1934,7 @@
         private System.Windows.Forms.Label label52;
         private System.Windows.Forms.Label label53;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridView dataGridCustomers;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -1866,27 +1955,27 @@
         public System.Windows.Forms.TextBox textBoxZipcode1;
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtbChTelephone;
         private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtbChAdress2;
         private System.Windows.Forms.Button buttonDeleteCustomer;
         private System.Windows.Forms.Button buttonBackChangeCustomers;
         private System.Windows.Forms.Label labelEmailChangeCustomer;
-        private System.Windows.Forms.TextBox textBoxEmailChangeCustomer;
+        private System.Windows.Forms.TextBox txtbChEmail;
         private System.Windows.Forms.Label labelFaxnumberChangeCustomer;
-        private System.Windows.Forms.TextBox textBoxFaxnumberChangeCustomer;
+        private System.Windows.Forms.TextBox txtbChFaxnumber;
         private System.Windows.Forms.Label labelTelephoneChangeCustomer;
-        private System.Windows.Forms.TextBox textBoxTelephoneChangeCustomer;
+        private System.Windows.Forms.TextBox txtbChTelephone2;
         private System.Windows.Forms.Label labelContactpersonChangeCustomer;
-        private System.Windows.Forms.TextBox textBoxContactpersonChangeCustomer;
+        private System.Windows.Forms.TextBox txtbChContactperson;
         private System.Windows.Forms.Label labelCityChangeCustomer;
-        private System.Windows.Forms.TextBox textBoxCityChangeCustomer;
+        private System.Windows.Forms.TextBox txtbChCity2;
         private System.Windows.Forms.Label labelHouseNumberChangeCustomer;
-        private System.Windows.Forms.TextBox textBoxHouseNumberChangeCustomer;
+        private System.Windows.Forms.TextBox txtbChHousenumber;
         private System.Windows.Forms.Label labelAddressChangeCustomer;
-        private System.Windows.Forms.TextBox textBoxAddressChangeCustomer;
+        private System.Windows.Forms.TextBox txtbChAdress;
         private System.Windows.Forms.Label labelNameChangeCustomer;
-        private System.Windows.Forms.TextBox textBoxNameChangeCustomer;
+        private System.Windows.Forms.TextBox txtbChCompanyName;
         public System.Windows.Forms.TextBox textBoxTerms;
         public System.Windows.Forms.TextBox textBoxCost;
         public System.Windows.Forms.TextBox textBoxEndDate;
@@ -1897,5 +1986,11 @@
         private System.Windows.Forms.TabPage tabPage7;
         private System.Windows.Forms.DataGridView datagridProjects;
         public System.Windows.Forms.TabControl tabControlSales;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.TextBox txtbChZipcode2;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.TextBox txtbChZipcode;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.TextBox txtbChCity;
     }
 }
