@@ -146,7 +146,10 @@ namespace Barroc_IT
 
                     ChangeProject changeProject = new ChangeProject(this);
                     changeProject.Show();
-                    changeProject.Datetbx.Text = row.Cells[0].Value.ToString();
+                    changeProject.StartDatetbx.Text = row.Cells[0].Value.ToString();
+                    changeProject.EndDatetbx.Text = row.Cells[1].Value.ToString();
+                    changeProject.Progressiontbx.Text = row.Cells[2].Value.ToString();
+                    
                 }
 
                 counter++;

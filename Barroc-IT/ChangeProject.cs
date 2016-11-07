@@ -25,7 +25,7 @@ namespace Barroc_IT
             Database.GetInstance().Query("UPDATE tbl_projects SET p_start_date = @p_start_date WHERE project_id = @project_id;");
 
             DateTime dt;
-            DateTime.TryParse(Datetbx.Text, out dt);
+            DateTime.TryParse(StartDatetbx.Text, out dt);
 
             Database.GetInstance().AddParameter("project_id", dev.GetSelectedIndexProject());
             Database.GetInstance().AddParameter("@p_start_date", dt);

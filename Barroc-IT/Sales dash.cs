@@ -67,7 +67,7 @@ namespace Barroc_IT
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form1 login = new Form1();
+            FormLogin login = new FormLogin();
             login.Show();
         }
 
@@ -93,9 +93,5 @@ namespace Barroc_IT
            Database.GetInstance().QueryInDatagridView("SELECT * FROM tbl_appiontments", dataGridView1);
         }
 
-        private void dataGridView3_SelectionChanged(object sender, EventArgs e)
-        {
-
-        }
         }
     }

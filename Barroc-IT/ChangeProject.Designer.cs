@@ -32,9 +32,9 @@
             this.StartDatelbl = new System.Windows.Forms.Label();
             this.EndDatelbl = new System.Windows.Forms.Label();
             this.progressionlbl = new System.Windows.Forms.Label();
-            this.Datetbx = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.StartDatetbx = new System.Windows.Forms.TextBox();
+            this.EndDatetbx = new System.Windows.Forms.TextBox();
+            this.Progressiontbx = new System.Windows.Forms.TextBox();
             this.Savebtn = new System.Windows.Forms.Button();
             this.Closebtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -79,26 +79,26 @@
             this.progressionlbl.TabIndex = 4;
             this.progressionlbl.Text = "Progression";
             // 
-            // Datetbx
+            // StartDatetbx
             // 
-            this.Datetbx.Location = new System.Drawing.Point(98, 58);
-            this.Datetbx.Name = "Datetbx";
-            this.Datetbx.Size = new System.Drawing.Size(278, 20);
-            this.Datetbx.TabIndex = 5;
+            this.StartDatetbx.Location = new System.Drawing.Point(98, 58);
+            this.StartDatetbx.Name = "StartDatetbx";
+            this.StartDatetbx.Size = new System.Drawing.Size(278, 20);
+            this.StartDatetbx.TabIndex = 5;
             // 
-            // textBox1
+            // EndDatetbx
             // 
-            this.textBox1.Location = new System.Drawing.Point(92, 90);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(284, 20);
-            this.textBox1.TabIndex = 6;
+            this.EndDatetbx.Location = new System.Drawing.Point(92, 90);
+            this.EndDatetbx.Name = "EndDatetbx";
+            this.EndDatetbx.Size = new System.Drawing.Size(284, 20);
+            this.EndDatetbx.TabIndex = 6;
             // 
-            // textBox2
+            // Progressiontbx
             // 
-            this.textBox2.Location = new System.Drawing.Point(111, 119);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(265, 20);
-            this.textBox2.TabIndex = 7;
+            this.Progressiontbx.Location = new System.Drawing.Point(111, 119);
+            this.Progressiontbx.Name = "Progressiontbx";
+            this.Progressiontbx.Size = new System.Drawing.Size(265, 20);
+            this.Progressiontbx.TabIndex = 7;
             // 
             // Savebtn
             // 
@@ -127,9 +127,9 @@
             this.ClientSize = new System.Drawing.Size(388, 204);
             this.Controls.Add(this.Closebtn);
             this.Controls.Add(this.Savebtn);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.Datetbx);
+            this.Controls.Add(this.Progressiontbx);
+            this.Controls.Add(this.EndDatetbx);
+            this.Controls.Add(this.StartDatetbx);
             this.Controls.Add(this.progressionlbl);
             this.Controls.Add(this.EndDatelbl);
             this.Controls.Add(this.StartDatelbl);
@@ -147,9 +147,9 @@
         private System.Windows.Forms.Label StartDatelbl;
         private System.Windows.Forms.Label EndDatelbl;
         private System.Windows.Forms.Label progressionlbl;
-        public System.Windows.Forms.TextBox Datetbx;
-        public System.Windows.Forms.TextBox textBox1;
-        public System.Windows.Forms.TextBox textBox2;
+        public System.Windows.Forms.TextBox StartDatetbx;
+        public System.Windows.Forms.TextBox EndDatetbx;
+        public System.Windows.Forms.TextBox Progressiontbx;
         private System.Windows.Forms.Button Savebtn;
         private System.Windows.Forms.Button Closebtn;
     }
