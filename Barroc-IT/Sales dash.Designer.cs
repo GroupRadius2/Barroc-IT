@@ -72,20 +72,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridAppointments = new System.Windows.Forms.DataGridView();
             this.pictureBox17 = new System.Windows.Forms.PictureBox();
             this.label30 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
             this.label26 = new System.Windows.Forms.Label();
             this.tabControlSales = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.dataGridPositiveB = new System.Windows.Forms.DataGridView();
+            this.dataGridNegativeB = new System.Windows.Forms.DataGridView();
             this.label36 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
@@ -172,15 +169,15 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dataGridNegativeB = new System.Windows.Forms.DataGridView();
-            this.dataGridPositiveB = new System.Windows.Forms.DataGridView();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridAppointments)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             this.tabControlSales.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridPositiveB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridNegativeB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
@@ -210,8 +207,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridNegativeB)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridPositiveB)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPage2
@@ -669,11 +664,10 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.dataGridView1);
+            this.tabPage1.Controls.Add(this.dataGridAppointments);
             this.tabPage1.Controls.Add(this.pictureBox17);
             this.tabPage1.Controls.Add(this.label30);
             this.tabPage1.Controls.Add(this.label29);
-            this.tabPage1.Controls.Add(this.label28);
             this.tabPage1.Controls.Add(this.label27);
             this.tabPage1.Controls.Add(this.pictureBox16);
             this.tabPage1.Controls.Add(this.label26);
@@ -687,43 +681,14 @@
             this.tabPage1.Text = "Dashboard";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dataGridAppointments
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4});
-            this.dataGridView1.Location = new System.Drawing.Point(21, 144);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1410, 637);
-            this.dataGridView1.TabIndex = 7;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 240;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 340;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 340;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 450;
+            this.dataGridAppointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridAppointments.Location = new System.Drawing.Point(21, 144);
+            this.dataGridAppointments.Name = "dataGridAppointments";
+            this.dataGridAppointments.RowTemplate.Height = 24;
+            this.dataGridAppointments.Size = new System.Drawing.Size(1410, 637);
+            this.dataGridAppointments.TabIndex = 7;
             // 
             // pictureBox17
             // 
@@ -740,7 +705,7 @@
             this.label30.BackColor = System.Drawing.Color.SkyBlue;
             this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label30.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label30.Location = new System.Drawing.Point(1025, 105);
+            this.label30.Location = new System.Drawing.Point(524, 105);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(69, 29);
             this.label30.TabIndex = 5;
@@ -752,23 +717,11 @@
             this.label29.BackColor = System.Drawing.Color.SkyBlue;
             this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label29.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label29.Location = new System.Drawing.Point(679, 105);
+            this.label29.Location = new System.Drawing.Point(1029, 105);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(101, 29);
             this.label29.TabIndex = 4;
             this.label29.Text = "Projects";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.BackColor = System.Drawing.Color.SkyBlue;
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label28.Location = new System.Drawing.Point(302, 105);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(124, 29);
-            this.label28.TabIndex = 3;
-            this.label28.Text = "Full Name";
             // 
             // label27
             // 
@@ -776,7 +729,7 @@
             this.label27.BackColor = System.Drawing.Color.SkyBlue;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label27.Location = new System.Drawing.Point(26, 105);
+            this.label27.Location = new System.Drawing.Point(39, 105);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(63, 29);
             this.label27.TabIndex = 2;
@@ -841,6 +794,24 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Customer Finance";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // dataGridPositiveB
+            // 
+            this.dataGridPositiveB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridPositiveB.Location = new System.Drawing.Point(84, 522);
+            this.dataGridPositiveB.Name = "dataGridPositiveB";
+            this.dataGridPositiveB.RowTemplate.Height = 24;
+            this.dataGridPositiveB.Size = new System.Drawing.Size(1147, 244);
+            this.dataGridPositiveB.TabIndex = 15;
+            // 
+            // dataGridNegativeB
+            // 
+            this.dataGridNegativeB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridNegativeB.Location = new System.Drawing.Point(84, 188);
+            this.dataGridNegativeB.Name = "dataGridNegativeB";
+            this.dataGridNegativeB.RowTemplate.Height = 24;
+            this.dataGridNegativeB.Size = new System.Drawing.Size(1147, 244);
+            this.dataGridNegativeB.TabIndex = 14;
             // 
             // label36
             // 
@@ -1742,24 +1713,6 @@
             this.pictureBox1.TabIndex = 33;
             this.pictureBox1.TabStop = false;
             // 
-            // dataGridNegativeB
-            // 
-            this.dataGridNegativeB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridNegativeB.Location = new System.Drawing.Point(84, 188);
-            this.dataGridNegativeB.Name = "dataGridNegativeB";
-            this.dataGridNegativeB.RowTemplate.Height = 24;
-            this.dataGridNegativeB.Size = new System.Drawing.Size(1147, 244);
-            this.dataGridNegativeB.TabIndex = 14;
-            // 
-            // dataGridPositiveB
-            // 
-            this.dataGridPositiveB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridPositiveB.Location = new System.Drawing.Point(84, 522);
-            this.dataGridPositiveB.Name = "dataGridPositiveB";
-            this.dataGridPositiveB.RowTemplate.Height = 24;
-            this.dataGridPositiveB.Size = new System.Drawing.Size(1147, 244);
-            this.dataGridPositiveB.TabIndex = 15;
-            // 
             // Sales_dash
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1801,12 +1754,14 @@
             this.tabPage2.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridAppointments)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
             this.tabControlSales.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridPositiveB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridNegativeB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
@@ -1839,8 +1794,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridNegativeB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridPositiveB)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1894,7 +1847,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.PictureBox pictureBox16;
         private System.Windows.Forms.Label label26;
@@ -1933,12 +1885,8 @@
         private System.Windows.Forms.Label label50;
         private System.Windows.Forms.Label label52;
         private System.Windows.Forms.Label label53;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridAppointments;
         private System.Windows.Forms.DataGridView dataGridCustomers;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         public System.Windows.Forms.TextBox textBoxAddress1;
         public System.Windows.Forms.TextBox textBoxHousenumber;
         private System.Windows.Forms.Label label14;
