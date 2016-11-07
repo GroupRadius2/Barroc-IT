@@ -71,12 +71,6 @@
     <Compile Include="ChangeAppointment.Designer.cs">
       <DependentUpon>ChangeAppointment.cs</DependentUpon>
     </Compile>
-    <Compile Include="Changecustomer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Changecustomer.Designer.cs">
-      <DependentUpon>Changecustomer.cs</DependentUpon>
-    </Compile>
     <Compile Include="ChangeProject.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,9 +143,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChangeAppointment.resx">
       <DependentUpon>ChangeAppointment.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Changecustomer.resx">
-      <DependentUpon>Changecustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChangeProject.resx">
       <DependentUpon>ChangeProject.cs</DependentUpon>

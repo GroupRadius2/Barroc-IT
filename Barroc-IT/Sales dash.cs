@@ -60,7 +60,7 @@ namespace Barroc_IT
         private void label6_Click(object sender, EventArgs e)
         {
             tabControlSales.SelectedTab = tabPage4;
-            Database.GetInstance().QueryInDatagridView("SELECT * FROM tbl_companies;", dataGridView3);
+            Database.GetInstance().QueryInDatagridView("SELECT * FROM tbl_companies;", dataGridCustomers);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -96,20 +96,52 @@ namespace Barroc_IT
 
         private void Sales_dash_Load(object sender, EventArgs e)
         {
-           Database.GetInstance().QueryInDatagridView("SELECT * FROM tbl_companies;", dataGridView3);
+           Database.GetInstance().QueryInDatagridView("SELECT * FROM tbl_companies;", dataGridCustomers);
            Database.GetInstance().QueryInDatagridView("SELECT * FROM tbl_appiontments", dataGridView1);
            Database.GetInstance().QueryInDatagridView("SELECT * FROM tbl_projects", datagridProjects);
 
         }
 
-        private void dataGridView3_SelectionChanged(object sender, EventArgs e)
+        private void dataGridCustomers_SelectionChanged(object sender, EventArgs e)
         {
-
+           
         }
 
         private void label8_Click(object sender, EventArgs e)
         {
             tabControlSales.SelectedTab = tabPage7;
+        }
+
+        private void dataGridCustomers_SelectionChanged_1(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dataGridCustomers.Rows)
+            {
+                if (row.Selected)
+                {
+
+                    tabControlSales.SelectedTab = tabPage5;
+
+                    txtbChAdress.Text = row.Cells["c_address"].Value.ToString();
+                    txtbChAdress2.Text = row.Cells["c_address2"].Value.ToString();
+                    txtbChCompanyName.Text = row.Cells["c_name"].Value.ToString();
+                    txtbChHousenumber.Text = row.Cells["c_housenumber"].Value.ToString();
+                    txtbChCity2.Text = row.Cells["c_city"].Value.ToString();
+                    txtbChAdress.Text = row.Cells["c_contactperson_first_name"].Value.ToString();
+                    txtbChAdress.Text = row.Cells["c_contactperson_telephone_number"].Value.ToString();
+                    txtbChAdress.Text = row.Cells["c_contactperson_telephone_number2"].Value.ToString();
+                    txtbChAdress.Text = row.Cells["c_contactperson_faxnumber"].Value.ToString();
+                    txtbChAdress.Text = row.Cells["c_contactperson_email"].Value.ToString();
+                    txtbChAdress.Text = row.Cells["c_zipcode"].Value.ToString();
+                    txtbChAdress.Text = row.Cells["c_zipcode2"].Value.ToString();
+                    txtbChAdress.Text = row.Cells["c_city2"].Value.ToString();
+
+                }
+            }
+        }
+
+        private void buttonBackChangeCustomers_Click(object sender, EventArgs e)
+        {
+            tabControlSales.SelectedTab = tabPage4;
         }
         }
     }
