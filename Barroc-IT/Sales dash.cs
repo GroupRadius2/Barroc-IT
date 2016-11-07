@@ -96,9 +96,11 @@ namespace Barroc_IT
 
         private void Sales_dash_Load(object sender, EventArgs e)
         {
-           Database.GetInstance().QueryInDatagridView("SELECT * FROM tbl_companies;", dataGridCustomers);
-           Database.GetInstance().QueryInDatagridView("SELECT * FROM tbl_appiontments", dataGridView1);
-           Database.GetInstance().QueryInDatagridView("SELECT * FROM tbl_projects", datagridProjects);
+            this.dataGridAppointments.DefaultCellStyle.Font = new Font("Tahoma", 16);
+            this.dataGridAppointments.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            Database.GetInstance().QueryInDatagridView("SELECT * FROM tbl_companies;", dataGridCustomers);
+            Database.GetInstance().QueryInDatagridView("SELECT a_date AS Date, a_time_of AS Time, project_id AS Projects FROM tbl_appointments", dataGridAppointments);
+            Database.GetInstance().QueryInDatagridView("SELECT * FROM tbl_projects", datagridProjects);
 
         }
 
@@ -168,6 +170,13 @@ namespace Barroc_IT
             Database.GetInstance().QueryInDatagridView("SELECT * FROM tbl_companies WHERE c_creditworthy = 0", dataGridNegativeB);
             Database.GetInstance().QueryInDatagridView("SELECT * FROM tbl_companies WHERE c_creditworthy = 1", dataGridPositiveB);
             Database.GetInstance().QueryInDatagridView("SELECT * FROM tbl_companies", dataGridCustomers);
+
+            
+        }
+
+        private void btnNewApp_Click(object sender, EventArgs e)
+        {
+
         }
         }
     }
