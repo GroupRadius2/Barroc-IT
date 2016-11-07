@@ -58,7 +58,7 @@ namespace Barroc_IT
 
             Database.GetInstance().ExecuteQuery();
 
-            Database.GetInstance().QueryInDatagridView("SELECT p_progression , p_start_date, p_end_date FROM tbl_projects;", dev.dataGridView4);
+            Database.GetInstance().QueryInDatagridView("SELECT p_progression , p_start_date, p_end_date FROM tbl_projects;", dev.dataGridViewProjectProgress);
             this.Hide();
         }
 

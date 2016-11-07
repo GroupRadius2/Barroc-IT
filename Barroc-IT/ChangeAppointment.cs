@@ -34,20 +34,20 @@ namespace Barroc_IT
 
             Database.GetInstance().ExecuteQuery();
 
-            Database.GetInstance().QueryInDatagridView("SELECT a_date, a_time_of FROM tbl_appointments;", dev.dataGridView1);
+            Database.GetInstance().QueryInDatagridView("SELECT a_date, a_time_of FROM tbl_appointments;", dev.dataGridViewAppointments);
             
             //Time
             Database.GetInstance().Query("UPDATE tbl_appointments SET a_time_of = @a_time_of WHERE appiontment_id = @appointment_id;");
 
             string pr;
-            pr = TimeTbx.Text;
+            pr = Timetbx.Text;
 
             Database.GetInstance().AddParameter("@appointment_id", dev.GetSelectedIndexAppointment());
             Database.GetInstance().AddParameter("@a_time_of", pr);
 
             Database.GetInstance().ExecuteQuery();
 
-            Database.GetInstance().QueryInDatagridView("SELECT a_date, a_time_of FROM tbl_appointments;", dev.dataGridView1);
+            Database.GetInstance().QueryInDatagridView("Select project_id, c_name, a_date , a_time_of FROM tbl_appointments", dev.dataGridViewAppointments);
 
             this.Hide();
         }
