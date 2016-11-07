@@ -96,6 +96,19 @@ namespace Barroc_IT
             dataGridView.DataSource = dataTable;
         }
 
+        public void QueryInDatagridView(string query, string parameterName, object value, DataGridView dataGridView)
+        {
+            dataGridView.Refresh();
+
+            SqlCommand cmd = new SqlCommand(query);
+            cmd.Parameters.Add(new SqlParameter(parameterName, value));
+            adapter = new SqlDataAdapter(cmd.CommandText, connectionString);
+            SqlCommandBuilder sqlCommandBuilder = new SqlCommandBuilder(adapter);
+            DataTable dataTable = new DataTable();
+            adapter.Fill(dataTable);
+            dataGridView.DataSource = dataTable;
+        }
+
         public void AddParameter(string parameterName, object value)
         {
             command.Parameters.Add(new SqlParameter(parameterName, value));

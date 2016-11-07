@@ -29,25 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.labelAddInvoice = new System.Windows.Forms.Label();
             this.labelAddCustomer = new System.Windows.Forms.Label();
             this.labelInvoices = new System.Windows.Forms.Label();
             this.labelProjects = new System.Windows.Forms.Label();
             this.labelCustomers = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labelNotifications = new System.Windows.Forms.Label();
             this.labelDashboard = new System.Windows.Forms.Label();
             this.buttonLogout = new System.Windows.Forms.Button();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.dataGridViewPositiveCompanies = new System.Windows.Forms.DataGridView();
             this.tabControlFinance = new System.Windows.Forms.TabControl();
             this.tabPageCustomers = new System.Windows.Forms.TabPage();
@@ -58,15 +47,11 @@
             this.labelTitleCustomers = new System.Windows.Forms.Label();
             this.tabPageProjects = new System.Windows.Forms.TabPage();
             this.dataGridViewProjects = new System.Windows.Forms.DataGridView();
-            this.projectidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pprogressionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pstartdateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.penddateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tblprojectsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.databaseBarrocProjectsDataSet = new Barroc_IT.DatabaseBarrocProjectsDataSet();
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelTitleProjects = new System.Windows.Forms.Label();
             this.tabPageInvoices = new System.Windows.Forms.TabPage();
+            this.labelNumOfInvoices = new System.Windows.Forms.Label();
+            this.textBoxSearchInvoices = new System.Windows.Forms.TextBox();
             this.dataGridViewInvoices = new System.Windows.Forms.DataGridView();
             this.labelTitleInvoices = new System.Windows.Forms.Label();
             this.panelInvoices = new System.Windows.Forms.Panel();
@@ -116,55 +101,57 @@
             this.labelTitleAddCustomer = new System.Windows.Forms.Label();
             this.labelCompanyName = new System.Windows.Forms.Label();
             this.textBoxAddCustomerCompanyName = new System.Windows.Forms.TextBox();
-            this.tabPageChangeCustomer = new System.Windows.Forms.TabPage();
-            this.buttonDeleteCustomer = new System.Windows.Forms.Button();
-            this.buttonBackChangeCustomers = new System.Windows.Forms.Button();
+            this.tabPageCustomerInfo = new System.Windows.Forms.TabPage();
+            this.textBoxCustomerInfoBKR = new System.Windows.Forms.TextBox();
+            this.labelCustomerInfoBKR = new System.Windows.Forms.Label();
+            this.buttonBackCustomerInfo = new System.Windows.Forms.Button();
             this.panelTitleChangeCustomer = new System.Windows.Forms.Panel();
-            this.labelTitleChangeCustomer = new System.Windows.Forms.Label();
-            this.labelBanknumberChangeCustomer = new System.Windows.Forms.Label();
-            this.textBoxBanknumberChangeCustomer = new System.Windows.Forms.TextBox();
-            this.labelDiscountChangeCustomer = new System.Windows.Forms.Label();
-            this.textBoxDiscountChangeCustomer = new System.Windows.Forms.TextBox();
-            this.labelEmailChangeCustomer = new System.Windows.Forms.Label();
-            this.textBoxEmailChangeCustomer = new System.Windows.Forms.TextBox();
-            this.labelFaxnumberChangeCustomer = new System.Windows.Forms.Label();
-            this.textBoxFaxnumberChangeCustomer = new System.Windows.Forms.TextBox();
-            this.labelTelephoneChangeCustomer = new System.Windows.Forms.Label();
-            this.textBoxTelephoneChangeCustomer = new System.Windows.Forms.TextBox();
-            this.labelInitialsChangeCustomer = new System.Windows.Forms.Label();
-            this.textBoxInitialsChangeCustomer = new System.Windows.Forms.TextBox();
-            this.labelContactpersonChangeCustomer = new System.Windows.Forms.Label();
-            this.textBoxContactpersonChangeCustomer = new System.Windows.Forms.TextBox();
-            this.labelMaintenanceContractChangeCustomer = new System.Windows.Forms.Label();
-            this.textBoxMaintenanceContractChangeCustomer = new System.Windows.Forms.TextBox();
-            this.labelVATCodeChangeCustomer = new System.Windows.Forms.Label();
-            this.textBoxVATCodeChangeCustomer = new System.Windows.Forms.TextBox();
-            this.labelLedgerChangeCustomer = new System.Windows.Forms.Label();
-            this.textBoxLedgerChangeCustomer = new System.Windows.Forms.TextBox();
-            this.labelLimitChangeCustomer = new System.Windows.Forms.Label();
-            this.textBoxLimitChangeCustomer = new System.Windows.Forms.TextBox();
-            this.labelRevenueChangeCustomer = new System.Windows.Forms.Label();
-            this.textBoxRevenueChangeCustomer = new System.Windows.Forms.TextBox();
-            this.buttonChangeCustomer = new System.Windows.Forms.Button();
-            this.labelCreditBalanceChangeCustomer = new System.Windows.Forms.Label();
-            this.textBoxCreditBalanceChangeCustomer = new System.Windows.Forms.TextBox();
-            this.checkBoxCreditworthyChangeCustomer = new System.Windows.Forms.CheckBox();
-            this.labelCreditworthyChangeCustomer = new System.Windows.Forms.Label();
-            this.checkBoxPotentialCustomerChangeCustomer = new System.Windows.Forms.CheckBox();
-            this.labelLastContactDateChangeCustomer = new System.Windows.Forms.Label();
-            this.textBoxLastContactDateChangeCustomer = new System.Windows.Forms.TextBox();
-            this.labelPotentialChangeCustomer = new System.Windows.Forms.Label();
-            this.labelCityChangeCustomer = new System.Windows.Forms.Label();
-            this.textBoxCityChangeCustomer = new System.Windows.Forms.TextBox();
-            this.labelCompanyCodeChangeCustomer = new System.Windows.Forms.Label();
-            this.textBoxCompanyCodeChangeCustomer = new System.Windows.Forms.TextBox();
-            this.labelHouseNumberChangeCustomer = new System.Windows.Forms.Label();
-            this.textBoxHouseNumberChangeCustomer = new System.Windows.Forms.TextBox();
-            this.labelAddressChangeCustomer = new System.Windows.Forms.Label();
-            this.textBoxAddressChangeCustomer = new System.Windows.Forms.TextBox();
-            this.labelNameChangeCustomer = new System.Windows.Forms.Label();
-            this.textBoxNameChangeCustomer = new System.Windows.Forms.TextBox();
+            this.labelTitleCustomerInformation = new System.Windows.Forms.Label();
+            this.labelBanknumberCustomerInfo = new System.Windows.Forms.Label();
+            this.textBoxBanknumberCustomerInfo = new System.Windows.Forms.TextBox();
+            this.labelDiscountCustomerInfo = new System.Windows.Forms.Label();
+            this.textBoxDiscountCustomerInfo = new System.Windows.Forms.TextBox();
+            this.labelEmailChangeCustomerInfo = new System.Windows.Forms.Label();
+            this.textBoxEmailCustomerInfo = new System.Windows.Forms.TextBox();
+            this.labelFaxnumberCustomerInfo = new System.Windows.Forms.Label();
+            this.textBoxFaxnumberCustomerInfo = new System.Windows.Forms.TextBox();
+            this.labelTelephoneCustomerInfo = new System.Windows.Forms.Label();
+            this.textBoxTelephoneCustomerInfo = new System.Windows.Forms.TextBox();
+            this.labelInitialsCustomerInfo = new System.Windows.Forms.Label();
+            this.textBoxInitialsCustomerInfo = new System.Windows.Forms.TextBox();
+            this.labelContactpersonCustomerInfo = new System.Windows.Forms.Label();
+            this.textBoxContactpersonCustomerInfo = new System.Windows.Forms.TextBox();
+            this.labelMaintenanceContractCustomerInfo = new System.Windows.Forms.Label();
+            this.textBoxMaintenanceContractCustomerInfo = new System.Windows.Forms.TextBox();
+            this.labelVATCodeCustomerInfo = new System.Windows.Forms.Label();
+            this.textBoxVATCodeCustomerInfo = new System.Windows.Forms.TextBox();
+            this.labelLedgerCustomerInfo = new System.Windows.Forms.Label();
+            this.textBoxLedgerCustomerInfo = new System.Windows.Forms.TextBox();
+            this.labelLimitCustomerInfo = new System.Windows.Forms.Label();
+            this.textBoxLimitCustomerInfo = new System.Windows.Forms.TextBox();
+            this.labelRevenueCustomerInfo = new System.Windows.Forms.Label();
+            this.textBoxRevenueCustomerInfo = new System.Windows.Forms.TextBox();
+            this.labelCreditBalanceCustomerInfo = new System.Windows.Forms.Label();
+            this.textBoxCreditBalanceCustomerInfo = new System.Windows.Forms.TextBox();
+            this.checkBoxCreditworthyCustomerInfo = new System.Windows.Forms.CheckBox();
+            this.labelCreditworthyCustomerInfo = new System.Windows.Forms.Label();
+            this.checkBoxPotentialCustomerInfo = new System.Windows.Forms.CheckBox();
+            this.labelLastContactDateCustomerInfo = new System.Windows.Forms.Label();
+            this.textBoxLastContactDateCustomerInfo = new System.Windows.Forms.TextBox();
+            this.labelPotentialCustomerInfo = new System.Windows.Forms.Label();
+            this.labelCityCustomerInfo = new System.Windows.Forms.Label();
+            this.textBoxCityChangeCustomerInfo = new System.Windows.Forms.TextBox();
+            this.labelCompanyCodeCustomerInfo = new System.Windows.Forms.Label();
+            this.textBoxCompanyCodeCustomerInfo = new System.Windows.Forms.TextBox();
+            this.labelHouseNumberCustomerInfo = new System.Windows.Forms.Label();
+            this.textBoxHouseNumberCustomerInfo = new System.Windows.Forms.TextBox();
+            this.labelAddressCustomerInfo = new System.Windows.Forms.Label();
+            this.textBoxAddressCustomerInfo = new System.Windows.Forms.TextBox();
+            this.labelNameCustomerInfo = new System.Windows.Forms.Label();
+            this.textBoxNameCustomerInfo = new System.Windows.Forms.TextBox();
             this.tabPageChangeInvoice = new System.Windows.Forms.TabPage();
+            this.checkBoxChangeInvoicePaid = new System.Windows.Forms.CheckBox();
+            this.labelChangeInvoicePaid = new System.Windows.Forms.Label();
             this.buttonDeleteInvoice = new System.Windows.Forms.Button();
             this.buttonBackInvoice = new System.Windows.Forms.Button();
             this.buttonChangeInvoice = new System.Windows.Forms.Button();
@@ -177,6 +164,8 @@
             this.panelTitleChangeInvoice = new System.Windows.Forms.Panel();
             this.labelTitleChangeInvoice = new System.Windows.Forms.Label();
             this.tabPageAddInvoice = new System.Windows.Forms.TabPage();
+            this.labelAddInvoicePaid = new System.Windows.Forms.Label();
+            this.checkBoxAddInvoicePaid = new System.Windows.Forms.CheckBox();
             this.buttonSaveInvoice = new System.Windows.Forms.Button();
             this.labelInvoicePrice = new System.Windows.Forms.Label();
             this.textBoxInvoicePrice = new System.Windows.Forms.TextBox();
@@ -186,18 +175,34 @@
             this.textBoxProjectId = new System.Windows.Forms.TextBox();
             this.panelTitleAddInvoice = new System.Windows.Forms.Panel();
             this.labelTitleAddInvoice = new System.Windows.Forms.Label();
+            this.tabPageChangeProject = new System.Windows.Forms.TabPage();
+            this.buttonChangeProject = new System.Windows.Forms.Button();
+            this.buttonBackChangeProject = new System.Windows.Forms.Button();
+            this.checkBoxActiveChangeProject = new System.Windows.Forms.CheckBox();
+            this.textBoxChangeProjectName = new System.Windows.Forms.TextBox();
+            this.labelChangeProjectActive = new System.Windows.Forms.Label();
+            this.labelChangeProjectName = new System.Windows.Forms.Label();
+            this.panelTitleChangeProject = new System.Windows.Forms.Panel();
+            this.labelTitleChangeProject = new System.Windows.Forms.Label();
+            this.tabPageDashboard = new System.Windows.Forms.TabPage();
+            this.labelCustomersPay = new System.Windows.Forms.Label();
+            this.dataGridViewCustomersProjectNeedsPay = new System.Windows.Forms.DataGridView();
+            this.labelEarnedCustomers = new System.Windows.Forms.Label();
+            this.dataGridViewEarnedCustomers = new System.Windows.Forms.DataGridView();
+            this.tblprojectsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.databaseBarrocProjectsDataSet = new Barroc_IT.DatabaseBarrocProjectsDataSet();
             this.tbl_projectsTableAdapter = new Barroc_IT.DatabaseBarrocProjectsDataSetTableAdapters.tbl_projectsTableAdapter();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPositiveCompanies)).BeginInit();
             this.tabControlFinance.SuspendLayout();
             this.tabPageCustomers.SuspendLayout();
@@ -205,32 +210,36 @@
             this.panel1.SuspendLayout();
             this.tabPageProjects.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProjects)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblprojectsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.databaseBarrocProjectsDataSet)).BeginInit();
             this.panel2.SuspendLayout();
             this.tabPageInvoices.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInvoices)).BeginInit();
             this.tabPageAddCustomer.SuspendLayout();
             this.panelAddCustomer.SuspendLayout();
-            this.tabPageChangeCustomer.SuspendLayout();
+            this.tabPageCustomerInfo.SuspendLayout();
             this.panelTitleChangeCustomer.SuspendLayout();
             this.tabPageChangeInvoice.SuspendLayout();
             this.panelTitleChangeInvoice.SuspendLayout();
             this.tabPageAddInvoice.SuspendLayout();
             this.panelTitleAddInvoice.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.tabPageChangeProject.SuspendLayout();
+            this.panelTitleChangeProject.SuspendLayout();
+            this.tabPageDashboard.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCustomersProjectNeedsPay)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEarnedCustomers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblprojectsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseBarrocProjectsDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox12
-            // 
-            this.pictureBox12.Image = global::Barroc_IT.Properties.Resources._1;
-            this.pictureBox12.Location = new System.Drawing.Point(46, 71);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(123, 108);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox12.TabIndex = 53;
-            this.pictureBox12.TabStop = false;
             // 
             // labelAddInvoice
             // 
@@ -292,16 +301,17 @@
             this.labelCustomers.Text = "Customers";
             this.labelCustomers.Click += new System.EventHandler(this.labelCustomers_Click);
             // 
-            // label2
+            // labelNotifications
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(488, 13);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(365, 33);
-            this.label2.TabIndex = 44;
-            this.label2.Text = "Barroc-IT Notifications (    )";
+            this.labelNotifications.AutoSize = true;
+            this.labelNotifications.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.labelNotifications.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNotifications.Location = new System.Drawing.Point(488, 13);
+            this.labelNotifications.Name = "labelNotifications";
+            this.labelNotifications.Size = new System.Drawing.Size(365, 33);
+            this.labelNotifications.TabIndex = 44;
+            this.labelNotifications.Text = "Barroc-IT Notifications (    )";
+            this.labelNotifications.Click += new System.EventHandler(this.labelNotifications_Click);
             // 
             // labelDashboard
             // 
@@ -325,90 +335,6 @@
             this.buttonLogout.UseVisualStyleBackColor = true;
             this.buttonLogout.Click += new System.EventHandler(this.buttonLogout_Click);
             // 
-            // pictureBox10
-            // 
-            this.pictureBox10.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox10.Location = new System.Drawing.Point(-5, 479);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(218, 5);
-            this.pictureBox10.TabIndex = 40;
-            this.pictureBox10.TabStop = false;
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox11.Location = new System.Drawing.Point(-5, 426);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(218, 5);
-            this.pictureBox11.TabIndex = 38;
-            this.pictureBox11.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox7.Location = new System.Drawing.Point(-7, 373);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(218, 5);
-            this.pictureBox7.TabIndex = 37;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox8.Location = new System.Drawing.Point(-7, 320);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(218, 5);
-            this.pictureBox8.TabIndex = 36;
-            this.pictureBox8.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox4.Location = new System.Drawing.Point(-6, 267);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(218, 5);
-            this.pictureBox4.TabIndex = 35;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox2.Location = new System.Drawing.Point(-6, 214);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(218, 5);
-            this.pictureBox2.TabIndex = 33;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.pictureBox1.Location = new System.Drawing.Point(-5, -3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1444, 68);
-            this.pictureBox1.TabIndex = 32;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox5.Location = new System.Drawing.Point(208, 65);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(5, 721);
-            this.pictureBox5.TabIndex = 54;
-            this.pictureBox5.TabStop = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DarkRed;
-            this.label3.Location = new System.Drawing.Point(803, 15);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(31, 33);
-            this.label3.TabIndex = 55;
-            this.label3.Text = "3";
-            // 
             // dataGridViewPositiveCompanies
             // 
             this.dataGridViewPositiveCompanies.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -419,7 +345,7 @@
             this.dataGridViewPositiveCompanies.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewPositiveCompanies.Location = new System.Drawing.Point(111, 140);
             this.dataGridViewPositiveCompanies.Name = "dataGridViewPositiveCompanies";
-            this.dataGridViewPositiveCompanies.Size = new System.Drawing.Size(906, 196);
+            this.dataGridViewPositiveCompanies.Size = new System.Drawing.Size(887, 196);
             this.dataGridViewPositiveCompanies.TabIndex = 56;
             this.dataGridViewPositiveCompanies.SelectionChanged += new System.EventHandler(this.dataGridViewPositiveCompanies_SelectionChanged);
             // 
@@ -433,9 +359,11 @@
             this.tabControlFinance.Controls.Add(this.tabPageProjects);
             this.tabControlFinance.Controls.Add(this.tabPageInvoices);
             this.tabControlFinance.Controls.Add(this.tabPageAddCustomer);
-            this.tabControlFinance.Controls.Add(this.tabPageChangeCustomer);
+            this.tabControlFinance.Controls.Add(this.tabPageCustomerInfo);
             this.tabControlFinance.Controls.Add(this.tabPageChangeInvoice);
             this.tabControlFinance.Controls.Add(this.tabPageAddInvoice);
+            this.tabControlFinance.Controls.Add(this.tabPageChangeProject);
+            this.tabControlFinance.Controls.Add(this.tabPageDashboard);
             this.tabControlFinance.Location = new System.Drawing.Point(208, 65);
             this.tabControlFinance.Multiline = true;
             this.tabControlFinance.Name = "tabControlFinance";
@@ -451,10 +379,10 @@
             this.tabPageCustomers.Controls.Add(this.labelPositiveBalances);
             this.tabPageCustomers.Controls.Add(this.dataGridViewPositiveCompanies);
             this.tabPageCustomers.Controls.Add(this.panel1);
-            this.tabPageCustomers.Location = new System.Drawing.Point(23, 4);
+            this.tabPageCustomers.Location = new System.Drawing.Point(42, 4);
             this.tabPageCustomers.Name = "tabPageCustomers";
             this.tabPageCustomers.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageCustomers.Size = new System.Drawing.Size(1122, 664);
+            this.tabPageCustomers.Size = new System.Drawing.Size(1103, 664);
             this.tabPageCustomers.TabIndex = 0;
             this.tabPageCustomers.Text = "Customers";
             this.tabPageCustomers.UseVisualStyleBackColor = true;
@@ -477,7 +405,7 @@
             this.dataGridViewNegativeCompanies.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewNegativeCompanies.Location = new System.Drawing.Point(111, 364);
             this.dataGridViewNegativeCompanies.Name = "dataGridViewNegativeCompanies";
-            this.dataGridViewNegativeCompanies.Size = new System.Drawing.Size(906, 210);
+            this.dataGridViewNegativeCompanies.Size = new System.Drawing.Size(887, 210);
             this.dataGridViewNegativeCompanies.TabIndex = 60;
             this.dataGridViewNegativeCompanies.SelectionChanged += new System.EventHandler(this.dataGridViewNegativeCompanies_SelectionChanged);
             // 
@@ -496,7 +424,7 @@
             this.panel1.Controls.Add(this.labelTitleCustomers);
             this.panel1.Location = new System.Drawing.Point(0, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1122, 66);
+            this.panel1.Size = new System.Drawing.Size(1103, 66);
             this.panel1.TabIndex = 58;
             // 
             // labelTitleCustomers
@@ -513,75 +441,22 @@
             // 
             this.tabPageProjects.Controls.Add(this.dataGridViewProjects);
             this.tabPageProjects.Controls.Add(this.panel2);
-            this.tabPageProjects.Location = new System.Drawing.Point(23, 4);
+            this.tabPageProjects.Location = new System.Drawing.Point(42, 4);
             this.tabPageProjects.Name = "tabPageProjects";
             this.tabPageProjects.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageProjects.Size = new System.Drawing.Size(1122, 664);
+            this.tabPageProjects.Size = new System.Drawing.Size(1103, 664);
             this.tabPageProjects.TabIndex = 1;
             this.tabPageProjects.Text = "Projects";
             this.tabPageProjects.UseVisualStyleBackColor = true;
             // 
             // dataGridViewProjects
             // 
-            this.dataGridViewProjects.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridViewProjects.AutoGenerateColumns = false;
             this.dataGridViewProjects.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewProjects.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.projectidDataGridViewTextBoxColumn,
-            this.pprogressionDataGridViewTextBoxColumn,
-            this.pstartdateDataGridViewTextBoxColumn,
-            this.penddateDataGridViewTextBoxColumn});
-            this.dataGridViewProjects.DataSource = this.tblprojectsBindingSource;
-            this.dataGridViewProjects.GridColor = System.Drawing.SystemColors.InactiveCaption;
-            this.dataGridViewProjects.Location = new System.Drawing.Point(37, 98);
+            this.dataGridViewProjects.Location = new System.Drawing.Point(12, 94);
             this.dataGridViewProjects.Name = "dataGridViewProjects";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewProjects.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewProjects.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dataGridViewProjects.Size = new System.Drawing.Size(1007, 504);
+            this.dataGridViewProjects.Size = new System.Drawing.Size(913, 499);
             this.dataGridViewProjects.TabIndex = 61;
-            // 
-            // projectidDataGridViewTextBoxColumn
-            // 
-            this.projectidDataGridViewTextBoxColumn.DataPropertyName = "project_id";
-            this.projectidDataGridViewTextBoxColumn.HeaderText = "project_id";
-            this.projectidDataGridViewTextBoxColumn.Name = "projectidDataGridViewTextBoxColumn";
-            // 
-            // pprogressionDataGridViewTextBoxColumn
-            // 
-            this.pprogressionDataGridViewTextBoxColumn.DataPropertyName = "p_progression";
-            this.pprogressionDataGridViewTextBoxColumn.HeaderText = "p_progression";
-            this.pprogressionDataGridViewTextBoxColumn.Name = "pprogressionDataGridViewTextBoxColumn";
-            // 
-            // pstartdateDataGridViewTextBoxColumn
-            // 
-            this.pstartdateDataGridViewTextBoxColumn.DataPropertyName = "p_start_date";
-            this.pstartdateDataGridViewTextBoxColumn.HeaderText = "p_start_date";
-            this.pstartdateDataGridViewTextBoxColumn.Name = "pstartdateDataGridViewTextBoxColumn";
-            // 
-            // penddateDataGridViewTextBoxColumn
-            // 
-            this.penddateDataGridViewTextBoxColumn.DataPropertyName = "p_end_date";
-            this.penddateDataGridViewTextBoxColumn.HeaderText = "p_end_date";
-            this.penddateDataGridViewTextBoxColumn.Name = "penddateDataGridViewTextBoxColumn";
-            // 
-            // tblprojectsBindingSource
-            // 
-            this.tblprojectsBindingSource.DataMember = "tbl_projects";
-            this.tblprojectsBindingSource.DataSource = this.databaseBarrocProjectsDataSet;
-            // 
-            // databaseBarrocProjectsDataSet
-            // 
-            this.databaseBarrocProjectsDataSet.DataSetName = "DatabaseBarrocProjectsDataSet";
-            this.databaseBarrocProjectsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.dataGridViewProjects.SelectionChanged += new System.EventHandler(this.dataGridViewProjects_SelectionChanged);
             // 
             // panel2
             // 
@@ -589,7 +464,7 @@
             this.panel2.Controls.Add(this.labelTitleProjects);
             this.panel2.Location = new System.Drawing.Point(0, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1122, 66);
+            this.panel2.Size = new System.Drawing.Size(1141, 66);
             this.panel2.TabIndex = 60;
             // 
             // labelTitleProjects
@@ -604,16 +479,36 @@
             // 
             // tabPageInvoices
             // 
+            this.tabPageInvoices.Controls.Add(this.labelNumOfInvoices);
+            this.tabPageInvoices.Controls.Add(this.textBoxSearchInvoices);
             this.tabPageInvoices.Controls.Add(this.dataGridViewInvoices);
             this.tabPageInvoices.Controls.Add(this.labelTitleInvoices);
             this.tabPageInvoices.Controls.Add(this.panelInvoices);
-            this.tabPageInvoices.Location = new System.Drawing.Point(23, 4);
+            this.tabPageInvoices.Location = new System.Drawing.Point(42, 4);
             this.tabPageInvoices.Name = "tabPageInvoices";
             this.tabPageInvoices.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageInvoices.Size = new System.Drawing.Size(1122, 664);
+            this.tabPageInvoices.Size = new System.Drawing.Size(1103, 664);
             this.tabPageInvoices.TabIndex = 2;
             this.tabPageInvoices.Text = "Invoices";
             this.tabPageInvoices.UseVisualStyleBackColor = true;
+            // 
+            // labelNumOfInvoices
+            // 
+            this.labelNumOfInvoices.AutoSize = true;
+            this.labelNumOfInvoices.Location = new System.Drawing.Point(23, 110);
+            this.labelNumOfInvoices.Name = "labelNumOfInvoices";
+            this.labelNumOfInvoices.Size = new System.Drawing.Size(83, 13);
+            this.labelNumOfInvoices.TabIndex = 65;
+            this.labelNumOfInvoices.Text = "Total Invoices ()";
+            // 
+            // textBoxSearchInvoices
+            // 
+            this.textBoxSearchInvoices.Location = new System.Drawing.Point(641, 104);
+            this.textBoxSearchInvoices.Name = "textBoxSearchInvoices";
+            this.textBoxSearchInvoices.Size = new System.Drawing.Size(186, 20);
+            this.textBoxSearchInvoices.TabIndex = 64;
+            this.textBoxSearchInvoices.Text = "Search...";
+            this.textBoxSearchInvoices.TextChanged += new System.EventHandler(this.textBoxSearchInvoices_TextChanged);
             // 
             // dataGridViewInvoices
             // 
@@ -621,9 +516,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewInvoices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewInvoices.Location = new System.Drawing.Point(23, 76);
+            this.dataGridViewInvoices.Location = new System.Drawing.Point(23, 130);
             this.dataGridViewInvoices.Name = "dataGridViewInvoices";
-            this.dataGridViewInvoices.Size = new System.Drawing.Size(1054, 498);
+            this.dataGridViewInvoices.Size = new System.Drawing.Size(823, 444);
             this.dataGridViewInvoices.TabIndex = 63;
             this.dataGridViewInvoices.SelectionChanged += new System.EventHandler(this.dataGridViewInvoices_SelectionChanged);
             // 
@@ -642,7 +537,7 @@
             this.panelInvoices.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelInvoices.Location = new System.Drawing.Point(0, 0);
             this.panelInvoices.Name = "panelInvoices";
-            this.panelInvoices.Size = new System.Drawing.Size(1122, 62);
+            this.panelInvoices.Size = new System.Drawing.Size(1141, 62);
             this.panelInvoices.TabIndex = 62;
             // 
             // tabPageAddCustomer
@@ -691,10 +586,10 @@
             this.tabPageAddCustomer.Controls.Add(this.panelAddCustomer);
             this.tabPageAddCustomer.Controls.Add(this.labelCompanyName);
             this.tabPageAddCustomer.Controls.Add(this.textBoxAddCustomerCompanyName);
-            this.tabPageAddCustomer.Location = new System.Drawing.Point(23, 4);
+            this.tabPageAddCustomer.Location = new System.Drawing.Point(42, 4);
             this.tabPageAddCustomer.Name = "tabPageAddCustomer";
             this.tabPageAddCustomer.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageAddCustomer.Size = new System.Drawing.Size(1122, 664);
+            this.tabPageAddCustomer.Size = new System.Drawing.Size(1103, 664);
             this.tabPageAddCustomer.TabIndex = 3;
             this.tabPageAddCustomer.Text = "Add Customer";
             this.tabPageAddCustomer.UseVisualStyleBackColor = true;
@@ -1039,7 +934,7 @@
             this.panelAddCustomer.Controls.Add(this.labelTitleAddCustomer);
             this.panelAddCustomer.Location = new System.Drawing.Point(0, 1);
             this.panelAddCustomer.Name = "panelAddCustomer";
-            this.panelAddCustomer.Size = new System.Drawing.Size(1122, 66);
+            this.panelAddCustomer.Size = new System.Drawing.Size(1141, 66);
             this.panelAddCustomer.TabIndex = 64;
             // 
             // labelTitleAddCustomer
@@ -1068,453 +963,473 @@
             this.textBoxAddCustomerCompanyName.Size = new System.Drawing.Size(132, 20);
             this.textBoxAddCustomerCompanyName.TabIndex = 0;
             // 
-            // tabPageChangeCustomer
+            // tabPageCustomerInfo
             // 
-            this.tabPageChangeCustomer.Controls.Add(this.buttonDeleteCustomer);
-            this.tabPageChangeCustomer.Controls.Add(this.buttonBackChangeCustomers);
-            this.tabPageChangeCustomer.Controls.Add(this.panelTitleChangeCustomer);
-            this.tabPageChangeCustomer.Controls.Add(this.labelBanknumberChangeCustomer);
-            this.tabPageChangeCustomer.Controls.Add(this.textBoxBanknumberChangeCustomer);
-            this.tabPageChangeCustomer.Controls.Add(this.labelDiscountChangeCustomer);
-            this.tabPageChangeCustomer.Controls.Add(this.textBoxDiscountChangeCustomer);
-            this.tabPageChangeCustomer.Controls.Add(this.labelEmailChangeCustomer);
-            this.tabPageChangeCustomer.Controls.Add(this.textBoxEmailChangeCustomer);
-            this.tabPageChangeCustomer.Controls.Add(this.labelFaxnumberChangeCustomer);
-            this.tabPageChangeCustomer.Controls.Add(this.textBoxFaxnumberChangeCustomer);
-            this.tabPageChangeCustomer.Controls.Add(this.labelTelephoneChangeCustomer);
-            this.tabPageChangeCustomer.Controls.Add(this.textBoxTelephoneChangeCustomer);
-            this.tabPageChangeCustomer.Controls.Add(this.labelInitialsChangeCustomer);
-            this.tabPageChangeCustomer.Controls.Add(this.textBoxInitialsChangeCustomer);
-            this.tabPageChangeCustomer.Controls.Add(this.labelContactpersonChangeCustomer);
-            this.tabPageChangeCustomer.Controls.Add(this.textBoxContactpersonChangeCustomer);
-            this.tabPageChangeCustomer.Controls.Add(this.labelMaintenanceContractChangeCustomer);
-            this.tabPageChangeCustomer.Controls.Add(this.textBoxMaintenanceContractChangeCustomer);
-            this.tabPageChangeCustomer.Controls.Add(this.labelVATCodeChangeCustomer);
-            this.tabPageChangeCustomer.Controls.Add(this.textBoxVATCodeChangeCustomer);
-            this.tabPageChangeCustomer.Controls.Add(this.labelLedgerChangeCustomer);
-            this.tabPageChangeCustomer.Controls.Add(this.textBoxLedgerChangeCustomer);
-            this.tabPageChangeCustomer.Controls.Add(this.labelLimitChangeCustomer);
-            this.tabPageChangeCustomer.Controls.Add(this.textBoxLimitChangeCustomer);
-            this.tabPageChangeCustomer.Controls.Add(this.labelRevenueChangeCustomer);
-            this.tabPageChangeCustomer.Controls.Add(this.textBoxRevenueChangeCustomer);
-            this.tabPageChangeCustomer.Controls.Add(this.buttonChangeCustomer);
-            this.tabPageChangeCustomer.Controls.Add(this.labelCreditBalanceChangeCustomer);
-            this.tabPageChangeCustomer.Controls.Add(this.textBoxCreditBalanceChangeCustomer);
-            this.tabPageChangeCustomer.Controls.Add(this.checkBoxCreditworthyChangeCustomer);
-            this.tabPageChangeCustomer.Controls.Add(this.labelCreditworthyChangeCustomer);
-            this.tabPageChangeCustomer.Controls.Add(this.checkBoxPotentialCustomerChangeCustomer);
-            this.tabPageChangeCustomer.Controls.Add(this.labelLastContactDateChangeCustomer);
-            this.tabPageChangeCustomer.Controls.Add(this.textBoxLastContactDateChangeCustomer);
-            this.tabPageChangeCustomer.Controls.Add(this.labelPotentialChangeCustomer);
-            this.tabPageChangeCustomer.Controls.Add(this.labelCityChangeCustomer);
-            this.tabPageChangeCustomer.Controls.Add(this.textBoxCityChangeCustomer);
-            this.tabPageChangeCustomer.Controls.Add(this.labelCompanyCodeChangeCustomer);
-            this.tabPageChangeCustomer.Controls.Add(this.textBoxCompanyCodeChangeCustomer);
-            this.tabPageChangeCustomer.Controls.Add(this.labelHouseNumberChangeCustomer);
-            this.tabPageChangeCustomer.Controls.Add(this.textBoxHouseNumberChangeCustomer);
-            this.tabPageChangeCustomer.Controls.Add(this.labelAddressChangeCustomer);
-            this.tabPageChangeCustomer.Controls.Add(this.textBoxAddressChangeCustomer);
-            this.tabPageChangeCustomer.Controls.Add(this.labelNameChangeCustomer);
-            this.tabPageChangeCustomer.Controls.Add(this.textBoxNameChangeCustomer);
-            this.tabPageChangeCustomer.Location = new System.Drawing.Point(23, 4);
-            this.tabPageChangeCustomer.Name = "tabPageChangeCustomer";
-            this.tabPageChangeCustomer.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageChangeCustomer.Size = new System.Drawing.Size(1122, 664);
-            this.tabPageChangeCustomer.TabIndex = 4;
-            this.tabPageChangeCustomer.Text = "Change Customer";
-            this.tabPageChangeCustomer.UseVisualStyleBackColor = true;
+            this.tabPageCustomerInfo.Controls.Add(this.textBoxCustomerInfoBKR);
+            this.tabPageCustomerInfo.Controls.Add(this.labelCustomerInfoBKR);
+            this.tabPageCustomerInfo.Controls.Add(this.buttonBackCustomerInfo);
+            this.tabPageCustomerInfo.Controls.Add(this.panelTitleChangeCustomer);
+            this.tabPageCustomerInfo.Controls.Add(this.labelBanknumberCustomerInfo);
+            this.tabPageCustomerInfo.Controls.Add(this.textBoxBanknumberCustomerInfo);
+            this.tabPageCustomerInfo.Controls.Add(this.labelDiscountCustomerInfo);
+            this.tabPageCustomerInfo.Controls.Add(this.textBoxDiscountCustomerInfo);
+            this.tabPageCustomerInfo.Controls.Add(this.labelEmailChangeCustomerInfo);
+            this.tabPageCustomerInfo.Controls.Add(this.textBoxEmailCustomerInfo);
+            this.tabPageCustomerInfo.Controls.Add(this.labelFaxnumberCustomerInfo);
+            this.tabPageCustomerInfo.Controls.Add(this.textBoxFaxnumberCustomerInfo);
+            this.tabPageCustomerInfo.Controls.Add(this.labelTelephoneCustomerInfo);
+            this.tabPageCustomerInfo.Controls.Add(this.textBoxTelephoneCustomerInfo);
+            this.tabPageCustomerInfo.Controls.Add(this.labelInitialsCustomerInfo);
+            this.tabPageCustomerInfo.Controls.Add(this.textBoxInitialsCustomerInfo);
+            this.tabPageCustomerInfo.Controls.Add(this.labelContactpersonCustomerInfo);
+            this.tabPageCustomerInfo.Controls.Add(this.textBoxContactpersonCustomerInfo);
+            this.tabPageCustomerInfo.Controls.Add(this.labelMaintenanceContractCustomerInfo);
+            this.tabPageCustomerInfo.Controls.Add(this.textBoxMaintenanceContractCustomerInfo);
+            this.tabPageCustomerInfo.Controls.Add(this.labelVATCodeCustomerInfo);
+            this.tabPageCustomerInfo.Controls.Add(this.textBoxVATCodeCustomerInfo);
+            this.tabPageCustomerInfo.Controls.Add(this.labelLedgerCustomerInfo);
+            this.tabPageCustomerInfo.Controls.Add(this.textBoxLedgerCustomerInfo);
+            this.tabPageCustomerInfo.Controls.Add(this.labelLimitCustomerInfo);
+            this.tabPageCustomerInfo.Controls.Add(this.textBoxLimitCustomerInfo);
+            this.tabPageCustomerInfo.Controls.Add(this.labelRevenueCustomerInfo);
+            this.tabPageCustomerInfo.Controls.Add(this.textBoxRevenueCustomerInfo);
+            this.tabPageCustomerInfo.Controls.Add(this.labelCreditBalanceCustomerInfo);
+            this.tabPageCustomerInfo.Controls.Add(this.textBoxCreditBalanceCustomerInfo);
+            this.tabPageCustomerInfo.Controls.Add(this.checkBoxCreditworthyCustomerInfo);
+            this.tabPageCustomerInfo.Controls.Add(this.labelCreditworthyCustomerInfo);
+            this.tabPageCustomerInfo.Controls.Add(this.checkBoxPotentialCustomerInfo);
+            this.tabPageCustomerInfo.Controls.Add(this.labelLastContactDateCustomerInfo);
+            this.tabPageCustomerInfo.Controls.Add(this.textBoxLastContactDateCustomerInfo);
+            this.tabPageCustomerInfo.Controls.Add(this.labelPotentialCustomerInfo);
+            this.tabPageCustomerInfo.Controls.Add(this.labelCityCustomerInfo);
+            this.tabPageCustomerInfo.Controls.Add(this.textBoxCityChangeCustomerInfo);
+            this.tabPageCustomerInfo.Controls.Add(this.labelCompanyCodeCustomerInfo);
+            this.tabPageCustomerInfo.Controls.Add(this.textBoxCompanyCodeCustomerInfo);
+            this.tabPageCustomerInfo.Controls.Add(this.labelHouseNumberCustomerInfo);
+            this.tabPageCustomerInfo.Controls.Add(this.textBoxHouseNumberCustomerInfo);
+            this.tabPageCustomerInfo.Controls.Add(this.labelAddressCustomerInfo);
+            this.tabPageCustomerInfo.Controls.Add(this.textBoxAddressCustomerInfo);
+            this.tabPageCustomerInfo.Controls.Add(this.labelNameCustomerInfo);
+            this.tabPageCustomerInfo.Controls.Add(this.textBoxNameCustomerInfo);
+            this.tabPageCustomerInfo.Location = new System.Drawing.Point(42, 4);
+            this.tabPageCustomerInfo.Name = "tabPageCustomerInfo";
+            this.tabPageCustomerInfo.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageCustomerInfo.Size = new System.Drawing.Size(1103, 664);
+            this.tabPageCustomerInfo.TabIndex = 4;
+            this.tabPageCustomerInfo.Text = "Customer Info";
+            this.tabPageCustomerInfo.UseVisualStyleBackColor = true;
             // 
-            // buttonDeleteCustomer
+            // textBoxCustomerInfoBKR
             // 
-            this.buttonDeleteCustomer.Location = new System.Drawing.Point(14, 530);
-            this.buttonDeleteCustomer.Name = "buttonDeleteCustomer";
-            this.buttonDeleteCustomer.Size = new System.Drawing.Size(75, 23);
-            this.buttonDeleteCustomer.TabIndex = 152;
-            this.buttonDeleteCustomer.Text = "Delete";
-            this.buttonDeleteCustomer.UseVisualStyleBackColor = true;
-            this.buttonDeleteCustomer.Click += new System.EventHandler(this.buttonDeleteCustomer_Click);
+            this.textBoxCustomerInfoBKR.Location = new System.Drawing.Point(453, 280);
+            this.textBoxCustomerInfoBKR.Name = "textBoxCustomerInfoBKR";
+            this.textBoxCustomerInfoBKR.ReadOnly = true;
+            this.textBoxCustomerInfoBKR.Size = new System.Drawing.Size(132, 20);
+            this.textBoxCustomerInfoBKR.TabIndex = 153;
             // 
-            // buttonBackChangeCustomers
+            // labelCustomerInfoBKR
             // 
-            this.buttonBackChangeCustomers.Location = new System.Drawing.Point(14, 501);
-            this.buttonBackChangeCustomers.Name = "buttonBackChangeCustomers";
-            this.buttonBackChangeCustomers.Size = new System.Drawing.Size(75, 23);
-            this.buttonBackChangeCustomers.TabIndex = 151;
-            this.buttonBackChangeCustomers.Text = "Back";
-            this.buttonBackChangeCustomers.UseVisualStyleBackColor = true;
-            this.buttonBackChangeCustomers.Click += new System.EventHandler(this.buttonBackChangeCustomers_Click);
+            this.labelCustomerInfoBKR.AutoSize = true;
+            this.labelCustomerInfoBKR.Location = new System.Drawing.Point(348, 280);
+            this.labelCustomerInfoBKR.Name = "labelCustomerInfoBKR";
+            this.labelCustomerInfoBKR.Size = new System.Drawing.Size(29, 13);
+            this.labelCustomerInfoBKR.TabIndex = 152;
+            this.labelCustomerInfoBKR.Text = "BKR";
+            // 
+            // buttonBackCustomerInfo
+            // 
+            this.buttonBackCustomerInfo.Location = new System.Drawing.Point(14, 501);
+            this.buttonBackCustomerInfo.Name = "buttonBackCustomerInfo";
+            this.buttonBackCustomerInfo.Size = new System.Drawing.Size(75, 23);
+            this.buttonBackCustomerInfo.TabIndex = 151;
+            this.buttonBackCustomerInfo.Text = "Back";
+            this.buttonBackCustomerInfo.UseVisualStyleBackColor = true;
+            this.buttonBackCustomerInfo.Click += new System.EventHandler(this.buttonBackChangeCustomers_Click);
             // 
             // panelTitleChangeCustomer
             // 
             this.panelTitleChangeCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelTitleChangeCustomer.Controls.Add(this.labelTitleChangeCustomer);
+            this.panelTitleChangeCustomer.Controls.Add(this.labelTitleCustomerInformation);
             this.panelTitleChangeCustomer.Location = new System.Drawing.Point(0, 3);
             this.panelTitleChangeCustomer.Name = "panelTitleChangeCustomer";
             this.panelTitleChangeCustomer.Size = new System.Drawing.Size(1122, 66);
             this.panelTitleChangeCustomer.TabIndex = 150;
             // 
-            // labelTitleChangeCustomer
-            // 
-            this.labelTitleChangeCustomer.AutoSize = true;
-            this.labelTitleChangeCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitleChangeCustomer.Location = new System.Drawing.Point(6, 11);
-            this.labelTitleChangeCustomer.Name = "labelTitleChangeCustomer";
-            this.labelTitleChangeCustomer.Size = new System.Drawing.Size(251, 33);
-            this.labelTitleChangeCustomer.TabIndex = 63;
-            this.labelTitleChangeCustomer.Text = "Change Customer";
-            // 
-            // labelBanknumberChangeCustomer
-            // 
-            this.labelBanknumberChangeCustomer.AutoSize = true;
-            this.labelBanknumberChangeCustomer.Location = new System.Drawing.Point(348, 256);
-            this.labelBanknumberChangeCustomer.Name = "labelBanknumberChangeCustomer";
-            this.labelBanknumberChangeCustomer.Size = new System.Drawing.Size(67, 13);
-            this.labelBanknumberChangeCustomer.TabIndex = 149;
-            this.labelBanknumberChangeCustomer.Text = "Banknumber";
-            // 
-            // textBoxBanknumberChangeCustomer
-            // 
-            this.textBoxBanknumberChangeCustomer.Location = new System.Drawing.Point(453, 253);
-            this.textBoxBanknumberChangeCustomer.Name = "textBoxBanknumberChangeCustomer";
-            this.textBoxBanknumberChangeCustomer.Size = new System.Drawing.Size(132, 20);
-            this.textBoxBanknumberChangeCustomer.TabIndex = 148;
-            // 
-            // labelDiscountChangeCustomer
-            // 
-            this.labelDiscountChangeCustomer.AutoSize = true;
-            this.labelDiscountChangeCustomer.Location = new System.Drawing.Point(348, 230);
-            this.labelDiscountChangeCustomer.Name = "labelDiscountChangeCustomer";
-            this.labelDiscountChangeCustomer.Size = new System.Drawing.Size(49, 13);
-            this.labelDiscountChangeCustomer.TabIndex = 147;
-            this.labelDiscountChangeCustomer.Text = "Discount";
-            // 
-            // textBoxDiscountChangeCustomer
-            // 
-            this.textBoxDiscountChangeCustomer.Location = new System.Drawing.Point(453, 227);
-            this.textBoxDiscountChangeCustomer.Name = "textBoxDiscountChangeCustomer";
-            this.textBoxDiscountChangeCustomer.Size = new System.Drawing.Size(132, 20);
-            this.textBoxDiscountChangeCustomer.TabIndex = 146;
-            // 
-            // labelEmailChangeCustomer
-            // 
-            this.labelEmailChangeCustomer.AutoSize = true;
-            this.labelEmailChangeCustomer.Location = new System.Drawing.Point(348, 204);
-            this.labelEmailChangeCustomer.Name = "labelEmailChangeCustomer";
-            this.labelEmailChangeCustomer.Size = new System.Drawing.Size(32, 13);
-            this.labelEmailChangeCustomer.TabIndex = 145;
-            this.labelEmailChangeCustomer.Text = "Email";
-            // 
-            // textBoxEmailChangeCustomer
-            // 
-            this.textBoxEmailChangeCustomer.Location = new System.Drawing.Point(453, 201);
-            this.textBoxEmailChangeCustomer.Name = "textBoxEmailChangeCustomer";
-            this.textBoxEmailChangeCustomer.Size = new System.Drawing.Size(132, 20);
-            this.textBoxEmailChangeCustomer.TabIndex = 144;
-            // 
-            // labelFaxnumberChangeCustomer
-            // 
-            this.labelFaxnumberChangeCustomer.AutoSize = true;
-            this.labelFaxnumberChangeCustomer.Location = new System.Drawing.Point(348, 177);
-            this.labelFaxnumberChangeCustomer.Name = "labelFaxnumberChangeCustomer";
-            this.labelFaxnumberChangeCustomer.Size = new System.Drawing.Size(59, 13);
-            this.labelFaxnumberChangeCustomer.TabIndex = 143;
-            this.labelFaxnumberChangeCustomer.Text = "Faxnumber";
-            // 
-            // textBoxFaxnumberChangeCustomer
-            // 
-            this.textBoxFaxnumberChangeCustomer.Location = new System.Drawing.Point(453, 174);
-            this.textBoxFaxnumberChangeCustomer.Name = "textBoxFaxnumberChangeCustomer";
-            this.textBoxFaxnumberChangeCustomer.Size = new System.Drawing.Size(132, 20);
-            this.textBoxFaxnumberChangeCustomer.TabIndex = 142;
-            // 
-            // labelTelephoneChangeCustomer
-            // 
-            this.labelTelephoneChangeCustomer.AutoSize = true;
-            this.labelTelephoneChangeCustomer.Location = new System.Drawing.Point(348, 151);
-            this.labelTelephoneChangeCustomer.Name = "labelTelephoneChangeCustomer";
-            this.labelTelephoneChangeCustomer.Size = new System.Drawing.Size(58, 13);
-            this.labelTelephoneChangeCustomer.TabIndex = 141;
-            this.labelTelephoneChangeCustomer.Text = "Telephone";
-            // 
-            // textBoxTelephoneChangeCustomer
-            // 
-            this.textBoxTelephoneChangeCustomer.Location = new System.Drawing.Point(453, 148);
-            this.textBoxTelephoneChangeCustomer.Name = "textBoxTelephoneChangeCustomer";
-            this.textBoxTelephoneChangeCustomer.Size = new System.Drawing.Size(132, 20);
-            this.textBoxTelephoneChangeCustomer.TabIndex = 140;
-            // 
-            // labelInitialsChangeCustomer
-            // 
-            this.labelInitialsChangeCustomer.AutoSize = true;
-            this.labelInitialsChangeCustomer.Location = new System.Drawing.Point(348, 123);
-            this.labelInitialsChangeCustomer.Name = "labelInitialsChangeCustomer";
-            this.labelInitialsChangeCustomer.Size = new System.Drawing.Size(36, 13);
-            this.labelInitialsChangeCustomer.TabIndex = 139;
-            this.labelInitialsChangeCustomer.Text = "Initials";
-            // 
-            // textBoxInitialsChangeCustomer
-            // 
-            this.textBoxInitialsChangeCustomer.Location = new System.Drawing.Point(453, 120);
-            this.textBoxInitialsChangeCustomer.Name = "textBoxInitialsChangeCustomer";
-            this.textBoxInitialsChangeCustomer.Size = new System.Drawing.Size(132, 20);
-            this.textBoxInitialsChangeCustomer.TabIndex = 138;
-            // 
-            // labelContactpersonChangeCustomer
-            // 
-            this.labelContactpersonChangeCustomer.AutoSize = true;
-            this.labelContactpersonChangeCustomer.Location = new System.Drawing.Point(348, 94);
-            this.labelContactpersonChangeCustomer.Name = "labelContactpersonChangeCustomer";
-            this.labelContactpersonChangeCustomer.Size = new System.Drawing.Size(76, 13);
-            this.labelContactpersonChangeCustomer.TabIndex = 137;
-            this.labelContactpersonChangeCustomer.Text = "Contactperson";
-            // 
-            // textBoxContactpersonChangeCustomer
-            // 
-            this.textBoxContactpersonChangeCustomer.Location = new System.Drawing.Point(453, 91);
-            this.textBoxContactpersonChangeCustomer.Name = "textBoxContactpersonChangeCustomer";
-            this.textBoxContactpersonChangeCustomer.Size = new System.Drawing.Size(132, 20);
-            this.textBoxContactpersonChangeCustomer.TabIndex = 136;
-            // 
-            // labelMaintenanceContractChangeCustomer
-            // 
-            this.labelMaintenanceContractChangeCustomer.AutoSize = true;
-            this.labelMaintenanceContractChangeCustomer.Location = new System.Drawing.Point(30, 452);
-            this.labelMaintenanceContractChangeCustomer.Name = "labelMaintenanceContractChangeCustomer";
-            this.labelMaintenanceContractChangeCustomer.Size = new System.Drawing.Size(72, 13);
-            this.labelMaintenanceContractChangeCustomer.TabIndex = 135;
-            this.labelMaintenanceContractChangeCustomer.Text = "Main contract";
-            // 
-            // textBoxMaintenanceContractChangeCustomer
-            // 
-            this.textBoxMaintenanceContractChangeCustomer.Location = new System.Drawing.Point(135, 449);
-            this.textBoxMaintenanceContractChangeCustomer.Name = "textBoxMaintenanceContractChangeCustomer";
-            this.textBoxMaintenanceContractChangeCustomer.Size = new System.Drawing.Size(132, 20);
-            this.textBoxMaintenanceContractChangeCustomer.TabIndex = 134;
-            // 
-            // labelVATCodeChangeCustomer
-            // 
-            this.labelVATCodeChangeCustomer.AutoSize = true;
-            this.labelVATCodeChangeCustomer.Location = new System.Drawing.Point(30, 419);
-            this.labelVATCodeChangeCustomer.Name = "labelVATCodeChangeCustomer";
-            this.labelVATCodeChangeCustomer.Size = new System.Drawing.Size(56, 13);
-            this.labelVATCodeChangeCustomer.TabIndex = 133;
-            this.labelVATCodeChangeCustomer.Text = "VAT Code";
-            // 
-            // textBoxVATCodeChangeCustomer
-            // 
-            this.textBoxVATCodeChangeCustomer.Location = new System.Drawing.Point(135, 416);
-            this.textBoxVATCodeChangeCustomer.Name = "textBoxVATCodeChangeCustomer";
-            this.textBoxVATCodeChangeCustomer.Size = new System.Drawing.Size(132, 20);
-            this.textBoxVATCodeChangeCustomer.TabIndex = 132;
-            // 
-            // labelLedgerChangeCustomer
-            // 
-            this.labelLedgerChangeCustomer.AutoSize = true;
-            this.labelLedgerChangeCustomer.Location = new System.Drawing.Point(30, 388);
-            this.labelLedgerChangeCustomer.Name = "labelLedgerChangeCustomer";
-            this.labelLedgerChangeCustomer.Size = new System.Drawing.Size(40, 13);
-            this.labelLedgerChangeCustomer.TabIndex = 131;
-            this.labelLedgerChangeCustomer.Text = "Ledger";
-            // 
-            // textBoxLedgerChangeCustomer
-            // 
-            this.textBoxLedgerChangeCustomer.Location = new System.Drawing.Point(135, 385);
-            this.textBoxLedgerChangeCustomer.Name = "textBoxLedgerChangeCustomer";
-            this.textBoxLedgerChangeCustomer.Size = new System.Drawing.Size(132, 20);
-            this.textBoxLedgerChangeCustomer.TabIndex = 130;
-            // 
-            // labelLimitChangeCustomer
-            // 
-            this.labelLimitChangeCustomer.AutoSize = true;
-            this.labelLimitChangeCustomer.Location = new System.Drawing.Point(30, 360);
-            this.labelLimitChangeCustomer.Name = "labelLimitChangeCustomer";
-            this.labelLimitChangeCustomer.Size = new System.Drawing.Size(28, 13);
-            this.labelLimitChangeCustomer.TabIndex = 129;
-            this.labelLimitChangeCustomer.Text = "Limit";
-            // 
-            // textBoxLimitChangeCustomer
-            // 
-            this.textBoxLimitChangeCustomer.Location = new System.Drawing.Point(135, 357);
-            this.textBoxLimitChangeCustomer.Name = "textBoxLimitChangeCustomer";
-            this.textBoxLimitChangeCustomer.Size = new System.Drawing.Size(132, 20);
-            this.textBoxLimitChangeCustomer.TabIndex = 128;
-            // 
-            // labelRevenueChangeCustomer
-            // 
-            this.labelRevenueChangeCustomer.AutoSize = true;
-            this.labelRevenueChangeCustomer.Location = new System.Drawing.Point(30, 331);
-            this.labelRevenueChangeCustomer.Name = "labelRevenueChangeCustomer";
-            this.labelRevenueChangeCustomer.Size = new System.Drawing.Size(51, 13);
-            this.labelRevenueChangeCustomer.TabIndex = 127;
-            this.labelRevenueChangeCustomer.Text = "Revenue";
-            // 
-            // textBoxRevenueChangeCustomer
-            // 
-            this.textBoxRevenueChangeCustomer.Location = new System.Drawing.Point(135, 328);
-            this.textBoxRevenueChangeCustomer.Name = "textBoxRevenueChangeCustomer";
-            this.textBoxRevenueChangeCustomer.Size = new System.Drawing.Size(132, 20);
-            this.textBoxRevenueChangeCustomer.TabIndex = 126;
-            // 
-            // buttonChangeCustomer
-            // 
-            this.buttonChangeCustomer.Location = new System.Drawing.Point(510, 501);
-            this.buttonChangeCustomer.Name = "buttonChangeCustomer";
-            this.buttonChangeCustomer.Size = new System.Drawing.Size(75, 23);
-            this.buttonChangeCustomer.TabIndex = 125;
-            this.buttonChangeCustomer.Text = "Change";
-            this.buttonChangeCustomer.UseVisualStyleBackColor = true;
-            this.buttonChangeCustomer.Click += new System.EventHandler(this.buttonChangeCustomer_Click);
-            // 
-            // labelCreditBalanceChangeCustomer
-            // 
-            this.labelCreditBalanceChangeCustomer.AutoSize = true;
-            this.labelCreditBalanceChangeCustomer.Location = new System.Drawing.Point(30, 301);
-            this.labelCreditBalanceChangeCustomer.Name = "labelCreditBalanceChangeCustomer";
-            this.labelCreditBalanceChangeCustomer.Size = new System.Drawing.Size(76, 13);
-            this.labelCreditBalanceChangeCustomer.TabIndex = 124;
-            this.labelCreditBalanceChangeCustomer.Text = "Credit Balance";
-            // 
-            // textBoxCreditBalanceChangeCustomer
-            // 
-            this.textBoxCreditBalanceChangeCustomer.Location = new System.Drawing.Point(135, 298);
-            this.textBoxCreditBalanceChangeCustomer.Name = "textBoxCreditBalanceChangeCustomer";
-            this.textBoxCreditBalanceChangeCustomer.Size = new System.Drawing.Size(132, 20);
-            this.textBoxCreditBalanceChangeCustomer.TabIndex = 123;
-            // 
-            // checkBoxCreditworthyChangeCustomer
-            // 
-            this.checkBoxCreditworthyChangeCustomer.AutoSize = true;
-            this.checkBoxCreditworthyChangeCustomer.Location = new System.Drawing.Point(136, 277);
-            this.checkBoxCreditworthyChangeCustomer.Name = "checkBoxCreditworthyChangeCustomer";
-            this.checkBoxCreditworthyChangeCustomer.Size = new System.Drawing.Size(15, 14);
-            this.checkBoxCreditworthyChangeCustomer.TabIndex = 122;
-            this.checkBoxCreditworthyChangeCustomer.UseVisualStyleBackColor = true;
-            // 
-            // labelCreditworthyChangeCustomer
-            // 
-            this.labelCreditworthyChangeCustomer.AutoSize = true;
-            this.labelCreditworthyChangeCustomer.Location = new System.Drawing.Point(30, 278);
-            this.labelCreditworthyChangeCustomer.Name = "labelCreditworthyChangeCustomer";
-            this.labelCreditworthyChangeCustomer.Size = new System.Drawing.Size(65, 13);
-            this.labelCreditworthyChangeCustomer.TabIndex = 121;
-            this.labelCreditworthyChangeCustomer.Text = "Creditworthy";
-            // 
-            // checkBoxPotentialCustomerChangeCustomer
-            // 
-            this.checkBoxPotentialCustomerChangeCustomer.AutoSize = true;
-            this.checkBoxPotentialCustomerChangeCustomer.Location = new System.Drawing.Point(136, 223);
-            this.checkBoxPotentialCustomerChangeCustomer.Name = "checkBoxPotentialCustomerChangeCustomer";
-            this.checkBoxPotentialCustomerChangeCustomer.Size = new System.Drawing.Size(15, 14);
-            this.checkBoxPotentialCustomerChangeCustomer.TabIndex = 120;
-            this.checkBoxPotentialCustomerChangeCustomer.UseVisualStyleBackColor = true;
-            // 
-            // labelLastContactDateChangeCustomer
-            // 
-            this.labelLastContactDateChangeCustomer.AutoSize = true;
-            this.labelLastContactDateChangeCustomer.Location = new System.Drawing.Point(30, 250);
-            this.labelLastContactDateChangeCustomer.Name = "labelLastContactDateChangeCustomer";
-            this.labelLastContactDateChangeCustomer.Size = new System.Drawing.Size(93, 13);
-            this.labelLastContactDateChangeCustomer.TabIndex = 119;
-            this.labelLastContactDateChangeCustomer.Text = "Last Contact Date";
-            // 
-            // textBoxLastContactDateChangeCustomer
-            // 
-            this.textBoxLastContactDateChangeCustomer.Location = new System.Drawing.Point(135, 247);
-            this.textBoxLastContactDateChangeCustomer.Name = "textBoxLastContactDateChangeCustomer";
-            this.textBoxLastContactDateChangeCustomer.Size = new System.Drawing.Size(132, 20);
-            this.textBoxLastContactDateChangeCustomer.TabIndex = 118;
-            // 
-            // labelPotentialChangeCustomer
-            // 
-            this.labelPotentialChangeCustomer.AutoSize = true;
-            this.labelPotentialChangeCustomer.Location = new System.Drawing.Point(30, 224);
-            this.labelPotentialChangeCustomer.Name = "labelPotentialChangeCustomer";
-            this.labelPotentialChangeCustomer.Size = new System.Drawing.Size(95, 13);
-            this.labelPotentialChangeCustomer.TabIndex = 117;
-            this.labelPotentialChangeCustomer.Text = "Potential Customer";
-            // 
-            // labelCityChangeCustomer
-            // 
-            this.labelCityChangeCustomer.AutoSize = true;
-            this.labelCityChangeCustomer.Location = new System.Drawing.Point(30, 198);
-            this.labelCityChangeCustomer.Name = "labelCityChangeCustomer";
-            this.labelCityChangeCustomer.Size = new System.Drawing.Size(24, 13);
-            this.labelCityChangeCustomer.TabIndex = 116;
-            this.labelCityChangeCustomer.Text = "City";
-            // 
-            // textBoxCityChangeCustomer
-            // 
-            this.textBoxCityChangeCustomer.Location = new System.Drawing.Point(135, 195);
-            this.textBoxCityChangeCustomer.Name = "textBoxCityChangeCustomer";
-            this.textBoxCityChangeCustomer.Size = new System.Drawing.Size(132, 20);
-            this.textBoxCityChangeCustomer.TabIndex = 115;
-            // 
-            // labelCompanyCodeChangeCustomer
-            // 
-            this.labelCompanyCodeChangeCustomer.AutoSize = true;
-            this.labelCompanyCodeChangeCustomer.Location = new System.Drawing.Point(30, 172);
-            this.labelCompanyCodeChangeCustomer.Name = "labelCompanyCodeChangeCustomer";
-            this.labelCompanyCodeChangeCustomer.Size = new System.Drawing.Size(79, 13);
-            this.labelCompanyCodeChangeCustomer.TabIndex = 114;
-            this.labelCompanyCodeChangeCustomer.Text = "Company Code";
-            // 
-            // textBoxCompanyCodeChangeCustomer
-            // 
-            this.textBoxCompanyCodeChangeCustomer.Location = new System.Drawing.Point(135, 169);
-            this.textBoxCompanyCodeChangeCustomer.Name = "textBoxCompanyCodeChangeCustomer";
-            this.textBoxCompanyCodeChangeCustomer.Size = new System.Drawing.Size(132, 20);
-            this.textBoxCompanyCodeChangeCustomer.TabIndex = 113;
-            // 
-            // labelHouseNumberChangeCustomer
-            // 
-            this.labelHouseNumberChangeCustomer.AutoSize = true;
-            this.labelHouseNumberChangeCustomer.Location = new System.Drawing.Point(30, 146);
-            this.labelHouseNumberChangeCustomer.Name = "labelHouseNumberChangeCustomer";
-            this.labelHouseNumberChangeCustomer.Size = new System.Drawing.Size(76, 13);
-            this.labelHouseNumberChangeCustomer.TabIndex = 112;
-            this.labelHouseNumberChangeCustomer.Text = "House number";
-            // 
-            // textBoxHouseNumberChangeCustomer
-            // 
-            this.textBoxHouseNumberChangeCustomer.Location = new System.Drawing.Point(135, 143);
-            this.textBoxHouseNumberChangeCustomer.Name = "textBoxHouseNumberChangeCustomer";
-            this.textBoxHouseNumberChangeCustomer.Size = new System.Drawing.Size(132, 20);
-            this.textBoxHouseNumberChangeCustomer.TabIndex = 111;
-            // 
-            // labelAddressChangeCustomer
-            // 
-            this.labelAddressChangeCustomer.AutoSize = true;
-            this.labelAddressChangeCustomer.Location = new System.Drawing.Point(30, 120);
-            this.labelAddressChangeCustomer.Name = "labelAddressChangeCustomer";
-            this.labelAddressChangeCustomer.Size = new System.Drawing.Size(45, 13);
-            this.labelAddressChangeCustomer.TabIndex = 110;
-            this.labelAddressChangeCustomer.Text = "Address";
-            // 
-            // textBoxAddressChangeCustomer
-            // 
-            this.textBoxAddressChangeCustomer.Location = new System.Drawing.Point(135, 117);
-            this.textBoxAddressChangeCustomer.Name = "textBoxAddressChangeCustomer";
-            this.textBoxAddressChangeCustomer.Size = new System.Drawing.Size(132, 20);
-            this.textBoxAddressChangeCustomer.TabIndex = 109;
-            // 
-            // labelNameChangeCustomer
-            // 
-            this.labelNameChangeCustomer.AutoSize = true;
-            this.labelNameChangeCustomer.Location = new System.Drawing.Point(30, 94);
-            this.labelNameChangeCustomer.Name = "labelNameChangeCustomer";
-            this.labelNameChangeCustomer.Size = new System.Drawing.Size(35, 13);
-            this.labelNameChangeCustomer.TabIndex = 108;
-            this.labelNameChangeCustomer.Text = "Name";
-            // 
-            // textBoxNameChangeCustomer
-            // 
-            this.textBoxNameChangeCustomer.Location = new System.Drawing.Point(135, 91);
-            this.textBoxNameChangeCustomer.Name = "textBoxNameChangeCustomer";
-            this.textBoxNameChangeCustomer.Size = new System.Drawing.Size(132, 20);
-            this.textBoxNameChangeCustomer.TabIndex = 107;
+            // labelTitleCustomerInformation
+            // 
+            this.labelTitleCustomerInformation.AutoSize = true;
+            this.labelTitleCustomerInformation.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitleCustomerInformation.Location = new System.Drawing.Point(6, 11);
+            this.labelTitleCustomerInformation.Name = "labelTitleCustomerInformation";
+            this.labelTitleCustomerInformation.Size = new System.Drawing.Size(296, 33);
+            this.labelTitleCustomerInformation.TabIndex = 63;
+            this.labelTitleCustomerInformation.Text = "Customer Information";
+            // 
+            // labelBanknumberCustomerInfo
+            // 
+            this.labelBanknumberCustomerInfo.AutoSize = true;
+            this.labelBanknumberCustomerInfo.Location = new System.Drawing.Point(348, 256);
+            this.labelBanknumberCustomerInfo.Name = "labelBanknumberCustomerInfo";
+            this.labelBanknumberCustomerInfo.Size = new System.Drawing.Size(67, 13);
+            this.labelBanknumberCustomerInfo.TabIndex = 149;
+            this.labelBanknumberCustomerInfo.Text = "Banknumber";
+            // 
+            // textBoxBanknumberCustomerInfo
+            // 
+            this.textBoxBanknumberCustomerInfo.Location = new System.Drawing.Point(453, 253);
+            this.textBoxBanknumberCustomerInfo.Name = "textBoxBanknumberCustomerInfo";
+            this.textBoxBanknumberCustomerInfo.ReadOnly = true;
+            this.textBoxBanknumberCustomerInfo.Size = new System.Drawing.Size(132, 20);
+            this.textBoxBanknumberCustomerInfo.TabIndex = 148;
+            // 
+            // labelDiscountCustomerInfo
+            // 
+            this.labelDiscountCustomerInfo.AutoSize = true;
+            this.labelDiscountCustomerInfo.Location = new System.Drawing.Point(348, 230);
+            this.labelDiscountCustomerInfo.Name = "labelDiscountCustomerInfo";
+            this.labelDiscountCustomerInfo.Size = new System.Drawing.Size(49, 13);
+            this.labelDiscountCustomerInfo.TabIndex = 147;
+            this.labelDiscountCustomerInfo.Text = "Discount";
+            // 
+            // textBoxDiscountCustomerInfo
+            // 
+            this.textBoxDiscountCustomerInfo.Location = new System.Drawing.Point(453, 227);
+            this.textBoxDiscountCustomerInfo.Name = "textBoxDiscountCustomerInfo";
+            this.textBoxDiscountCustomerInfo.ReadOnly = true;
+            this.textBoxDiscountCustomerInfo.Size = new System.Drawing.Size(132, 20);
+            this.textBoxDiscountCustomerInfo.TabIndex = 146;
+            // 
+            // labelEmailChangeCustomerInfo
+            // 
+            this.labelEmailChangeCustomerInfo.AutoSize = true;
+            this.labelEmailChangeCustomerInfo.Location = new System.Drawing.Point(348, 204);
+            this.labelEmailChangeCustomerInfo.Name = "labelEmailChangeCustomerInfo";
+            this.labelEmailChangeCustomerInfo.Size = new System.Drawing.Size(32, 13);
+            this.labelEmailChangeCustomerInfo.TabIndex = 145;
+            this.labelEmailChangeCustomerInfo.Text = "Email";
+            // 
+            // textBoxEmailCustomerInfo
+            // 
+            this.textBoxEmailCustomerInfo.Location = new System.Drawing.Point(453, 201);
+            this.textBoxEmailCustomerInfo.Name = "textBoxEmailCustomerInfo";
+            this.textBoxEmailCustomerInfo.ReadOnly = true;
+            this.textBoxEmailCustomerInfo.Size = new System.Drawing.Size(132, 20);
+            this.textBoxEmailCustomerInfo.TabIndex = 144;
+            // 
+            // labelFaxnumberCustomerInfo
+            // 
+            this.labelFaxnumberCustomerInfo.AutoSize = true;
+            this.labelFaxnumberCustomerInfo.Location = new System.Drawing.Point(348, 177);
+            this.labelFaxnumberCustomerInfo.Name = "labelFaxnumberCustomerInfo";
+            this.labelFaxnumberCustomerInfo.Size = new System.Drawing.Size(59, 13);
+            this.labelFaxnumberCustomerInfo.TabIndex = 143;
+            this.labelFaxnumberCustomerInfo.Text = "Faxnumber";
+            // 
+            // textBoxFaxnumberCustomerInfo
+            // 
+            this.textBoxFaxnumberCustomerInfo.Location = new System.Drawing.Point(453, 174);
+            this.textBoxFaxnumberCustomerInfo.Name = "textBoxFaxnumberCustomerInfo";
+            this.textBoxFaxnumberCustomerInfo.ReadOnly = true;
+            this.textBoxFaxnumberCustomerInfo.Size = new System.Drawing.Size(132, 20);
+            this.textBoxFaxnumberCustomerInfo.TabIndex = 142;
+            // 
+            // labelTelephoneCustomerInfo
+            // 
+            this.labelTelephoneCustomerInfo.AutoSize = true;
+            this.labelTelephoneCustomerInfo.Location = new System.Drawing.Point(348, 151);
+            this.labelTelephoneCustomerInfo.Name = "labelTelephoneCustomerInfo";
+            this.labelTelephoneCustomerInfo.Size = new System.Drawing.Size(58, 13);
+            this.labelTelephoneCustomerInfo.TabIndex = 141;
+            this.labelTelephoneCustomerInfo.Text = "Telephone";
+            // 
+            // textBoxTelephoneCustomerInfo
+            // 
+            this.textBoxTelephoneCustomerInfo.Location = new System.Drawing.Point(453, 148);
+            this.textBoxTelephoneCustomerInfo.Name = "textBoxTelephoneCustomerInfo";
+            this.textBoxTelephoneCustomerInfo.ReadOnly = true;
+            this.textBoxTelephoneCustomerInfo.Size = new System.Drawing.Size(132, 20);
+            this.textBoxTelephoneCustomerInfo.TabIndex = 140;
+            // 
+            // labelInitialsCustomerInfo
+            // 
+            this.labelInitialsCustomerInfo.AutoSize = true;
+            this.labelInitialsCustomerInfo.Location = new System.Drawing.Point(348, 123);
+            this.labelInitialsCustomerInfo.Name = "labelInitialsCustomerInfo";
+            this.labelInitialsCustomerInfo.Size = new System.Drawing.Size(36, 13);
+            this.labelInitialsCustomerInfo.TabIndex = 139;
+            this.labelInitialsCustomerInfo.Text = "Initials";
+            // 
+            // textBoxInitialsCustomerInfo
+            // 
+            this.textBoxInitialsCustomerInfo.Location = new System.Drawing.Point(453, 120);
+            this.textBoxInitialsCustomerInfo.Name = "textBoxInitialsCustomerInfo";
+            this.textBoxInitialsCustomerInfo.ReadOnly = true;
+            this.textBoxInitialsCustomerInfo.Size = new System.Drawing.Size(132, 20);
+            this.textBoxInitialsCustomerInfo.TabIndex = 138;
+            // 
+            // labelContactpersonCustomerInfo
+            // 
+            this.labelContactpersonCustomerInfo.AutoSize = true;
+            this.labelContactpersonCustomerInfo.Location = new System.Drawing.Point(348, 94);
+            this.labelContactpersonCustomerInfo.Name = "labelContactpersonCustomerInfo";
+            this.labelContactpersonCustomerInfo.Size = new System.Drawing.Size(76, 13);
+            this.labelContactpersonCustomerInfo.TabIndex = 137;
+            this.labelContactpersonCustomerInfo.Text = "Contactperson";
+            // 
+            // textBoxContactpersonCustomerInfo
+            // 
+            this.textBoxContactpersonCustomerInfo.Location = new System.Drawing.Point(453, 91);
+            this.textBoxContactpersonCustomerInfo.Name = "textBoxContactpersonCustomerInfo";
+            this.textBoxContactpersonCustomerInfo.ReadOnly = true;
+            this.textBoxContactpersonCustomerInfo.Size = new System.Drawing.Size(132, 20);
+            this.textBoxContactpersonCustomerInfo.TabIndex = 136;
+            // 
+            // labelMaintenanceContractCustomerInfo
+            // 
+            this.labelMaintenanceContractCustomerInfo.AutoSize = true;
+            this.labelMaintenanceContractCustomerInfo.Location = new System.Drawing.Point(30, 452);
+            this.labelMaintenanceContractCustomerInfo.Name = "labelMaintenanceContractCustomerInfo";
+            this.labelMaintenanceContractCustomerInfo.Size = new System.Drawing.Size(72, 13);
+            this.labelMaintenanceContractCustomerInfo.TabIndex = 135;
+            this.labelMaintenanceContractCustomerInfo.Text = "Main contract";
+            // 
+            // textBoxMaintenanceContractCustomerInfo
+            // 
+            this.textBoxMaintenanceContractCustomerInfo.Location = new System.Drawing.Point(135, 449);
+            this.textBoxMaintenanceContractCustomerInfo.Name = "textBoxMaintenanceContractCustomerInfo";
+            this.textBoxMaintenanceContractCustomerInfo.ReadOnly = true;
+            this.textBoxMaintenanceContractCustomerInfo.Size = new System.Drawing.Size(132, 20);
+            this.textBoxMaintenanceContractCustomerInfo.TabIndex = 134;
+            // 
+            // labelVATCodeCustomerInfo
+            // 
+            this.labelVATCodeCustomerInfo.AutoSize = true;
+            this.labelVATCodeCustomerInfo.Location = new System.Drawing.Point(30, 419);
+            this.labelVATCodeCustomerInfo.Name = "labelVATCodeCustomerInfo";
+            this.labelVATCodeCustomerInfo.Size = new System.Drawing.Size(56, 13);
+            this.labelVATCodeCustomerInfo.TabIndex = 133;
+            this.labelVATCodeCustomerInfo.Text = "VAT Code";
+            // 
+            // textBoxVATCodeCustomerInfo
+            // 
+            this.textBoxVATCodeCustomerInfo.Location = new System.Drawing.Point(135, 416);
+            this.textBoxVATCodeCustomerInfo.Name = "textBoxVATCodeCustomerInfo";
+            this.textBoxVATCodeCustomerInfo.ReadOnly = true;
+            this.textBoxVATCodeCustomerInfo.Size = new System.Drawing.Size(132, 20);
+            this.textBoxVATCodeCustomerInfo.TabIndex = 132;
+            // 
+            // labelLedgerCustomerInfo
+            // 
+            this.labelLedgerCustomerInfo.AutoSize = true;
+            this.labelLedgerCustomerInfo.Location = new System.Drawing.Point(30, 388);
+            this.labelLedgerCustomerInfo.Name = "labelLedgerCustomerInfo";
+            this.labelLedgerCustomerInfo.Size = new System.Drawing.Size(40, 13);
+            this.labelLedgerCustomerInfo.TabIndex = 131;
+            this.labelLedgerCustomerInfo.Text = "Ledger";
+            // 
+            // textBoxLedgerCustomerInfo
+            // 
+            this.textBoxLedgerCustomerInfo.Location = new System.Drawing.Point(135, 385);
+            this.textBoxLedgerCustomerInfo.Name = "textBoxLedgerCustomerInfo";
+            this.textBoxLedgerCustomerInfo.ReadOnly = true;
+            this.textBoxLedgerCustomerInfo.Size = new System.Drawing.Size(132, 20);
+            this.textBoxLedgerCustomerInfo.TabIndex = 130;
+            // 
+            // labelLimitCustomerInfo
+            // 
+            this.labelLimitCustomerInfo.AutoSize = true;
+            this.labelLimitCustomerInfo.Location = new System.Drawing.Point(30, 360);
+            this.labelLimitCustomerInfo.Name = "labelLimitCustomerInfo";
+            this.labelLimitCustomerInfo.Size = new System.Drawing.Size(28, 13);
+            this.labelLimitCustomerInfo.TabIndex = 129;
+            this.labelLimitCustomerInfo.Text = "Limit";
+            // 
+            // textBoxLimitCustomerInfo
+            // 
+            this.textBoxLimitCustomerInfo.Location = new System.Drawing.Point(135, 357);
+            this.textBoxLimitCustomerInfo.Name = "textBoxLimitCustomerInfo";
+            this.textBoxLimitCustomerInfo.ReadOnly = true;
+            this.textBoxLimitCustomerInfo.Size = new System.Drawing.Size(132, 20);
+            this.textBoxLimitCustomerInfo.TabIndex = 128;
+            // 
+            // labelRevenueCustomerInfo
+            // 
+            this.labelRevenueCustomerInfo.AutoSize = true;
+            this.labelRevenueCustomerInfo.Location = new System.Drawing.Point(30, 331);
+            this.labelRevenueCustomerInfo.Name = "labelRevenueCustomerInfo";
+            this.labelRevenueCustomerInfo.Size = new System.Drawing.Size(51, 13);
+            this.labelRevenueCustomerInfo.TabIndex = 127;
+            this.labelRevenueCustomerInfo.Text = "Revenue";
+            // 
+            // textBoxRevenueCustomerInfo
+            // 
+            this.textBoxRevenueCustomerInfo.Location = new System.Drawing.Point(135, 328);
+            this.textBoxRevenueCustomerInfo.Name = "textBoxRevenueCustomerInfo";
+            this.textBoxRevenueCustomerInfo.ReadOnly = true;
+            this.textBoxRevenueCustomerInfo.Size = new System.Drawing.Size(132, 20);
+            this.textBoxRevenueCustomerInfo.TabIndex = 126;
+            // 
+            // labelCreditBalanceCustomerInfo
+            // 
+            this.labelCreditBalanceCustomerInfo.AutoSize = true;
+            this.labelCreditBalanceCustomerInfo.Location = new System.Drawing.Point(30, 301);
+            this.labelCreditBalanceCustomerInfo.Name = "labelCreditBalanceCustomerInfo";
+            this.labelCreditBalanceCustomerInfo.Size = new System.Drawing.Size(76, 13);
+            this.labelCreditBalanceCustomerInfo.TabIndex = 124;
+            this.labelCreditBalanceCustomerInfo.Text = "Credit Balance";
+            // 
+            // textBoxCreditBalanceCustomerInfo
+            // 
+            this.textBoxCreditBalanceCustomerInfo.Location = new System.Drawing.Point(135, 298);
+            this.textBoxCreditBalanceCustomerInfo.Name = "textBoxCreditBalanceCustomerInfo";
+            this.textBoxCreditBalanceCustomerInfo.ReadOnly = true;
+            this.textBoxCreditBalanceCustomerInfo.Size = new System.Drawing.Size(132, 20);
+            this.textBoxCreditBalanceCustomerInfo.TabIndex = 123;
+            // 
+            // checkBoxCreditworthyCustomerInfo
+            // 
+            this.checkBoxCreditworthyCustomerInfo.AutoSize = true;
+            this.checkBoxCreditworthyCustomerInfo.Enabled = false;
+            this.checkBoxCreditworthyCustomerInfo.Location = new System.Drawing.Point(136, 277);
+            this.checkBoxCreditworthyCustomerInfo.Name = "checkBoxCreditworthyCustomerInfo";
+            this.checkBoxCreditworthyCustomerInfo.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxCreditworthyCustomerInfo.TabIndex = 122;
+            this.checkBoxCreditworthyCustomerInfo.UseVisualStyleBackColor = true;
+            // 
+            // labelCreditworthyCustomerInfo
+            // 
+            this.labelCreditworthyCustomerInfo.AutoSize = true;
+            this.labelCreditworthyCustomerInfo.Location = new System.Drawing.Point(30, 278);
+            this.labelCreditworthyCustomerInfo.Name = "labelCreditworthyCustomerInfo";
+            this.labelCreditworthyCustomerInfo.Size = new System.Drawing.Size(65, 13);
+            this.labelCreditworthyCustomerInfo.TabIndex = 121;
+            this.labelCreditworthyCustomerInfo.Text = "Creditworthy";
+            // 
+            // checkBoxPotentialCustomerInfo
+            // 
+            this.checkBoxPotentialCustomerInfo.AutoSize = true;
+            this.checkBoxPotentialCustomerInfo.Enabled = false;
+            this.checkBoxPotentialCustomerInfo.Location = new System.Drawing.Point(136, 223);
+            this.checkBoxPotentialCustomerInfo.Name = "checkBoxPotentialCustomerInfo";
+            this.checkBoxPotentialCustomerInfo.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxPotentialCustomerInfo.TabIndex = 120;
+            this.checkBoxPotentialCustomerInfo.UseVisualStyleBackColor = true;
+            // 
+            // labelLastContactDateCustomerInfo
+            // 
+            this.labelLastContactDateCustomerInfo.AutoSize = true;
+            this.labelLastContactDateCustomerInfo.Location = new System.Drawing.Point(30, 250);
+            this.labelLastContactDateCustomerInfo.Name = "labelLastContactDateCustomerInfo";
+            this.labelLastContactDateCustomerInfo.Size = new System.Drawing.Size(93, 13);
+            this.labelLastContactDateCustomerInfo.TabIndex = 119;
+            this.labelLastContactDateCustomerInfo.Text = "Last Contact Date";
+            // 
+            // textBoxLastContactDateCustomerInfo
+            // 
+            this.textBoxLastContactDateCustomerInfo.Location = new System.Drawing.Point(135, 247);
+            this.textBoxLastContactDateCustomerInfo.Name = "textBoxLastContactDateCustomerInfo";
+            this.textBoxLastContactDateCustomerInfo.ReadOnly = true;
+            this.textBoxLastContactDateCustomerInfo.Size = new System.Drawing.Size(132, 20);
+            this.textBoxLastContactDateCustomerInfo.TabIndex = 118;
+            // 
+            // labelPotentialCustomerInfo
+            // 
+            this.labelPotentialCustomerInfo.AutoSize = true;
+            this.labelPotentialCustomerInfo.Location = new System.Drawing.Point(30, 224);
+            this.labelPotentialCustomerInfo.Name = "labelPotentialCustomerInfo";
+            this.labelPotentialCustomerInfo.Size = new System.Drawing.Size(95, 13);
+            this.labelPotentialCustomerInfo.TabIndex = 117;
+            this.labelPotentialCustomerInfo.Text = "Potential Customer";
+            // 
+            // labelCityCustomerInfo
+            // 
+            this.labelCityCustomerInfo.AutoSize = true;
+            this.labelCityCustomerInfo.Location = new System.Drawing.Point(30, 198);
+            this.labelCityCustomerInfo.Name = "labelCityCustomerInfo";
+            this.labelCityCustomerInfo.Size = new System.Drawing.Size(24, 13);
+            this.labelCityCustomerInfo.TabIndex = 116;
+            this.labelCityCustomerInfo.Text = "City";
+            // 
+            // textBoxCityChangeCustomerInfo
+            // 
+            this.textBoxCityChangeCustomerInfo.Location = new System.Drawing.Point(135, 195);
+            this.textBoxCityChangeCustomerInfo.Name = "textBoxCityChangeCustomerInfo";
+            this.textBoxCityChangeCustomerInfo.ReadOnly = true;
+            this.textBoxCityChangeCustomerInfo.Size = new System.Drawing.Size(132, 20);
+            this.textBoxCityChangeCustomerInfo.TabIndex = 115;
+            // 
+            // labelCompanyCodeCustomerInfo
+            // 
+            this.labelCompanyCodeCustomerInfo.AutoSize = true;
+            this.labelCompanyCodeCustomerInfo.Location = new System.Drawing.Point(30, 172);
+            this.labelCompanyCodeCustomerInfo.Name = "labelCompanyCodeCustomerInfo";
+            this.labelCompanyCodeCustomerInfo.Size = new System.Drawing.Size(79, 13);
+            this.labelCompanyCodeCustomerInfo.TabIndex = 114;
+            this.labelCompanyCodeCustomerInfo.Text = "Company Code";
+            // 
+            // textBoxCompanyCodeCustomerInfo
+            // 
+            this.textBoxCompanyCodeCustomerInfo.Location = new System.Drawing.Point(135, 169);
+            this.textBoxCompanyCodeCustomerInfo.Name = "textBoxCompanyCodeCustomerInfo";
+            this.textBoxCompanyCodeCustomerInfo.ReadOnly = true;
+            this.textBoxCompanyCodeCustomerInfo.Size = new System.Drawing.Size(132, 20);
+            this.textBoxCompanyCodeCustomerInfo.TabIndex = 113;
+            // 
+            // labelHouseNumberCustomerInfo
+            // 
+            this.labelHouseNumberCustomerInfo.AutoSize = true;
+            this.labelHouseNumberCustomerInfo.Location = new System.Drawing.Point(30, 146);
+            this.labelHouseNumberCustomerInfo.Name = "labelHouseNumberCustomerInfo";
+            this.labelHouseNumberCustomerInfo.Size = new System.Drawing.Size(76, 13);
+            this.labelHouseNumberCustomerInfo.TabIndex = 112;
+            this.labelHouseNumberCustomerInfo.Text = "House number";
+            // 
+            // textBoxHouseNumberCustomerInfo
+            // 
+            this.textBoxHouseNumberCustomerInfo.Location = new System.Drawing.Point(135, 143);
+            this.textBoxHouseNumberCustomerInfo.Name = "textBoxHouseNumberCustomerInfo";
+            this.textBoxHouseNumberCustomerInfo.ReadOnly = true;
+            this.textBoxHouseNumberCustomerInfo.Size = new System.Drawing.Size(132, 20);
+            this.textBoxHouseNumberCustomerInfo.TabIndex = 111;
+            // 
+            // labelAddressCustomerInfo
+            // 
+            this.labelAddressCustomerInfo.AutoSize = true;
+            this.labelAddressCustomerInfo.Location = new System.Drawing.Point(30, 120);
+            this.labelAddressCustomerInfo.Name = "labelAddressCustomerInfo";
+            this.labelAddressCustomerInfo.Size = new System.Drawing.Size(45, 13);
+            this.labelAddressCustomerInfo.TabIndex = 110;
+            this.labelAddressCustomerInfo.Text = "Address";
+            // 
+            // textBoxAddressCustomerInfo
+            // 
+            this.textBoxAddressCustomerInfo.Location = new System.Drawing.Point(135, 117);
+            this.textBoxAddressCustomerInfo.Name = "textBoxAddressCustomerInfo";
+            this.textBoxAddressCustomerInfo.ReadOnly = true;
+            this.textBoxAddressCustomerInfo.Size = new System.Drawing.Size(132, 20);
+            this.textBoxAddressCustomerInfo.TabIndex = 109;
+            // 
+            // labelNameCustomerInfo
+            // 
+            this.labelNameCustomerInfo.AutoSize = true;
+            this.labelNameCustomerInfo.Location = new System.Drawing.Point(30, 94);
+            this.labelNameCustomerInfo.Name = "labelNameCustomerInfo";
+            this.labelNameCustomerInfo.Size = new System.Drawing.Size(35, 13);
+            this.labelNameCustomerInfo.TabIndex = 108;
+            this.labelNameCustomerInfo.Text = "Name";
+            // 
+            // textBoxNameCustomerInfo
+            // 
+            this.textBoxNameCustomerInfo.Location = new System.Drawing.Point(135, 91);
+            this.textBoxNameCustomerInfo.Name = "textBoxNameCustomerInfo";
+            this.textBoxNameCustomerInfo.ReadOnly = true;
+            this.textBoxNameCustomerInfo.Size = new System.Drawing.Size(132, 20);
+            this.textBoxNameCustomerInfo.TabIndex = 107;
             // 
             // tabPageChangeInvoice
             // 
+            this.tabPageChangeInvoice.Controls.Add(this.checkBoxChangeInvoicePaid);
+            this.tabPageChangeInvoice.Controls.Add(this.labelChangeInvoicePaid);
             this.tabPageChangeInvoice.Controls.Add(this.buttonDeleteInvoice);
             this.tabPageChangeInvoice.Controls.Add(this.buttonBackInvoice);
             this.tabPageChangeInvoice.Controls.Add(this.buttonChangeInvoice);
@@ -1525,17 +1440,35 @@
             this.tabPageChangeInvoice.Controls.Add(this.labelChangeInvoiceProjectId);
             this.tabPageChangeInvoice.Controls.Add(this.textBoxChangeInvoiceProjectId);
             this.tabPageChangeInvoice.Controls.Add(this.panelTitleChangeInvoice);
-            this.tabPageChangeInvoice.Location = new System.Drawing.Point(23, 4);
+            this.tabPageChangeInvoice.Location = new System.Drawing.Point(42, 4);
             this.tabPageChangeInvoice.Name = "tabPageChangeInvoice";
             this.tabPageChangeInvoice.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageChangeInvoice.Size = new System.Drawing.Size(1122, 664);
+            this.tabPageChangeInvoice.Size = new System.Drawing.Size(1103, 664);
             this.tabPageChangeInvoice.TabIndex = 5;
             this.tabPageChangeInvoice.Text = "Change Invoice";
             this.tabPageChangeInvoice.UseVisualStyleBackColor = true;
             // 
+            // checkBoxChangeInvoicePaid
+            // 
+            this.checkBoxChangeInvoicePaid.AutoSize = true;
+            this.checkBoxChangeInvoicePaid.Location = new System.Drawing.Point(112, 190);
+            this.checkBoxChangeInvoicePaid.Name = "checkBoxChangeInvoicePaid";
+            this.checkBoxChangeInvoicePaid.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxChangeInvoicePaid.TabIndex = 84;
+            this.checkBoxChangeInvoicePaid.UseVisualStyleBackColor = true;
+            // 
+            // labelChangeInvoicePaid
+            // 
+            this.labelChangeInvoicePaid.AutoSize = true;
+            this.labelChangeInvoicePaid.Location = new System.Drawing.Point(11, 190);
+            this.labelChangeInvoicePaid.Name = "labelChangeInvoicePaid";
+            this.labelChangeInvoicePaid.Size = new System.Drawing.Size(28, 13);
+            this.labelChangeInvoicePaid.TabIndex = 83;
+            this.labelChangeInvoicePaid.Text = "Paid";
+            // 
             // buttonDeleteInvoice
             // 
-            this.buttonDeleteInvoice.Location = new System.Drawing.Point(14, 240);
+            this.buttonDeleteInvoice.Location = new System.Drawing.Point(14, 280);
             this.buttonDeleteInvoice.Name = "buttonDeleteInvoice";
             this.buttonDeleteInvoice.Size = new System.Drawing.Size(75, 23);
             this.buttonDeleteInvoice.TabIndex = 82;
@@ -1545,7 +1478,7 @@
             // 
             // buttonBackInvoice
             // 
-            this.buttonBackInvoice.Location = new System.Drawing.Point(14, 211);
+            this.buttonBackInvoice.Location = new System.Drawing.Point(14, 251);
             this.buttonBackInvoice.Name = "buttonBackInvoice";
             this.buttonBackInvoice.Size = new System.Drawing.Size(75, 23);
             this.buttonBackInvoice.TabIndex = 81;
@@ -1555,7 +1488,7 @@
             // 
             // buttonChangeInvoice
             // 
-            this.buttonChangeInvoice.Location = new System.Drawing.Point(334, 210);
+            this.buttonChangeInvoice.Location = new System.Drawing.Point(334, 250);
             this.buttonChangeInvoice.Name = "buttonChangeInvoice";
             this.buttonChangeInvoice.Size = new System.Drawing.Size(75, 23);
             this.buttonChangeInvoice.TabIndex = 80;
@@ -1632,6 +1565,8 @@
             // 
             // tabPageAddInvoice
             // 
+            this.tabPageAddInvoice.Controls.Add(this.labelAddInvoicePaid);
+            this.tabPageAddInvoice.Controls.Add(this.checkBoxAddInvoicePaid);
             this.tabPageAddInvoice.Controls.Add(this.buttonSaveInvoice);
             this.tabPageAddInvoice.Controls.Add(this.labelInvoicePrice);
             this.tabPageAddInvoice.Controls.Add(this.textBoxInvoicePrice);
@@ -1640,17 +1575,35 @@
             this.tabPageAddInvoice.Controls.Add(this.labelInvoiceProjectId);
             this.tabPageAddInvoice.Controls.Add(this.textBoxProjectId);
             this.tabPageAddInvoice.Controls.Add(this.panelTitleAddInvoice);
-            this.tabPageAddInvoice.Location = new System.Drawing.Point(23, 4);
+            this.tabPageAddInvoice.Location = new System.Drawing.Point(42, 4);
             this.tabPageAddInvoice.Name = "tabPageAddInvoice";
             this.tabPageAddInvoice.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageAddInvoice.Size = new System.Drawing.Size(1122, 664);
+            this.tabPageAddInvoice.Size = new System.Drawing.Size(1103, 664);
             this.tabPageAddInvoice.TabIndex = 6;
             this.tabPageAddInvoice.Text = "Add Invoice";
             this.tabPageAddInvoice.UseVisualStyleBackColor = true;
             // 
+            // labelAddInvoicePaid
+            // 
+            this.labelAddInvoicePaid.AutoSize = true;
+            this.labelAddInvoicePaid.Location = new System.Drawing.Point(11, 190);
+            this.labelAddInvoicePaid.Name = "labelAddInvoicePaid";
+            this.labelAddInvoicePaid.Size = new System.Drawing.Size(28, 13);
+            this.labelAddInvoicePaid.TabIndex = 74;
+            this.labelAddInvoicePaid.Text = "Paid";
+            // 
+            // checkBoxAddInvoicePaid
+            // 
+            this.checkBoxAddInvoicePaid.AutoSize = true;
+            this.checkBoxAddInvoicePaid.Location = new System.Drawing.Point(112, 190);
+            this.checkBoxAddInvoicePaid.Name = "checkBoxAddInvoicePaid";
+            this.checkBoxAddInvoicePaid.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxAddInvoicePaid.TabIndex = 73;
+            this.checkBoxAddInvoicePaid.UseVisualStyleBackColor = true;
+            // 
             // buttonSaveInvoice
             // 
-            this.buttonSaveInvoice.Location = new System.Drawing.Point(14, 221);
+            this.buttonSaveInvoice.Location = new System.Drawing.Point(14, 233);
             this.buttonSaveInvoice.Name = "buttonSaveInvoice";
             this.buttonSaveInvoice.Size = new System.Drawing.Size(75, 23);
             this.buttonSaveInvoice.TabIndex = 72;
@@ -1725,18 +1678,157 @@
             this.labelTitleAddInvoice.TabIndex = 63;
             this.labelTitleAddInvoice.Text = "Add Invoice";
             // 
+            // tabPageChangeProject
+            // 
+            this.tabPageChangeProject.Controls.Add(this.buttonChangeProject);
+            this.tabPageChangeProject.Controls.Add(this.buttonBackChangeProject);
+            this.tabPageChangeProject.Controls.Add(this.checkBoxActiveChangeProject);
+            this.tabPageChangeProject.Controls.Add(this.textBoxChangeProjectName);
+            this.tabPageChangeProject.Controls.Add(this.labelChangeProjectActive);
+            this.tabPageChangeProject.Controls.Add(this.labelChangeProjectName);
+            this.tabPageChangeProject.Controls.Add(this.panelTitleChangeProject);
+            this.tabPageChangeProject.Location = new System.Drawing.Point(42, 4);
+            this.tabPageChangeProject.Name = "tabPageChangeProject";
+            this.tabPageChangeProject.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageChangeProject.Size = new System.Drawing.Size(1103, 664);
+            this.tabPageChangeProject.TabIndex = 7;
+            this.tabPageChangeProject.Text = "Change Project";
+            this.tabPageChangeProject.UseVisualStyleBackColor = true;
+            // 
+            // buttonChangeProject
+            // 
+            this.buttonChangeProject.Location = new System.Drawing.Point(190, 145);
+            this.buttonChangeProject.Name = "buttonChangeProject";
+            this.buttonChangeProject.Size = new System.Drawing.Size(75, 23);
+            this.buttonChangeProject.TabIndex = 65;
+            this.buttonChangeProject.Text = "Change";
+            this.buttonChangeProject.UseVisualStyleBackColor = true;
+            this.buttonChangeProject.Click += new System.EventHandler(this.buttonChangeProject_Click);
+            // 
+            // buttonBackChangeProject
+            // 
+            this.buttonBackChangeProject.Location = new System.Drawing.Point(15, 145);
+            this.buttonBackChangeProject.Name = "buttonBackChangeProject";
+            this.buttonBackChangeProject.Size = new System.Drawing.Size(75, 23);
+            this.buttonBackChangeProject.TabIndex = 64;
+            this.buttonBackChangeProject.Text = "Back";
+            this.buttonBackChangeProject.UseVisualStyleBackColor = true;
+            this.buttonBackChangeProject.Click += new System.EventHandler(this.buttonBackChangeProject_Click);
+            // 
+            // checkBoxActiveChangeProject
+            // 
+            this.checkBoxActiveChangeProject.AutoSize = true;
+            this.checkBoxActiveChangeProject.Location = new System.Drawing.Point(165, 106);
+            this.checkBoxActiveChangeProject.Name = "checkBoxActiveChangeProject";
+            this.checkBoxActiveChangeProject.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxActiveChangeProject.TabIndex = 63;
+            this.checkBoxActiveChangeProject.UseVisualStyleBackColor = true;
+            // 
+            // textBoxChangeProjectName
+            // 
+            this.textBoxChangeProjectName.Location = new System.Drawing.Point(165, 77);
+            this.textBoxChangeProjectName.Name = "textBoxChangeProjectName";
+            this.textBoxChangeProjectName.ReadOnly = true;
+            this.textBoxChangeProjectName.Size = new System.Drawing.Size(100, 20);
+            this.textBoxChangeProjectName.TabIndex = 62;
+            // 
+            // labelChangeProjectActive
+            // 
+            this.labelChangeProjectActive.AutoSize = true;
+            this.labelChangeProjectActive.Location = new System.Drawing.Point(12, 106);
+            this.labelChangeProjectActive.Name = "labelChangeProjectActive";
+            this.labelChangeProjectActive.Size = new System.Drawing.Size(37, 13);
+            this.labelChangeProjectActive.TabIndex = 61;
+            this.labelChangeProjectActive.Text = "Active";
+            // 
+            // labelChangeProjectName
+            // 
+            this.labelChangeProjectName.AutoSize = true;
+            this.labelChangeProjectName.Location = new System.Drawing.Point(12, 80);
+            this.labelChangeProjectName.Name = "labelChangeProjectName";
+            this.labelChangeProjectName.Size = new System.Drawing.Size(35, 13);
+            this.labelChangeProjectName.TabIndex = 60;
+            this.labelChangeProjectName.Text = "Name";
+            // 
+            // panelTitleChangeProject
+            // 
+            this.panelTitleChangeProject.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelTitleChangeProject.Controls.Add(this.labelTitleChangeProject);
+            this.panelTitleChangeProject.Location = new System.Drawing.Point(0, 0);
+            this.panelTitleChangeProject.Name = "panelTitleChangeProject";
+            this.panelTitleChangeProject.Size = new System.Drawing.Size(1141, 66);
+            this.panelTitleChangeProject.TabIndex = 59;
+            // 
+            // labelTitleChangeProject
+            // 
+            this.labelTitleChangeProject.AutoSize = true;
+            this.labelTitleChangeProject.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitleChangeProject.Location = new System.Drawing.Point(6, 8);
+            this.labelTitleChangeProject.Name = "labelTitleChangeProject";
+            this.labelTitleChangeProject.Size = new System.Drawing.Size(106, 33);
+            this.labelTitleChangeProject.TabIndex = 57;
+            this.labelTitleChangeProject.Text = "Project";
+            // 
+            // tabPageDashboard
+            // 
+            this.tabPageDashboard.Controls.Add(this.labelCustomersPay);
+            this.tabPageDashboard.Controls.Add(this.dataGridViewCustomersProjectNeedsPay);
+            this.tabPageDashboard.Controls.Add(this.labelEarnedCustomers);
+            this.tabPageDashboard.Controls.Add(this.dataGridViewEarnedCustomers);
+            this.tabPageDashboard.Location = new System.Drawing.Point(42, 4);
+            this.tabPageDashboard.Name = "tabPageDashboard";
+            this.tabPageDashboard.Size = new System.Drawing.Size(1103, 664);
+            this.tabPageDashboard.TabIndex = 8;
+            this.tabPageDashboard.Text = "tabPageDashboard";
+            this.tabPageDashboard.UseVisualStyleBackColor = true;
+            // 
+            // labelCustomersPay
+            // 
+            this.labelCustomersPay.AutoSize = true;
+            this.labelCustomersPay.Location = new System.Drawing.Point(26, 100);
+            this.labelCustomersPay.Name = "labelCustomersPay";
+            this.labelCustomersPay.Size = new System.Drawing.Size(141, 13);
+            this.labelCustomersPay.TabIndex = 3;
+            this.labelCustomersPay.Text = "Customers that needs to pay";
+            // 
+            // dataGridViewCustomersProjectNeedsPay
+            // 
+            this.dataGridViewCustomersProjectNeedsPay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewCustomersProjectNeedsPay.Location = new System.Drawing.Point(26, 120);
+            this.dataGridViewCustomersProjectNeedsPay.Name = "dataGridViewCustomersProjectNeedsPay";
+            this.dataGridViewCustomersProjectNeedsPay.Size = new System.Drawing.Size(577, 193);
+            this.dataGridViewCustomersProjectNeedsPay.TabIndex = 2;
+            // 
+            // labelEarnedCustomers
+            // 
+            this.labelEarnedCustomers.AutoSize = true;
+            this.labelEarnedCustomers.Location = new System.Drawing.Point(26, 320);
+            this.labelEarnedCustomers.Name = "labelEarnedCustomers";
+            this.labelEarnedCustomers.Size = new System.Drawing.Size(115, 13);
+            this.labelEarnedCustomers.TabIndex = 1;
+            this.labelEarnedCustomers.Text = "Earned from customers";
+            // 
+            // dataGridViewEarnedCustomers
+            // 
+            this.dataGridViewEarnedCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewEarnedCustomers.Location = new System.Drawing.Point(26, 340);
+            this.dataGridViewEarnedCustomers.Name = "dataGridViewEarnedCustomers";
+            this.dataGridViewEarnedCustomers.Size = new System.Drawing.Size(577, 193);
+            this.dataGridViewEarnedCustomers.TabIndex = 0;
+            // 
+            // tblprojectsBindingSource
+            // 
+            this.tblprojectsBindingSource.DataMember = "tbl_projects";
+            this.tblprojectsBindingSource.DataSource = this.databaseBarrocProjectsDataSet;
+            // 
+            // databaseBarrocProjectsDataSet
+            // 
+            this.databaseBarrocProjectsDataSet.DataSetName = "DatabaseBarrocProjectsDataSet";
+            this.databaseBarrocProjectsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // tbl_projectsTableAdapter
             // 
             this.tbl_projectsTableAdapter.ClearBeforeFill = true;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.pictureBox3.Location = new System.Drawing.Point(-6, 219);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(218, 576);
-            this.pictureBox3.TabIndex = 34;
-            this.pictureBox3.TabStop = false;
             // 
             // pictureBox6
             // 
@@ -1747,6 +1839,97 @@
             this.pictureBox6.TabIndex = 58;
             this.pictureBox6.TabStop = false;
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pictureBox5.Location = new System.Drawing.Point(208, 65);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(5, 721);
+            this.pictureBox5.TabIndex = 54;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.Image = global::Barroc_IT.Properties.Resources._1;
+            this.pictureBox12.Location = new System.Drawing.Point(46, 71);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(123, 108);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox12.TabIndex = 53;
+            this.pictureBox12.TabStop = false;
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pictureBox10.Location = new System.Drawing.Point(-5, 479);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(218, 5);
+            this.pictureBox10.TabIndex = 40;
+            this.pictureBox10.TabStop = false;
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pictureBox11.Location = new System.Drawing.Point(-5, 426);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(218, 5);
+            this.pictureBox11.TabIndex = 38;
+            this.pictureBox11.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pictureBox7.Location = new System.Drawing.Point(-7, 373);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(218, 5);
+            this.pictureBox7.TabIndex = 37;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pictureBox8.Location = new System.Drawing.Point(-7, 320);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(218, 5);
+            this.pictureBox8.TabIndex = 36;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pictureBox4.Location = new System.Drawing.Point(-6, 267);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(218, 5);
+            this.pictureBox4.TabIndex = 35;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pictureBox3.Location = new System.Drawing.Point(-6, 219);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(218, 576);
+            this.pictureBox3.TabIndex = 34;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pictureBox2.Location = new System.Drawing.Point(-6, 214);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(218, 5);
+            this.pictureBox2.TabIndex = 33;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.pictureBox1.Location = new System.Drawing.Point(-5, -3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1444, 68);
+            this.pictureBox1.TabIndex = 32;
+            this.pictureBox1.TabStop = false;
+            // 
             // FormFinance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1754,7 +1937,6 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1354, 733);
             this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox12);
             this.Controls.Add(this.labelAddInvoice);
@@ -1762,7 +1944,7 @@
             this.Controls.Add(this.labelInvoices);
             this.Controls.Add(this.labelProjects);
             this.Controls.Add(this.labelCustomers);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.labelNotifications);
             this.Controls.Add(this.labelDashboard);
             this.Controls.Add(this.buttonLogout);
             this.Controls.Add(this.pictureBox10);
@@ -1777,15 +1959,6 @@
             this.Name = "FormFinance";
             this.Text = "FormFinance";
             this.Load += new System.EventHandler(this.FormFinance_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPositiveCompanies)).EndInit();
             this.tabControlFinance.ResumeLayout(false);
             this.tabPageCustomers.ResumeLayout(false);
@@ -1795,8 +1968,6 @@
             this.panel1.PerformLayout();
             this.tabPageProjects.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProjects)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblprojectsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.databaseBarrocProjectsDataSet)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.tabPageInvoices.ResumeLayout(false);
@@ -1806,8 +1977,8 @@
             this.tabPageAddCustomer.PerformLayout();
             this.panelAddCustomer.ResumeLayout(false);
             this.panelAddCustomer.PerformLayout();
-            this.tabPageChangeCustomer.ResumeLayout(false);
-            this.tabPageChangeCustomer.PerformLayout();
+            this.tabPageCustomerInfo.ResumeLayout(false);
+            this.tabPageCustomerInfo.PerformLayout();
             this.panelTitleChangeCustomer.ResumeLayout(false);
             this.panelTitleChangeCustomer.PerformLayout();
             this.tabPageChangeInvoice.ResumeLayout(false);
@@ -1818,8 +1989,27 @@
             this.tabPageAddInvoice.PerformLayout();
             this.panelTitleAddInvoice.ResumeLayout(false);
             this.panelTitleAddInvoice.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.tabPageChangeProject.ResumeLayout(false);
+            this.tabPageChangeProject.PerformLayout();
+            this.panelTitleChangeProject.ResumeLayout(false);
+            this.panelTitleChangeProject.PerformLayout();
+            this.tabPageDashboard.ResumeLayout(false);
+            this.tabPageDashboard.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCustomersProjectNeedsPay)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEarnedCustomers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblprojectsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseBarrocProjectsDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1833,7 +2023,7 @@
         private System.Windows.Forms.Label labelInvoices;
         private System.Windows.Forms.Label labelProjects;
         private System.Windows.Forms.Label labelCustomers;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelNotifications;
         private System.Windows.Forms.Label labelDashboard;
         private System.Windows.Forms.Button buttonLogout;
         private System.Windows.Forms.PictureBox pictureBox10;
@@ -1844,7 +2034,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridViewPositiveCompanies;
         private System.Windows.Forms.TabControl tabControlFinance;
         private System.Windows.Forms.TabPage tabPageCustomers;
@@ -1855,17 +2044,12 @@
         private System.Windows.Forms.DataGridView dataGridViewNegativeCompanies;
         private System.Windows.Forms.Label labelTitleProjects;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dataGridViewProjects;
         private DatabaseBarrocProjectsDataSet databaseBarrocProjectsDataSet;
         private System.Windows.Forms.BindingSource tblprojectsBindingSource;
         private DatabaseBarrocProjectsDataSetTableAdapters.tbl_projectsTableAdapter tbl_projectsTableAdapter;
         private System.Windows.Forms.TabPage tabPageInvoices;
-        private System.Windows.Forms.DataGridViewTextBoxColumn projectidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pprogressionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pstartdateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn penddateDataGridViewTextBoxColumn;
         private System.Windows.Forms.TabPage tabPageAddCustomer;
-        private System.Windows.Forms.TabPage tabPageChangeCustomer;
+        private System.Windows.Forms.TabPage tabPageCustomerInfo;
         private System.Windows.Forms.TabPage tabPageChangeInvoice;
         private System.Windows.Forms.TabPage tabPageAddInvoice;
         private System.Windows.Forms.Label labelTitleInvoices;
@@ -1937,54 +2121,75 @@
         private System.Windows.Forms.Label labelAddCustomerBanknumber;
         private System.Windows.Forms.TextBox textBoxAddCustomerBanknumber;
         private System.Windows.Forms.Panel panelTitleChangeCustomer;
-        private System.Windows.Forms.Label labelTitleChangeCustomer;
-        private System.Windows.Forms.Label labelBanknumberChangeCustomer;
-        private System.Windows.Forms.TextBox textBoxBanknumberChangeCustomer;
-        private System.Windows.Forms.Label labelDiscountChangeCustomer;
-        private System.Windows.Forms.TextBox textBoxDiscountChangeCustomer;
-        private System.Windows.Forms.Label labelEmailChangeCustomer;
-        private System.Windows.Forms.TextBox textBoxEmailChangeCustomer;
-        private System.Windows.Forms.Label labelFaxnumberChangeCustomer;
-        private System.Windows.Forms.TextBox textBoxFaxnumberChangeCustomer;
-        private System.Windows.Forms.Label labelTelephoneChangeCustomer;
-        private System.Windows.Forms.TextBox textBoxTelephoneChangeCustomer;
-        private System.Windows.Forms.Label labelInitialsChangeCustomer;
-        private System.Windows.Forms.TextBox textBoxInitialsChangeCustomer;
-        private System.Windows.Forms.Label labelContactpersonChangeCustomer;
-        private System.Windows.Forms.TextBox textBoxContactpersonChangeCustomer;
-        private System.Windows.Forms.Label labelMaintenanceContractChangeCustomer;
-        private System.Windows.Forms.TextBox textBoxMaintenanceContractChangeCustomer;
-        private System.Windows.Forms.Label labelVATCodeChangeCustomer;
-        private System.Windows.Forms.TextBox textBoxVATCodeChangeCustomer;
-        private System.Windows.Forms.Label labelLedgerChangeCustomer;
-        private System.Windows.Forms.TextBox textBoxLedgerChangeCustomer;
-        private System.Windows.Forms.Label labelLimitChangeCustomer;
-        private System.Windows.Forms.TextBox textBoxLimitChangeCustomer;
-        private System.Windows.Forms.Label labelRevenueChangeCustomer;
-        private System.Windows.Forms.TextBox textBoxRevenueChangeCustomer;
-        private System.Windows.Forms.Button buttonChangeCustomer;
-        private System.Windows.Forms.Label labelCreditBalanceChangeCustomer;
-        private System.Windows.Forms.TextBox textBoxCreditBalanceChangeCustomer;
-        private System.Windows.Forms.CheckBox checkBoxCreditworthyChangeCustomer;
-        private System.Windows.Forms.Label labelCreditworthyChangeCustomer;
-        private System.Windows.Forms.CheckBox checkBoxPotentialCustomerChangeCustomer;
-        private System.Windows.Forms.Label labelLastContactDateChangeCustomer;
-        private System.Windows.Forms.TextBox textBoxLastContactDateChangeCustomer;
-        private System.Windows.Forms.Label labelPotentialChangeCustomer;
-        private System.Windows.Forms.Label labelCityChangeCustomer;
-        private System.Windows.Forms.TextBox textBoxCityChangeCustomer;
-        private System.Windows.Forms.Label labelCompanyCodeChangeCustomer;
-        private System.Windows.Forms.TextBox textBoxCompanyCodeChangeCustomer;
-        private System.Windows.Forms.Label labelHouseNumberChangeCustomer;
-        private System.Windows.Forms.TextBox textBoxHouseNumberChangeCustomer;
-        private System.Windows.Forms.Label labelAddressChangeCustomer;
-        private System.Windows.Forms.TextBox textBoxAddressChangeCustomer;
-        private System.Windows.Forms.Label labelNameChangeCustomer;
-        private System.Windows.Forms.TextBox textBoxNameChangeCustomer;
-        private System.Windows.Forms.Button buttonBackChangeCustomers;
-        private System.Windows.Forms.Button buttonDeleteCustomer;
+        private System.Windows.Forms.Label labelTitleCustomerInformation;
+        private System.Windows.Forms.Label labelBanknumberCustomerInfo;
+        private System.Windows.Forms.TextBox textBoxBanknumberCustomerInfo;
+        private System.Windows.Forms.Label labelDiscountCustomerInfo;
+        private System.Windows.Forms.TextBox textBoxDiscountCustomerInfo;
+        private System.Windows.Forms.Label labelEmailChangeCustomerInfo;
+        private System.Windows.Forms.TextBox textBoxEmailCustomerInfo;
+        private System.Windows.Forms.Label labelFaxnumberCustomerInfo;
+        private System.Windows.Forms.TextBox textBoxFaxnumberCustomerInfo;
+        private System.Windows.Forms.Label labelTelephoneCustomerInfo;
+        private System.Windows.Forms.TextBox textBoxTelephoneCustomerInfo;
+        private System.Windows.Forms.Label labelInitialsCustomerInfo;
+        private System.Windows.Forms.TextBox textBoxInitialsCustomerInfo;
+        private System.Windows.Forms.Label labelContactpersonCustomerInfo;
+        private System.Windows.Forms.TextBox textBoxContactpersonCustomerInfo;
+        private System.Windows.Forms.Label labelMaintenanceContractCustomerInfo;
+        private System.Windows.Forms.TextBox textBoxMaintenanceContractCustomerInfo;
+        private System.Windows.Forms.Label labelVATCodeCustomerInfo;
+        private System.Windows.Forms.TextBox textBoxVATCodeCustomerInfo;
+        private System.Windows.Forms.Label labelLedgerCustomerInfo;
+        private System.Windows.Forms.TextBox textBoxLedgerCustomerInfo;
+        private System.Windows.Forms.Label labelLimitCustomerInfo;
+        private System.Windows.Forms.TextBox textBoxLimitCustomerInfo;
+        private System.Windows.Forms.Label labelRevenueCustomerInfo;
+        private System.Windows.Forms.TextBox textBoxRevenueCustomerInfo;
+        private System.Windows.Forms.Label labelCreditBalanceCustomerInfo;
+        private System.Windows.Forms.TextBox textBoxCreditBalanceCustomerInfo;
+        private System.Windows.Forms.CheckBox checkBoxCreditworthyCustomerInfo;
+        private System.Windows.Forms.Label labelCreditworthyCustomerInfo;
+        private System.Windows.Forms.CheckBox checkBoxPotentialCustomerInfo;
+        private System.Windows.Forms.Label labelLastContactDateCustomerInfo;
+        private System.Windows.Forms.TextBox textBoxLastContactDateCustomerInfo;
+        private System.Windows.Forms.Label labelPotentialCustomerInfo;
+        private System.Windows.Forms.Label labelCityCustomerInfo;
+        private System.Windows.Forms.TextBox textBoxCityChangeCustomerInfo;
+        private System.Windows.Forms.Label labelCompanyCodeCustomerInfo;
+        private System.Windows.Forms.TextBox textBoxCompanyCodeCustomerInfo;
+        private System.Windows.Forms.Label labelHouseNumberCustomerInfo;
+        private System.Windows.Forms.TextBox textBoxHouseNumberCustomerInfo;
+        private System.Windows.Forms.Label labelAddressCustomerInfo;
+        private System.Windows.Forms.TextBox textBoxAddressCustomerInfo;
+        private System.Windows.Forms.Label labelNameCustomerInfo;
+        private System.Windows.Forms.TextBox textBoxNameCustomerInfo;
+        private System.Windows.Forms.Button buttonBackCustomerInfo;
         private System.Windows.Forms.Button buttonBackInvoice;
         private System.Windows.Forms.Button buttonDeleteInvoice;
         private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.TabPage tabPageChangeProject;
+        private System.Windows.Forms.DataGridView dataGridViewProjects;
+        private System.Windows.Forms.Button buttonBackChangeProject;
+        private System.Windows.Forms.CheckBox checkBoxActiveChangeProject;
+        private System.Windows.Forms.TextBox textBoxChangeProjectName;
+        private System.Windows.Forms.Label labelChangeProjectActive;
+        private System.Windows.Forms.Label labelChangeProjectName;
+        private System.Windows.Forms.Panel panelTitleChangeProject;
+        private System.Windows.Forms.Label labelTitleChangeProject;
+        private System.Windows.Forms.Button buttonChangeProject;
+        private System.Windows.Forms.TabPage tabPageDashboard;
+        private System.Windows.Forms.Label labelEarnedCustomers;
+        private System.Windows.Forms.DataGridView dataGridViewEarnedCustomers;
+        private System.Windows.Forms.Label labelCustomersPay;
+        private System.Windows.Forms.DataGridView dataGridViewCustomersProjectNeedsPay;
+        private System.Windows.Forms.Label labelAddInvoicePaid;
+        private System.Windows.Forms.CheckBox checkBoxAddInvoicePaid;
+        private System.Windows.Forms.CheckBox checkBoxChangeInvoicePaid;
+        private System.Windows.Forms.Label labelChangeInvoicePaid;
+        private System.Windows.Forms.TextBox textBoxCustomerInfoBKR;
+        private System.Windows.Forms.Label labelCustomerInfoBKR;
+        private System.Windows.Forms.Label labelNumOfInvoices;
+        private System.Windows.Forms.TextBox textBoxSearchInvoices;
     }
 }

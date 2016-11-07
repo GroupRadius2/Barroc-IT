@@ -13,6 +13,9 @@ namespace Barroc_IT
         private ConfirmBox confirmBox;
         private Label labelTop;
         private RichTextBox richTextBoxCenter;
+        private TabControl tabControl;
+        private TabPage tabPageGoBack;
+        private DataGridView dataGridView;
 
         public ConfirmBoxBuilder()
         {
@@ -35,6 +38,7 @@ namespace Barroc_IT
             labelTop = new Label();
             labelTop.Location = new Point(5, 5);
             labelTop.Text = text;
+            labelTop.Width = confirmBox.ConfirmForm.Width;
 
             confirmBox.ConfirmForm.Controls.Add(labelTop);
         }
@@ -45,16 +49,20 @@ namespace Barroc_IT
             richTextBoxCenter.Location = new Point(5, labelTop.Height + 5);
             richTextBoxCenter.Width = confirmBox.ConfirmForm.Width - 25;
             richTextBoxCenter.Height = confirmBox.ConfirmForm.Height - labelTop.Height - 150;
+            richTextBoxCenter.BackColor = Color.LightGray;
 
             richTextBoxCenter.Text = text;
 
             confirmBox.ConfirmForm.Controls.Add(richTextBoxCenter);
         }
 
-        public void BuildBottom()
+        public void BuildBottom(TabControl tabControl, TabPage tabPageGoBack, DataGridView dataGridView)
         {
             Button buttonAccept = new Button();
             Button buttonDecline = new Button();
+            this.tabControl = tabControl;
+            this.tabPageGoBack = tabPageGoBack;
+            this.dataGridView = dataGridView;
 
             buttonAccept.Text = "Accept";
             buttonDecline.Text = "Decline";
@@ -79,6 +87,7 @@ namespace Barroc_IT
             confirmBox.Accept(true);
             Database.GetInstance().ExecuteQuery();
             confirmBox.ConfirmForm.Close();
+            tabControl.SelectTab(tabPageGoBack);
         }
 
         public ConfirmBox GetConfirmBox()
