@@ -65,9 +65,9 @@ namespace Barroc_IT
 
         private void FormFinance_Load(object sender, EventArgs e)
         {
-            database.QueryInDatagridView("SELECT tbl_companies.c_id, c_name, p_price AS Earned FROM tbl_companies, tbl_projects" + 
-                " WHERE p_paid = 1;", dataGridViewEarnedCustomers);
-            database.QueryInDatagridView(queryProjects, dataGridViewCustomersProjectNeedsPay);
+            database.QueryInDatagridView("SELECT tbl_companies.c_id, c_name, SUM(p_cost) AS Earned FROM tbl_companies, tbl_projects" +
+                " WHERE p_paid = 'True' AND tbl_projects.c_id = tbl_companies.c_id GROUP BY tbl_companies.c_id, c_name;", dataGridViewEarnedCustomers);
+            database.QueryInDatagridView("SELECT tbl_companies.c_id, c_name, p_active FROM tbl_companies, tbl_projects WHERE p_paid = 'False';", dataGridViewCustomersProjectNeedsPay);
 
             UpdateInfo();
         }
