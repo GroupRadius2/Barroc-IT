@@ -72,6 +72,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnNewApp = new System.Windows.Forms.Button();
             this.dataGridAppointments = new System.Windows.Forms.DataGridView();
             this.pictureBox17 = new System.Windows.Forms.PictureBox();
             this.label30 = new System.Windows.Forms.Label();
@@ -84,11 +85,11 @@
             this.dataGridPositiveB = new System.Windows.Forms.DataGridView();
             this.dataGridNegativeB = new System.Windows.Forms.DataGridView();
             this.label36 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
+            this.lblPosBalance = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
+            this.lblNegBalance = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
@@ -154,6 +155,7 @@
             this.label53 = new System.Windows.Forms.Label();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.datagridProjects = new System.Windows.Forms.DataGridView();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -169,8 +171,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnNewApp = new System.Windows.Forms.Button();
-            this.tabPage8 = new System.Windows.Forms.TabPage();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridAppointments)).BeginInit();
@@ -639,6 +639,7 @@
             this.label2.Size = new System.Drawing.Size(459, 42);
             this.label2.TabIndex = 47;
             this.label2.Text = "Barroc-IT Notifications (    )";
+            this.label2.Click += new System.EventHandler(this.lblNotification_Click);
             // 
             // label1
             // 
@@ -683,6 +684,16 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Dashboard";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // btnNewApp
+            // 
+            this.btnNewApp.Location = new System.Drawing.Point(21, 756);
+            this.btnNewApp.Name = "btnNewApp";
+            this.btnNewApp.Size = new System.Drawing.Size(138, 57);
+            this.btnNewApp.TabIndex = 8;
+            this.btnNewApp.Text = "New Appointment";
+            this.btnNewApp.UseVisualStyleBackColor = true;
+            this.btnNewApp.Click += new System.EventHandler(this.btnNewApp_Click);
             // 
             // dataGridAppointments
             // 
@@ -779,11 +790,11 @@
             this.tabPage3.Controls.Add(this.dataGridPositiveB);
             this.tabPage3.Controls.Add(this.dataGridNegativeB);
             this.tabPage3.Controls.Add(this.label36);
-            this.tabPage3.Controls.Add(this.label37);
+            this.tabPage3.Controls.Add(this.lblPosBalance);
             this.tabPage3.Controls.Add(this.label38);
             this.tabPage3.Controls.Add(this.label39);
             this.tabPage3.Controls.Add(this.label35);
-            this.tabPage3.Controls.Add(this.label34);
+            this.tabPage3.Controls.Add(this.lblNegBalance);
             this.tabPage3.Controls.Add(this.label33);
             this.tabPage3.Controls.Add(this.label32);
             this.tabPage3.Controls.Add(this.label31);
@@ -828,17 +839,17 @@
             this.label36.TabIndex = 13;
             this.label36.Text = ")";
             // 
-            // label37
+            // lblPosBalance
             // 
-            this.label37.AutoSize = true;
-            this.label37.BackColor = System.Drawing.Color.SkyBlue;
-            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.ForeColor = System.Drawing.Color.Lime;
-            this.label37.Location = new System.Drawing.Point(352, 451);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(47, 32);
-            this.label37.TabIndex = 12;
-            this.label37.Text = "60";
+            this.lblPosBalance.AutoSize = true;
+            this.lblPosBalance.BackColor = System.Drawing.Color.SkyBlue;
+            this.lblPosBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPosBalance.ForeColor = System.Drawing.Color.Lime;
+            this.lblPosBalance.Location = new System.Drawing.Point(352, 451);
+            this.lblPosBalance.Name = "lblPosBalance";
+            this.lblPosBalance.Size = new System.Drawing.Size(47, 32);
+            this.lblPosBalance.TabIndex = 12;
+            this.lblPosBalance.Text = "60";
             // 
             // label38
             // 
@@ -873,17 +884,17 @@
             this.label35.TabIndex = 7;
             this.label35.Text = ")";
             // 
-            // label34
+            // lblNegBalance
             // 
-            this.label34.AutoSize = true;
-            this.label34.BackColor = System.Drawing.Color.SkyBlue;
-            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.ForeColor = System.Drawing.Color.Red;
-            this.label34.Location = new System.Drawing.Point(352, 141);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(47, 32);
-            this.label34.TabIndex = 6;
-            this.label34.Text = "13";
+            this.lblNegBalance.AutoSize = true;
+            this.lblNegBalance.BackColor = System.Drawing.Color.SkyBlue;
+            this.lblNegBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNegBalance.ForeColor = System.Drawing.Color.Red;
+            this.lblNegBalance.Location = new System.Drawing.Point(352, 141);
+            this.lblNegBalance.Name = "lblNegBalance";
+            this.lblNegBalance.Size = new System.Drawing.Size(47, 32);
+            this.lblNegBalance.TabIndex = 6;
+            this.lblNegBalance.Text = "13";
             // 
             // label33
             // 
@@ -1562,6 +1573,16 @@
             this.datagridProjects.Size = new System.Drawing.Size(1038, 424);
             this.datagridProjects.TabIndex = 0;
             // 
+            // tabPage8
+            // 
+            this.tabPage8.Location = new System.Drawing.Point(4, 25);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage8.Size = new System.Drawing.Size(1548, 842);
+            this.tabPage8.TabIndex = 7;
+            this.tabPage8.Text = "NewAppointment";
+            this.tabPage8.UseVisualStyleBackColor = true;
+            // 
             // pictureBox12
             // 
             this.pictureBox12.Image = global::Barroc_IT.Properties.Resources._1;
@@ -1717,26 +1738,6 @@
             this.pictureBox1.TabIndex = 33;
             this.pictureBox1.TabStop = false;
             // 
-            // btnNewApp
-            // 
-            this.btnNewApp.Location = new System.Drawing.Point(21, 756);
-            this.btnNewApp.Name = "btnNewApp";
-            this.btnNewApp.Size = new System.Drawing.Size(138, 57);
-            this.btnNewApp.TabIndex = 8;
-            this.btnNewApp.Text = "New Appointment";
-            this.btnNewApp.UseVisualStyleBackColor = true;
-            this.btnNewApp.Click += new System.EventHandler(this.btnNewApp_Click);
-            // 
-            // tabPage8
-            // 
-            this.tabPage8.Location = new System.Drawing.Point(4, 25);
-            this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(1548, 842);
-            this.tabPage8.TabIndex = 7;
-            this.tabPage8.Text = "NewAppointment";
-            this.tabPage8.UseVisualStyleBackColor = true;
-            // 
             // Sales_dash
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1883,12 +1884,12 @@
         private System.Windows.Forms.PictureBox pictureBox19;
         private System.Windows.Forms.PictureBox pictureBox18;
         private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label lblPosBalance;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.PictureBox pictureBox23;
         private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label lblNegBalance;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.PictureBox pictureBox24;
         private System.Windows.Forms.DataGridView dataGridView2;
