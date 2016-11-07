@@ -169,6 +169,8 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnNewApp = new System.Windows.Forms.Button();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridAppointments)).BeginInit();
@@ -664,6 +666,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.btnNewApp);
             this.tabPage1.Controls.Add(this.dataGridAppointments);
             this.tabPage1.Controls.Add(this.pictureBox17);
             this.tabPage1.Controls.Add(this.label30);
@@ -687,7 +690,7 @@
             this.dataGridAppointments.Location = new System.Drawing.Point(21, 144);
             this.dataGridAppointments.Name = "dataGridAppointments";
             this.dataGridAppointments.RowTemplate.Height = 24;
-            this.dataGridAppointments.Size = new System.Drawing.Size(1410, 637);
+            this.dataGridAppointments.Size = new System.Drawing.Size(1410, 591);
             this.dataGridAppointments.TabIndex = 7;
             // 
             // pictureBox17
@@ -695,7 +698,7 @@
             this.pictureBox17.BackColor = System.Drawing.Color.DarkGray;
             this.pictureBox17.Location = new System.Drawing.Point(21, 144);
             this.pictureBox17.Name = "pictureBox17";
-            this.pictureBox17.Size = new System.Drawing.Size(1410, 637);
+            this.pictureBox17.Size = new System.Drawing.Size(1410, 591);
             this.pictureBox17.TabIndex = 6;
             this.pictureBox17.TabStop = false;
             // 
@@ -717,7 +720,7 @@
             this.label29.BackColor = System.Drawing.Color.SkyBlue;
             this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label29.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label29.Location = new System.Drawing.Point(1029, 105);
+            this.label29.Location = new System.Drawing.Point(996, 105);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(101, 29);
             this.label29.TabIndex = 4;
@@ -763,6 +766,7 @@
             this.tabControlSales.Controls.Add(this.tabPage5);
             this.tabControlSales.Controls.Add(this.tabPage6);
             this.tabControlSales.Controls.Add(this.tabPage7);
+            this.tabControlSales.Controls.Add(this.tabPage8);
             this.tabControlSales.Location = new System.Drawing.Point(279, 52);
             this.tabControlSales.Margin = new System.Windows.Forms.Padding(4);
             this.tabControlSales.Name = "tabControlSales";
@@ -963,7 +967,7 @@
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage4.Size = new System.Drawing.Size(1548, 842);
             this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "tabPage4";
+            this.tabPage4.Text = "Customers";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // dataGridCustomers
@@ -1044,7 +1048,7 @@
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage5.Size = new System.Drawing.Size(1548, 842);
             this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "tabPage5";
+            this.tabPage5.Text = "ChangeCustomer";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
             // label54
@@ -1386,7 +1390,7 @@
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage6.Size = new System.Drawing.Size(1548, 842);
             this.tabPage6.TabIndex = 5;
-            this.tabPage6.Text = "tabPage6";
+            this.tabPage6.Text = "NewProject";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
             // button4
@@ -1546,7 +1550,7 @@
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage7.Size = new System.Drawing.Size(1548, 842);
             this.tabPage7.TabIndex = 6;
-            this.tabPage7.Text = "tabPage7";
+            this.tabPage7.Text = "TemplateProjects";
             this.tabPage7.UseVisualStyleBackColor = true;
             // 
             // datagridProjects
@@ -1712,6 +1716,26 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 33;
             this.pictureBox1.TabStop = false;
+            // 
+            // btnNewApp
+            // 
+            this.btnNewApp.Location = new System.Drawing.Point(21, 756);
+            this.btnNewApp.Name = "btnNewApp";
+            this.btnNewApp.Size = new System.Drawing.Size(138, 57);
+            this.btnNewApp.TabIndex = 8;
+            this.btnNewApp.Text = "New Appointment";
+            this.btnNewApp.UseVisualStyleBackColor = true;
+            this.btnNewApp.Click += new System.EventHandler(this.btnNewApp_Click);
+            // 
+            // tabPage8
+            // 
+            this.tabPage8.Location = new System.Drawing.Point(4, 25);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage8.Size = new System.Drawing.Size(1548, 842);
+            this.tabPage8.TabIndex = 7;
+            this.tabPage8.Text = "NewAppointment";
+            this.tabPage8.UseVisualStyleBackColor = true;
             // 
             // Sales_dash
             // 
@@ -1942,5 +1966,7 @@
         private System.Windows.Forms.TextBox txtbChCity;
         public System.Windows.Forms.DataGridView dataGridPositiveB;
         public System.Windows.Forms.DataGridView dataGridNegativeB;
+        private System.Windows.Forms.Button btnNewApp;
+        private System.Windows.Forms.TabPage tabPage8;
     }
 }

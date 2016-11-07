@@ -170,6 +170,13 @@ namespace Barroc_IT
             Database.GetInstance().QueryInDatagridView("SELECT * FROM tbl_companies WHERE c_creditworthy = 0", dataGridNegativeB);
             Database.GetInstance().QueryInDatagridView("SELECT * FROM tbl_companies WHERE c_creditworthy = 1", dataGridPositiveB);
             Database.GetInstance().QueryInDatagridView("SELECT * FROM tbl_companies", dataGridCustomers);
+
+            
+        }
+
+        private void btnNewApp_Click(object sender, EventArgs e)
+        {
+
         }
         }
     }
