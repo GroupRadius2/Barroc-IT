@@ -36,16 +36,17 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewProjectProgress = new System.Windows.Forms.DataGridView();
             this.label12 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewCompanies = new System.Windows.Forms.DataGridView();
             this.label8 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dataGridViewProjects = new System.Windows.Forms.DataGridView();
             this.Projects = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button2 = new System.Windows.Forms.Button();
+            this.dataGridViewAppointments = new System.Windows.Forms.DataGridView();
             this.Appointments = new System.Windows.Forms.Label();
             this.Tabcontrol1 = new System.Windows.Forms.TabControl();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
@@ -58,15 +59,14 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.tabPage6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProjectProgress)).BeginInit();
             this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCompanies)).BeginInit();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProjects)).BeginInit();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAppointments)).BeginInit();
             this.Tabcontrol1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -164,7 +164,7 @@
             // 
             // tabPage6
             // 
-            this.tabPage6.Controls.Add(this.dataGridView4);
+            this.tabPage6.Controls.Add(this.dataGridViewProjectProgress);
             this.tabPage6.Controls.Add(this.label12);
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
@@ -174,18 +174,18 @@
             this.tabPage6.Text = "Project progress";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
-            // dataGridView4
+            // dataGridViewProjectProgress
             // 
-            this.dataGridView4.AllowUserToAddRows = false;
-            this.dataGridView4.AllowUserToDeleteRows = false;
-            this.dataGridView4.AllowUserToOrderColumns = true;
-            this.dataGridView4.AllowUserToResizeRows = false;
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(34, 64);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.ReadOnly = true;
-            this.dataGridView4.Size = new System.Drawing.Size(1065, 539);
-            this.dataGridView4.TabIndex = 61;
+            this.dataGridViewProjectProgress.AllowUserToAddRows = false;
+            this.dataGridViewProjectProgress.AllowUserToDeleteRows = false;
+            this.dataGridViewProjectProgress.AllowUserToOrderColumns = true;
+            this.dataGridViewProjectProgress.AllowUserToResizeRows = false;
+            this.dataGridViewProjectProgress.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewProjectProgress.Location = new System.Drawing.Point(34, 64);
+            this.dataGridViewProjectProgress.Name = "dataGridViewProjectProgress";
+            this.dataGridViewProjectProgress.ReadOnly = true;
+            this.dataGridViewProjectProgress.Size = new System.Drawing.Size(1065, 539);
+            this.dataGridViewProjectProgress.TabIndex = 61;
             // 
             // label12
             // 
@@ -199,7 +199,7 @@
             // 
             // tabPage4
             // 
-            this.tabPage4.Controls.Add(this.dataGridView2);
+            this.tabPage4.Controls.Add(this.dataGridViewCompanies);
             this.tabPage4.Controls.Add(this.label8);
             this.tabPage4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
@@ -210,13 +210,13 @@
             this.tabPage4.Text = "Companies";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // dataGridView2
+            // dataGridViewCompanies
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(31, 80);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(1065, 565);
-            this.dataGridView2.TabIndex = 62;
+            this.dataGridViewCompanies.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewCompanies.Location = new System.Drawing.Point(31, 80);
+            this.dataGridViewCompanies.Name = "dataGridViewCompanies";
+            this.dataGridViewCompanies.Size = new System.Drawing.Size(1065, 565);
+            this.dataGridViewCompanies.TabIndex = 62;
             // 
             // label8
             // 
@@ -267,7 +267,7 @@
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.button2);
-            this.tabPage2.Controls.Add(this.dataGridView1);
+            this.tabPage2.Controls.Add(this.dataGridViewAppointments);
             this.tabPage2.Controls.Add(this.Appointments);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
@@ -277,19 +277,29 @@
             this.tabPage2.Text = "Appointments";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // button2
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(35, 82);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(1065, 505);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
+            this.button2.Location = new System.Drawing.Point(51, 611);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // dataGridViewAppointments
+            // 
+            this.dataGridViewAppointments.AllowUserToAddRows = false;
+            this.dataGridViewAppointments.AllowUserToDeleteRows = false;
+            this.dataGridViewAppointments.AllowUserToOrderColumns = true;
+            this.dataGridViewAppointments.AllowUserToResizeRows = false;
+            this.dataGridViewAppointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewAppointments.Location = new System.Drawing.Point(35, 82);
+            this.dataGridViewAppointments.Name = "dataGridViewAppointments";
+            this.dataGridViewAppointments.ReadOnly = true;
+            this.dataGridViewAppointments.Size = new System.Drawing.Size(1065, 505);
+            this.dataGridViewAppointments.TabIndex = 0;
+            this.dataGridViewAppointments.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
             // Appointments
             // 
@@ -405,16 +415,6 @@
             this.pictureBox1.TabIndex = 33;
             this.pictureBox1.TabStop = false;
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(51, 611);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // Development
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -445,16 +445,16 @@
             this.Load += new System.EventHandler(this.Development_Load);
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProjectProgress)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCompanies)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProjects)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAppointments)).EndInit();
             this.Tabcontrol1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
@@ -499,10 +499,10 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label Appointments;
         private System.Windows.Forms.TabControl Tabcontrol1;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        public System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewCompanies;
+        public System.Windows.Forms.DataGridView dataGridViewAppointments;
         public System.Windows.Forms.DataGridView dataGridViewProjects;
-        public System.Windows.Forms.DataGridView dataGridView4;
+        public System.Windows.Forms.DataGridView dataGridViewProjectProgress;
         private System.Windows.Forms.Button button2;
     }
 }

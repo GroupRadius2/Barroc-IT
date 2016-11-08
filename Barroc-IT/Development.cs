@@ -28,46 +28,60 @@ namespace Barroc_IT
         }
         private void Development_Load(object sender, EventArgs e)
         {
-            this.dataGridView1.DefaultCellStyle.Font = new Font("Tahoma", 16);
-            this.dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView2.DefaultCellStyle.Font = new Font("Tahoma", 16);
-            this.dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridViewAppointments.DefaultCellStyle.Font = new Font("Tahoma", 16);
+            this.dataGridViewAppointments.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewCompanies.DefaultCellStyle.Font = new Font("Tahoma", 16);
+            this.dataGridViewCompanies.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridViewProjects.DefaultCellStyle.Font = new Font("Tahoma", 16);
             this.dataGridViewProjects.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView4.DefaultCellStyle.Font = new Font("Tahoma", 16);
-            this.dataGridView4.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            Database.GetInstance().QueryInDatagridView("Select c_name, c_address, c_housenumber,c_code,c_city,c_contactperson_first_name, c_contactperson_last_name, c_contactperson_initials,c_contactperson_telephone_number,c_contactperson_faxnumber, c_contactperson_email, c_potential_customer, c_last_contact_date, c_creditworthy, c_revenue, c_limit, c_ledger, c_btw_code, c_maintenance_contract  FROM tbl_companies ", dataGridView2);
-            Database.GetInstance().QueryInDatagridView("Select p_start_date, p_end_date, p_progression FROM tbl_projects", dataGridViewProjects);
-            Database.GetInstance().QueryInDatagridView("Select project_id, a_date , a_time_of FROM tbl_appointments", dataGridView1);
-            Database.GetInstance().QueryInDatagridView("Select p_progression , p_start_date, p_end_date  FROM tbl_projects", dataGridView4);
-            dataGridView1.Columns[0].HeaderCell.Value = "Project id";
-            dataGridView1.Columns[1].HeaderCell.Value = "Date";
-            dataGridView1.Columns[2].HeaderCell.Value = "Time";
-            dataGridViewProjects.Columns[0].HeaderCell.Value = "Start date";
-            dataGridViewProjects.Columns[1].HeaderCell.Value = "End date";
-            dataGridViewProjects.Columns[2].HeaderCell.Value = "Progression (In %)";
-            dataGridView4.Columns[0].HeaderCell.Value = "Progress (In %)";
-            dataGridView4.Columns[1].HeaderCell.Value = "Startdate";
-            dataGridView4.Columns[2].HeaderCell.Value = "Enddate";
-            dataGridView2.Columns[0].HeaderCell.Value = "Name";
-            dataGridView2.Columns[1].HeaderCell.Value = "Address";
-            dataGridView2.Columns[2].HeaderCell.Value = "Housenumber";
-            dataGridView2.Columns[3].HeaderCell.Value = "Code";
-            dataGridView2.Columns[4].HeaderCell.Value = "City";
-            dataGridView2.Columns[5].HeaderCell.Value = "First name";
-            dataGridView2.Columns[6].HeaderCell.Value = "Last name";
-            dataGridView2.Columns[7].HeaderCell.Value = "initials";
-            dataGridView2.Columns[8].HeaderCell.Value = "Telephone number";
-            dataGridView2.Columns[9].HeaderCell.Value = "Faxnumber";
-            dataGridView2.Columns[10].HeaderCell.Value = "Email";
-            dataGridView2.Columns[11].HeaderCell.Value = "Potentional customer";
-            dataGridView2.Columns[12].HeaderCell.Value = "Last contact date";
-            dataGridView2.Columns[13].HeaderCell.Value = "Creditworthy";
-            dataGridView2.Columns[14].HeaderCell.Value = "Revenue";
-            dataGridView2.Columns[15].HeaderCell.Value = "Limit";
-            dataGridView2.Columns[16].HeaderCell.Value = "Ledger";
-            dataGridView2.Columns[17].HeaderCell.Value = "BTW Code";
-            dataGridView2.Columns[18].HeaderCell.Value = "Maintenance contract";
+            this.dataGridViewProjectProgress.DefaultCellStyle.Font = new Font("Tahoma", 16);
+            this.dataGridViewProjectProgress.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                        
+            //DatagridView appointments
+            Database.GetInstance().QueryInDatagridView("Select project_id, c_name, a_date , a_time_of FROM tbl_appointments", dataGridViewAppointments);
+            dataGridViewAppointments.Columns[0].HeaderCell.Value = "Project id";
+            dataGridViewAppointments.Columns[1].HeaderCell.Value = "Name";
+            dataGridViewAppointments.Columns[2].HeaderCell.Value = "Date";
+            dataGridViewAppointments.Columns[3].HeaderCell.Value = "Time";
+            
+            //DatagridView Projects
+            Database.GetInstance().QueryInDatagridView("Select company_id, p_name, p_status, p_start_date, p_end_date, p_progression FROM tbl_projects", dataGridViewProjects);
+            dataGridViewProjects.Columns[0].HeaderCell.Value = "Company";
+            dataGridViewProjects.Columns[1].HeaderCell.Value = "Project";
+            dataGridViewProjects.Columns[2].HeaderCell.Value = "Status";
+            dataGridViewProjects.Columns[3].HeaderCell.Value = "Start date";
+            dataGridViewProjects.Columns[4].HeaderCell.Value = "End date";
+            dataGridViewProjects.Columns[5].HeaderCell.Value = "Progression (In %)";
+            
+            //DatagridView Project progress
+            Database.GetInstance().QueryInDatagridView("Select p_name, p_progression, p_status , p_start_date, p_end_date  FROM tbl_projects", dataGridViewProjectProgress);
+            dataGridViewProjectProgress.Columns[0].HeaderCell.Value = "Project";
+            dataGridViewProjectProgress.Columns[1].HeaderCell.Value = "Progress (In %)";
+            dataGridViewProjectProgress.Columns[2].HeaderCell.Value = "Status";
+            dataGridViewProjectProgress.Columns[3].HeaderCell.Value = "Startdate";
+            dataGridViewProjectProgress.Columns[4].HeaderCell.Value = "Enddate";
+            
+            //DatagridView Companies
+            Database.GetInstance().QueryInDatagridView("Select c_name, c_address, c_housenumber,c_code,c_city,c_contactperson_first_name, c_contactperson_last_name, c_contactperson_initials,c_contactperson_telephone_number,c_contactperson_faxnumber, c_contactperson_email, c_potential_customer, c_last_contact_date, c_creditworthy, c_revenue, c_limit, c_ledger, c_btw_code, c_maintenance_contract  FROM tbl_companies ", dataGridViewCompanies);
+            dataGridViewCompanies.Columns[0].HeaderCell.Value = "Name";
+            dataGridViewCompanies.Columns[1].HeaderCell.Value = "Address";
+            dataGridViewCompanies.Columns[2].HeaderCell.Value = "Housenumber";
+            dataGridViewCompanies.Columns[3].HeaderCell.Value = "Code";
+            dataGridViewCompanies.Columns[4].HeaderCell.Value = "City";
+            dataGridViewCompanies.Columns[5].HeaderCell.Value = "First name";
+            dataGridViewCompanies.Columns[6].HeaderCell.Value = "Last name";
+            dataGridViewCompanies.Columns[7].HeaderCell.Value = "initials";
+            dataGridViewCompanies.Columns[8].HeaderCell.Value = "Telephone number";
+            dataGridViewCompanies.Columns[9].HeaderCell.Value = "Faxnumber";
+            dataGridViewCompanies.Columns[10].HeaderCell.Value = "Email";
+            dataGridViewCompanies.Columns[11].HeaderCell.Value = "Potentional customer";
+            dataGridViewCompanies.Columns[12].HeaderCell.Value = "Last contact date";
+            dataGridViewCompanies.Columns[13].HeaderCell.Value = "Creditworthy";
+            dataGridViewCompanies.Columns[14].HeaderCell.Value = "Revenue";
+            dataGridViewCompanies.Columns[15].HeaderCell.Value = "Limit";
+            dataGridViewCompanies.Columns[16].HeaderCell.Value = "Ledger";
+            dataGridViewCompanies.Columns[17].HeaderCell.Value = "BTW Code";
+            dataGridViewCompanies.Columns[18].HeaderCell.Value = "Maintenance contract";
 
 
         }
@@ -120,7 +134,7 @@ namespace Barroc_IT
         {
             int counter = 1;
 
-            foreach(DataGridViewRow row in dataGridView1.Rows)
+            foreach(DataGridViewRow row in dataGridViewAppointments.Rows)
             {
                 if(row.Selected)
                 {
@@ -128,8 +142,10 @@ namespace Barroc_IT
 
                     ChangeAppointment changeappointment = new ChangeAppointment(this);
                     changeappointment.Show();
-                    changeappointment.Datetbx.Text = row.Cells[0].Value.ToString();
-                    changeappointment.TimeTbx.Text = row.Cells[1].Value.ToString();
+                    changeappointment.Projecttbx.Text= row.Cells[0].Value.ToString();
+                    changeappointment.Nametbx.Text = row.Cells[1].Value.ToString();
+                    changeappointment.Datetbx.Text = row.Cells[2].Value.ToString();
+                    changeappointment.Timetbx.Text = row.Cells[3].Value.ToString();
                 }
 
                 counter++;

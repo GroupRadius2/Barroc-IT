@@ -101,6 +101,7 @@ namespace Barroc_IT
             Database.GetInstance().QueryInDatagridView("SELECT * FROM tbl_companies;", dataGridCustomers);
             Database.GetInstance().QueryInDatagridView("SELECT a_date AS Date, a_time_of AS Time, project_id AS Projects FROM tbl_appointments", dataGridAppointments);
             Database.GetInstance().QueryInDatagridView("SELECT * FROM tbl_projects", datagridProjects);
+            UpdateInfo();
 
         }
 
@@ -170,6 +171,28 @@ namespace Barroc_IT
             Database.GetInstance().QueryInDatagridView("SELECT * FROM tbl_companies WHERE c_creditworthy = 0", dataGridNegativeB);
             Database.GetInstance().QueryInDatagridView("SELECT * FROM tbl_companies WHERE c_creditworthy = 1", dataGridPositiveB);
             Database.GetInstance().QueryInDatagridView("SELECT * FROM tbl_companies", dataGridCustomers);
+
+            Database.GetInstance().Query("SELECT COUNT(*) FROM tbl_companies WHERE c_creditworthy = 0");
+            lblNegBalance.Text = Database.GetInstance().ExecuteQuery().ToString();
+            Database.GetInstance().Query("SELECT COUNT(*) FROM tbl_companies WHERE c_creditworthy = 1");
+            lblPosBalance.Text = Database.GetInstance().ExecuteQuery().ToString();
+        }
+
+        private void btnNewApp_Click(object sender, EventArgs e)
+        {
+            tabControlSales.SelectedTab = tabPage8;
+        }
+
+        private void lblNotification_Click(object sender, EventArgs e)
+        {
+            FormNotifications salesNotification = new FormNotifications(Department.Sales);
+            salesNotification.ReceiveMessages();
+            salesNotification.Show();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
         }
         }
     }

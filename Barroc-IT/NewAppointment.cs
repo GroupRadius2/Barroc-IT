@@ -35,7 +35,7 @@ namespace Barroc_IT
             database.AddParameter("@a_time_of", Timetbx.Text);
             database.ExecuteQuery();
 
-            Database.GetInstance().QueryInDatagridView("SELECT project_id, a_date, a_time_of FROM tbl_appointments;", dev.dataGridView1);
+            Database.GetInstance().QueryInDatagridView("SELECT project_id, a_date, a_time_of FROM tbl_appointments;", dev.dataGridViewAppointments);
             this.Hide();
         }
 
