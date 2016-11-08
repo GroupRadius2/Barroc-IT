@@ -77,7 +77,7 @@ namespace Barroc_IT
 
         private void button4_Click(object sender, EventArgs e)
         {
-            MessageNewProject MNP = new MessageNewProject();
+            MessageNewProject MNP = new MessageNewProject(this);
             MNP.Show();
             MNP.lblCompanyName.Text = textBoxC_Name.Text;
             MNP.lblCustomerName.Text = textBoxCustomerName.Text;

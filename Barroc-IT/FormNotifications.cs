@@ -98,7 +98,7 @@ namespace Barroc_IT
 
         private void buttonSendMessage_Click(object sender, EventArgs e)
         {
-            FormMessage message = new FormMessage();
+            FormMessage message = new FormMessage(this);
             message.Show();
         }
     }

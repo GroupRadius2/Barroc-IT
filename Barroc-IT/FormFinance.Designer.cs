@@ -337,9 +337,6 @@
             // 
             // dataGridViewPositiveCompanies
             // 
-            this.dataGridViewPositiveCompanies.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewPositiveCompanies.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridViewPositiveCompanies.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dataGridViewPositiveCompanies.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -398,9 +395,6 @@
             // 
             // dataGridViewNegativeCompanies
             // 
-            this.dataGridViewNegativeCompanies.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewNegativeCompanies.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridViewNegativeCompanies.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewNegativeCompanies.Location = new System.Drawing.Point(111, 364);
@@ -420,7 +414,6 @@
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.labelTitleCustomers);
             this.panel1.Location = new System.Drawing.Point(0, 2);
             this.panel1.Name = "panel1";
@@ -503,7 +496,7 @@
             // 
             // textBoxSearchInvoices
             // 
-            this.textBoxSearchInvoices.Location = new System.Drawing.Point(641, 104);
+            this.textBoxSearchInvoices.Location = new System.Drawing.Point(574, 104);
             this.textBoxSearchInvoices.Name = "textBoxSearchInvoices";
             this.textBoxSearchInvoices.Size = new System.Drawing.Size(186, 20);
             this.textBoxSearchInvoices.TabIndex = 64;
@@ -516,9 +509,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewInvoices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewInvoices.Location = new System.Drawing.Point(23, 130);
+            this.dataGridViewInvoices.Location = new System.Drawing.Point(26, 130);
             this.dataGridViewInvoices.Name = "dataGridViewInvoices";
-            this.dataGridViewInvoices.Size = new System.Drawing.Size(838, 444);
+            this.dataGridViewInvoices.Size = new System.Drawing.Size(734, 257);
             this.dataGridViewInvoices.TabIndex = 63;
             this.dataGridViewInvoices.SelectionChanged += new System.EventHandler(this.dataGridViewInvoices_SelectionChanged);
             // 

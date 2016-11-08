@@ -15,9 +15,10 @@ namespace Barroc_IT
         private bool saved;
         private Sales_dash sales;
 
-        public MessageNewProject()
+        public MessageNewProject(Sales_dash sales)
         {
             InitializeComponent();
+            this.sales = sales;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -43,7 +44,6 @@ namespace Barroc_IT
             Database.GetInstance().AddParameter("@p_terms", sales.textBoxTerms.Text);
 
             Database.GetInstance().ExecuteQuery();
-
         }
          public bool IsSaved()
         {
