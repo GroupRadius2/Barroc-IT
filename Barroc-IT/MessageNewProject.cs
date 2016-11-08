@@ -45,7 +45,9 @@ namespace Barroc_IT
             Database.GetInstance().AddParameter("@p_terms", sales.textBoxTerms.Text);
 
             Database.GetInstance().ExecuteQuery();
-            
+
+            sales.tabControlSales.SelectedTab = sales.tabTemplateProjects;
+            sales.UpdateInfo();
         }
          public bool IsSaved()
         {
