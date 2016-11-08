@@ -156,6 +156,16 @@
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.datagridProjects = new System.Windows.Forms.DataGridView();
             this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.label55 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.textBoxA_Date = new System.Windows.Forms.TextBox();
+            this.textBoxA_time = new System.Windows.Forms.TextBox();
+            this.textBoxA_Project = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.pictureBox21 = new System.Windows.Forms.PictureBox();
+            this.pictureBox22 = new System.Windows.Forms.PictureBox();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -171,16 +181,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label28 = new System.Windows.Forms.Label();
-            this.pictureBox21 = new System.Windows.Forms.PictureBox();
-            this.pictureBox22 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label55 = new System.Windows.Forms.Label();
-            this.btnSave = new System.Windows.Forms.Button();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridAppointments)).BeginInit();
@@ -205,6 +205,8 @@
             this.tabPage7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagridProjects)).BeginInit();
             this.tabPage8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -220,8 +222,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPage2
@@ -1592,9 +1592,9 @@
             this.tabPage8.Controls.Add(this.label55);
             this.tabPage8.Controls.Add(this.label37);
             this.tabPage8.Controls.Add(this.label34);
-            this.tabPage8.Controls.Add(this.textBox4);
-            this.tabPage8.Controls.Add(this.textBox3);
-            this.tabPage8.Controls.Add(this.textBox1);
+            this.tabPage8.Controls.Add(this.textBoxA_Date);
+            this.tabPage8.Controls.Add(this.textBoxA_time);
+            this.tabPage8.Controls.Add(this.textBoxA_Project);
             this.tabPage8.Controls.Add(this.label28);
             this.tabPage8.Controls.Add(this.pictureBox21);
             this.tabPage8.Controls.Add(this.pictureBox22);
@@ -1605,6 +1605,93 @@
             this.tabPage8.TabIndex = 7;
             this.tabPage8.Text = "NewAppointment";
             this.tabPage8.UseVisualStyleBackColor = true;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(1048, 150);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(217, 53);
+            this.btnSave.TabIndex = 16;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Location = new System.Drawing.Point(121, 199);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(38, 17);
+            this.label55.TabIndex = 15;
+            this.label55.Text = "Date";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(121, 242);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(39, 17);
+            this.label37.TabIndex = 14;
+            this.label37.Text = "Time";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(121, 157);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(59, 17);
+            this.label34.TabIndex = 13;
+            this.label34.Text = "Projects";
+            // 
+            // textBoxA_Date
+            // 
+            this.textBoxA_Date.Location = new System.Drawing.Point(304, 198);
+            this.textBoxA_Date.Name = "textBoxA_Date";
+            this.textBoxA_Date.Size = new System.Drawing.Size(270, 22);
+            this.textBoxA_Date.TabIndex = 12;
+            // 
+            // textBoxA_time
+            // 
+            this.textBoxA_time.Location = new System.Drawing.Point(304, 237);
+            this.textBoxA_time.Name = "textBoxA_time";
+            this.textBoxA_time.Size = new System.Drawing.Size(270, 22);
+            this.textBoxA_time.TabIndex = 11;
+            // 
+            // textBoxA_Project
+            // 
+            this.textBoxA_Project.Location = new System.Drawing.Point(304, 157);
+            this.textBoxA_Project.Name = "textBoxA_Project";
+            this.textBoxA_Project.Size = new System.Drawing.Size(270, 22);
+            this.textBoxA_Project.TabIndex = 9;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(18, 35);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(253, 32);
+            this.label28.TabIndex = 8;
+            this.label28.Text = "New Appointments";
+            // 
+            // pictureBox21
+            // 
+            this.pictureBox21.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.pictureBox21.Location = new System.Drawing.Point(8, 97);
+            this.pictureBox21.Name = "pictureBox21";
+            this.pictureBox21.Size = new System.Drawing.Size(1335, 693);
+            this.pictureBox21.TabIndex = 7;
+            this.pictureBox21.TabStop = false;
+            // 
+            // pictureBox22
+            // 
+            this.pictureBox22.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pictureBox22.Location = new System.Drawing.Point(8, 11);
+            this.pictureBox22.Name = "pictureBox22";
+            this.pictureBox22.Size = new System.Drawing.Size(1335, 89);
+            this.pictureBox22.TabIndex = 6;
+            this.pictureBox22.TabStop = false;
             // 
             // pictureBox12
             // 
@@ -1761,93 +1848,6 @@
             this.pictureBox1.TabIndex = 33;
             this.pictureBox1.TabStop = false;
             // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(18, 35);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(253, 32);
-            this.label28.TabIndex = 8;
-            this.label28.Text = "New Appointments";
-            // 
-            // pictureBox21
-            // 
-            this.pictureBox21.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.pictureBox21.Location = new System.Drawing.Point(8, 97);
-            this.pictureBox21.Name = "pictureBox21";
-            this.pictureBox21.Size = new System.Drawing.Size(1335, 693);
-            this.pictureBox21.TabIndex = 7;
-            this.pictureBox21.TabStop = false;
-            // 
-            // pictureBox22
-            // 
-            this.pictureBox22.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.pictureBox22.Location = new System.Drawing.Point(8, 11);
-            this.pictureBox22.Name = "pictureBox22";
-            this.pictureBox22.Size = new System.Drawing.Size(1335, 89);
-            this.pictureBox22.TabIndex = 6;
-            this.pictureBox22.TabStop = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(304, 157);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(270, 22);
-            this.textBox1.TabIndex = 9;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(304, 237);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(270, 22);
-            this.textBox3.TabIndex = 11;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(304, 194);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(270, 22);
-            this.textBox4.TabIndex = 12;
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(121, 157);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(59, 17);
-            this.label34.TabIndex = 13;
-            this.label34.Text = "Projects";
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(121, 242);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(39, 17);
-            this.label37.TabIndex = 14;
-            this.label37.Text = "Time";
-            // 
-            // label55
-            // 
-            this.label55.AutoSize = true;
-            this.label55.Location = new System.Drawing.Point(121, 199);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(38, 17);
-            this.label55.TabIndex = 15;
-            this.label55.Text = "Date";
-            // 
-            // btnSave
-            // 
-            this.btnSave.Location = new System.Drawing.Point(880, 157);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(147, 37);
-            this.btnSave.TabIndex = 16;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
             // Sales_dash
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1916,6 +1916,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.datagridProjects)).EndInit();
             this.tabPage8.ResumeLayout(false);
             this.tabPage8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -1931,8 +1933,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2087,11 +2087,11 @@
         private System.Windows.Forms.Label label55;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.PictureBox pictureBox21;
         private System.Windows.Forms.PictureBox pictureBox22;
+        public System.Windows.Forms.TextBox textBoxA_Date;
+        public System.Windows.Forms.TextBox textBoxA_time;
+        public System.Windows.Forms.TextBox textBoxA_Project;
     }
 }

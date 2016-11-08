@@ -192,7 +192,14 @@ namespace Barroc_IT
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            Database.GetInstance().Query("INSERT INTO tbl_appointments(project_id, a_date, a_time_of)" +
+                "VALUES(@project_id, @a_date_ @a_time_of)");
 
+            Database.GetInstance().AddParameter("@project_id", textBoxA_Project);
+            Database.GetInstance().AddParameter("@a_date", textBoxA_Date);
+            Database.GetInstance().AddParameter("@a_time_of", textBoxA_time);
+
+            Database.GetInstance().ExecuteQuery();
         }
         }
     }
