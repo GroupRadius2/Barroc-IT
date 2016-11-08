@@ -31,24 +31,25 @@
             this.dataGridViewAllNotifications = new System.Windows.Forms.DataGridView();
             this.richTextBoxMessage = new System.Windows.Forms.RichTextBox();
             this.labelNotifications = new System.Windows.Forms.Label();
+            this.buttonSendMessage = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAllNotifications)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridViewAllNotifications
             // 
             this.dataGridViewAllNotifications.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewAllNotifications.Location = new System.Drawing.Point(12, 29);
+            this.dataGridViewAllNotifications.Location = new System.Drawing.Point(12, 49);
             this.dataGridViewAllNotifications.Name = "dataGridViewAllNotifications";
-            this.dataGridViewAllNotifications.Size = new System.Drawing.Size(142, 220);
+            this.dataGridViewAllNotifications.Size = new System.Drawing.Size(142, 200);
             this.dataGridViewAllNotifications.TabIndex = 0;
             this.dataGridViewAllNotifications.SelectionChanged += new System.EventHandler(this.dataGridViewAllNotifications_SelectionChanged);
             // 
             // richTextBoxMessage
             // 
-            this.richTextBoxMessage.Location = new System.Drawing.Point(160, 29);
+            this.richTextBoxMessage.Location = new System.Drawing.Point(160, 49);
             this.richTextBoxMessage.Name = "richTextBoxMessage";
             this.richTextBoxMessage.ReadOnly = true;
-            this.richTextBoxMessage.Size = new System.Drawing.Size(259, 220);
+            this.richTextBoxMessage.Size = new System.Drawing.Size(259, 200);
             this.richTextBoxMessage.TabIndex = 1;
             this.richTextBoxMessage.Text = "";
             // 
@@ -61,11 +62,22 @@
             this.labelNotifications.TabIndex = 2;
             this.labelNotifications.Text = "Notifications";
             // 
+            // buttonSendMessage
+            // 
+            this.buttonSendMessage.Location = new System.Drawing.Point(344, 8);
+            this.buttonSendMessage.Name = "buttonSendMessage";
+            this.buttonSendMessage.Size = new System.Drawing.Size(75, 23);
+            this.buttonSendMessage.TabIndex = 3;
+            this.buttonSendMessage.Text = "New";
+            this.buttonSendMessage.UseVisualStyleBackColor = true;
+            this.buttonSendMessage.Click += new System.EventHandler(this.buttonSendMessage_Click);
+            // 
             // FormNotifications
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(427, 261);
+            this.Controls.Add(this.buttonSendMessage);
             this.Controls.Add(this.labelNotifications);
             this.Controls.Add(this.richTextBoxMessage);
             this.Controls.Add(this.dataGridViewAllNotifications);
@@ -83,5 +95,6 @@
         private System.Windows.Forms.DataGridView dataGridViewAllNotifications;
         private System.Windows.Forms.RichTextBox richTextBoxMessage;
         private System.Windows.Forms.Label labelNotifications;
+        private System.Windows.Forms.Button buttonSendMessage;
     }
 }
