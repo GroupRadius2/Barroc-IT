@@ -113,6 +113,7 @@ namespace Barroc_IT
         private void label8_Click(object sender, EventArgs e)
         {
             tabControlSales.SelectedTab = tabPage7;
+            UpdateInfo();
         }
 
         private void dataGridCustomers_SelectionChanged_1(object sender, EventArgs e)
@@ -171,6 +172,8 @@ namespace Barroc_IT
             Database.GetInstance().QueryInDatagridView("SELECT * FROM tbl_companies WHERE c_creditworthy = 0", dataGridNegativeB);
             Database.GetInstance().QueryInDatagridView("SELECT * FROM tbl_companies WHERE c_creditworthy = 1", dataGridPositiveB);
             Database.GetInstance().QueryInDatagridView("SELECT * FROM tbl_companies", dataGridCustomers);
+            Database.GetInstance().QueryInDatagridView("SELECT * FROM tbl_projects", datagridProjects);
+            Database.GetInstance().QueryInDatagridView("SELECT * FROM tbl_appointments", dataGridAppointments);
 
             Database.GetInstance().Query("SELECT COUNT(*) FROM tbl_companies WHERE c_creditworthy = 0");
             lblNegBalance.Text = Database.GetInstance().ExecuteQuery().ToString();
@@ -192,14 +195,20 @@ namespace Barroc_IT
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            Database.GetInstance().Query("INSERT INTO tbl_appointments(project_id, a_date, a_time_of)" +
-                "VALUES(@project_id, @a_date_ @a_time_of)");
+            DateTime dt;
+            DateTime.TryParse(textBoxA_time.Text, out dt);
 
-            Database.GetInstance().AddParameter("@project_id", textBoxA_Project);
-            Database.GetInstance().AddParameter("@a_date", textBoxA_Date);
-            Database.GetInstance().AddParameter("@a_time_of", textBoxA_time);
+            int countOfAppointments = (int)Database.GetInstance().ExecuteQuery();
+            Database.GetInstance().Query("INSERT INTO tbl_appointments(appointment_id, project_id, a_date, a_time_of)" +
+                "VALUES(@appointment_id, @project_id, @a_date, @a_time_of)");
+            Database.GetInstance().AddParameter("@appointment_id", ++countOfAppointments);
+            Database.GetInstance().AddParameter("@project_id", textBoxA_Project.Text);
+            Database.GetInstance().AddParameter("@a_date", textBoxA_Date.Text);
+            Database.GetInstance().AddParameter("@a_time_of", dt);
 
             Database.GetInstance().ExecuteQuery();
+            tabControlSales.SelectedTab = tabPage1;
+            UpdateInfo();
         }
         }
     }

@@ -33,8 +33,9 @@ namespace Barroc_IT
             Database.GetInstance().Query("SELECT COUNT(*) FROM tbl_projects");
             int countOfProjectId = (int)Database.GetInstance().ExecuteQuery();
 
-            Database.GetInstance().Query("INSERT INTO tbl_projects(p_company_name, p_customer_name, p_name, p_start_date, p_end_date, p_cost, p_terms) " +
-                "VALUES(@p_company_name, @p_customer_name, @p_name, @p_start_date, @p_end_date, @p_cost, @p_terms)");
+            Database.GetInstance().Query("INSERT INTO tbl_projects(project_id, p_company_name, p_customer_name, p_name, p_start_date, p_end_date, p_cost, p_terms) " +
+                "VALUES(@project_id, @p_company_name, @p_customer_name, @p_name, @p_start_date, @p_end_date, @p_cost, @p_terms)");
+            Database.GetInstance().AddParameter("@project_id", ++countOfProjectId);
             Database.GetInstance().AddParameter("@p_company_name", sales.textBoxC_Name.Text);
             Database.GetInstance().AddParameter("@p_customer_name", sales.textBoxCustomerName.Text);
             Database.GetInstance().AddParameter("@p_name", sales.textBoxP_Name.Text);
@@ -44,6 +45,7 @@ namespace Barroc_IT
             Database.GetInstance().AddParameter("@p_terms", sales.textBoxTerms.Text);
 
             Database.GetInstance().ExecuteQuery();
+            
         }
          public bool IsSaved()
         {
