@@ -148,10 +148,10 @@ namespace Barroc_IT
             labelAddInvoice.ForeColor = Color.Black;
             labelInvoices.ForeColor = Color.Black;
 
-            database.Query("SELECT COUNT(*) FROM tbl_companies WHERE c_creditworthy = 1");
+            database.Query("SELECT COUNT(*) FROM tbl_companies WHERE c_credit_balance >= 0");
             labelPositiveBalances.Text = "Positive balances (" + database.ExecuteQuery() + ")";
 
-            database.Query("SELECT COUNT(*) FROM tbl_companies WHERE c_creditworthy = 0");
+            database.Query("SELECT COUNT(*) FROM tbl_companies WHERE c_credit_balance < 0");
             labelNegativeBalances.Text = "Negative balances (" + database.ExecuteQuery() +")";
 
             database.Query("SELECT COUNT(*) FROM tbl_invoices;");
@@ -162,8 +162,8 @@ namespace Barroc_IT
 
             database.QueryInDatagridView("SELECT project_id, p_name, p_active FROM tbl_projects", dataGridViewProjects);
             database.QueryInDatagridView("SELECT * FROM tbl_invoices", dataGridViewInvoices);
-            database.QueryInDatagridView("SELECT * FROM tbl_companies WHERE c_creditworthy = 1", dataGridViewPositiveCompanies);
-            database.QueryInDatagridView("SELECT * FROM tbl_companies WHERE c_creditworthy = 0", dataGridViewNegativeCompanies);
+            database.QueryInDatagridView("SELECT * FROM tbl_companies WHERE c_credit_balance >= 0", dataGridViewPositiveCompanies);
+            database.QueryInDatagridView("SELECT * FROM tbl_companies WHERE c_credit_balance < 0", dataGridViewNegativeCompanies);
         }
 
         private void buttonSaveInvoice_Click(object sender, EventArgs e)
@@ -386,8 +386,6 @@ namespace Barroc_IT
                         {
                             isActiveProject = true;
                         }
-
-                        
 
                         selectedIndexProject = (int)row.Cells["project_id"].Value;
 
