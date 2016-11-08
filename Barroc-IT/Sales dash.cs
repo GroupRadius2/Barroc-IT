@@ -260,6 +260,7 @@ namespace Barroc_IT
             Database.GetInstance().AddParameter("@a_date", txtbChAdress.Text);
             Database.GetInstance().AddParameter("@a_time_off", txtbChHousenumber.Text);
             Database.GetInstance().ExecuteQuery();
+            Database.GetInstance().QueryInDatagridView("SELECT * FROM tbl_appointments", dataGridAppointments);
 
             UpdateInfo();
         }
