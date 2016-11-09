@@ -256,9 +256,9 @@ namespace Barroc_IT
         {
             tabControlSales.SelectedTab = TabDashboard;
             Database.GetInstance().Query("UPDATE tbl_appointments SET project_id = @project_id, a_date = @a_date, a_time_off = @a_time_off");
-            Database.GetInstance().AddParameter("@project_id", txtbChCompanyName.Text);
-            Database.GetInstance().AddParameter("@a_date", txtbChAdress.Text);
-            Database.GetInstance().AddParameter("@a_time_off", txtbChHousenumber.Text);
+            Database.GetInstance().AddParameter("@project_id", textBChA_projects.Text);
+            Database.GetInstance().AddParameter("@a_date", textBChA_Date.Text);
+            Database.GetInstance().AddParameter("@a_time_off", textBChA_time.Text);
             Database.GetInstance().ExecuteQuery();
             Database.GetInstance().QueryInDatagridView("SELECT * FROM tbl_appointments", dataGridAppointments);
 

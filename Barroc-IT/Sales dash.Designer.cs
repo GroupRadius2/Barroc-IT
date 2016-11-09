@@ -174,9 +174,9 @@
             this.label56 = new System.Windows.Forms.Label();
             this.label57 = new System.Windows.Forms.Label();
             this.label58 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBChA_Date = new System.Windows.Forms.TextBox();
+            this.textBChA_time = new System.Windows.Forms.TextBox();
+            this.textBChA_projects = new System.Windows.Forms.TextBox();
             this.label59 = new System.Windows.Forms.Label();
             this.pictureBox27 = new System.Windows.Forms.PictureBox();
             this.pictureBox28 = new System.Windows.Forms.PictureBox();
@@ -1732,9 +1732,9 @@
             this.tabChange_A.Controls.Add(this.label56);
             this.tabChange_A.Controls.Add(this.label57);
             this.tabChange_A.Controls.Add(this.label58);
-            this.tabChange_A.Controls.Add(this.textBox1);
-            this.tabChange_A.Controls.Add(this.textBox2);
-            this.tabChange_A.Controls.Add(this.textBox3);
+            this.tabChange_A.Controls.Add(this.textBChA_Date);
+            this.tabChange_A.Controls.Add(this.textBChA_time);
+            this.tabChange_A.Controls.Add(this.textBChA_projects);
             this.tabChange_A.Controls.Add(this.label59);
             this.tabChange_A.Controls.Add(this.pictureBox27);
             this.tabChange_A.Controls.Add(this.pictureBox28);
@@ -1803,26 +1803,26 @@
             this.label58.TabIndex = 25;
             this.label58.Text = "Projects";
             // 
-            // textBox1
+            // textBChA_Date
             // 
-            this.textBox1.Location = new System.Drawing.Point(299, 199);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(270, 22);
-            this.textBox1.TabIndex = 24;
+            this.textBChA_Date.Location = new System.Drawing.Point(299, 199);
+            this.textBChA_Date.Name = "textBChA_Date";
+            this.textBChA_Date.Size = new System.Drawing.Size(270, 22);
+            this.textBChA_Date.TabIndex = 24;
             // 
-            // textBox2
+            // textBChA_time
             // 
-            this.textBox2.Location = new System.Drawing.Point(299, 238);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(270, 22);
-            this.textBox2.TabIndex = 23;
+            this.textBChA_time.Location = new System.Drawing.Point(299, 238);
+            this.textBChA_time.Name = "textBChA_time";
+            this.textBChA_time.Size = new System.Drawing.Size(270, 22);
+            this.textBChA_time.TabIndex = 23;
             // 
-            // textBox3
+            // textBChA_projects
             // 
-            this.textBox3.Location = new System.Drawing.Point(299, 158);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(270, 22);
-            this.textBox3.TabIndex = 22;
+            this.textBChA_projects.Location = new System.Drawing.Point(299, 158);
+            this.textBChA_projects.Name = "textBChA_projects";
+            this.textBChA_projects.Size = new System.Drawing.Size(270, 22);
+            this.textBChA_projects.TabIndex = 22;
             // 
             // label59
             // 
@@ -2265,9 +2265,9 @@
         private System.Windows.Forms.Label label56;
         private System.Windows.Forms.Label label57;
         private System.Windows.Forms.Label label58;
-        public System.Windows.Forms.TextBox textBox1;
-        public System.Windows.Forms.TextBox textBox2;
-        public System.Windows.Forms.TextBox textBox3;
+        public System.Windows.Forms.TextBox textBChA_Date;
+        public System.Windows.Forms.TextBox textBChA_time;
+        public System.Windows.Forms.TextBox textBChA_projects;
         private System.Windows.Forms.Label label59;
         private System.Windows.Forms.PictureBox pictureBox27;
         private System.Windows.Forms.PictureBox pictureBox28;
