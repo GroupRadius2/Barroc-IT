@@ -13,19 +13,21 @@ namespace Barroc_IT
     public partial class Sales_dash : Form
     {
         private int selectedIndexCustomer;
+        private int selectedIndexAppointments;
         public Sales_dash()
         {
             selectedIndexCustomer = 1;
+            selectedIndexAppointments = 1;
             InitializeComponent();
         }
 
         private void label4_Click(object sender, EventArgs e)
         {
-            tabControlSales.SelectedTab = tabPage2;
+            tabControlSales.SelectedTab = tabNewCustomer;
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            tabControlSales.SelectedTab = tabPage1;
+            tabControlSales.SelectedTab = TabDashboard;
         }
 
         private void customerSave_Click(object sender, EventArgs e)
@@ -49,17 +51,17 @@ namespace Barroc_IT
 
         private void label1_Click(object sender, EventArgs e)
         {
-            tabControlSales.SelectedTab = tabPage1;
+            tabControlSales.SelectedTab = TabDashboard;
         }
 
         private void label5_Click(object sender, EventArgs e)
         {
-            tabControlSales.SelectedTab = tabPage3;
+            tabControlSales.SelectedTab = tabCustomerFinance;
         }
 
         private void label6_Click(object sender, EventArgs e)
         {
-            tabControlSales.SelectedTab = tabPage4;
+            tabControlSales.SelectedTab = tabCustomers;
             Database.GetInstance().QueryInDatagridView("SELECT * FROM tbl_companies;", dataGridCustomers);
         }
 
@@ -72,7 +74,7 @@ namespace Barroc_IT
 
         private void button5_Click(object sender, EventArgs e)
         {
-            tabControlSales.SelectedTab = tabPage1;
+            tabControlSales.SelectedTab = TabDashboard;
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -90,7 +92,7 @@ namespace Barroc_IT
 
         private void label7_Click(object sender, EventArgs e)
         {
-            tabControlSales.SelectedTab = tabPage6;
+            tabControlSales.SelectedTab = tabNewProject;
             Database.GetInstance().QueryInDatagridView("SELECT * FROM tbl_projects;", datagridProjects);
         }
 
@@ -99,20 +101,17 @@ namespace Barroc_IT
             this.dataGridAppointments.DefaultCellStyle.Font = new Font("Tahoma", 16);
             this.dataGridAppointments.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             Database.GetInstance().QueryInDatagridView("SELECT * FROM tbl_companies;", dataGridCustomers);
-            Database.GetInstance().QueryInDatagridView("SELECT a_date AS Date, a_time_of AS Time, project_id AS Projects FROM tbl_appointments", dataGridAppointments);
+            Database.GetInstance().QueryInDatagridView("SELECT a_date AS Date, a_time_off AS Time, project_id AS Projects FROM tbl_appointments", dataGridAppointments);
             Database.GetInstance().QueryInDatagridView("SELECT * FROM tbl_projects", datagridProjects);
+            Database.GetInstance().QueryInDatagridView("SELECT * FROM tbl_appointments", dataGridAppointments);
             UpdateInfo();
 
         }
 
-        private void dataGridCustomers_SelectionChanged(object sender, EventArgs e)
-        {
-           
-        }
-
         private void label8_Click(object sender, EventArgs e)
         {
-            tabControlSales.SelectedTab = tabPage7;
+            tabControlSales.SelectedTab = tabTemplateProjects;
+            UpdateInfo();
         }
 
         private void dataGridCustomers_SelectionChanged_1(object sender, EventArgs e)
@@ -121,7 +120,7 @@ namespace Barroc_IT
             {
                 if (row.Selected)
                 {
-                    tabControlSales.SelectedTab = tabPage5;
+                    tabControlSales.SelectedTab = tabChangeCustomer;
 
                     txtbChAdress.Text = row.Cells["c_address"].Value.ToString();
                     txtbChAdress2.Text = row.Cells["c_address2"].Value.ToString();
@@ -142,7 +141,7 @@ namespace Barroc_IT
 
         private void buttonBackChangeCustomers_Click(object sender, EventArgs e)
         {
-            tabControlSales.SelectedTab = tabPage4;
+            tabControlSales.SelectedTab = tabCustomers;
         }
 
         private void btnChSave_Click(object sender, EventArgs e)
@@ -166,11 +165,13 @@ namespace Barroc_IT
             Database.GetInstance().ExecuteQuery();
             UpdateInfo();
         }
-        private void UpdateInfo()
+        public void UpdateInfo()
         {
             Database.GetInstance().QueryInDatagridView("SELECT * FROM tbl_companies WHERE c_creditworthy = 0", dataGridNegativeB);
             Database.GetInstance().QueryInDatagridView("SELECT * FROM tbl_companies WHERE c_creditworthy = 1", dataGridPositiveB);
             Database.GetInstance().QueryInDatagridView("SELECT * FROM tbl_companies", dataGridCustomers);
+            Database.GetInstance().QueryInDatagridView("SELECT * FROM tbl_projects", datagridProjects);
+            Database.GetInstance().QueryInDatagridView("SELECT * FROM tbl_appointments", dataGridAppointments);
 
             Database.GetInstance().Query("SELECT COUNT(*) FROM tbl_companies WHERE c_creditworthy = 0");
             lblNegBalance.Text = Database.GetInstance().ExecuteQuery().ToString();
@@ -180,7 +181,7 @@ namespace Barroc_IT
 
         private void btnNewApp_Click(object sender, EventArgs e)
         {
-            tabControlSales.SelectedTab = tabPage8;
+            tabControlSales.SelectedTab = tabNewAppointment;
         }
 
         private void lblNotification_Click(object sender, EventArgs e)
@@ -192,14 +193,76 @@ namespace Barroc_IT
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            Database.GetInstance().Query("INSERT INTO tbl_appointments(project_id, a_date, a_time_of)" +
-                "VALUES(@project_id, @a_date_ @a_time_of)");
+            DateTime dt;
+            DateTime.TryParse(textBoxA_time.Text, out dt);
 
-            Database.GetInstance().AddParameter("@project_id", textBoxA_Project);
-            Database.GetInstance().AddParameter("@a_date", textBoxA_Date);
-            Database.GetInstance().AddParameter("@a_time_of", textBoxA_time);
+            int countOfAppointments = (int)Database.GetInstance().ExecuteQuery();
+            Database.GetInstance().Query("INSERT INTO tbl_appointments(appointment_id, project_id, a_date, a_time_off)" +
+                "VALUES(@appointment_id, @project_id, @a_date, @a_time_off)");
+            Database.GetInstance().AddParameter("@appointment_id", ++countOfAppointments);
+            Database.GetInstance().AddParameter("@project_id", textBoxA_Project.Text);
+            Database.GetInstance().AddParameter("@a_date", textBoxA_Date.Text);
+            Database.GetInstance().AddParameter("@a_time_off", dt);
 
             Database.GetInstance().ExecuteQuery();
+            tabControlSales.SelectedTab = TabDashboard;
+            UpdateInfo();
+        }
+
+        private void buttonDeleteCustomer_Click(object sender, EventArgs e)
+        {
+            Database.GetInstance().Query("DELETE FROM tbl_companies WHERE c_id = @c_id");
+            Database.GetInstance().AddParameter("@c_id", selectedIndexCustomer);
+
+            Database.GetInstance().ExecuteQuery();
+            tabControlSales.SelectedTab = tabCustomers;
+        }
+
+        private void btnA_Back_Click(object sender, EventArgs e)
+        {
+            tabControlSales.SelectedTab = TabDashboard;
+        }
+
+        private void btnDelete_ChA_Click(object sender, EventArgs e)
+        {
+            Database.GetInstance().Query("DELETE FROM tbl_appointments WHERE appointment_id = @appointment_id");
+            Database.GetInstance().AddParameter("@appointments_id", selectedIndexAppointments);
+
+            Database.GetInstance().ExecuteQuery();
+            tabControlSales.SelectedTab = TabDashboard;
+        }
+
+        private void btnBack_ChA_Click(object sender, EventArgs e)
+        {
+            tabControlSales.SelectedTab = TabDashboard;
+        }
+
+        private void dataGridAppointments_SelectionChanged(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dataGridAppointments.Rows)
+            {
+                if (row.Selected)
+                {
+                    tabControlSales.SelectedTab = tabChange_A;
+
+                    textBoxA_Project.Text = row.Cells["project_id"].Value.ToString();
+                    textBoxA_Date.Text = row.Cells["a_date"].Value.ToString();
+                    textBoxA_time.Text = row.Cells["a_time_off"].Value.ToString();
+                }
+            }
+        }
+
+        private void btnCh_Save_Click(object sender, EventArgs e)
+        {
+            tabControlSales.SelectedTab = TabDashboard;
+            Database.GetInstance().Query("UPDATE tbl_appointments SET project_id = @project_id, a_date = @a_date, a_time_off = @a_time_off");
+            Database.GetInstance().AddParameter("@project_id", textBChA_projects.Text);
+            Database.GetInstance().AddParameter("@a_date", textBChA_Date.Text);
+            Database.GetInstance().AddParameter("@a_time_off", textBChA_time.Text);
+            Database.GetInstance().ExecuteQuery();
+            Database.GetInstance().QueryInDatagridView("SELECT * FROM tbl_appointments", dataGridAppointments);
+
+            UpdateInfo();
         }
         }
     }

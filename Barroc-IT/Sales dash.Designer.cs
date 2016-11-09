@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabNewCustomer = new System.Windows.Forms.TabPage();
             this.textBoxZipcode1 = new System.Windows.Forms.TextBox();
             this.label41 = new System.Windows.Forms.Label();
             this.textBoxHousenumber = new System.Windows.Forms.TextBox();
@@ -71,7 +71,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.TabDashboard = new System.Windows.Forms.TabPage();
             this.btnNewApp = new System.Windows.Forms.Button();
             this.dataGridAppointments = new System.Windows.Forms.DataGridView();
             this.pictureBox17 = new System.Windows.Forms.PictureBox();
@@ -81,7 +81,7 @@
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
             this.label26 = new System.Windows.Forms.Label();
             this.tabControlSales = new System.Windows.Forms.TabControl();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabCustomerFinance = new System.Windows.Forms.TabPage();
             this.dataGridPositiveB = new System.Windows.Forms.DataGridView();
             this.dataGridNegativeB = new System.Windows.Forms.DataGridView();
             this.label36 = new System.Windows.Forms.Label();
@@ -97,12 +97,12 @@
             this.pictureBox20 = new System.Windows.Forms.PictureBox();
             this.pictureBox19 = new System.Windows.Forms.PictureBox();
             this.pictureBox18 = new System.Windows.Forms.PictureBox();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabCustomers = new System.Windows.Forms.TabPage();
             this.dataGridCustomers = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.Customerlbl = new System.Windows.Forms.Label();
             this.pictureBox24 = new System.Windows.Forms.PictureBox();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.tabChangeCustomer = new System.Windows.Forms.TabPage();
             this.label54 = new System.Windows.Forms.Label();
             this.txtbChCity = new System.Windows.Forms.TextBox();
             this.label51 = new System.Windows.Forms.Label();
@@ -135,7 +135,7 @@
             this.label40 = new System.Windows.Forms.Label();
             this.pictureBox26 = new System.Windows.Forms.PictureBox();
             this.pictureBox25 = new System.Windows.Forms.PictureBox();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.tabNewProject = new System.Windows.Forms.TabPage();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.textBoxTerms = new System.Windows.Forms.TextBox();
@@ -153,9 +153,10 @@
             this.label50 = new System.Windows.Forms.Label();
             this.label52 = new System.Windows.Forms.Label();
             this.label53 = new System.Windows.Forms.Label();
-            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.tabTemplateProjects = new System.Windows.Forms.TabPage();
             this.datagridProjects = new System.Windows.Forms.DataGridView();
-            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.tabNewAppointment = new System.Windows.Forms.TabPage();
+            this.btnA_Back = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.label55 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
@@ -166,6 +167,19 @@
             this.label28 = new System.Windows.Forms.Label();
             this.pictureBox21 = new System.Windows.Forms.PictureBox();
             this.pictureBox22 = new System.Windows.Forms.PictureBox();
+            this.tabChange_A = new System.Windows.Forms.TabPage();
+            this.btnBack_ChA = new System.Windows.Forms.Button();
+            this.btnDelete_ChA = new System.Windows.Forms.Button();
+            this.btnCh_Save = new System.Windows.Forms.Button();
+            this.label56 = new System.Windows.Forms.Label();
+            this.label57 = new System.Windows.Forms.Label();
+            this.label58 = new System.Windows.Forms.Label();
+            this.textBChA_Date = new System.Windows.Forms.TextBox();
+            this.textBChA_time = new System.Windows.Forms.TextBox();
+            this.textBChA_projects = new System.Windows.Forms.TextBox();
+            this.label59 = new System.Windows.Forms.Label();
+            this.pictureBox27 = new System.Windows.Forms.PictureBox();
+            this.pictureBox28 = new System.Windows.Forms.PictureBox();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -181,32 +195,35 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tabPage2.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.tabNewCustomer.SuspendLayout();
+            this.TabDashboard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridAppointments)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             this.tabControlSales.SuspendLayout();
-            this.tabPage3.SuspendLayout();
+            this.tabCustomerFinance.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridPositiveB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridNegativeB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
-            this.tabPage4.SuspendLayout();
+            this.tabCustomers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCustomers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).BeginInit();
-            this.tabPage5.SuspendLayout();
+            this.tabChangeCustomer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).BeginInit();
-            this.tabPage6.SuspendLayout();
-            this.tabPage7.SuspendLayout();
+            this.tabNewProject.SuspendLayout();
+            this.tabTemplateProjects.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagridProjects)).BeginInit();
-            this.tabPage8.SuspendLayout();
+            this.tabNewAppointment.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
+            this.tabChange_A.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -224,45 +241,45 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // tabPage2
+            // tabNewCustomer
             // 
-            this.tabPage2.Controls.Add(this.textBoxZipcode1);
-            this.tabPage2.Controls.Add(this.label41);
-            this.tabPage2.Controls.Add(this.textBoxHousenumber);
-            this.tabPage2.Controls.Add(this.label14);
-            this.tabPage2.Controls.Add(this.customerSave);
-            this.tabPage2.Controls.Add(this.button2);
-            this.tabPage2.Controls.Add(this.textBoxFaxnumber);
-            this.tabPage2.Controls.Add(this.textBoxTelephone2);
-            this.tabPage2.Controls.Add(this.textBoxContactPerson);
-            this.tabPage2.Controls.Add(this.textBoxResidence2);
-            this.tabPage2.Controls.Add(this.textBoxResidence1);
-            this.tabPage2.Controls.Add(this.textBoxAddress2);
-            this.tabPage2.Controls.Add(this.textBoxZipcode2);
-            this.tabPage2.Controls.Add(this.textBoxCompanyName);
-            this.tabPage2.Controls.Add(this.textBoxEmail);
-            this.tabPage2.Controls.Add(this.textBoxTelephone1);
-            this.tabPage2.Controls.Add(this.textBoxAddress1);
-            this.tabPage2.Controls.Add(this.label25);
-            this.tabPage2.Controls.Add(this.label24);
-            this.tabPage2.Controls.Add(this.label23);
-            this.tabPage2.Controls.Add(this.label22);
-            this.tabPage2.Controls.Add(this.label21);
-            this.tabPage2.Controls.Add(this.label20);
-            this.tabPage2.Controls.Add(this.label19);
-            this.tabPage2.Controls.Add(this.label18);
-            this.tabPage2.Controls.Add(this.label17);
-            this.tabPage2.Controls.Add(this.label16);
-            this.tabPage2.Controls.Add(this.label15);
-            this.tabPage2.Controls.Add(this.label13);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage2.Size = new System.Drawing.Size(1548, 842);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "New Customer ";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabNewCustomer.Controls.Add(this.textBoxZipcode1);
+            this.tabNewCustomer.Controls.Add(this.label41);
+            this.tabNewCustomer.Controls.Add(this.textBoxHousenumber);
+            this.tabNewCustomer.Controls.Add(this.label14);
+            this.tabNewCustomer.Controls.Add(this.customerSave);
+            this.tabNewCustomer.Controls.Add(this.button2);
+            this.tabNewCustomer.Controls.Add(this.textBoxFaxnumber);
+            this.tabNewCustomer.Controls.Add(this.textBoxTelephone2);
+            this.tabNewCustomer.Controls.Add(this.textBoxContactPerson);
+            this.tabNewCustomer.Controls.Add(this.textBoxResidence2);
+            this.tabNewCustomer.Controls.Add(this.textBoxResidence1);
+            this.tabNewCustomer.Controls.Add(this.textBoxAddress2);
+            this.tabNewCustomer.Controls.Add(this.textBoxZipcode2);
+            this.tabNewCustomer.Controls.Add(this.textBoxCompanyName);
+            this.tabNewCustomer.Controls.Add(this.textBoxEmail);
+            this.tabNewCustomer.Controls.Add(this.textBoxTelephone1);
+            this.tabNewCustomer.Controls.Add(this.textBoxAddress1);
+            this.tabNewCustomer.Controls.Add(this.label25);
+            this.tabNewCustomer.Controls.Add(this.label24);
+            this.tabNewCustomer.Controls.Add(this.label23);
+            this.tabNewCustomer.Controls.Add(this.label22);
+            this.tabNewCustomer.Controls.Add(this.label21);
+            this.tabNewCustomer.Controls.Add(this.label20);
+            this.tabNewCustomer.Controls.Add(this.label19);
+            this.tabNewCustomer.Controls.Add(this.label18);
+            this.tabNewCustomer.Controls.Add(this.label17);
+            this.tabNewCustomer.Controls.Add(this.label16);
+            this.tabNewCustomer.Controls.Add(this.label15);
+            this.tabNewCustomer.Controls.Add(this.label13);
+            this.tabNewCustomer.Location = new System.Drawing.Point(4, 25);
+            this.tabNewCustomer.Margin = new System.Windows.Forms.Padding(4);
+            this.tabNewCustomer.Name = "tabNewCustomer";
+            this.tabNewCustomer.Padding = new System.Windows.Forms.Padding(4);
+            this.tabNewCustomer.Size = new System.Drawing.Size(1548, 842);
+            this.tabNewCustomer.TabIndex = 1;
+            this.tabNewCustomer.Text = "New Customer ";
+            this.tabNewCustomer.UseVisualStyleBackColor = true;
             // 
             // textBoxZipcode1
             // 
@@ -678,25 +695,25 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // tabPage1
+            // TabDashboard
             // 
-            this.tabPage1.Controls.Add(this.btnNewApp);
-            this.tabPage1.Controls.Add(this.dataGridAppointments);
-            this.tabPage1.Controls.Add(this.pictureBox17);
-            this.tabPage1.Controls.Add(this.label30);
-            this.tabPage1.Controls.Add(this.label29);
-            this.tabPage1.Controls.Add(this.label27);
-            this.tabPage1.Controls.Add(this.pictureBox16);
-            this.tabPage1.Controls.Add(this.label26);
-            this.tabPage1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage1.Size = new System.Drawing.Size(1548, 842);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Dashboard";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.TabDashboard.Controls.Add(this.btnNewApp);
+            this.TabDashboard.Controls.Add(this.dataGridAppointments);
+            this.TabDashboard.Controls.Add(this.pictureBox17);
+            this.TabDashboard.Controls.Add(this.label30);
+            this.TabDashboard.Controls.Add(this.label29);
+            this.TabDashboard.Controls.Add(this.label27);
+            this.TabDashboard.Controls.Add(this.pictureBox16);
+            this.TabDashboard.Controls.Add(this.label26);
+            this.TabDashboard.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.TabDashboard.Location = new System.Drawing.Point(4, 25);
+            this.TabDashboard.Margin = new System.Windows.Forms.Padding(4);
+            this.TabDashboard.Name = "TabDashboard";
+            this.TabDashboard.Padding = new System.Windows.Forms.Padding(4);
+            this.TabDashboard.Size = new System.Drawing.Size(1548, 842);
+            this.TabDashboard.TabIndex = 0;
+            this.TabDashboard.Text = "Dashboard";
+            this.TabDashboard.UseVisualStyleBackColor = true;
             // 
             // btnNewApp
             // 
@@ -716,6 +733,7 @@
             this.dataGridAppointments.RowTemplate.Height = 24;
             this.dataGridAppointments.Size = new System.Drawing.Size(1410, 591);
             this.dataGridAppointments.TabIndex = 7;
+            this.dataGridAppointments.SelectionChanged += new System.EventHandler(this.dataGridAppointments_SelectionChanged);
             // 
             // pictureBox17
             // 
@@ -783,14 +801,15 @@
             // 
             // tabControlSales
             // 
-            this.tabControlSales.Controls.Add(this.tabPage1);
-            this.tabControlSales.Controls.Add(this.tabPage2);
-            this.tabControlSales.Controls.Add(this.tabPage3);
-            this.tabControlSales.Controls.Add(this.tabPage4);
-            this.tabControlSales.Controls.Add(this.tabPage5);
-            this.tabControlSales.Controls.Add(this.tabPage6);
-            this.tabControlSales.Controls.Add(this.tabPage7);
-            this.tabControlSales.Controls.Add(this.tabPage8);
+            this.tabControlSales.Controls.Add(this.TabDashboard);
+            this.tabControlSales.Controls.Add(this.tabNewCustomer);
+            this.tabControlSales.Controls.Add(this.tabCustomerFinance);
+            this.tabControlSales.Controls.Add(this.tabCustomers);
+            this.tabControlSales.Controls.Add(this.tabChangeCustomer);
+            this.tabControlSales.Controls.Add(this.tabNewProject);
+            this.tabControlSales.Controls.Add(this.tabTemplateProjects);
+            this.tabControlSales.Controls.Add(this.tabNewAppointment);
+            this.tabControlSales.Controls.Add(this.tabChange_A);
             this.tabControlSales.Location = new System.Drawing.Point(279, 52);
             this.tabControlSales.Margin = new System.Windows.Forms.Padding(4);
             this.tabControlSales.Name = "tabControlSales";
@@ -798,30 +817,30 @@
             this.tabControlSales.Size = new System.Drawing.Size(1556, 871);
             this.tabControlSales.TabIndex = 30;
             // 
-            // tabPage3
+            // tabCustomerFinance
             // 
-            this.tabPage3.Controls.Add(this.dataGridPositiveB);
-            this.tabPage3.Controls.Add(this.dataGridNegativeB);
-            this.tabPage3.Controls.Add(this.label36);
-            this.tabPage3.Controls.Add(this.lblPosBalance);
-            this.tabPage3.Controls.Add(this.label38);
-            this.tabPage3.Controls.Add(this.label39);
-            this.tabPage3.Controls.Add(this.label35);
-            this.tabPage3.Controls.Add(this.lblNegBalance);
-            this.tabPage3.Controls.Add(this.label33);
-            this.tabPage3.Controls.Add(this.label32);
-            this.tabPage3.Controls.Add(this.label31);
-            this.tabPage3.Controls.Add(this.pictureBox23);
-            this.tabPage3.Controls.Add(this.pictureBox20);
-            this.tabPage3.Controls.Add(this.pictureBox19);
-            this.tabPage3.Controls.Add(this.pictureBox18);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1548, 842);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Customer Finance";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.tabCustomerFinance.Controls.Add(this.dataGridPositiveB);
+            this.tabCustomerFinance.Controls.Add(this.dataGridNegativeB);
+            this.tabCustomerFinance.Controls.Add(this.label36);
+            this.tabCustomerFinance.Controls.Add(this.lblPosBalance);
+            this.tabCustomerFinance.Controls.Add(this.label38);
+            this.tabCustomerFinance.Controls.Add(this.label39);
+            this.tabCustomerFinance.Controls.Add(this.label35);
+            this.tabCustomerFinance.Controls.Add(this.lblNegBalance);
+            this.tabCustomerFinance.Controls.Add(this.label33);
+            this.tabCustomerFinance.Controls.Add(this.label32);
+            this.tabCustomerFinance.Controls.Add(this.label31);
+            this.tabCustomerFinance.Controls.Add(this.pictureBox23);
+            this.tabCustomerFinance.Controls.Add(this.pictureBox20);
+            this.tabCustomerFinance.Controls.Add(this.pictureBox19);
+            this.tabCustomerFinance.Controls.Add(this.pictureBox18);
+            this.tabCustomerFinance.Location = new System.Drawing.Point(4, 25);
+            this.tabCustomerFinance.Name = "tabCustomerFinance";
+            this.tabCustomerFinance.Padding = new System.Windows.Forms.Padding(3);
+            this.tabCustomerFinance.Size = new System.Drawing.Size(1548, 842);
+            this.tabCustomerFinance.TabIndex = 2;
+            this.tabCustomerFinance.Text = "Customer Finance";
+            this.tabCustomerFinance.UseVisualStyleBackColor = true;
             // 
             // dataGridPositiveB
             // 
@@ -980,19 +999,19 @@
             this.pictureBox18.TabIndex = 0;
             this.pictureBox18.TabStop = false;
             // 
-            // tabPage4
+            // tabCustomers
             // 
-            this.tabPage4.Controls.Add(this.dataGridCustomers);
-            this.tabPage4.Controls.Add(this.dataGridView2);
-            this.tabPage4.Controls.Add(this.Customerlbl);
-            this.tabPage4.Controls.Add(this.pictureBox24);
-            this.tabPage4.Location = new System.Drawing.Point(4, 25);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1548, 842);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Customers";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            this.tabCustomers.Controls.Add(this.dataGridCustomers);
+            this.tabCustomers.Controls.Add(this.dataGridView2);
+            this.tabCustomers.Controls.Add(this.Customerlbl);
+            this.tabCustomers.Controls.Add(this.pictureBox24);
+            this.tabCustomers.Location = new System.Drawing.Point(4, 25);
+            this.tabCustomers.Name = "tabCustomers";
+            this.tabCustomers.Padding = new System.Windows.Forms.Padding(3);
+            this.tabCustomers.Size = new System.Drawing.Size(1548, 842);
+            this.tabCustomers.TabIndex = 3;
+            this.tabCustomers.Text = "Customers";
+            this.tabCustomers.UseVisualStyleBackColor = true;
             // 
             // dataGridCustomers
             // 
@@ -1033,47 +1052,47 @@
             this.pictureBox24.TabIndex = 0;
             this.pictureBox24.TabStop = false;
             // 
-            // tabPage5
+            // tabChangeCustomer
             // 
-            this.tabPage5.Controls.Add(this.label54);
-            this.tabPage5.Controls.Add(this.txtbChCity);
-            this.tabPage5.Controls.Add(this.label51);
-            this.tabPage5.Controls.Add(this.txtbChZipcode2);
-            this.tabPage5.Controls.Add(this.label44);
-            this.tabPage5.Controls.Add(this.txtbChZipcode);
-            this.tabPage5.Controls.Add(this.label43);
-            this.tabPage5.Controls.Add(this.txtbChTelephone);
-            this.tabPage5.Controls.Add(this.label42);
-            this.tabPage5.Controls.Add(this.txtbChAdress2);
-            this.tabPage5.Controls.Add(this.buttonDeleteCustomer);
-            this.tabPage5.Controls.Add(this.buttonBackChangeCustomers);
-            this.tabPage5.Controls.Add(this.labelEmailChangeCustomer);
-            this.tabPage5.Controls.Add(this.txtbChEmail);
-            this.tabPage5.Controls.Add(this.labelFaxnumberChangeCustomer);
-            this.tabPage5.Controls.Add(this.txtbChFaxnumber);
-            this.tabPage5.Controls.Add(this.labelTelephoneChangeCustomer);
-            this.tabPage5.Controls.Add(this.txtbChTelephone2);
-            this.tabPage5.Controls.Add(this.labelContactpersonChangeCustomer);
-            this.tabPage5.Controls.Add(this.txtbChContactperson);
-            this.tabPage5.Controls.Add(this.labelCityChangeCustomer);
-            this.tabPage5.Controls.Add(this.txtbChCity2);
-            this.tabPage5.Controls.Add(this.labelHouseNumberChangeCustomer);
-            this.tabPage5.Controls.Add(this.txtbChHousenumber);
-            this.tabPage5.Controls.Add(this.labelAddressChangeCustomer);
-            this.tabPage5.Controls.Add(this.txtbChAdress);
-            this.tabPage5.Controls.Add(this.labelNameChangeCustomer);
-            this.tabPage5.Controls.Add(this.txtbChCompanyName);
-            this.tabPage5.Controls.Add(this.button6);
-            this.tabPage5.Controls.Add(this.label40);
-            this.tabPage5.Controls.Add(this.pictureBox26);
-            this.tabPage5.Controls.Add(this.pictureBox25);
-            this.tabPage5.Location = new System.Drawing.Point(4, 25);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(1548, 842);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "ChangeCustomer";
-            this.tabPage5.UseVisualStyleBackColor = true;
+            this.tabChangeCustomer.Controls.Add(this.label54);
+            this.tabChangeCustomer.Controls.Add(this.txtbChCity);
+            this.tabChangeCustomer.Controls.Add(this.label51);
+            this.tabChangeCustomer.Controls.Add(this.txtbChZipcode2);
+            this.tabChangeCustomer.Controls.Add(this.label44);
+            this.tabChangeCustomer.Controls.Add(this.txtbChZipcode);
+            this.tabChangeCustomer.Controls.Add(this.label43);
+            this.tabChangeCustomer.Controls.Add(this.txtbChTelephone);
+            this.tabChangeCustomer.Controls.Add(this.label42);
+            this.tabChangeCustomer.Controls.Add(this.txtbChAdress2);
+            this.tabChangeCustomer.Controls.Add(this.buttonDeleteCustomer);
+            this.tabChangeCustomer.Controls.Add(this.buttonBackChangeCustomers);
+            this.tabChangeCustomer.Controls.Add(this.labelEmailChangeCustomer);
+            this.tabChangeCustomer.Controls.Add(this.txtbChEmail);
+            this.tabChangeCustomer.Controls.Add(this.labelFaxnumberChangeCustomer);
+            this.tabChangeCustomer.Controls.Add(this.txtbChFaxnumber);
+            this.tabChangeCustomer.Controls.Add(this.labelTelephoneChangeCustomer);
+            this.tabChangeCustomer.Controls.Add(this.txtbChTelephone2);
+            this.tabChangeCustomer.Controls.Add(this.labelContactpersonChangeCustomer);
+            this.tabChangeCustomer.Controls.Add(this.txtbChContactperson);
+            this.tabChangeCustomer.Controls.Add(this.labelCityChangeCustomer);
+            this.tabChangeCustomer.Controls.Add(this.txtbChCity2);
+            this.tabChangeCustomer.Controls.Add(this.labelHouseNumberChangeCustomer);
+            this.tabChangeCustomer.Controls.Add(this.txtbChHousenumber);
+            this.tabChangeCustomer.Controls.Add(this.labelAddressChangeCustomer);
+            this.tabChangeCustomer.Controls.Add(this.txtbChAdress);
+            this.tabChangeCustomer.Controls.Add(this.labelNameChangeCustomer);
+            this.tabChangeCustomer.Controls.Add(this.txtbChCompanyName);
+            this.tabChangeCustomer.Controls.Add(this.button6);
+            this.tabChangeCustomer.Controls.Add(this.label40);
+            this.tabChangeCustomer.Controls.Add(this.pictureBox26);
+            this.tabChangeCustomer.Controls.Add(this.pictureBox25);
+            this.tabChangeCustomer.Location = new System.Drawing.Point(4, 25);
+            this.tabChangeCustomer.Name = "tabChangeCustomer";
+            this.tabChangeCustomer.Padding = new System.Windows.Forms.Padding(3);
+            this.tabChangeCustomer.Size = new System.Drawing.Size(1548, 842);
+            this.tabChangeCustomer.TabIndex = 4;
+            this.tabChangeCustomer.Text = "ChangeCustomer";
+            this.tabChangeCustomer.UseVisualStyleBackColor = true;
             // 
             // label54
             // 
@@ -1176,21 +1195,22 @@
             // 
             // buttonDeleteCustomer
             // 
-            this.buttonDeleteCustomer.Location = new System.Drawing.Point(17, 737);
+            this.buttonDeleteCustomer.Location = new System.Drawing.Point(17, 710);
             this.buttonDeleteCustomer.Margin = new System.Windows.Forms.Padding(4);
             this.buttonDeleteCustomer.Name = "buttonDeleteCustomer";
-            this.buttonDeleteCustomer.Size = new System.Drawing.Size(100, 28);
+            this.buttonDeleteCustomer.Size = new System.Drawing.Size(142, 55);
             this.buttonDeleteCustomer.TabIndex = 172;
             this.buttonDeleteCustomer.Text = "Delete";
             this.buttonDeleteCustomer.UseVisualStyleBackColor = true;
+            this.buttonDeleteCustomer.Click += new System.EventHandler(this.buttonDeleteCustomer_Click);
             // 
             // buttonBackChangeCustomers
             // 
             this.buttonBackChangeCustomers.BackColor = System.Drawing.Color.Transparent;
-            this.buttonBackChangeCustomers.Location = new System.Drawing.Point(17, 608);
+            this.buttonBackChangeCustomers.Location = new System.Drawing.Point(17, 579);
             this.buttonBackChangeCustomers.Margin = new System.Windows.Forms.Padding(4);
             this.buttonBackChangeCustomers.Name = "buttonBackChangeCustomers";
-            this.buttonBackChangeCustomers.Size = new System.Drawing.Size(100, 29);
+            this.buttonBackChangeCustomers.Size = new System.Drawing.Size(142, 58);
             this.buttonBackChangeCustomers.TabIndex = 171;
             this.buttonBackChangeCustomers.Text = "Back";
             this.buttonBackChangeCustomers.UseVisualStyleBackColor = false;
@@ -1390,32 +1410,32 @@
             this.pictureBox25.TabIndex = 0;
             this.pictureBox25.TabStop = false;
             // 
-            // tabPage6
+            // tabNewProject
             // 
-            this.tabPage6.Controls.Add(this.button4);
-            this.tabPage6.Controls.Add(this.button5);
-            this.tabPage6.Controls.Add(this.textBoxTerms);
-            this.tabPage6.Controls.Add(this.textBoxCost);
-            this.tabPage6.Controls.Add(this.textBoxEndDate);
-            this.tabPage6.Controls.Add(this.textBoxBeginDate);
-            this.tabPage6.Controls.Add(this.textBoxP_Name);
-            this.tabPage6.Controls.Add(this.textBoxCustomerName);
-            this.tabPage6.Controls.Add(this.textBoxC_Name);
-            this.tabPage6.Controls.Add(this.label45);
-            this.tabPage6.Controls.Add(this.label46);
-            this.tabPage6.Controls.Add(this.label47);
-            this.tabPage6.Controls.Add(this.label48);
-            this.tabPage6.Controls.Add(this.label49);
-            this.tabPage6.Controls.Add(this.label50);
-            this.tabPage6.Controls.Add(this.label52);
-            this.tabPage6.Controls.Add(this.label53);
-            this.tabPage6.Location = new System.Drawing.Point(4, 25);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(1548, 842);
-            this.tabPage6.TabIndex = 5;
-            this.tabPage6.Text = "NewProject";
-            this.tabPage6.UseVisualStyleBackColor = true;
+            this.tabNewProject.Controls.Add(this.button4);
+            this.tabNewProject.Controls.Add(this.button5);
+            this.tabNewProject.Controls.Add(this.textBoxTerms);
+            this.tabNewProject.Controls.Add(this.textBoxCost);
+            this.tabNewProject.Controls.Add(this.textBoxEndDate);
+            this.tabNewProject.Controls.Add(this.textBoxBeginDate);
+            this.tabNewProject.Controls.Add(this.textBoxP_Name);
+            this.tabNewProject.Controls.Add(this.textBoxCustomerName);
+            this.tabNewProject.Controls.Add(this.textBoxC_Name);
+            this.tabNewProject.Controls.Add(this.label45);
+            this.tabNewProject.Controls.Add(this.label46);
+            this.tabNewProject.Controls.Add(this.label47);
+            this.tabNewProject.Controls.Add(this.label48);
+            this.tabNewProject.Controls.Add(this.label49);
+            this.tabNewProject.Controls.Add(this.label50);
+            this.tabNewProject.Controls.Add(this.label52);
+            this.tabNewProject.Controls.Add(this.label53);
+            this.tabNewProject.Location = new System.Drawing.Point(4, 25);
+            this.tabNewProject.Name = "tabNewProject";
+            this.tabNewProject.Padding = new System.Windows.Forms.Padding(3);
+            this.tabNewProject.Size = new System.Drawing.Size(1548, 842);
+            this.tabNewProject.TabIndex = 5;
+            this.tabNewProject.Text = "NewProject";
+            this.tabNewProject.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
@@ -1566,16 +1586,16 @@
             this.label53.TabIndex = 27;
             this.label53.Text = "New Projects";
             // 
-            // tabPage7
+            // tabTemplateProjects
             // 
-            this.tabPage7.Controls.Add(this.datagridProjects);
-            this.tabPage7.Location = new System.Drawing.Point(4, 25);
-            this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(1548, 842);
-            this.tabPage7.TabIndex = 6;
-            this.tabPage7.Text = "TemplateProjects";
-            this.tabPage7.UseVisualStyleBackColor = true;
+            this.tabTemplateProjects.Controls.Add(this.datagridProjects);
+            this.tabTemplateProjects.Location = new System.Drawing.Point(4, 25);
+            this.tabTemplateProjects.Name = "tabTemplateProjects";
+            this.tabTemplateProjects.Padding = new System.Windows.Forms.Padding(3);
+            this.tabTemplateProjects.Size = new System.Drawing.Size(1548, 842);
+            this.tabTemplateProjects.TabIndex = 6;
+            this.tabTemplateProjects.Text = "TemplateProjects";
+            this.tabTemplateProjects.UseVisualStyleBackColor = true;
             // 
             // datagridProjects
             // 
@@ -1586,25 +1606,36 @@
             this.datagridProjects.Size = new System.Drawing.Size(1038, 424);
             this.datagridProjects.TabIndex = 0;
             // 
-            // tabPage8
+            // tabNewAppointment
             // 
-            this.tabPage8.Controls.Add(this.btnSave);
-            this.tabPage8.Controls.Add(this.label55);
-            this.tabPage8.Controls.Add(this.label37);
-            this.tabPage8.Controls.Add(this.label34);
-            this.tabPage8.Controls.Add(this.textBoxA_Date);
-            this.tabPage8.Controls.Add(this.textBoxA_time);
-            this.tabPage8.Controls.Add(this.textBoxA_Project);
-            this.tabPage8.Controls.Add(this.label28);
-            this.tabPage8.Controls.Add(this.pictureBox21);
-            this.tabPage8.Controls.Add(this.pictureBox22);
-            this.tabPage8.Location = new System.Drawing.Point(4, 25);
-            this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(1548, 842);
-            this.tabPage8.TabIndex = 7;
-            this.tabPage8.Text = "NewAppointment";
-            this.tabPage8.UseVisualStyleBackColor = true;
+            this.tabNewAppointment.Controls.Add(this.btnA_Back);
+            this.tabNewAppointment.Controls.Add(this.btnSave);
+            this.tabNewAppointment.Controls.Add(this.label55);
+            this.tabNewAppointment.Controls.Add(this.label37);
+            this.tabNewAppointment.Controls.Add(this.label34);
+            this.tabNewAppointment.Controls.Add(this.textBoxA_Date);
+            this.tabNewAppointment.Controls.Add(this.textBoxA_time);
+            this.tabNewAppointment.Controls.Add(this.textBoxA_Project);
+            this.tabNewAppointment.Controls.Add(this.label28);
+            this.tabNewAppointment.Controls.Add(this.pictureBox21);
+            this.tabNewAppointment.Controls.Add(this.pictureBox22);
+            this.tabNewAppointment.Location = new System.Drawing.Point(4, 25);
+            this.tabNewAppointment.Name = "tabNewAppointment";
+            this.tabNewAppointment.Padding = new System.Windows.Forms.Padding(3);
+            this.tabNewAppointment.Size = new System.Drawing.Size(1548, 842);
+            this.tabNewAppointment.TabIndex = 7;
+            this.tabNewAppointment.Text = "NewAppointment";
+            this.tabNewAppointment.UseVisualStyleBackColor = true;
+            // 
+            // btnA_Back
+            // 
+            this.btnA_Back.Location = new System.Drawing.Point(42, 678);
+            this.btnA_Back.Name = "btnA_Back";
+            this.btnA_Back.Size = new System.Drawing.Size(217, 53);
+            this.btnA_Back.TabIndex = 18;
+            this.btnA_Back.Text = "Back";
+            this.btnA_Back.UseVisualStyleBackColor = true;
+            this.btnA_Back.Click += new System.EventHandler(this.btnA_Back_Click);
             // 
             // btnSave
             // 
@@ -1692,6 +1723,135 @@
             this.pictureBox22.Size = new System.Drawing.Size(1335, 89);
             this.pictureBox22.TabIndex = 6;
             this.pictureBox22.TabStop = false;
+            // 
+            // tabChange_A
+            // 
+            this.tabChange_A.Controls.Add(this.btnBack_ChA);
+            this.tabChange_A.Controls.Add(this.btnDelete_ChA);
+            this.tabChange_A.Controls.Add(this.btnCh_Save);
+            this.tabChange_A.Controls.Add(this.label56);
+            this.tabChange_A.Controls.Add(this.label57);
+            this.tabChange_A.Controls.Add(this.label58);
+            this.tabChange_A.Controls.Add(this.textBChA_Date);
+            this.tabChange_A.Controls.Add(this.textBChA_time);
+            this.tabChange_A.Controls.Add(this.textBChA_projects);
+            this.tabChange_A.Controls.Add(this.label59);
+            this.tabChange_A.Controls.Add(this.pictureBox27);
+            this.tabChange_A.Controls.Add(this.pictureBox28);
+            this.tabChange_A.Location = new System.Drawing.Point(4, 25);
+            this.tabChange_A.Name = "tabChange_A";
+            this.tabChange_A.Padding = new System.Windows.Forms.Padding(3);
+            this.tabChange_A.Size = new System.Drawing.Size(1548, 842);
+            this.tabChange_A.TabIndex = 8;
+            this.tabChange_A.Text = "ChangeAppointments";
+            this.tabChange_A.UseVisualStyleBackColor = true;
+            // 
+            // btnBack_ChA
+            // 
+            this.btnBack_ChA.Location = new System.Drawing.Point(49, 519);
+            this.btnBack_ChA.Name = "btnBack_ChA";
+            this.btnBack_ChA.Size = new System.Drawing.Size(217, 53);
+            this.btnBack_ChA.TabIndex = 30;
+            this.btnBack_ChA.Text = "Back";
+            this.btnBack_ChA.UseVisualStyleBackColor = true;
+            this.btnBack_ChA.Click += new System.EventHandler(this.btnBack_ChA_Click);
+            // 
+            // btnDelete_ChA
+            // 
+            this.btnDelete_ChA.Location = new System.Drawing.Point(49, 623);
+            this.btnDelete_ChA.Name = "btnDelete_ChA";
+            this.btnDelete_ChA.Size = new System.Drawing.Size(217, 53);
+            this.btnDelete_ChA.TabIndex = 29;
+            this.btnDelete_ChA.Text = "Delete";
+            this.btnDelete_ChA.UseVisualStyleBackColor = true;
+            this.btnDelete_ChA.Click += new System.EventHandler(this.btnDelete_ChA_Click);
+            // 
+            // btnCh_Save
+            // 
+            this.btnCh_Save.Location = new System.Drawing.Point(1043, 151);
+            this.btnCh_Save.Name = "btnCh_Save";
+            this.btnCh_Save.Size = new System.Drawing.Size(217, 53);
+            this.btnCh_Save.TabIndex = 28;
+            this.btnCh_Save.Text = "Save";
+            this.btnCh_Save.UseVisualStyleBackColor = true;
+            this.btnCh_Save.Click += new System.EventHandler(this.btnCh_Save_Click);
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.Location = new System.Drawing.Point(116, 200);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(38, 17);
+            this.label56.TabIndex = 27;
+            this.label56.Text = "Date";
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Location = new System.Drawing.Point(116, 243);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(39, 17);
+            this.label57.TabIndex = 26;
+            this.label57.Text = "Time";
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Location = new System.Drawing.Point(116, 158);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(59, 17);
+            this.label58.TabIndex = 25;
+            this.label58.Text = "Projects";
+            // 
+            // textBChA_Date
+            // 
+            this.textBChA_Date.Location = new System.Drawing.Point(299, 199);
+            this.textBChA_Date.Name = "textBChA_Date";
+            this.textBChA_Date.Size = new System.Drawing.Size(270, 22);
+            this.textBChA_Date.TabIndex = 24;
+            // 
+            // textBChA_time
+            // 
+            this.textBChA_time.Location = new System.Drawing.Point(299, 238);
+            this.textBChA_time.Name = "textBChA_time";
+            this.textBChA_time.Size = new System.Drawing.Size(270, 22);
+            this.textBChA_time.TabIndex = 23;
+            // 
+            // textBChA_projects
+            // 
+            this.textBChA_projects.Location = new System.Drawing.Point(299, 158);
+            this.textBChA_projects.Name = "textBChA_projects";
+            this.textBChA_projects.Size = new System.Drawing.Size(270, 22);
+            this.textBChA_projects.TabIndex = 22;
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label59.Location = new System.Drawing.Point(13, 36);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(283, 32);
+            this.label59.TabIndex = 21;
+            this.label59.Text = "Change Appointment";
+            // 
+            // pictureBox27
+            // 
+            this.pictureBox27.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.pictureBox27.Location = new System.Drawing.Point(3, 98);
+            this.pictureBox27.Name = "pictureBox27";
+            this.pictureBox27.Size = new System.Drawing.Size(1335, 693);
+            this.pictureBox27.TabIndex = 20;
+            this.pictureBox27.TabStop = false;
+            // 
+            // pictureBox28
+            // 
+            this.pictureBox28.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pictureBox28.Location = new System.Drawing.Point(3, 12);
+            this.pictureBox28.Name = "pictureBox28";
+            this.pictureBox28.Size = new System.Drawing.Size(1335, 89);
+            this.pictureBox28.TabIndex = 19;
+            this.pictureBox28.TabStop = false;
             // 
             // pictureBox12
             // 
@@ -1885,39 +2045,43 @@
             this.Name = "Sales_dash";
             this.Text = "Sales_dash";
             this.Load += new System.EventHandler(this.Sales_dash_Load);
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
+            this.tabNewCustomer.ResumeLayout(false);
+            this.tabNewCustomer.PerformLayout();
+            this.TabDashboard.ResumeLayout(false);
+            this.TabDashboard.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridAppointments)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
             this.tabControlSales.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
+            this.tabCustomerFinance.ResumeLayout(false);
+            this.tabCustomerFinance.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridPositiveB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridNegativeB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
+            this.tabCustomers.ResumeLayout(false);
+            this.tabCustomers.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCustomers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).EndInit();
-            this.tabPage5.ResumeLayout(false);
-            this.tabPage5.PerformLayout();
+            this.tabChangeCustomer.ResumeLayout(false);
+            this.tabChangeCustomer.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).EndInit();
-            this.tabPage6.ResumeLayout(false);
-            this.tabPage6.PerformLayout();
-            this.tabPage7.ResumeLayout(false);
+            this.tabNewProject.ResumeLayout(false);
+            this.tabNewProject.PerformLayout();
+            this.tabTemplateProjects.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.datagridProjects)).EndInit();
-            this.tabPage8.ResumeLayout(false);
-            this.tabPage8.PerformLayout();
+            this.tabNewAppointment.ResumeLayout(false);
+            this.tabNewAppointment.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
+            this.tabChange_A.ResumeLayout(false);
+            this.tabChange_A.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -1940,7 +2104,6 @@
 
         #endregion
 
-        private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
@@ -1955,7 +2118,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox13;
@@ -1984,7 +2146,6 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Button customerSave;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.PictureBox pictureBox16;
@@ -2004,16 +2165,13 @@
         private System.Windows.Forms.PictureBox pictureBox23;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label lblNegBalance;
-        private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.PictureBox pictureBox24;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Label Customerlbl;
-        private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.PictureBox pictureBox26;
         private System.Windows.Forms.PictureBox pictureBox25;
-        private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label45;
@@ -2070,7 +2228,6 @@
         public System.Windows.Forms.TextBox textBoxP_Name;
         public System.Windows.Forms.TextBox textBoxCustomerName;
         public System.Windows.Forms.TextBox textBoxC_Name;
-        private System.Windows.Forms.TabPage tabPage7;
         private System.Windows.Forms.DataGridView datagridProjects;
         public System.Windows.Forms.TabControl tabControlSales;
         private System.Windows.Forms.Label label51;
@@ -2082,7 +2239,6 @@
         public System.Windows.Forms.DataGridView dataGridPositiveB;
         public System.Windows.Forms.DataGridView dataGridNegativeB;
         private System.Windows.Forms.Button btnNewApp;
-        private System.Windows.Forms.TabPage tabPage8;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label label55;
         private System.Windows.Forms.Label label37;
@@ -2093,5 +2249,27 @@
         public System.Windows.Forms.TextBox textBoxA_Date;
         public System.Windows.Forms.TextBox textBoxA_time;
         public System.Windows.Forms.TextBox textBoxA_Project;
+        public System.Windows.Forms.TabPage tabNewCustomer;
+        public System.Windows.Forms.TabPage TabDashboard;
+        public System.Windows.Forms.TabPage tabCustomerFinance;
+        public System.Windows.Forms.TabPage tabCustomers;
+        public System.Windows.Forms.TabPage tabChangeCustomer;
+        public System.Windows.Forms.TabPage tabNewProject;
+        public System.Windows.Forms.TabPage tabTemplateProjects;
+        public System.Windows.Forms.TabPage tabNewAppointment;
+        private System.Windows.Forms.Button btnA_Back;
+        private System.Windows.Forms.TabPage tabChange_A;
+        private System.Windows.Forms.Button btnBack_ChA;
+        private System.Windows.Forms.Button btnDelete_ChA;
+        private System.Windows.Forms.Button btnCh_Save;
+        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.Label label58;
+        public System.Windows.Forms.TextBox textBChA_Date;
+        public System.Windows.Forms.TextBox textBChA_time;
+        public System.Windows.Forms.TextBox textBChA_projects;
+        private System.Windows.Forms.Label label59;
+        private System.Windows.Forms.PictureBox pictureBox27;
+        private System.Windows.Forms.PictureBox pictureBox28;
     }
 }
