@@ -203,6 +203,8 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panelTitleDashboard = new System.Windows.Forms.Panel();
+            this.labelTitleDashboard = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPositiveCompanies)).BeginInit();
             this.tabControlFinance.SuspendLayout();
             this.tabPageCustomers.SuspendLayout();
@@ -239,6 +241,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelTitleDashboard.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelAddInvoice
@@ -445,9 +448,9 @@
             // dataGridViewProjects
             // 
             this.dataGridViewProjects.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewProjects.Location = new System.Drawing.Point(12, 94);
+            this.dataGridViewProjects.Location = new System.Drawing.Point(12, 116);
             this.dataGridViewProjects.Name = "dataGridViewProjects";
-            this.dataGridViewProjects.Size = new System.Drawing.Size(913, 499);
+            this.dataGridViewProjects.Size = new System.Drawing.Size(913, 477);
             this.dataGridViewProjects.TabIndex = 61;
             this.dataGridViewProjects.SelectionChanged += new System.EventHandler(this.dataGridViewProjects_SelectionChanged);
             // 
@@ -496,7 +499,7 @@
             // 
             // textBoxSearchInvoices
             // 
-            this.textBoxSearchInvoices.Location = new System.Drawing.Point(574, 104);
+            this.textBoxSearchInvoices.Location = new System.Drawing.Point(392, 103);
             this.textBoxSearchInvoices.Name = "textBoxSearchInvoices";
             this.textBoxSearchInvoices.Size = new System.Drawing.Size(186, 20);
             this.textBoxSearchInvoices.TabIndex = 64;
@@ -511,7 +514,7 @@
             this.dataGridViewInvoices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewInvoices.Location = new System.Drawing.Point(26, 130);
             this.dataGridViewInvoices.Name = "dataGridViewInvoices";
-            this.dataGridViewInvoices.Size = new System.Drawing.Size(734, 257);
+            this.dataGridViewInvoices.Size = new System.Drawing.Size(552, 257);
             this.dataGridViewInvoices.TabIndex = 63;
             this.dataGridViewInvoices.SelectionChanged += new System.EventHandler(this.dataGridViewInvoices_SelectionChanged);
             // 
@@ -590,7 +593,7 @@
             // labelAddCustomerBanknumber
             // 
             this.labelAddCustomerBanknumber.AutoSize = true;
-            this.labelAddCustomerBanknumber.Location = new System.Drawing.Point(341, 242);
+            this.labelAddCustomerBanknumber.Location = new System.Drawing.Point(341, 268);
             this.labelAddCustomerBanknumber.Name = "labelAddCustomerBanknumber";
             this.labelAddCustomerBanknumber.Size = new System.Drawing.Size(67, 13);
             this.labelAddCustomerBanknumber.TabIndex = 106;
@@ -598,7 +601,7 @@
             // 
             // textBoxAddCustomerBanknumber
             // 
-            this.textBoxAddCustomerBanknumber.Location = new System.Drawing.Point(446, 239);
+            this.textBoxAddCustomerBanknumber.Location = new System.Drawing.Point(446, 265);
             this.textBoxAddCustomerBanknumber.Name = "textBoxAddCustomerBanknumber";
             this.textBoxAddCustomerBanknumber.Size = new System.Drawing.Size(132, 20);
             this.textBoxAddCustomerBanknumber.TabIndex = 105;
@@ -606,7 +609,7 @@
             // labelAddCustomerDiscount
             // 
             this.labelAddCustomerDiscount.AutoSize = true;
-            this.labelAddCustomerDiscount.Location = new System.Drawing.Point(341, 216);
+            this.labelAddCustomerDiscount.Location = new System.Drawing.Point(341, 242);
             this.labelAddCustomerDiscount.Name = "labelAddCustomerDiscount";
             this.labelAddCustomerDiscount.Size = new System.Drawing.Size(49, 13);
             this.labelAddCustomerDiscount.TabIndex = 104;
@@ -614,7 +617,7 @@
             // 
             // textBoxAddCustomerDiscount
             // 
-            this.textBoxAddCustomerDiscount.Location = new System.Drawing.Point(446, 213);
+            this.textBoxAddCustomerDiscount.Location = new System.Drawing.Point(446, 239);
             this.textBoxAddCustomerDiscount.Name = "textBoxAddCustomerDiscount";
             this.textBoxAddCustomerDiscount.Size = new System.Drawing.Size(132, 20);
             this.textBoxAddCustomerDiscount.TabIndex = 103;
@@ -622,7 +625,7 @@
             // labelAddCustomerEmail
             // 
             this.labelAddCustomerEmail.AutoSize = true;
-            this.labelAddCustomerEmail.Location = new System.Drawing.Point(341, 190);
+            this.labelAddCustomerEmail.Location = new System.Drawing.Point(341, 216);
             this.labelAddCustomerEmail.Name = "labelAddCustomerEmail";
             this.labelAddCustomerEmail.Size = new System.Drawing.Size(32, 13);
             this.labelAddCustomerEmail.TabIndex = 102;
@@ -630,7 +633,7 @@
             // 
             // textBoxAddCustomerEmail
             // 
-            this.textBoxAddCustomerEmail.Location = new System.Drawing.Point(446, 187);
+            this.textBoxAddCustomerEmail.Location = new System.Drawing.Point(446, 213);
             this.textBoxAddCustomerEmail.Name = "textBoxAddCustomerEmail";
             this.textBoxAddCustomerEmail.Size = new System.Drawing.Size(132, 20);
             this.textBoxAddCustomerEmail.TabIndex = 101;
@@ -638,7 +641,7 @@
             // labelAddCustomerFaxnumber
             // 
             this.labelAddCustomerFaxnumber.AutoSize = true;
-            this.labelAddCustomerFaxnumber.Location = new System.Drawing.Point(341, 163);
+            this.labelAddCustomerFaxnumber.Location = new System.Drawing.Point(341, 189);
             this.labelAddCustomerFaxnumber.Name = "labelAddCustomerFaxnumber";
             this.labelAddCustomerFaxnumber.Size = new System.Drawing.Size(59, 13);
             this.labelAddCustomerFaxnumber.TabIndex = 100;
@@ -646,7 +649,7 @@
             // 
             // textBoxAddCustomerFaxnumber
             // 
-            this.textBoxAddCustomerFaxnumber.Location = new System.Drawing.Point(446, 160);
+            this.textBoxAddCustomerFaxnumber.Location = new System.Drawing.Point(446, 186);
             this.textBoxAddCustomerFaxnumber.Name = "textBoxAddCustomerFaxnumber";
             this.textBoxAddCustomerFaxnumber.Size = new System.Drawing.Size(132, 20);
             this.textBoxAddCustomerFaxnumber.TabIndex = 99;
@@ -654,7 +657,7 @@
             // labelAddCustomerTelephone
             // 
             this.labelAddCustomerTelephone.AutoSize = true;
-            this.labelAddCustomerTelephone.Location = new System.Drawing.Point(341, 137);
+            this.labelAddCustomerTelephone.Location = new System.Drawing.Point(341, 163);
             this.labelAddCustomerTelephone.Name = "labelAddCustomerTelephone";
             this.labelAddCustomerTelephone.Size = new System.Drawing.Size(58, 13);
             this.labelAddCustomerTelephone.TabIndex = 98;
@@ -662,7 +665,7 @@
             // 
             // textBoxAddCustomerTelephone
             // 
-            this.textBoxAddCustomerTelephone.Location = new System.Drawing.Point(446, 134);
+            this.textBoxAddCustomerTelephone.Location = new System.Drawing.Point(446, 160);
             this.textBoxAddCustomerTelephone.Name = "textBoxAddCustomerTelephone";
             this.textBoxAddCustomerTelephone.Size = new System.Drawing.Size(132, 20);
             this.textBoxAddCustomerTelephone.TabIndex = 97;
@@ -670,7 +673,7 @@
             // labelAddCustomerInitials
             // 
             this.labelAddCustomerInitials.AutoSize = true;
-            this.labelAddCustomerInitials.Location = new System.Drawing.Point(341, 109);
+            this.labelAddCustomerInitials.Location = new System.Drawing.Point(341, 135);
             this.labelAddCustomerInitials.Name = "labelAddCustomerInitials";
             this.labelAddCustomerInitials.Size = new System.Drawing.Size(36, 13);
             this.labelAddCustomerInitials.TabIndex = 96;
@@ -678,7 +681,7 @@
             // 
             // textBoxAddCustomerInitials
             // 
-            this.textBoxAddCustomerInitials.Location = new System.Drawing.Point(446, 106);
+            this.textBoxAddCustomerInitials.Location = new System.Drawing.Point(446, 132);
             this.textBoxAddCustomerInitials.Name = "textBoxAddCustomerInitials";
             this.textBoxAddCustomerInitials.Size = new System.Drawing.Size(132, 20);
             this.textBoxAddCustomerInitials.TabIndex = 95;
@@ -686,7 +689,7 @@
             // labelAddCustomerContactPerson
             // 
             this.labelAddCustomerContactPerson.AutoSize = true;
-            this.labelAddCustomerContactPerson.Location = new System.Drawing.Point(341, 80);
+            this.labelAddCustomerContactPerson.Location = new System.Drawing.Point(341, 106);
             this.labelAddCustomerContactPerson.Name = "labelAddCustomerContactPerson";
             this.labelAddCustomerContactPerson.Size = new System.Drawing.Size(76, 13);
             this.labelAddCustomerContactPerson.TabIndex = 94;
@@ -694,7 +697,7 @@
             // 
             // textBoxAddCustomerContactperson
             // 
-            this.textBoxAddCustomerContactperson.Location = new System.Drawing.Point(446, 77);
+            this.textBoxAddCustomerContactperson.Location = new System.Drawing.Point(446, 103);
             this.textBoxAddCustomerContactperson.Name = "textBoxAddCustomerContactperson";
             this.textBoxAddCustomerContactperson.Size = new System.Drawing.Size(132, 20);
             this.textBoxAddCustomerContactperson.TabIndex = 93;
@@ -1764,6 +1767,7 @@
             // 
             // tabPageDashboard
             // 
+            this.tabPageDashboard.Controls.Add(this.panelTitleDashboard);
             this.tabPageDashboard.Controls.Add(this.labelCustomersPay);
             this.tabPageDashboard.Controls.Add(this.dataGridViewCustomersProjectNeedsPay);
             this.tabPageDashboard.Controls.Add(this.labelEarnedCustomers);
@@ -1923,6 +1927,24 @@
             this.pictureBox1.TabIndex = 32;
             this.pictureBox1.TabStop = false;
             // 
+            // panelTitleDashboard
+            // 
+            this.panelTitleDashboard.Controls.Add(this.labelTitleDashboard);
+            this.panelTitleDashboard.Location = new System.Drawing.Point(2, 2);
+            this.panelTitleDashboard.Name = "panelTitleDashboard";
+            this.panelTitleDashboard.Size = new System.Drawing.Size(768, 66);
+            this.panelTitleDashboard.TabIndex = 59;
+            // 
+            // labelTitleDashboard
+            // 
+            this.labelTitleDashboard.AutoSize = true;
+            this.labelTitleDashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitleDashboard.Location = new System.Drawing.Point(6, 8);
+            this.labelTitleDashboard.Name = "labelTitleDashboard";
+            this.labelTitleDashboard.Size = new System.Drawing.Size(157, 33);
+            this.labelTitleDashboard.TabIndex = 57;
+            this.labelTitleDashboard.Text = "Dashboard";
+            // 
             // FormFinance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2004,6 +2026,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelTitleDashboard.ResumeLayout(false);
+            this.panelTitleDashboard.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2185,5 +2209,7 @@
         private System.Windows.Forms.Label labelCustomerInfoBKR;
         private System.Windows.Forms.Label labelNumOfInvoices;
         private System.Windows.Forms.TextBox textBoxSearchInvoices;
+        private System.Windows.Forms.Panel panelTitleDashboard;
+        private System.Windows.Forms.Label labelTitleDashboard;
     }
 }

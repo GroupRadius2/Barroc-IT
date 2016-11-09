@@ -103,6 +103,18 @@ namespace Barroc_IT
         private void buttonCompanySave_Click(object sender, EventArgs e)
         {
             UpdateInfo();
+
+            string ledgerZeros = "";
+            int counterLedgerZeros = 0;
+
+            while (textBoxLedgerCustomerInfo.Text.Length < 10)
+            {
+                counterLedgerZeros++;
+                ledgerZeros += "0";
+            }
+
+            textBoxLedgerCustomerInfo.Text = ledgerZeros + textBoxLedgerCustomerInfo.Text;
+
             database.Query("SELECT COUNT(*) FROM tbl_companies");
             int countOfCompanyId = (int)database.ExecuteQuery();
 

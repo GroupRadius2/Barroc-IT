@@ -12,112 +12,93 @@ namespace Barroc_IT
 {
     public partial class FormLogin : Form
     {
-        public string psS = "sales123";
-        private string psF = "";
-        public string psD = "";
+        private Database database;
 
         public FormLogin()
         {
             InitializeComponent();
+            this.Show();
+            database = Database.GetInstance();
+            SetUp();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public void SetUp()
         {
-            switch(comboBox1.Text)
-            {
-                case "Finance":
-                    if (textBox2.Text == psF)
-                    {
-                        FormFinance finance = new FormFinance();
-                        finance.Show();
-                        this.Hide();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Invalid login credentials");
-                    }
-                    break;
-                case "Development":
-                    if (textBox2.Text == psD)
-                    {
-                        Development d = new Development();
-                        d.Show();
-                        this.Hide();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Invalid login credentials");
-                    }
-                    break;
-                case "Sales":
-                    if (textBox2.Text == psS)
-                    {
-                        Sales_dash SD = new Sales_dash();
-                        SD.Show();
-                        this.Hide();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Invalid login credentials");
-                    }
-                    break;
-                default:
-                    MessageBox.Show("Invalid login credentials");
-                    break;
-            }
+            database.CloseConnection();
+            database.OpenConnection();
+
+            CreateAccount("Finance", "abc");
+            CreateAccount("Sales", "def");
+            CreateAccount("Development", "ghi");
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        public void CreateAccount(string user, string passwordInSHA1Hash)
         {
-            comboBox1.Text = comboBox1.GetItemText(comboBox1.Items[0]);
+            database.Query("SELECT COUNT(*) FROM tbl_accounts");
+            int countOfAccounts = (int)database.ExecuteQuery();
+
+            database.Query("INSERT INTO tbl_accounts(a_username, a_password) VALUES(@a_username, @a_password);");
+            //database.AddParameter("@a_id", ++countOfAccounts);
+            database.AddParameter("@a_username", user);
+            database.AddParameter("@a_password", passwordInSHA1Hash);
+
+            database.ExecuteQuery();
         }
 
-        private void textBox2_KeyDown(object sender, KeyEventArgs e)
+        private void buttonLogin_Click(object sender, EventArgs e)
+        {
+            CheckLogin();
+        }
+
+        private void buttonLogin_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                switch (comboBox1.Text)
+                CheckLogin();
+            }
+        }
+
+        private void CheckLogin()
+        {
+            //database.Query("SELECT HASHBYTES('SHA', @a_password)");
+            //database.AddParameter("@a_password", textBoxPassword.Text);
+
+            database.Query("SELECT COUNT(*) FROM tbl_accounts WHERE a_username = @a_username AND a_password = @a_password;");
+            database.AddParameter("@a_username", comboBoxDepartments.SelectedItem.ToString());
+            database.AddParameter("@a_password", textBoxPassword.Text);
+
+            MessageBox.Show(comboBoxDepartments.SelectedItem.ToString());
+            MessageBox.Show(textBoxPassword.Text);
+            MessageBox.Show(((int)database.ExecuteQuery()).ToString());
+
+            if ((int)database.ExecuteQuery() > 0)
+            {
+                switch (comboBoxDepartments.SelectedItem.ToString().ToUpper())
                 {
-                    case "Finance":
-                        if (textBox2.Text == psF)
-                        {
-                            MainForm mf = new MainForm();
-                            mf.Show();
-                            this.Close();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Invalid login credentials");
-                        }
+                    case "FINANCE":
+                        MessageBox.Show("Finance");
+                        FormFinance finance = new FormFinance();
+                        finance.Show();
                         break;
-                    case "Development":
-                        if (textBox2.Text == psD)
-                        {
-                            Development d = new Development();
-                            d.Show();
-                            this.Hide();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Invalid login credentials");
-                        }
+                    case "SALES":
+                        Sales_dash sales = new Sales_dash();
+                        sales.Show();
                         break;
-                    case "Sales":
-                        if (textBox2.Text == psS)
-                        {
-                            Sales_dash SD = new Sales_dash();
-                            SD.Show();
-                            this.Hide();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Invalid login credentials");
-                        }
+                    case "DEVELOPMENT":
+                        Development dev = new Development();
+                        dev.Show();
                         break;
                     default:
-                        MessageBox.Show("Invalid login credentials");
                         break;
                 }
+            }
+        }
+
+        private void textBoxPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                CheckLogin();
             }
         }
     }   
