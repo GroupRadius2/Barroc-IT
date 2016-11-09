@@ -38,14 +38,14 @@ namespace Barroc_IT
             this.dataGridViewProjectProgress.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                         
             //DatagridView appointments
-            Database.GetInstance().QueryInDatagridView("Select project_id, c_name, a_date , a_time_of FROM tbl_appointments", dataGridViewAppointments);
-            dataGridViewAppointments.Columns[0].HeaderCell.Value = "Project id";
+            Database.GetInstance().QueryInDatagridView("Select tbl_projects.p_name , c_name, a_date , a_time_of FROM tbl_appointments, tbl_projects WHERE tbl_appointments.project_id = tbl_projects.project_id", dataGridViewAppointments);
+            dataGridViewAppointments.Columns[0].HeaderCell.Value = "Project name";
             dataGridViewAppointments.Columns[1].HeaderCell.Value = "Name";
             dataGridViewAppointments.Columns[2].HeaderCell.Value = "Date";
             dataGridViewAppointments.Columns[3].HeaderCell.Value = "Time";
             
             //DatagridView Projects
-            Database.GetInstance().QueryInDatagridView("Select company_id, p_name, p_status, p_start_date, p_end_date, p_progression FROM tbl_projects", dataGridViewProjects);
+            Database.GetInstance().QueryInDatagridView("Select tbl_companies.c_name, p_name, p_status, p_start_date, p_end_date, p_progression FROM tbl_projects, tbl_companies WHERE tbl_projects.company_id = tbl_companies.c_id", dataGridViewProjects);
             dataGridViewProjects.Columns[0].HeaderCell.Value = "Company";
             dataGridViewProjects.Columns[1].HeaderCell.Value = "Project";
             dataGridViewProjects.Columns[2].HeaderCell.Value = "Status";
@@ -82,36 +82,34 @@ namespace Barroc_IT
             dataGridViewCompanies.Columns[16].HeaderCell.Value = "Ledger";
             dataGridViewCompanies.Columns[17].HeaderCell.Value = "BTW Code";
             dataGridViewCompanies.Columns[18].HeaderCell.Value = "Maintenance contract";
-
-
         }
 
 
         private void label4_Click(object sender, EventArgs e)
         {
-            Tabcontrol1.SelectedTab = tabPage2;
-            label4.ForeColor = Color.Red;
-            label5.ForeColor = Color.Black;
-            label6.ForeColor = Color.Black;
-            label9.ForeColor = Color.Black;
+            Developmenttabcontrol.SelectedTab = Appointmentstab;
+            Appointmentslbl.ForeColor = Color.Red;
+            Projectslbl.ForeColor = Color.Black;
+            Companieslbl.ForeColor = Color.Black;
+            ProjectProgresslbl.ForeColor = Color.Black;
         }
 
         private void label5_Click(object sender, EventArgs e)
         {
-            Tabcontrol1.SelectedTab = tabPage3;
-            label4.ForeColor = Color.Black;
-            label5.ForeColor = Color.Red;
-            label6.ForeColor = Color.Black;
-            label9.ForeColor = Color.Black;
+            Developmenttabcontrol.SelectedTab = Projecttab;
+            Appointmentslbl.ForeColor = Color.Black;
+            Projectslbl.ForeColor = Color.Red;
+            Companieslbl.ForeColor = Color.Black;
+            ProjectProgresslbl.ForeColor = Color.Black;
         }
 
         private void label6_Click(object sender, EventArgs e)
         {
-            Tabcontrol1.SelectedTab = tabPage4;
-            label4.ForeColor = Color.Black;
-            label5.ForeColor = Color.Black;
-            label6.ForeColor = Color.Red;
-            label9.ForeColor = Color.Black;
+            Developmenttabcontrol.SelectedTab = Companiestab;
+            Appointmentslbl.ForeColor = Color.Black;
+            Projectslbl.ForeColor = Color.Black;
+            Companieslbl.ForeColor = Color.Red;
+            ProjectProgresslbl.ForeColor = Color.Black;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -123,11 +121,11 @@ namespace Barroc_IT
 
         private void label9_Click(object sender, EventArgs e)
         {
-            Tabcontrol1.SelectedTab = tabPage6;
-            label4.ForeColor = Color.Black;
-            label5.ForeColor = Color.Black;
-            label6.ForeColor = Color.Black;
-            label9.ForeColor = Color.Red;
+            Developmenttabcontrol.SelectedTab = ProjectProgresstab;
+            Appointmentslbl.ForeColor = Color.Black;
+            Projectslbl.ForeColor = Color.Black;
+            Companieslbl.ForeColor = Color.Black;
+            ProjectProgresslbl.ForeColor = Color.Red;
         }
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
@@ -138,16 +136,17 @@ namespace Barroc_IT
             {
                 if(row.Selected)
                 {
+                    
                     selectedIndexAppointment = counter;
 
                     ChangeAppointment changeappointment = new ChangeAppointment(this);
                     changeappointment.Show();
-                    changeappointment.Projecttbx.Text= row.Cells[0].Value.ToString();
                     changeappointment.Nametbx.Text = row.Cells[1].Value.ToString();
-                    changeappointment.Datetbx.Text = row.Cells[2].Value.ToString();
+                    changeappointment.Datetbx.Text = row.Cells[2].Value.ToString().Split(' ')[0];
                     changeappointment.Timetbx.Text = row.Cells[3].Value.ToString();
+                    
                 }
-
+                dataGridViewProjects.ClearSelection();
                 counter++;
             }
         }
@@ -163,13 +162,24 @@ namespace Barroc_IT
 
                     ChangeProject changeProject = new ChangeProject(this);
                     changeProject.Show();
-                    changeProject.StartDatetbx.Text = row.Cells[0].Value.ToString();
-                    changeProject.EndDatetbx.Text = row.Cells[1].Value.ToString();
-                    changeProject.Progressiontbx.Text = row.Cells[2].Value.ToString();
-                    
+                    if(row.Cells[2].Value.ToString() == "True")
+                    {
+                        changeProject.Statuscbx.Checked = true;
+                        changeProject.Statuscbx.Text = "Project is active";
+                    }
+                    else
+                    {
+                        changeProject.Statuscbx.Checked = false;
+                        changeProject.Statuscbx.Text = "Project is inactive";
+                    }
+                    changeProject.Nametbx.Text = row.Cells[1].Value.ToString();
+                    changeProject.StartDatetbx.Text = row.Cells[3].Value.ToString().Split(' ')[0];
+                    changeProject.EndDatetbx.Text = row.Cells[4].Value.ToString().Split(' ')[0];
+                    changeProject.Progressiontbx.Text = row.Cells[5].Value.ToString();
+                    dataGridViewProjects.ClearSelection();
                 }
-
                 counter++;
+                
             }
         }
 
