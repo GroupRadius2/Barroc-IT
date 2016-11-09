@@ -57,7 +57,7 @@ namespace Barroc_IT
             return departmentInString;
         }
 
-        public void SentMessage(Department department, string title, string message)
+        public void SendMessage(Department department, string title, string message)
         {
             database.Query("SELECT COUNT(*) FROM tbl_messages;");
             int countOfMessages = (int)database.ExecuteQuery();
@@ -94,6 +94,12 @@ namespace Barroc_IT
                     }
                 }
             }
+        }
+
+        private void buttonSendMessage_Click(object sender, EventArgs e)
+        {
+            FormMessage message = new FormMessage(this);
+            message.Show();
         }
     }
 }

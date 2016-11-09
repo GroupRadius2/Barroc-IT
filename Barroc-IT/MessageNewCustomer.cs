@@ -40,9 +40,9 @@ namespace Barroc_IT
             int countOfCompanyId = (int)Database.GetInstance().ExecuteQuery();
 
             Database.GetInstance().Query("INSERT INTO tbl_companies(c_name, c_address, c_housenumber, c_city, c_contactperson_first_name, " +
-                "c_contactperson_telephone_number, c_contactperson_faxnumber, c_contactperson_email, c_contactperson_telephone_number2, c_city2, c_zipcode, c_zipcode2, c_address2) " +
+                "c_contactperson_telephone_number, c_contactperson_faxnumber, c_contactperson_email, c_contactperson_telephone_number2, c_city2, c_zipcode, c_zipcode2, c_address2, c_credit_balance, c_bkr) " +
                 "VALUES(@c_name, @c_address, @c_housenumber, @c_city, @c_contactperson_first_name, " +
-                "@c_contactperson_telephone_number, @c_contactperson_faxnumber, @c_contactperson_email, @c_contactperson_telephone_number2, @c_city2, @c_zipcode, @c_zipcode2, @c_address2)");
+                "@c_contactperson_telephone_number, @c_contactperson_faxnumber, @c_contactperson_email, @c_contactperson_telephone_number2, @c_city2, @c_zipcode, @c_zipcode2, @c_address2, @c_credit_balance, @c_bkr)");
             Database.GetInstance().AddParameter("@c_name", sales.textBoxCompanyName.Text);
             Database.GetInstance().AddParameter("@c_address", sales.textBoxAddress1.Text);
             Database.GetInstance().AddParameter("@c_housenumber", sales.textBoxHousenumber.Text );
@@ -56,10 +56,13 @@ namespace Barroc_IT
             Database.GetInstance().AddParameter("@c_zipcode2", sales.textBoxZipcode2.Text);
             Database.GetInstance().AddParameter("@c_address2", sales.textBoxAddress2.Text);
             Database.GetInstance().AddParameter("@c_city2", sales.textBoxResidence2.Text);
+            Database.GetInstance().AddParameter("@c_credit_balance", 0);
+            Database.GetInstance().AddParameter("@c_bkr", 0);
 
             Database.GetInstance().ExecuteQuery();
 
-            
+            sales.tabControlSales.SelectedTab = sales.tabCustomers;
+            sales.UpdateInfo();
            
         }
 
