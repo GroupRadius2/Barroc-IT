@@ -90,7 +90,7 @@ namespace Barroc_IT
         {
             UpdateInfo();
             tabControlFinance.SelectTab(tabPageAddCustomer);
-            labelAddCustomer.ForeColor = Color.Red;
+            //labelAddCustomer.ForeColor = Color.Red;
         }
 
         private void labelAddInvoice_Click(object sender, EventArgs e)
@@ -153,7 +153,7 @@ namespace Barroc_IT
 
         private void UpdateInfo()
         {
-            labelAddCustomer.ForeColor = Color.Black;
+            //labelAddCustomer.ForeColor = Color.Black;
             labelDashboard.ForeColor = Color.Black;
             labelProjects.ForeColor = Color.Black;
             labelCustomers.ForeColor = Color.Black;

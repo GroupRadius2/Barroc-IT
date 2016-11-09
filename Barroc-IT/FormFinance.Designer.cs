@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormFinance));
             this.labelAddInvoice = new System.Windows.Forms.Label();
-            this.labelAddCustomer = new System.Windows.Forms.Label();
             this.labelInvoices = new System.Windows.Forms.Label();
             this.labelProjects = new System.Windows.Forms.Label();
             this.labelCustomers = new System.Windows.Forms.Label();
@@ -185,6 +185,8 @@
             this.panelTitleChangeProject = new System.Windows.Forms.Panel();
             this.labelTitleChangeProject = new System.Windows.Forms.Label();
             this.tabPageDashboard = new System.Windows.Forms.TabPage();
+            this.panelTitleDashboard = new System.Windows.Forms.Panel();
+            this.labelTitleDashboard = new System.Windows.Forms.Label();
             this.labelCustomersPay = new System.Windows.Forms.Label();
             this.dataGridViewCustomersProjectNeedsPay = new System.Windows.Forms.DataGridView();
             this.labelEarnedCustomers = new System.Windows.Forms.Label();
@@ -195,7 +197,6 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
@@ -203,8 +204,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panelTitleDashboard = new System.Windows.Forms.Panel();
-            this.labelTitleDashboard = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPositiveCompanies)).BeginInit();
             this.tabControlFinance.SuspendLayout();
             this.tabPageCustomers.SuspendLayout();
@@ -226,6 +225,7 @@
             this.tabPageChangeProject.SuspendLayout();
             this.panelTitleChangeProject.SuspendLayout();
             this.tabPageDashboard.SuspendLayout();
+            this.panelTitleDashboard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCustomersProjectNeedsPay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEarnedCustomers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblprojectsBindingSource)).BeginInit();
@@ -233,7 +233,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -241,7 +240,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panelTitleDashboard.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelAddInvoice
@@ -249,24 +247,12 @@
             this.labelAddInvoice.AutoSize = true;
             this.labelAddInvoice.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.labelAddInvoice.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAddInvoice.Location = new System.Drawing.Point(5, 497);
+            this.labelAddInvoice.Location = new System.Drawing.Point(2, 439);
             this.labelAddInvoice.Name = "labelAddInvoice";
             this.labelAddInvoice.Size = new System.Drawing.Size(167, 33);
             this.labelAddInvoice.TabIndex = 51;
             this.labelAddInvoice.Text = "Add Invoice";
             this.labelAddInvoice.Click += new System.EventHandler(this.labelAddInvoice_Click);
-            // 
-            // labelAddCustomer
-            // 
-            this.labelAddCustomer.AutoSize = true;
-            this.labelAddCustomer.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.labelAddCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAddCustomer.Location = new System.Drawing.Point(5, 440);
-            this.labelAddCustomer.Name = "labelAddCustomer";
-            this.labelAddCustomer.Size = new System.Drawing.Size(195, 33);
-            this.labelAddCustomer.TabIndex = 48;
-            this.labelAddCustomer.Text = "Add customer";
-            this.labelAddCustomer.Click += new System.EventHandler(this.labelAddCustomer_Click);
             // 
             // labelInvoices
             // 
@@ -1779,6 +1765,24 @@
             this.tabPageDashboard.Text = "tabPageDashboard";
             this.tabPageDashboard.UseVisualStyleBackColor = true;
             // 
+            // panelTitleDashboard
+            // 
+            this.panelTitleDashboard.Controls.Add(this.labelTitleDashboard);
+            this.panelTitleDashboard.Location = new System.Drawing.Point(2, 2);
+            this.panelTitleDashboard.Name = "panelTitleDashboard";
+            this.panelTitleDashboard.Size = new System.Drawing.Size(768, 66);
+            this.panelTitleDashboard.TabIndex = 59;
+            // 
+            // labelTitleDashboard
+            // 
+            this.labelTitleDashboard.AutoSize = true;
+            this.labelTitleDashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitleDashboard.Location = new System.Drawing.Point(6, 8);
+            this.labelTitleDashboard.Name = "labelTitleDashboard";
+            this.labelTitleDashboard.Size = new System.Drawing.Size(157, 33);
+            this.labelTitleDashboard.TabIndex = 57;
+            this.labelTitleDashboard.Text = "Dashboard";
+            // 
             // labelCustomersPay
             // 
             this.labelCustomersPay.AutoSize = true;
@@ -1830,7 +1834,7 @@
             // pictureBox6
             // 
             this.pictureBox6.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox6.Location = new System.Drawing.Point(-6, 534);
+            this.pictureBox6.Location = new System.Drawing.Point(-5, 478);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(218, 5);
             this.pictureBox6.TabIndex = 58;
@@ -1847,22 +1851,13 @@
             // 
             // pictureBox12
             // 
-            this.pictureBox12.Image = global::Barroc_IT.Properties.Resources._1;
+            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
             this.pictureBox12.Location = new System.Drawing.Point(46, 71);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(123, 108);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox12.TabIndex = 53;
             this.pictureBox12.TabStop = false;
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox10.Location = new System.Drawing.Point(-5, 479);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(218, 5);
-            this.pictureBox10.TabIndex = 40;
-            this.pictureBox10.TabStop = false;
             // 
             // pictureBox11
             // 
@@ -1927,24 +1922,6 @@
             this.pictureBox1.TabIndex = 32;
             this.pictureBox1.TabStop = false;
             // 
-            // panelTitleDashboard
-            // 
-            this.panelTitleDashboard.Controls.Add(this.labelTitleDashboard);
-            this.panelTitleDashboard.Location = new System.Drawing.Point(2, 2);
-            this.panelTitleDashboard.Name = "panelTitleDashboard";
-            this.panelTitleDashboard.Size = new System.Drawing.Size(768, 66);
-            this.panelTitleDashboard.TabIndex = 59;
-            // 
-            // labelTitleDashboard
-            // 
-            this.labelTitleDashboard.AutoSize = true;
-            this.labelTitleDashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitleDashboard.Location = new System.Drawing.Point(6, 8);
-            this.labelTitleDashboard.Name = "labelTitleDashboard";
-            this.labelTitleDashboard.Size = new System.Drawing.Size(157, 33);
-            this.labelTitleDashboard.TabIndex = 57;
-            this.labelTitleDashboard.Text = "Dashboard";
-            // 
             // FormFinance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1955,14 +1932,12 @@
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox12);
             this.Controls.Add(this.labelAddInvoice);
-            this.Controls.Add(this.labelAddCustomer);
             this.Controls.Add(this.labelInvoices);
             this.Controls.Add(this.labelProjects);
             this.Controls.Add(this.labelCustomers);
             this.Controls.Add(this.labelNotifications);
             this.Controls.Add(this.labelDashboard);
             this.Controls.Add(this.buttonLogout);
-            this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.pictureBox11);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox8);
@@ -2011,6 +1986,8 @@
             this.panelTitleChangeProject.PerformLayout();
             this.tabPageDashboard.ResumeLayout(false);
             this.tabPageDashboard.PerformLayout();
+            this.panelTitleDashboard.ResumeLayout(false);
+            this.panelTitleDashboard.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCustomersProjectNeedsPay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEarnedCustomers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblprojectsBindingSource)).EndInit();
@@ -2018,7 +1995,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
@@ -2026,8 +2002,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panelTitleDashboard.ResumeLayout(false);
-            this.panelTitleDashboard.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2037,14 +2011,12 @@
 
         private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.Label labelAddInvoice;
-        private System.Windows.Forms.Label labelAddCustomer;
         private System.Windows.Forms.Label labelInvoices;
         private System.Windows.Forms.Label labelProjects;
         private System.Windows.Forms.Label labelCustomers;
         private System.Windows.Forms.Label labelNotifications;
         private System.Windows.Forms.Label labelDashboard;
         private System.Windows.Forms.Button buttonLogout;
-        private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox8;

@@ -67,10 +67,6 @@ namespace Barroc_IT
             database.AddParameter("@a_username", comboBoxDepartments.SelectedItem.ToString());
             database.AddParameter("@a_password", textBoxPassword.Text);
 
-            MessageBox.Show(comboBoxDepartments.SelectedItem.ToString());
-            MessageBox.Show(textBoxPassword.Text);
-            MessageBox.Show(((int)database.ExecuteQuery()).ToString());
-
             if ((int)database.ExecuteQuery() > 0)
             {
                 switch (comboBoxDepartments.SelectedItem.ToString().ToUpper())
