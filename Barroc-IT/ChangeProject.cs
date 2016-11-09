@@ -31,9 +31,7 @@ namespace Barroc_IT
             Database.GetInstance().AddParameter("@p_start_date", Sd);
 
             Database.GetInstance().ExecuteQuery();
-
-            Database.GetInstance().QueryInDatagridView("SELECT p_start_date, p_end_date, p_progression FROM tbl_projects;", dev.dataGridViewProjects);
-            //Database.GetInstance().QueryInDatagridView("SELECT p_progression , p_start_date, p_end_date FROM tbl_projects;", dev.dataGridView4);
+ 
             //EndDate
             Database.GetInstance().Query("UPDATE tbl_projects SET p_end_date = @p_end_date WHERE project_id = @project_id;");
             DateTime Ed;
@@ -44,8 +42,6 @@ namespace Barroc_IT
 
             Database.GetInstance().ExecuteQuery();
 
-            Database.GetInstance().QueryInDatagridView("SELECT p_start_date, p_end_date, p_progression FROM tbl_projects;", dev.dataGridViewProjects);
-            //Database.GetInstance().QueryInDatagridView("SELECT p_progression , p_start_date, p_end_date FROM tbl_projects;", dev.dataGridView4);
             
             //Progression
             Database.GetInstance().Query("UPDATE tbl_projects SET p_progression = @p_progression WHERE project_id = @project_id;");
@@ -57,14 +53,59 @@ namespace Barroc_IT
             Database.GetInstance().AddParameter("@p_progression", pr);
 
             Database.GetInstance().ExecuteQuery();
+            //Name
+            Database.GetInstance().Query("UPDATE tbl_projects SET p_name = @p_name WHERE project_id = @project_id;");
 
-            Database.GetInstance().QueryInDatagridView("SELECT p_progression , p_start_date, p_end_date FROM tbl_projects;", dev.dataGridViewProjectProgress);
+            string Nm;
+            Nm = Nametbx.Text;
+
+            Database.GetInstance().AddParameter("@project_id", dev.GetSelectedIndexProject());
+            Database.GetInstance().AddParameter("@p_name", Nm);
+
+            Database.GetInstance().ExecuteQuery();
+
+            Database.GetInstance().QueryInDatagridView("Select tbl_companies.c_name, p_name, p_status, p_start_date, p_end_date, p_progression FROM tbl_projects, tbl_companies WHERE tbl_projects.company_id = tbl_companies.c_id;", dev.dataGridViewProjects);
+            this.Hide();
+
+            //Checkbox
+            Database.GetInstance().Query("UPDATE tbl_projects SET p_status = @p_status WHERE project_id = @project_id;");
+
+            string Cb;
+            if(Statuscbx.Checked)
+            {
+                Cb = "True";
+            }
+            else
+            {
+                Cb = "false";
+            }
+
+            Database.GetInstance().AddParameter("@project_id", dev.GetSelectedIndexProject());
+            Database.GetInstance().AddParameter("@p_status", Cb);
+
+            Database.GetInstance().ExecuteQuery();
+
+            Database.GetInstance().QueryInDatagridView("Select tbl_companies.c_name, p_name, p_status, p_start_date, p_end_date, p_progression FROM tbl_projects, tbl_companies WHERE tbl_projects.company_id = tbl_companies.c_id;", dev.dataGridViewProjects);
+            Database.GetInstance().QueryInDatagridView("Select tbl_companies.c_name, p_name, p_status, p_start_date, p_end_date, p_progression FROM tbl_projects, tbl_companies WHERE tbl_projects.company_id = tbl_companies.c_id;", dev.dataGridViewProjectProgress);
+
             this.Hide();
         }
 
         private void Closebtn_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void Statuscbx_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Statuscbx.Checked)
+            {
+                Statuscbx.Text = "Project is active";
+            }
+            else
+            {
+                Statuscbx.Text = "Project is inactive";
+            }
         }
     }
 }

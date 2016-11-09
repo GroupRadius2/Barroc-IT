@@ -28,14 +28,16 @@ namespace Barroc_IT
             database.Query("SELECT COUNT(*) FROM tbl_appointments");
             int countAppointmentId = (int)database.ExecuteQuery();
 
-            database.Query("INSERT INTO tbl_appointments(appiontment_id, project_id, a_date, a_time_of)VALUES(@id, @p_id, @a_date, @a_time_of);");
+            database.Query("INSERT INTO tbl_appointments(appiontment_id, project_id, a_date, a_time_of, c_name)VALUES(@id, @p_id, @a_date, @a_time_of , @c_name);");
             database.AddParameter("@id", ++countAppointmentId);
             database.AddParameter("@p_id", Projecttbx.Text);
             database.AddParameter("@a_date", Datetbx.Text);
             database.AddParameter("@a_time_of", Timetbx.Text);
+            database.AddParameter("@c_name", Nametbx.Text);
             database.ExecuteQuery();
 
-            Database.GetInstance().QueryInDatagridView("SELECT project_id, a_date, a_time_of FROM tbl_appointments;", dev.dataGridViewAppointments);
+            Database.GetInstance().QueryInDatagridView("Select tbl_projects.p_name , c_name, a_date , a_time_of FROM tbl_appointments, tbl_projects WHERE tbl_appointments.project_id = tbl_projects.project_id;", dev.dataGridViewAppointments);
+
             this.Hide();
         }
 

@@ -33,8 +33,6 @@ namespace Barroc_IT
             Database.GetInstance().AddParameter("@a_date", dt);
 
             Database.GetInstance().ExecuteQuery();
-
-            Database.GetInstance().QueryInDatagridView("SELECT a_date, a_time_of FROM tbl_appointments;", dev.dataGridViewAppointments);
             
             //Time
             Database.GetInstance().Query("UPDATE tbl_appointments SET a_time_of = @a_time_of WHERE appiontment_id = @appointment_id;");
@@ -47,7 +45,19 @@ namespace Barroc_IT
 
             Database.GetInstance().ExecuteQuery();
 
-            Database.GetInstance().QueryInDatagridView("Select project_id, c_name, a_date , a_time_of FROM tbl_appointments", dev.dataGridViewAppointments);
+            this.Hide();
+            //Name
+            Database.GetInstance().Query("UPDATE tbl_appointments SET c_name = @c_name WHERE appiontment_id = @appointment_id;");
+
+            string Nm;
+            Nm = Nametbx.Text;
+
+            Database.GetInstance().AddParameter("@appointment_id", dev.GetSelectedIndexAppointment());
+            Database.GetInstance().AddParameter("@c_name", Nm);
+
+            Database.GetInstance().ExecuteQuery();
+
+            Database.GetInstance().QueryInDatagridView("Select tbl_projects.p_name , c_name, a_date , a_time_of FROM tbl_appointments, tbl_projects WHERE tbl_appointments.project_id = tbl_projects.project_id", dev.dataGridViewAppointments);
 
             this.Hide();
         }
