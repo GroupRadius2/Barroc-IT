@@ -182,6 +182,10 @@ namespace Barroc_IT
         private void buttonSaveInvoice_Click(object sender, EventArgs e)
         {
             UpdateInfo();
+            bool correct = true;
+            string message = "";
+            decimal price;
+            int projectId;
 
             database.Query("SELECT COUNT(*) FROM tbl_invoices");
             int countOfInvoicesId = (int)database.ExecuteQuery();
@@ -190,21 +194,50 @@ namespace Barroc_IT
                 "(@id, @project_id, @i_description, @i_price, @i_paid);");
 
             database.AddParameter("@id", ++countOfInvoicesId);
-            database.AddParameter("@project_id", textBoxProjectId.Text);
-            database.AddParameter("@i_description", textBoxInvoiceDescription.Text);
-            database.AddParameter("@i_price", textBoxInvoicePrice.Text);
-            database.AddParameter("@i_paid", checkBoxAddInvoicePaid.Checked ? 1 : 0); 
 
-            ConfirmBoxBuilder builder = new ConfirmBoxBuilder();
-            builder.BuildSize(400, 500);
-            builder.BuildTop("Are you sure you want to save the following information:");
-            builder.BuildCenter("Project id: " + countOfInvoicesId.ToString() + Environment.NewLine +
-                "Description: " + textBoxInvoiceDescription.Text + Environment.NewLine +
-                "Price: " + textBoxInvoicePrice.Text + Environment.NewLine +
-                "Paid: " + checkBoxChangeInvoicePaid.Checked.ToString());
-            builder.BuildBottom(tabControlFinance, tabPageInvoices, dataGridViewInvoices, "SELECT * FROM tbl_invoices;");
+            if (int.TryParse(textBoxProjectId.Text, out projectId))
+            {
+                database.AddParameter("@project_id", textBoxProjectId.Text);
+            }
+            else
+            {
+                correct = false;
+                message += "Project ID is not a valid number. ";
+            } 
 
-            builder.GetConfirmBox().Show();
+            if (decimal.TryParse(textBoxInvoicePrice.Text, out price))
+            {
+                database.AddParameter("@i_price", price);
+            }
+            else
+            {
+                correct = false;
+                message += "Price is not valid datatype. ";
+            }
+
+            database.AddParameter("@id", selectedIndexInvoice);
+
+            if (correct)
+            {
+                database.AddParameter("@i_description", textBoxInvoiceDescription.Text);
+                database.AddParameter("@i_price", textBoxInvoicePrice.Text);
+                database.AddParameter("@i_paid", checkBoxAddInvoicePaid.Checked ? 1 : 0);
+
+                ConfirmBoxBuilder builder = new ConfirmBoxBuilder();
+                builder.BuildSize(400, 500);
+                builder.BuildTop("Are you sure you want to save the following information:");
+                builder.BuildCenter("Project id: " + countOfInvoicesId.ToString() + Environment.NewLine +
+                    "Description: " + textBoxInvoiceDescription.Text + Environment.NewLine +
+                    "Price: " + textBoxInvoicePrice.Text + Environment.NewLine +
+                    "Paid: " + checkBoxChangeInvoicePaid.Checked.ToString());
+                builder.BuildBottom(tabControlFinance, tabPageInvoices, dataGridViewInvoices, "SELECT * FROM tbl_invoices;");
+
+                builder.GetConfirmBox().Show();
+            }
+            else
+            {
+                MessageBox.Show(message);
+            }
         }
 
         private void dataGridViewInvoices_SelectionChanged(object sender, EventArgs e)
@@ -250,7 +283,6 @@ namespace Barroc_IT
                 message += "Price is not valid datatype.";
             }
 
-            
             database.AddParameter("@id", selectedIndexInvoice);
 
             if (correct)
@@ -318,7 +350,6 @@ namespace Barroc_IT
                     {
                         bool potentialCustomer;
                         bool creditWorthyChecked;
-                        bool bkr;
                         int indexCustomer;
 
                         bool.TryParse(row.Cells["c_creditworthy"].Value.ToString(), out creditWorthyChecked);
@@ -347,9 +378,6 @@ namespace Barroc_IT
                         textBoxMaintenanceContractCustomerInfo.Text = row.Cells["c_maintenance_contract"].Value.ToString();
                         bool.TryParse(row.Cells["c_potential_customer"].Value.ToString(), out potentialCustomer);
                         checkBoxPotentialCustomerInfo.Checked = potentialCustomer;
-
-                        bool.TryParse(row.Cells["c_bkr"].Value.ToString(), out bkr);
-                        textBoxCustomerInfoBKR.Text = bkr ? "Positive" : "Negative";
 
                         tabControlFinance.SelectTab(tabPageCustomerInfo);
                     }
@@ -412,7 +440,7 @@ namespace Barroc_IT
             {
                 if (row.Selected)
                 {
-                    if (row.Cells[0].Value != null)
+                    if (row.Cells[1].Value != null)
                     {
                         bool isActiveProject = false;
                         bool activeProject;
@@ -422,7 +450,7 @@ namespace Barroc_IT
                             isActiveProject = true;
                         }
 
-                        selectedIndexProject = (int)row.Cells["project_id"].Value;
+                        int.TryParse(row.Cells["project_id"].Value.ToString(), out selectedIndexProject);
 
                         textBoxChangeProjectName.Text = row.Cells["p_name"].Value.ToString();
                         checkBoxActiveChangeProject.Checked = isActiveProject;
@@ -468,22 +496,54 @@ namespace Barroc_IT
 
         private void labelAddQuotation_Click(object sender, EventArgs e)
         {
+            UpdateInfo();
+            tabControlFinance.SelectTab(tabPageAddQuotation);
             labelAddQuotation.ForeColor = Color.Red;
         }
 
         private void buttonAddQuotationSave_Click(object sender, EventArgs e)
         {
+            int projectId;
+            bool correct = true;
+            string message = "";
+
             database.Query("INSERT INTO tbl_quotations(project_id, q_status) VALUES(@project_id, @q_status)");
 
-            database.AddParameter("@project_id", textBoxAddQuotationProjectId.Text);
+            if (int.TryParse(textBoxAddQuotationProjectId.Text, out projectId))
+            {
+                database.AddParameter("@project_id", textBoxAddQuotationProjectId.Text);
+            }
+            else
+            {
+                correct = false;
+                message += "Project ID is not a number. ";
+            }
+            
             database.AddParameter("@q_status", textBoxAddQuotationStatus.Text);
 
-            ConfirmBoxBuilder builder = new ConfirmBoxBuilder();
-            builder.BuildTop("You are about to change the following information:");
-            builder.BuildCenter("Project ID: " + textBoxAddQuotationProjectId.Text + Environment.NewLine +
-                "Status: " + textBoxAddQuotationStatus.Text);
-            builder.BuildBottom(tabControlFinance, tabPageProjects, dataGridViewProjects, queryProjects);
-            builder.GetConfirmBox().Show();
+            if (correct)
+            {
+                ConfirmBoxBuilder builder = new ConfirmBoxBuilder();
+                builder.BuildTop("You are about to change the following information:");
+                builder.BuildCenter("Project ID: " + textBoxAddQuotationProjectId.Text + Environment.NewLine +
+                    "Status: " + textBoxAddQuotationStatus.Text);
+                builder.BuildBottom(tabControlFinance, tabPageProjects, dataGridViewProjects, queryProjects);
+                builder.GetConfirmBox().Show();
+            }
+            else
+            {
+                MessageBox.Show(message);
+            }
+            
+        }
+
+        private void checkBoxCustomerBKR_CheckedChanged(object sender, EventArgs e)
+        {
+            database.Query("UPDATE tbl_companies SET c_bkr = @c_bkr;");
+
+            database.AddParameter("@c_bkr", checkBoxCustomerBKR.Checked);
+
+            database.ExecuteQuery();
         }
     }
 }
