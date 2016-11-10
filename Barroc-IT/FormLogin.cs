@@ -72,7 +72,6 @@ namespace Barroc_IT
                 switch (comboBoxDepartments.SelectedItem.ToString().ToUpper())
                 {
                     case "FINANCE":
-                        MessageBox.Show("Finance");
                         FormFinance finance = new FormFinance();
                         finance.Show();
                         break;
@@ -88,6 +87,10 @@ namespace Barroc_IT
                         break;
                 }
             }
+            else
+            {
+                MessageBox.Show("Invalid login details...");
+            }
         }
 
         private void textBoxPassword_KeyDown(object sender, KeyEventArgs e)
@@ -96,6 +99,11 @@ namespace Barroc_IT
             {
                 CheckLogin();
             }
+        }
+
+        private void comboBoxDepartments_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            buttonLogin.Enabled = true;
         }
     }   
 }
