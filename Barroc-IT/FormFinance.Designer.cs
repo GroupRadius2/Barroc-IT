@@ -102,7 +102,7 @@
             this.labelCompanyName = new System.Windows.Forms.Label();
             this.textBoxAddCustomerCompanyName = new System.Windows.Forms.TextBox();
             this.tabPageCustomerInfo = new System.Windows.Forms.TabPage();
-            this.textBoxCustomerInfoBKR = new System.Windows.Forms.TextBox();
+            this.checkBoxCustomerBKR = new System.Windows.Forms.CheckBox();
             this.labelCustomerInfoBKR = new System.Windows.Forms.Label();
             this.buttonBackCustomerInfo = new System.Windows.Forms.Button();
             this.panelTitleChangeCustomer = new System.Windows.Forms.Panel();
@@ -191,7 +191,12 @@
             this.dataGridViewCustomersProjectNeedsPay = new System.Windows.Forms.DataGridView();
             this.labelEarnedCustomers = new System.Windows.Forms.Label();
             this.dataGridViewEarnedCustomers = new System.Windows.Forms.DataGridView();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPageAddQuotation = new System.Windows.Forms.TabPage();
+            this.buttonAddQuotationSave = new System.Windows.Forms.Button();
+            this.labelAddQuotationStatus = new System.Windows.Forms.Label();
+            this.textBoxAddQuotationStatus = new System.Windows.Forms.TextBox();
+            this.labelAddQuotationProjectID = new System.Windows.Forms.Label();
+            this.textBoxAddQuotationProjectId = new System.Windows.Forms.TextBox();
             this.panelQuotation = new System.Windows.Forms.Panel();
             this.labelTitleAddQuotation = new System.Windows.Forms.Label();
             this.tblprojectsBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -209,11 +214,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelAddQuotation = new System.Windows.Forms.Label();
             this.pictureBoxAddQuotation = new System.Windows.Forms.PictureBox();
-            this.buttonAddQuotationSave = new System.Windows.Forms.Button();
-            this.labelAddQuotationStatus = new System.Windows.Forms.Label();
-            this.textBoxAddQuotationStatus = new System.Windows.Forms.TextBox();
-            this.labelAddQuotationProjectID = new System.Windows.Forms.Label();
-            this.textBoxAddQuotationProjectId = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPositiveCompanies)).BeginInit();
             this.tabControlFinance.SuspendLayout();
             this.tabPageCustomers.SuspendLayout();
@@ -238,7 +238,7 @@
             this.panelTitleDashboard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCustomersProjectNeedsPay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEarnedCustomers)).BeginInit();
-            this.tabPage1.SuspendLayout();
+            this.tabPageAddQuotation.SuspendLayout();
             this.panelQuotation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblprojectsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.databaseBarrocProjectsDataSet)).BeginInit();
@@ -343,6 +343,7 @@
             this.dataGridViewPositiveCompanies.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dataGridViewPositiveCompanies.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewPositiveCompanies.Location = new System.Drawing.Point(111, 140);
+            this.dataGridViewPositiveCompanies.MultiSelect = false;
             this.dataGridViewPositiveCompanies.Name = "dataGridViewPositiveCompanies";
             this.dataGridViewPositiveCompanies.Size = new System.Drawing.Size(884, 196);
             this.dataGridViewPositiveCompanies.TabIndex = 56;
@@ -363,7 +364,7 @@
             this.tabControlFinance.Controls.Add(this.tabPageAddInvoice);
             this.tabControlFinance.Controls.Add(this.tabPageChangeProject);
             this.tabControlFinance.Controls.Add(this.tabPageDashboard);
-            this.tabControlFinance.Controls.Add(this.tabPage1);
+            this.tabControlFinance.Controls.Add(this.tabPageAddQuotation);
             this.tabControlFinance.Location = new System.Drawing.Point(208, 65);
             this.tabControlFinance.Multiline = true;
             this.tabControlFinance.Name = "tabControlFinance";
@@ -401,6 +402,7 @@
             this.dataGridViewNegativeCompanies.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridViewNegativeCompanies.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewNegativeCompanies.Location = new System.Drawing.Point(111, 364);
+            this.dataGridViewNegativeCompanies.MultiSelect = false;
             this.dataGridViewNegativeCompanies.Name = "dataGridViewNegativeCompanies";
             this.dataGridViewNegativeCompanies.Size = new System.Drawing.Size(884, 210);
             this.dataGridViewNegativeCompanies.TabIndex = 60;
@@ -460,7 +462,7 @@
             this.panel2.Controls.Add(this.labelTitleProjects);
             this.panel2.Location = new System.Drawing.Point(0, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1175, 66);
+            this.panel2.Size = new System.Drawing.Size(1194, 66);
             this.panel2.TabIndex = 60;
             // 
             // labelTitleProjects
@@ -513,8 +515,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewInvoices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewInvoices.Location = new System.Drawing.Point(26, 130);
+            this.dataGridViewInvoices.MultiSelect = false;
             this.dataGridViewInvoices.Name = "dataGridViewInvoices";
-            this.dataGridViewInvoices.Size = new System.Drawing.Size(571, 257);
+            this.dataGridViewInvoices.Size = new System.Drawing.Size(590, 257);
             this.dataGridViewInvoices.TabIndex = 63;
             this.dataGridViewInvoices.SelectionChanged += new System.EventHandler(this.dataGridViewInvoices_SelectionChanged);
             // 
@@ -533,7 +536,7 @@
             this.panelInvoices.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelInvoices.Location = new System.Drawing.Point(0, 0);
             this.panelInvoices.Name = "panelInvoices";
-            this.panelInvoices.Size = new System.Drawing.Size(1175, 62);
+            this.panelInvoices.Size = new System.Drawing.Size(1194, 62);
             this.panelInvoices.TabIndex = 62;
             // 
             // tabPageAddCustomer
@@ -930,7 +933,7 @@
             this.panelAddCustomer.Controls.Add(this.labelTitleAddCustomer);
             this.panelAddCustomer.Location = new System.Drawing.Point(0, 1);
             this.panelAddCustomer.Name = "panelAddCustomer";
-            this.panelAddCustomer.Size = new System.Drawing.Size(1175, 66);
+            this.panelAddCustomer.Size = new System.Drawing.Size(1194, 66);
             this.panelAddCustomer.TabIndex = 64;
             // 
             // labelTitleAddCustomer
@@ -961,7 +964,7 @@
             // 
             // tabPageCustomerInfo
             // 
-            this.tabPageCustomerInfo.Controls.Add(this.textBoxCustomerInfoBKR);
+            this.tabPageCustomerInfo.Controls.Add(this.checkBoxCustomerBKR);
             this.tabPageCustomerInfo.Controls.Add(this.labelCustomerInfoBKR);
             this.tabPageCustomerInfo.Controls.Add(this.buttonBackCustomerInfo);
             this.tabPageCustomerInfo.Controls.Add(this.panelTitleChangeCustomer);
@@ -1015,13 +1018,15 @@
             this.tabPageCustomerInfo.Text = "Customer Info";
             this.tabPageCustomerInfo.UseVisualStyleBackColor = true;
             // 
-            // textBoxCustomerInfoBKR
+            // checkBoxCustomerBKR
             // 
-            this.textBoxCustomerInfoBKR.Location = new System.Drawing.Point(453, 280);
-            this.textBoxCustomerInfoBKR.Name = "textBoxCustomerInfoBKR";
-            this.textBoxCustomerInfoBKR.ReadOnly = true;
-            this.textBoxCustomerInfoBKR.Size = new System.Drawing.Size(132, 20);
-            this.textBoxCustomerInfoBKR.TabIndex = 153;
+            this.checkBoxCustomerBKR.AutoSize = true;
+            this.checkBoxCustomerBKR.Location = new System.Drawing.Point(453, 280);
+            this.checkBoxCustomerBKR.Name = "checkBoxCustomerBKR";
+            this.checkBoxCustomerBKR.Size = new System.Drawing.Size(15, 14);
+            this.checkBoxCustomerBKR.TabIndex = 153;
+            this.checkBoxCustomerBKR.UseVisualStyleBackColor = true;
+            this.checkBoxCustomerBKR.CheckedChanged += new System.EventHandler(this.checkBoxCustomerBKR_CheckedChanged);
             // 
             // labelCustomerInfoBKR
             // 
@@ -1048,7 +1053,7 @@
             this.panelTitleChangeCustomer.Controls.Add(this.labelTitleCustomerInformation);
             this.panelTitleChangeCustomer.Location = new System.Drawing.Point(0, 3);
             this.panelTitleChangeCustomer.Name = "panelTitleChangeCustomer";
-            this.panelTitleChangeCustomer.Size = new System.Drawing.Size(1157, 66);
+            this.panelTitleChangeCustomer.Size = new System.Drawing.Size(1176, 66);
             this.panelTitleChangeCustomer.TabIndex = 150;
             // 
             // labelTitleCustomerInformation
@@ -1546,7 +1551,7 @@
             this.panelTitleChangeInvoice.Controls.Add(this.labelTitleChangeInvoice);
             this.panelTitleChangeInvoice.Location = new System.Drawing.Point(0, 0);
             this.panelTitleChangeInvoice.Name = "panelTitleChangeInvoice";
-            this.panelTitleChangeInvoice.Size = new System.Drawing.Size(1141, 75);
+            this.panelTitleChangeInvoice.Size = new System.Drawing.Size(1160, 75);
             this.panelTitleChangeInvoice.TabIndex = 73;
             // 
             // labelTitleChangeInvoice
@@ -1661,7 +1666,7 @@
             this.panelTitleAddInvoice.Controls.Add(this.labelTitleAddInvoice);
             this.panelTitleAddInvoice.Location = new System.Drawing.Point(0, 0);
             this.panelTitleAddInvoice.Name = "panelTitleAddInvoice";
-            this.panelTitleAddInvoice.Size = new System.Drawing.Size(1141, 75);
+            this.panelTitleAddInvoice.Size = new System.Drawing.Size(1160, 75);
             this.panelTitleAddInvoice.TabIndex = 65;
             // 
             // labelTitleAddInvoice
@@ -1752,7 +1757,7 @@
             this.panelTitleChangeProject.Controls.Add(this.labelTitleChangeProject);
             this.panelTitleChangeProject.Location = new System.Drawing.Point(0, 0);
             this.panelTitleChangeProject.Name = "panelTitleChangeProject";
-            this.panelTitleChangeProject.Size = new System.Drawing.Size(1160, 66);
+            this.panelTitleChangeProject.Size = new System.Drawing.Size(1179, 66);
             this.panelTitleChangeProject.TabIndex = 59;
             // 
             // labelTitleChangeProject
@@ -1831,20 +1836,62 @@
             this.dataGridViewEarnedCustomers.Size = new System.Drawing.Size(577, 193);
             this.dataGridViewEarnedCustomers.TabIndex = 0;
             // 
-            // tabPage1
+            // tabPageAddQuotation
             // 
-            this.tabPage1.Controls.Add(this.buttonAddQuotationSave);
-            this.tabPage1.Controls.Add(this.labelAddQuotationStatus);
-            this.tabPage1.Controls.Add(this.textBoxAddQuotationStatus);
-            this.tabPage1.Controls.Add(this.labelAddQuotationProjectID);
-            this.tabPage1.Controls.Add(this.textBoxAddQuotationProjectId);
-            this.tabPage1.Controls.Add(this.panelQuotation);
-            this.tabPage1.Location = new System.Drawing.Point(42, 4);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(1103, 664);
-            this.tabPage1.TabIndex = 9;
-            this.tabPage1.Text = "tabPageAddQuotation";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPageAddQuotation.Controls.Add(this.buttonAddQuotationSave);
+            this.tabPageAddQuotation.Controls.Add(this.labelAddQuotationStatus);
+            this.tabPageAddQuotation.Controls.Add(this.textBoxAddQuotationStatus);
+            this.tabPageAddQuotation.Controls.Add(this.labelAddQuotationProjectID);
+            this.tabPageAddQuotation.Controls.Add(this.textBoxAddQuotationProjectId);
+            this.tabPageAddQuotation.Controls.Add(this.panelQuotation);
+            this.tabPageAddQuotation.Location = new System.Drawing.Point(42, 4);
+            this.tabPageAddQuotation.Name = "tabPageAddQuotation";
+            this.tabPageAddQuotation.Size = new System.Drawing.Size(1103, 664);
+            this.tabPageAddQuotation.TabIndex = 9;
+            this.tabPageAddQuotation.Text = "tabPageAddQuotation";
+            this.tabPageAddQuotation.UseVisualStyleBackColor = true;
+            // 
+            // buttonAddQuotationSave
+            // 
+            this.buttonAddQuotationSave.Location = new System.Drawing.Point(17, 158);
+            this.buttonAddQuotationSave.Name = "buttonAddQuotationSave";
+            this.buttonAddQuotationSave.Size = new System.Drawing.Size(75, 23);
+            this.buttonAddQuotationSave.TabIndex = 79;
+            this.buttonAddQuotationSave.Text = "Save";
+            this.buttonAddQuotationSave.UseVisualStyleBackColor = true;
+            this.buttonAddQuotationSave.Click += new System.EventHandler(this.buttonAddQuotationSave_Click);
+            // 
+            // labelAddQuotationStatus
+            // 
+            this.labelAddQuotationStatus.AutoSize = true;
+            this.labelAddQuotationStatus.Location = new System.Drawing.Point(14, 111);
+            this.labelAddQuotationStatus.Name = "labelAddQuotationStatus";
+            this.labelAddQuotationStatus.Size = new System.Drawing.Size(60, 13);
+            this.labelAddQuotationStatus.TabIndex = 76;
+            this.labelAddQuotationStatus.Text = "Description";
+            // 
+            // textBoxAddQuotationStatus
+            // 
+            this.textBoxAddQuotationStatus.Location = new System.Drawing.Point(115, 108);
+            this.textBoxAddQuotationStatus.Name = "textBoxAddQuotationStatus";
+            this.textBoxAddQuotationStatus.Size = new System.Drawing.Size(100, 20);
+            this.textBoxAddQuotationStatus.TabIndex = 75;
+            // 
+            // labelAddQuotationProjectID
+            // 
+            this.labelAddQuotationProjectID.AutoSize = true;
+            this.labelAddQuotationProjectID.Location = new System.Drawing.Point(14, 85);
+            this.labelAddQuotationProjectID.Name = "labelAddQuotationProjectID";
+            this.labelAddQuotationProjectID.Size = new System.Drawing.Size(52, 13);
+            this.labelAddQuotationProjectID.TabIndex = 74;
+            this.labelAddQuotationProjectID.Text = "Project Id";
+            // 
+            // textBoxAddQuotationProjectId
+            // 
+            this.textBoxAddQuotationProjectId.Location = new System.Drawing.Point(115, 82);
+            this.textBoxAddQuotationProjectId.Name = "textBoxAddQuotationProjectId";
+            this.textBoxAddQuotationProjectId.Size = new System.Drawing.Size(100, 20);
+            this.textBoxAddQuotationProjectId.TabIndex = 73;
             // 
             // panelQuotation
             // 
@@ -1991,48 +2038,6 @@
             this.pictureBoxAddQuotation.TabIndex = 60;
             this.pictureBoxAddQuotation.TabStop = false;
             // 
-            // buttonAddQuotationSave
-            // 
-            this.buttonAddQuotationSave.Location = new System.Drawing.Point(17, 158);
-            this.buttonAddQuotationSave.Name = "buttonAddQuotationSave";
-            this.buttonAddQuotationSave.Size = new System.Drawing.Size(75, 23);
-            this.buttonAddQuotationSave.TabIndex = 79;
-            this.buttonAddQuotationSave.Text = "Save";
-            this.buttonAddQuotationSave.UseVisualStyleBackColor = true;
-            this.buttonAddQuotationSave.Click += new System.EventHandler(this.buttonAddQuotationSave_Click);
-            // 
-            // labelAddQuotationStatus
-            // 
-            this.labelAddQuotationStatus.AutoSize = true;
-            this.labelAddQuotationStatus.Location = new System.Drawing.Point(14, 111);
-            this.labelAddQuotationStatus.Name = "labelAddQuotationStatus";
-            this.labelAddQuotationStatus.Size = new System.Drawing.Size(60, 13);
-            this.labelAddQuotationStatus.TabIndex = 76;
-            this.labelAddQuotationStatus.Text = "Description";
-            // 
-            // textBoxAddQuotationStatus
-            // 
-            this.textBoxAddQuotationStatus.Location = new System.Drawing.Point(115, 108);
-            this.textBoxAddQuotationStatus.Name = "textBoxAddQuotationStatus";
-            this.textBoxAddQuotationStatus.Size = new System.Drawing.Size(100, 20);
-            this.textBoxAddQuotationStatus.TabIndex = 75;
-            // 
-            // labelAddQuotationProjectID
-            // 
-            this.labelAddQuotationProjectID.AutoSize = true;
-            this.labelAddQuotationProjectID.Location = new System.Drawing.Point(14, 85);
-            this.labelAddQuotationProjectID.Name = "labelAddQuotationProjectID";
-            this.labelAddQuotationProjectID.Size = new System.Drawing.Size(52, 13);
-            this.labelAddQuotationProjectID.TabIndex = 74;
-            this.labelAddQuotationProjectID.Text = "Project Id";
-            // 
-            // textBoxAddQuotationProjectId
-            // 
-            this.textBoxAddQuotationProjectId.Location = new System.Drawing.Point(115, 82);
-            this.textBoxAddQuotationProjectId.Name = "textBoxAddQuotationProjectId";
-            this.textBoxAddQuotationProjectId.Size = new System.Drawing.Size(100, 20);
-            this.textBoxAddQuotationProjectId.TabIndex = 73;
-            // 
             // FormFinance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2103,8 +2108,8 @@
             this.panelTitleDashboard.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCustomersProjectNeedsPay)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEarnedCustomers)).EndInit();
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
+            this.tabPageAddQuotation.ResumeLayout(false);
+            this.tabPageAddQuotation.PerformLayout();
             this.panelQuotation.ResumeLayout(false);
             this.panelQuotation.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblprojectsBindingSource)).EndInit();
@@ -2295,7 +2300,6 @@
         private System.Windows.Forms.CheckBox checkBoxAddInvoicePaid;
         private System.Windows.Forms.CheckBox checkBoxChangeInvoicePaid;
         private System.Windows.Forms.Label labelChangeInvoicePaid;
-        private System.Windows.Forms.TextBox textBoxCustomerInfoBKR;
         private System.Windows.Forms.Label labelCustomerInfoBKR;
         private System.Windows.Forms.Label labelNumOfInvoices;
         private System.Windows.Forms.TextBox textBoxSearchInvoices;
@@ -2303,7 +2307,7 @@
         private System.Windows.Forms.Label labelTitleDashboard;
         private System.Windows.Forms.Label labelAddQuotation;
         private System.Windows.Forms.PictureBox pictureBoxAddQuotation;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPageAddQuotation;
         private System.Windows.Forms.Panel panelQuotation;
         private System.Windows.Forms.Label labelTitleAddQuotation;
         private System.Windows.Forms.Button buttonAddQuotationSave;
@@ -2311,5 +2315,6 @@
         private System.Windows.Forms.TextBox textBoxAddQuotationStatus;
         private System.Windows.Forms.Label labelAddQuotationProjectID;
         private System.Windows.Forms.TextBox textBoxAddQuotationProjectId;
+        private System.Windows.Forms.CheckBox checkBoxCustomerBKR;
     }
 }

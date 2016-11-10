@@ -45,7 +45,7 @@ namespace Barroc_IT
             dataGridViewAppointments.Columns[3].HeaderCell.Value = "Time";
             
             //DatagridView Projects
-            Database.GetInstance().QueryInDatagridView("Select tbl_companies.c_name, p_name, p_status, p_start_date, p_end_date, p_progression FROM tbl_projects, tbl_companies WHERE tbl_projects.c_id = tbl_companies.c_id", dataGridViewProjects);
+            Database.GetInstance().QueryInDatagridView("Select tbl_companies.c_name, p_name, p_status, p_start_date, p_end_date, p_progression FROM tbl_projects, tbl_companies WHERE tbl_projects.company_id = tbl_companies.c_id", dataGridViewProjects);
             dataGridViewProjects.Columns[0].HeaderCell.Value = "Company";
             dataGridViewProjects.Columns[1].HeaderCell.Value = "Project";
             dataGridViewProjects.Columns[2].HeaderCell.Value = "Status";
@@ -197,6 +197,13 @@ namespace Barroc_IT
         {
             NewAppointment newAppointment = new NewAppointment(this);
             newAppointment.Show();
+        }
+
+        private void Notificationlbl_Click(object sender, EventArgs e)
+        {
+            FormNotifications notifications = new FormNotifications(Department.Development);
+
+            notifications.Show();
         }
     }
 }

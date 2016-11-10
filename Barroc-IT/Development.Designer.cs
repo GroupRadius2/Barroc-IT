@@ -139,6 +139,7 @@
             this.Notificationlbl.Size = new System.Drawing.Size(365, 33);
             this.Notificationlbl.TabIndex = 47;
             this.Notificationlbl.Text = "Barroc-IT Notifications (    )";
+            this.Notificationlbl.Click += new System.EventHandler(this.Notificationlbl_Click);
             // 
             // LogoutBtn
             // 
@@ -421,7 +422,7 @@
             this.Header.BackColor = System.Drawing.SystemColors.ControlDark;
             this.Header.Location = new System.Drawing.Point(-9, -2);
             this.Header.Name = "Header";
-            this.Header.Size = new System.Drawing.Size(1444, 38);
+            this.Header.Size = new System.Drawing.Size(1444, 68);
             this.Header.TabIndex = 33;
             this.Header.TabStop = false;
             // 
