@@ -197,12 +197,12 @@ namespace Barroc_IT
             DateTime.TryParse(textBoxA_time.Text, out dt);
 
             int countOfAppointments = (int)Database.GetInstance().ExecuteQuery();
-            Database.GetInstance().Query("INSERT INTO tbl_appointments(appointment_id, project_id, a_date, a_time_off)" +
+            Database.GetInstance().Query("INSERT INTO tbl_appointments(appointment_id, project_id, a_date, a_time_of)" +
                 "VALUES(@appointment_id, @project_id, @a_date, @a_time_of)");
             Database.GetInstance().AddParameter("@appointment_id", ++countOfAppointments);
             Database.GetInstance().AddParameter("@project_id", textBoxA_Project.Text);
             Database.GetInstance().AddParameter("@a_date", textBoxA_Date.Text);
-            Database.GetInstance().AddParameter("@a_time_off", dt);
+            Database.GetInstance().AddParameter("@a_time_of", dt);
 
             Database.GetInstance().ExecuteQuery();
             tabControlSales.SelectedTab = TabDashboard;
@@ -243,11 +243,15 @@ namespace Barroc_IT
             {
                 if (row.Selected)
                 {
-                    tabControlSales.SelectedTab = tabChange_A;
+                    if (row != null)
+                    {
+                        tabControlSales.SelectedTab = tabChange_A;
 
-                    textBoxA_Project.Text = row.Cells["project_id"].Value.ToString();
-                    textBoxA_Date.Text = row.Cells["a_date"].Value.ToString();
-                    textBoxA_time.Text = row.Cells["a_time_of"].Value.ToString();
+                        textBoxA_Project.Text = row.Cells["project_id"].Value.ToString();
+                        textBoxA_Date.Text = row.Cells["a_date"].Value.ToString();
+                        textBoxA_time.Text = row.Cells["a_time_of"].Value.ToString();
+                    }
+                    MessageBox.Show("Wrong Selection");
                 }
             }
         }

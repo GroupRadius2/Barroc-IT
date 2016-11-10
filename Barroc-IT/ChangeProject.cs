@@ -13,7 +13,7 @@ namespace Barroc_IT
     public partial class ChangeProject : Form
     {
         private Development dev;
-
+        DateTime dateValue = new DateTime();
         public ChangeProject(Development dev)
         {
             InitializeComponent();
@@ -22,6 +22,8 @@ namespace Barroc_IT
 
         private void Savebtn_Click(object sender, EventArgs e)
         {
+            if ((DateTime.TryParse(StartDatetbx.Text, out dateValue)) && (DateTime.TryParse(EndDatetbx.Text, out dateValue)))
+            {
             //Start date
             Database.GetInstance().Query("UPDATE tbl_projects SET p_start_date = @p_start_date WHERE project_id = @project_id;");
             DateTime Sd;
@@ -89,6 +91,12 @@ namespace Barroc_IT
             Database.GetInstance().QueryInDatagridView("Select tbl_companies.c_name, p_name, p_status, p_start_date, p_end_date, p_progression FROM tbl_projects, tbl_companies WHERE tbl_projects.company_id = tbl_companies.c_id;", dev.dataGridViewProjectProgress);
 
             this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Start or End date is not Validate.");
+            }
+            
         }
 
         private void Closebtn_Click(object sender, EventArgs e)
