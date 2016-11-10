@@ -187,7 +187,10 @@ namespace Barroc_IT
             decimal price;
             int projectId;
 
-            database.Query("SELECT COUNT(*) FROM tbl_invoices");
+            database.Query("SELECT COUNT(*) FROM tbl_projects;");
+            int countOfProjects = (int)database.ExecuteQuery();
+
+            database.Query("SELECT COUNT(*) FROM tbl_invoices;");
             int countOfInvoicesId = (int)database.ExecuteQuery();
 
             database.Query("INSERT INTO tbl_invoices(invoice_id, project_id, i_description, i_price, i_paid) VALUES " +
@@ -197,7 +200,15 @@ namespace Barroc_IT
 
             if (int.TryParse(textBoxProjectId.Text, out projectId))
             {
-                database.AddParameter("@project_id", textBoxProjectId.Text);
+                if (projectId <= countOfProjects)
+                {
+                    database.AddParameter("@project_id", projectId);
+                }
+                else
+                {
+                    correct = false;
+                    message += "Project ID does not exists. ";
+                }
             }
             else
             {
