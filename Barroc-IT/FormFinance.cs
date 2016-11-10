@@ -154,6 +154,7 @@ namespace Barroc_IT
         private void UpdateInfo()
         {
             //labelAddCustomer.ForeColor = Color.Black;
+            labelAddQuotation.ForeColor = Color.Black;
             labelDashboard.ForeColor = Color.Black;
             labelProjects.ForeColor = Color.Black;
             labelCustomers.ForeColor = Color.Black;
@@ -230,21 +231,43 @@ namespace Barroc_IT
 
         private void buttonSaveChangeInvoice_Click(object sender, EventArgs e)
         {
+            bool correct = true;
+            string message = "";
+            decimal price;
+
             database.Query("UPDATE tbl_invoices SET project_id = @project_id, i_description = @i_description, i_price = @i_price WHERE invoice_id = @id;");
 
             database.AddParameter("@project_id", textBoxChangeInvoiceProjectId.Text);
             database.AddParameter("@i_description", textBoxChangeInvoiceDescription.Text);
-            database.AddParameter("@i_price", textBoxChangeInvoicePrice.Text);
+
+            if (decimal.TryParse(textBoxChangeInvoicePrice.Text, out price))
+            {
+                database.AddParameter("@i_price", price);
+            }
+            else
+            {
+                correct = false;
+                message += "Price is not valid datatype.";
+            }
+
+            
             database.AddParameter("@id", selectedIndexInvoice);
 
-            ConfirmBoxBuilder builder = new ConfirmBoxBuilder();
-            builder.BuildSize(500, 450);
-            builder.BuildTop("You are about to save the following data:");
-            builder.BuildCenter("Project id: " + textBoxChangeInvoiceProjectId.Text + Environment.NewLine + 
-                "Description: " + textBoxChangeInvoiceDescription.Text + Environment.NewLine +
-                "Price: " + textBoxChangeInvoicePrice.Text);
-            builder.BuildBottom(tabControlFinance, tabPageInvoices, dataGridViewInvoices, "SELECT * FROM tbl_invoices;");
-            builder.GetConfirmBox().Show();
+            if (correct)
+            {
+                ConfirmBoxBuilder builder = new ConfirmBoxBuilder();
+                builder.BuildSize(500, 450);
+                builder.BuildTop("You are about to save the following data:");
+                builder.BuildCenter("Project id: " + textBoxChangeInvoiceProjectId.Text + Environment.NewLine +
+                    "Description: " + textBoxChangeInvoiceDescription.Text + Environment.NewLine +
+                    "Price: " + textBoxChangeInvoicePrice.Text);
+                builder.BuildBottom(tabControlFinance, tabPageInvoices, dataGridViewInvoices, "SELECT * FROM tbl_invoices;");
+                builder.GetConfirmBox().Show();
+            }
+            else
+            {
+                MessageBox.Show(message);
+            }
         }
 
         private void buttonChangeCustomer_Click(object sender, EventArgs e)
@@ -441,6 +464,26 @@ namespace Barroc_IT
 
             notifications.ReceiveMessages();
             notifications.Show();
+        }
+
+        private void labelAddQuotation_Click(object sender, EventArgs e)
+        {
+            labelAddQuotation.ForeColor = Color.Red;
+        }
+
+        private void buttonAddQuotationSave_Click(object sender, EventArgs e)
+        {
+            database.Query("INSERT INTO tbl_quotations(project_id, q_status) VALUES(@project_id, @q_status)");
+
+            database.AddParameter("@project_id", textBoxAddQuotationProjectId.Text);
+            database.AddParameter("@q_status", textBoxAddQuotationStatus.Text);
+
+            ConfirmBoxBuilder builder = new ConfirmBoxBuilder();
+            builder.BuildTop("You are about to change the following information:");
+            builder.BuildCenter("Project ID: " + textBoxAddQuotationProjectId.Text + Environment.NewLine +
+                "Status: " + textBoxAddQuotationStatus.Text);
+            builder.BuildBottom(tabControlFinance, tabPageProjects, dataGridViewProjects, queryProjects);
+            builder.GetConfirmBox().Show();
         }
     }
 }

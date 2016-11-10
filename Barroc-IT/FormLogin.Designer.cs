@@ -41,6 +41,7 @@
             // 
             // buttonLogin
             // 
+            this.buttonLogin.Enabled = false;
             this.buttonLogin.Location = new System.Drawing.Point(353, 214);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(260, 58);
@@ -99,6 +100,7 @@
             this.comboBoxDepartments.Name = "comboBoxDepartments";
             this.comboBoxDepartments.Size = new System.Drawing.Size(180, 21);
             this.comboBoxDepartments.TabIndex = 7;
+            this.comboBoxDepartments.SelectedIndexChanged += new System.EventHandler(this.comboBoxDepartments_SelectedIndexChanged);
             // 
             // FormLogin
             // 

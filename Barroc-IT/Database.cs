@@ -33,7 +33,6 @@ namespace Barroc_IT
             }
             catch (SqlException se)
             {
-                MessageBox.Show(se.Message);
             }
         }
 
@@ -54,7 +53,6 @@ namespace Barroc_IT
             }
             catch (SqlException se)
             {
-                MessageBox.Show(se.Message);
             }
 
             return state;
