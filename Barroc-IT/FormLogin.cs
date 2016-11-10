@@ -35,10 +35,8 @@ namespace Barroc_IT
         public void CreateAccount(string user, string passwordInSHA1Hash)
         {
             database.Query("SELECT COUNT(*) FROM tbl_accounts");
-            int countOfAccounts = (int)database.ExecuteQuery();
 
-            database.Query("INSERT INTO tbl_accounts(a_id, a_username, a_password) VALUES(@a_id ,@a_username, @a_password);");
-            database.AddParameter("@a_id", ++countOfAccounts);
+            database.Query("INSERT INTO tbl_accounts(a_username, a_password) VALUES(@a_username, @a_password);");
             database.AddParameter("@a_username", user);
             database.AddParameter("@a_password", passwordInSHA1Hash);
 

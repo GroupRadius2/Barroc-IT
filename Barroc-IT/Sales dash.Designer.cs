@@ -729,7 +729,9 @@
             // 
             this.dataGridAppointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridAppointments.Location = new System.Drawing.Point(21, 144);
+            this.dataGridAppointments.MultiSelect = false;
             this.dataGridAppointments.Name = "dataGridAppointments";
+            this.dataGridAppointments.ReadOnly = true;
             this.dataGridAppointments.RowTemplate.Height = 24;
             this.dataGridAppointments.Size = new System.Drawing.Size(1410, 591);
             this.dataGridAppointments.TabIndex = 7;
@@ -847,6 +849,7 @@
             this.dataGridPositiveB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridPositiveB.Location = new System.Drawing.Point(84, 522);
             this.dataGridPositiveB.Name = "dataGridPositiveB";
+            this.dataGridPositiveB.ReadOnly = true;
             this.dataGridPositiveB.RowTemplate.Height = 24;
             this.dataGridPositiveB.Size = new System.Drawing.Size(1147, 244);
             this.dataGridPositiveB.TabIndex = 15;
@@ -856,6 +859,7 @@
             this.dataGridNegativeB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridNegativeB.Location = new System.Drawing.Point(84, 188);
             this.dataGridNegativeB.Name = "dataGridNegativeB";
+            this.dataGridNegativeB.ReadOnly = true;
             this.dataGridNegativeB.RowTemplate.Height = 24;
             this.dataGridNegativeB.Size = new System.Drawing.Size(1147, 244);
             this.dataGridNegativeB.TabIndex = 14;
@@ -1017,7 +1021,9 @@
             // 
             this.dataGridCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridCustomers.Location = new System.Drawing.Point(44, 118);
+            this.dataGridCustomers.MultiSelect = false;
             this.dataGridCustomers.Name = "dataGridCustomers";
+            this.dataGridCustomers.ReadOnly = true;
             this.dataGridCustomers.RowTemplate.Height = 24;
             this.dataGridCustomers.Size = new System.Drawing.Size(1445, 582);
             this.dataGridCustomers.TabIndex = 3;
