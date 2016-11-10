@@ -518,11 +518,26 @@ namespace Barroc_IT
             bool correct = true;
             string message = "";
 
+            database.Query("SELECT COUNT(*) FROM tbl_projects;");
+            int countOfProjects = (int)database.ExecuteQuery();
+
             database.Query("INSERT INTO tbl_quotations(project_id, q_status) VALUES(@project_id, @q_status)");
+
+
 
             if (int.TryParse(textBoxAddQuotationProjectId.Text, out projectId))
             {
                 database.AddParameter("@project_id", textBoxAddQuotationProjectId.Text);
+
+                if (projectId <= countOfProjects)
+                {
+                    database.AddParameter("@project_id", projectId);
+                }
+                else
+                {
+                    correct = false;
+                    message += "Project ID does not exists. ";
+                }
             }
             else
             {
