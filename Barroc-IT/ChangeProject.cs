@@ -14,6 +14,7 @@ namespace Barroc_IT
     {
         private Development dev;
         DateTime dateValue = new DateTime();
+        int intValue = new int();
         public ChangeProject(Development dev)
         {
             InitializeComponent();
@@ -22,7 +23,7 @@ namespace Barroc_IT
 
         private void Savebtn_Click(object sender, EventArgs e)
         {
-            if ((DateTime.TryParse(StartDatetbx.Text, out dateValue)) && (DateTime.TryParse(EndDatetbx.Text, out dateValue)))
+            if ((DateTime.TryParse(StartDatetbx.Text, out dateValue)) && (DateTime.TryParse(EndDatetbx.Text, out dateValue)) && (int.TryParse(Progressiontbx.Text , out intValue)) && intValue <101 && intValue > 0)
             {
             //Start date
             Database.GetInstance().Query("UPDATE tbl_projects SET p_start_date = @p_start_date WHERE project_id = @project_id;");
@@ -94,7 +95,19 @@ namespace Barroc_IT
             }
             else
             {
-                MessageBox.Show("Start or End date is not Validate.");
+                if (!(DateTime.TryParse(StartDatetbx.Text, out dateValue)))
+                {
+                    MessageBox.Show("The startdate is not valid");
+                }
+                if(!(DateTime.TryParse(EndDatetbx.Text, out dateValue)))
+                {
+                    MessageBox.Show("The enddate is not valid");
+                }
+                if(!(int.TryParse(Progressiontbx.Text , out intValue)) || intValue < 101 || intValue > 0)
+                {
+                    MessageBox.Show("The progression is not valid, Please enter a number between 0 and 100.");
+                }
+                
             }
             
         }
