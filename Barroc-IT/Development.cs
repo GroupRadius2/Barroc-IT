@@ -198,5 +198,12 @@ namespace Barroc_IT
             NewAppointment newAppointment = new NewAppointment(this);
             newAppointment.Show();
         }
+
+        private void Notificationlbl_Click(object sender, EventArgs e)
+        {
+            FormNotifications notifications = new FormNotifications(Department.Development);
+
+            notifications.Show();
+        }
     }
 }

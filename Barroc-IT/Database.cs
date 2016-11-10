@@ -117,7 +117,7 @@ namespace Barroc_IT
         public object ExecuteQuery()
         {
             object result = command.ExecuteScalar();
-
+            
             return result;
         }
     }
