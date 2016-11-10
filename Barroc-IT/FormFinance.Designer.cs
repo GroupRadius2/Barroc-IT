@@ -345,6 +345,7 @@
             this.dataGridViewPositiveCompanies.Location = new System.Drawing.Point(111, 140);
             this.dataGridViewPositiveCompanies.MultiSelect = false;
             this.dataGridViewPositiveCompanies.Name = "dataGridViewPositiveCompanies";
+            this.dataGridViewPositiveCompanies.ReadOnly = true;
             this.dataGridViewPositiveCompanies.Size = new System.Drawing.Size(884, 196);
             this.dataGridViewPositiveCompanies.TabIndex = 56;
             this.dataGridViewPositiveCompanies.SelectionChanged += new System.EventHandler(this.dataGridViewPositiveCompanies_SelectionChanged);
@@ -404,6 +405,7 @@
             this.dataGridViewNegativeCompanies.Location = new System.Drawing.Point(111, 364);
             this.dataGridViewNegativeCompanies.MultiSelect = false;
             this.dataGridViewNegativeCompanies.Name = "dataGridViewNegativeCompanies";
+            this.dataGridViewNegativeCompanies.ReadOnly = true;
             this.dataGridViewNegativeCompanies.Size = new System.Drawing.Size(884, 210);
             this.dataGridViewNegativeCompanies.TabIndex = 60;
             this.dataGridViewNegativeCompanies.SelectionChanged += new System.EventHandler(this.dataGridViewNegativeCompanies_SelectionChanged);
@@ -452,6 +454,7 @@
             this.dataGridViewProjects.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewProjects.Location = new System.Drawing.Point(12, 116);
             this.dataGridViewProjects.Name = "dataGridViewProjects";
+            this.dataGridViewProjects.ReadOnly = true;
             this.dataGridViewProjects.Size = new System.Drawing.Size(913, 477);
             this.dataGridViewProjects.TabIndex = 61;
             this.dataGridViewProjects.SelectionChanged += new System.EventHandler(this.dataGridViewProjects_SelectionChanged);
@@ -517,6 +520,7 @@
             this.dataGridViewInvoices.Location = new System.Drawing.Point(26, 130);
             this.dataGridViewInvoices.MultiSelect = false;
             this.dataGridViewInvoices.Name = "dataGridViewInvoices";
+            this.dataGridViewInvoices.ReadOnly = true;
             this.dataGridViewInvoices.Size = new System.Drawing.Size(590, 257);
             this.dataGridViewInvoices.TabIndex = 63;
             this.dataGridViewInvoices.SelectionChanged += new System.EventHandler(this.dataGridViewInvoices_SelectionChanged);
@@ -1816,6 +1820,7 @@
             this.dataGridViewCustomersProjectNeedsPay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewCustomersProjectNeedsPay.Location = new System.Drawing.Point(26, 120);
             this.dataGridViewCustomersProjectNeedsPay.Name = "dataGridViewCustomersProjectNeedsPay";
+            this.dataGridViewCustomersProjectNeedsPay.ReadOnly = true;
             this.dataGridViewCustomersProjectNeedsPay.Size = new System.Drawing.Size(577, 193);
             this.dataGridViewCustomersProjectNeedsPay.TabIndex = 2;
             // 
@@ -1833,6 +1838,7 @@
             this.dataGridViewEarnedCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewEarnedCustomers.Location = new System.Drawing.Point(26, 340);
             this.dataGridViewEarnedCustomers.Name = "dataGridViewEarnedCustomers";
+            this.dataGridViewEarnedCustomers.ReadOnly = true;
             this.dataGridViewEarnedCustomers.Size = new System.Drawing.Size(577, 193);
             this.dataGridViewEarnedCustomers.TabIndex = 0;
             // 
