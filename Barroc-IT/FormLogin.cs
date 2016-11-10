@@ -67,16 +67,11 @@ namespace Barroc_IT
             database.AddParameter("@a_username", comboBoxDepartments.SelectedItem.ToString());
             database.AddParameter("@a_password", textBoxPassword.Text);
 
-            MessageBox.Show(comboBoxDepartments.SelectedItem.ToString());
-            MessageBox.Show(textBoxPassword.Text);
-            MessageBox.Show(((int)database.ExecuteQuery()).ToString());
-
             if ((int)database.ExecuteQuery() > 0)
             {
                 switch (comboBoxDepartments.SelectedItem.ToString().ToUpper())
                 {
                     case "FINANCE":
-                        MessageBox.Show("Finance");
                         FormFinance finance = new FormFinance();
                         finance.Show();
                         break;
@@ -92,6 +87,10 @@ namespace Barroc_IT
                         break;
                 }
             }
+            else
+            {
+                MessageBox.Show("Invalid login details...");
+            }
         }
 
         private void textBoxPassword_KeyDown(object sender, KeyEventArgs e)
@@ -100,6 +99,11 @@ namespace Barroc_IT
             {
                 CheckLogin();
             }
+        }
+
+        private void comboBoxDepartments_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            buttonLogin.Enabled = true;
         }
     }   
 }
