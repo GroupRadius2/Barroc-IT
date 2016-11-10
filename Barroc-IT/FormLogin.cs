@@ -46,6 +46,7 @@ namespace Barroc_IT
         private void buttonLogin_Click(object sender, EventArgs e)
         {
             CheckLogin();
+            this.Close();
         }
 
         private void buttonLogin_KeyDown(object sender, KeyEventArgs e)
