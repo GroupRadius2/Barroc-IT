@@ -729,6 +729,7 @@
             // 
             this.dataGridAppointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridAppointments.Location = new System.Drawing.Point(21, 144);
+            this.dataGridAppointments.MultiSelect = false;
             this.dataGridAppointments.Name = "dataGridAppointments";
             this.dataGridAppointments.RowTemplate.Height = 24;
             this.dataGridAppointments.Size = new System.Drawing.Size(1410, 591);
@@ -1017,6 +1018,7 @@
             // 
             this.dataGridCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridCustomers.Location = new System.Drawing.Point(44, 118);
+            this.dataGridCustomers.MultiSelect = false;
             this.dataGridCustomers.Name = "dataGridCustomers";
             this.dataGridCustomers.RowTemplate.Height = 24;
             this.dataGridCustomers.Size = new System.Drawing.Size(1445, 582);
