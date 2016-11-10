@@ -13,6 +13,7 @@ namespace Barroc_IT
     public partial class Sales_dash : Form
     {
         DateTime dtm = new DateTime();
+        int i = new int();
         private int selectedIndexCustomer;
         private int selectedIndexAppointments;
         public Sales_dash()
@@ -155,24 +156,32 @@ namespace Barroc_IT
 
         private void btnChSave_Click(object sender, EventArgs e)
         {
-            Database.GetInstance().Query("UPDATE tbl_companies SET c_name = @c_name, c_address = @c_address, c_housenumber = @c_housenumber, c_city = @c_city, c_contactperson_first_name = @c_contactperson_first_name, " +
+            if ((int.TryParse(txtbChHousenumber.Text, out i)))
+            {
+                Database.GetInstance().Query("UPDATE tbl_companies SET c_name = @c_name, c_address = @c_address, c_housenumber = @c_housenumber, c_city = @c_city, c_contactperson_first_name = @c_contactperson_first_name, " +
                 "c_contactperson_telephone_number = @c_contactperson_telephone_number, @c_contactperson_faxnumber = @c_contactperson_faxnumber, c_contactperson_email = @c_contactperson_email, c_contactperson_telephone_number2 = @c_contactperson_telephone_number2, c_city2 = @c_city2, c_zipcode = @c_zipcode, c_zipcode2 = @c_zipcode2, c_address2 = @c_address2");
-            Database.GetInstance().AddParameter("@c_name", txtbChCompanyName.Text);
-            Database.GetInstance().AddParameter("@c_address", txtbChAdress.Text);
-            Database.GetInstance().AddParameter("@c_housenumber", txtbChHousenumber.Text);
-            Database.GetInstance().AddParameter("@c_city", txtbChCity.Text);
-            Database.GetInstance().AddParameter("@c_contactperson_first_name", txtbChContactperson.Text);
-            Database.GetInstance().AddParameter("@c_contactperson_telephone_number", txtbChTelephone.Text);
-            Database.GetInstance().AddParameter("@c_contactperson_faxnumber", txtbChFaxnumber.Text);
-            Database.GetInstance().AddParameter("@c_contactperson_telephone_number2", txtbChTelephone2.Text);
-            Database.GetInstance().AddParameter("@c_contactperson_email", txtbChEmail.Text);
-            Database.GetInstance().AddParameter("@c_zipcode", txtbChZipcode.Text);
-            Database.GetInstance().AddParameter("@c_zipcode2", txtbChZipcode2.Text);
-            Database.GetInstance().AddParameter("@c_address2", txtbChAdress2.Text);
-            Database.GetInstance().AddParameter("@c_city2", txtbChCity2.Text);
+                Database.GetInstance().AddParameter("@c_name", txtbChCompanyName.Text);
+                Database.GetInstance().AddParameter("@c_address", txtbChAdress.Text);
+                Database.GetInstance().AddParameter("@c_housenumber", txtbChHousenumber.Text);
+                Database.GetInstance().AddParameter("@c_city", txtbChCity.Text);
+                Database.GetInstance().AddParameter("@c_contactperson_first_name", txtbChContactperson.Text);
+                Database.GetInstance().AddParameter("@c_contactperson_telephone_number", txtbChTelephone.Text);
+                Database.GetInstance().AddParameter("@c_contactperson_faxnumber", txtbChFaxnumber.Text);
+                Database.GetInstance().AddParameter("@c_contactperson_telephone_number2", txtbChTelephone2.Text);
+                Database.GetInstance().AddParameter("@c_contactperson_email", txtbChEmail.Text);
+                Database.GetInstance().AddParameter("@c_zipcode", txtbChZipcode.Text);
+                Database.GetInstance().AddParameter("@c_zipcode2", txtbChZipcode2.Text);
+                Database.GetInstance().AddParameter("@c_address2", txtbChAdress2.Text);
+                Database.GetInstance().AddParameter("@c_city2", txtbChCity2.Text);
 
-            Database.GetInstance().ExecuteQuery();
-            UpdateInfo();
+                Database.GetInstance().ExecuteQuery();
+                UpdateInfo();
+            }
+            else
+            {
+                MessageBox.Show("Invalid Data Housenumber");
+            }
+          
         }
         public void UpdateInfo()
         {
