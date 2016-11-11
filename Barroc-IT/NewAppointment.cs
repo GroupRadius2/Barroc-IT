@@ -33,7 +33,7 @@ namespace Barroc_IT
                 database.Query("SELECT COUNT(*) FROM tbl_appointments");
                 int countAppointmentId = (int)database.ExecuteQuery();
 
-                database.Query("INSERT INTO tbl_appointments(appiontment_id, project_id, a_date, a_time_of, c_name)VALUES(@id, @p_id, @a_date, @a_time_of , @c_name);");
+                database.Query("INSERT INTO tbl_appointments(appointment_id, project_id, a_date, a_time_of, c_name)VALUES(@id, @p_id, @a_date, @a_time_of , @c_name);");
                 database.AddParameter("@id", ++countAppointmentId);
                 database.AddParameter("@p_id", Projecttbx.Text);
                 database.AddParameter("@a_date", Datetbx.Text);

@@ -67,7 +67,7 @@ namespace Barroc_IT
 
             Database.GetInstance().ExecuteQuery();
 
-            Database.GetInstance().QueryInDatagridView("Select tbl_companies.c_name, p_name, p_status, p_start_date, p_end_date, p_progression FROM tbl_projects, tbl_companies WHERE tbl_projects.company_id = tbl_companies.c_id;", dev.dataGridViewProjects);
+            Database.GetInstance().QueryInDatagridView("Select tbl_companies.c_name, p_name, p_status, p_start_date, p_end_date, p_progression FROM tbl_projects, tbl_companies WHERE tbl_projects.c_id = tbl_companies.c_id;", dev.dataGridViewProjects);
             this.Hide();
 
             //Checkbox
@@ -88,8 +88,8 @@ namespace Barroc_IT
 
             Database.GetInstance().ExecuteQuery();
 
-            Database.GetInstance().QueryInDatagridView("Select tbl_companies.c_name, p_name, p_status, p_start_date, p_end_date, p_progression FROM tbl_projects, tbl_companies WHERE tbl_projects.company_id = tbl_companies.c_id;", dev.dataGridViewProjects);
-            Database.GetInstance().QueryInDatagridView("Select tbl_companies.c_name, p_name, p_status, p_start_date, p_end_date, p_progression FROM tbl_projects, tbl_companies WHERE tbl_projects.company_id = tbl_companies.c_id;", dev.dataGridViewProjectProgress);
+            Database.GetInstance().QueryInDatagridView("Select tbl_companies.c_name, p_name, p_status, p_start_date, p_end_date, p_progression FROM tbl_projects, tbl_companies WHERE tbl_projects.c_id = tbl_companies.c_id;", dev.dataGridViewProjects);
+            Database.GetInstance().QueryInDatagridView("Select tbl_companies.c_name, p_name, p_status, p_start_date, p_end_date, p_progression FROM tbl_projects, tbl_companies WHERE tbl_projects.c_id = tbl_companies.c_id;", dev.dataGridViewProjectProgress);
 
             this.Hide();
             }
